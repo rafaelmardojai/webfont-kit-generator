@@ -1,0 +1,7 @@
+data/com.rafaelmardojai.WebfontKitGenerator.desktop.in
+data/com.rafaelmardojai.WebfontKitGenerator.appdata.xml.in
+data/com.rafaelmardojai.WebfontKitGenerator.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+

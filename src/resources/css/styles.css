@@ -1,0 +1,9 @@
+.fonts-list {
+  border: 1px solid @borders;
+  border-radius: 8px;
+}
+
+.fonts-list row:not(:last-child) {
+  border-bottom: 1px solid @borders;
+}
+

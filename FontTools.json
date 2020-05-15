@@ -1,0 +1,26 @@
+{
+    "name": "FontTools",
+    "buildsystem": "simple",
+    "build-commands": [
+        "python3 setup.py install --prefix=/app --root=/"
+    ],
+    "sources": [{
+        "type": "archive",
+        "url": "https://files.pythonhosted.org/packages/8d/9f/a1188780fd723ee8b02ba02d57d3c3a42b8914190d0c79e306573f5d18ba/fonttools-4.4.1.zip",
+        "sha256": "fab07ad31b4d24d7b9798453f678faa179906d29a3ad15bddb92496f1f9ea122"
+    }],
+    "modules": [
+        {
+            "name": "Brotli",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix=/app --root=/"
+            ],
+            "sources": [{
+                "type": "archive",
+                "url": "https://files.pythonhosted.org/packages/cd/9c/7955895f5672ecc85270244582c6b53ff95bb4c24bf77bd9271d42351635/Brotli-1.0.7.zip",
+                "sha256": "0538dc1744fd17c314d2adc409ea7d1b779783b89fd95bcfb0c2acc93a6ea5a7"
+            }]
+        }
+    ]
+}

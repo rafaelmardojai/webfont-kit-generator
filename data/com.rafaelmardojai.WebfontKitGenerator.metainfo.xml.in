@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>com.rafaelmardojai.WebfontKitGenerator</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0-or-later</project_license>
+  <name>Webfont Kit Generator</name>
+  <summary>Create @font-face kits easily</summary>
+
+  <launchable type="desktop-id">com.rafaelmardojai.WebfontKitGenerator.desktop</launchable>
+  <developer_name>Rafael Mardojai CM</developer_name>
+  <update_contact>email_AT_rafaelmardojai.com</update_contact>
+</component>

@@ -60,7 +60,7 @@ class Generator(object):
             slug = ''.join(font.data['family'].split()).lower()
             self._generate_font(font.filename, font.data, slug)
 
-        self.window.appstack.set_visible_child_name("main")
+        self.window.appstack.set_visible_child_name('finish')
 
     def _generate_font(self, filename, data, slug):
         out_folder = os.path.join(self.path, slug)

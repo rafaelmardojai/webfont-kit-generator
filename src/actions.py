@@ -33,8 +33,13 @@ class Actions(object):
                 'accels': ['<Ctl>o']
             },
             {
-                "name"  : "about",
-                "func"  : self.on_about
+                'name'  : 'back',
+                'func'  : self.on_back,
+                'accels': ['Escape']
+            },
+            {
+                'name'  : 'about',
+                'func'  : self.on_about
             }
         ]
 
@@ -54,6 +59,12 @@ class Actions(object):
 
     def on_open(self, action, param):
         self.window.open_fonts()
+
+    def on_back(self, action, param):
+        name = self.window.appstack.get_visible_child_name()
+        if name is not 'generator':
+            self.window.appstack.set_visible_child_name('main')
+
 
     def on_about(self, action, param):
         pass

@@ -17,7 +17,7 @@
 
 import gi
 
-gi.require_version("Gtk", "3.0")
+gi.require_version('Gtk', '3.0')
 
 from gi.repository import GLib, Gio, Gtk
 from threading import Thread
@@ -28,9 +28,9 @@ class Actions(object):
     def __init__(self):
         actions = [
             {
-                "name"  : "open",
-                "func"  : self.on_open,
-                "accels": ["<Ctl>o"]
+                'name'  : 'open',
+                'func'  : self.on_open,
+                'accels': ['<Ctl>o']
             },
             {
                 "name"  : "about",
@@ -39,18 +39,18 @@ class Actions(object):
         ]
 
         for a in actions:
-            if "state" in a:
+            if 'state' in a:
                 action = Gio.SimpleAction.new_stateful(
-                    a["name"], None, GLib.Variant.new_boolean(False))
-                action.connect("change-state", a["func"])
+                    a['name'], None, GLib.Variant.new_boolean(False))
+                action.connect('change-state', a['func'])
             else:
-                action = Gio.SimpleAction.new(a["name"], None)
-                action.connect("activate", a["func"])
+                action = Gio.SimpleAction.new(a['name'], None)
+                action.connect('activate', a['func'])
 
             self.add_action(action)
 
-            if "accels" in a:
-                self.set_accels_for_action("app." + a["name"], a["accels"])
+            if 'accels' in a:
+                self.set_accels_for_action('app.' + a['name'], a['accels'])
 
     def on_open(self, action, param):
         self.window.open_fonts()

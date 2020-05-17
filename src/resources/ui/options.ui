@@ -23,11 +23,9 @@
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
                     <property name="spacing">20</property>
-                    <property name="margin_top">20</property>
-                    <property name="margin_bottom">20</property>
+                    <property name="margin">20</property>
                     <child>
                       <object class="HdyPreferencesGroup">
-                        <property name="description" translatable="yes"></property>
                         <property name="title" translatable="yes">Fonts</property>
                         <property name="visible">True</property>
                         <child>
@@ -38,10 +36,9 @@
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="orientation">horizontal</property>
                                 <property name="valign">center</property>
                                 <child>
-                                  <object class="GtkCheckButton" id="woff2">
+                                  <object class="GtkCheckButton" id="format_woff2">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="active">True</property>
@@ -50,7 +47,7 @@
                                   </object>
                                 </child>
                                 <child>
-                                  <object class="GtkCheckButton"  id="woff">
+                                  <object class="GtkCheckButton"  id="format_woff">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="label">WOFF</property>
@@ -61,85 +58,48 @@
                           </object>
                         </child>
                         <child>
-                          <object class="HdyActionRow">
+                          <object class="HdyComboRow" id="subsetting">
                             <property name="title" translatable="yes">Subsetting</property>
                             <property name="visible">True</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkRevealer">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="reveal_child">True</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
+                                <property name="orientation">horizontal</property>
                                 <property name="valign">center</property>
-                                <child>
-                                  <object class="GtkRadioButton" id="subsetting_1">
-                                    <property name="label">Western languages</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="draw_indicator">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="orientation">vertical</property>
-                                        <property name="margin_top">20</property>
-                                        <property name="margin_bottom">20</property>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label">Basic</property>
-                                            <style>
-                                              <class name="fonts-list"/>
-                                            </style>
-                                          </object>
-                                          <packing>
-                                            <property name="expand">False</property>
-                                            <property name="fill">True</property>
-                                            <property name="position">0</property>
-                                          </packing>
-                                        </child>
-                                      </object>
-                                  </child>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkRadioButton" id="subsetting_2">
-                                    <property name="label">Disabled</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="draw_indicator">False</property>
-                                    <property name="group">subsetting_1</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkRadioButton" id="subsetting_3">
-                                    <property name="label">Custom</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="draw_indicator">False</property>
-                                    <property name="group">subsetting_1</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
                                 <style>
-                                  <class name="linked"/>
+                                  <class name="inline-toolbar"/>
                                 </style>
+                                <child>
+                                  <object class="GtkCheckButton">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="active">True</property>
+                                    <property name="label">WOFF2</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkCheckButton" >
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="label">WOFF</property>
+                                  </object>
+                                </child>
                               </object>
                             </child>
                           </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="pack_type">end</property>
+                          </packing>
                         </child>
                       </object>
                     </child>
@@ -149,71 +109,12 @@
                         <property name="title" translatable="yes">CSS</property>
                         <property name="visible">True</property>
                         <child>
-                          <object class="HdyActionRow">
-                            <property name="title" translatable="yes">Where to generate CSS</property>
+                          <object class="HdyComboRow" id="css_out">
+                            <property name="title" translatable="yes">CSS out</property>
                             <property name="visible">True</property>
-                            <child>
-                              <object class="GtkButtonBox">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="layout_style">start</property>
-                                <child>
-                                  <object class="GtkRadioButton" id="css_out_1">
-                                    <property name="label">File per font family</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="draw_indicator">False</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkRadioButton" id="css_out_2">
-                                    <property name="label">Single file</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="draw_indicator">False</property>
-                                    <property name="group">css_out_1</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkRadioButton" id="css_out_3">
-                                    <property name="label">In App</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="draw_indicator">False</property>
-                                    <property name="group">css_out_1</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                  </packing>
-                                </child>
-                                <style>
-                                  <class name="linked"/>
-                                </style>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
                           </object>
                         </child>
                       </object>
-                    </child>
-                    <child>
-                      <placeholder/>
                     </child>
                   </object>
                 </child>

@@ -22,12 +22,12 @@ import os
 import urllib
 
 from gettext import gettext as _
-from gi.repository import GLib, Gdk, Gtk, Handy
-from threading import Thread
+from gi.repository import GLib, Gtk, Handy
 
 from .options import Options
 from .font_widget import WidgetFont
 from .generator import Generator
+from .log import Log
 
 LOGGER = logging.getLogger('storiestyper')
 
@@ -38,6 +38,8 @@ class Window(Handy.ApplicationWindow):
 
     appstack = Gtk.Template.Child()
     progressbar = Gtk.Template.Child()
+    progressbar_label = Gtk.Template.Child()
+    log_column = Gtk.Template.Child()
 
     btn_generate = Gtk.Template.Child()
     btn_add_fonts = Gtk.Template.Child()
@@ -50,6 +52,9 @@ class Window(Handy.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.processing = False
+        self.options = Options()
+        self.log = Log(self.progressbar_label)
+
         self.setup_widgets()
 
         self.fonts_list.connect('add', self._on_fonts_list_changed)
@@ -58,9 +63,20 @@ class Window(Handy.ApplicationWindow):
         self.btn_generate.connect('clicked', self.on_generate)
 
     def setup_widgets(self):
-        options = WfkgOptions()
+        self.stack.add_titled(self.options, 'options', _('Output Options'))
 
-        self.stack.add_titled(options, 'options', _('Output Options'))
+        self.log_column.add(self.log)
+        self.log.show_all()
+
+    def toggle_generation(self, toggle):
+        self.processing = toggle
+
+        if not toggle:
+            self.appstack.set_visible_child_name('finished')
+        else:
+            self.appstack.set_visible_child_name('progress')
+
+
 
     def open_fonts(self, _widget=None):
         otf_filter = Gtk.FileFilter()
@@ -117,7 +133,10 @@ class Window(Handy.ApplicationWindow):
 
         if response == Gtk.ResponseType.ACCEPT:
             path = filechooser.get_filename()
-            generator = Generator(self, path, self.fonts_list)
+            generator = Generator(self, path, self.fonts_list,
+                                  self.options.get_formats(),
+                                  self.options.get_subsetting(),
+                                  self.options.get_css_out())
             generator.run()
             filechooser.destroy()
 

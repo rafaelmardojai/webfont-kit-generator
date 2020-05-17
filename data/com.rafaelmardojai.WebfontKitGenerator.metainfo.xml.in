@@ -9,4 +9,6 @@
   <launchable type="desktop-id">com.rafaelmardojai.WebfontKitGenerator.desktop</launchable>
   <developer_name>Rafael Mardojai CM</developer_name>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
+
+  <content_rating type="oars-1.1" />
 </component>

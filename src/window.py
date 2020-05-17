@@ -25,7 +25,7 @@ from gettext import gettext as _
 from gi.repository import GLib, Gdk, Gtk, Handy
 from threading import Thread
 
-from .options import WfkgOptions
+from .options import Options
 from .font_widget import WidgetFont
 from .generator import Generator
 
@@ -33,8 +33,8 @@ LOGGER = logging.getLogger('storiestyper')
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/ui/window.ui')
-class WebfontkitgeneratorWindow(Handy.ApplicationWindow):
-    __gtype_name__ = 'WebfontkitgeneratorWindow'
+class Window(Handy.ApplicationWindow):
+    __gtype_name__ = 'Window'
 
     appstack = Gtk.Template.Child()
     progressbar = Gtk.Template.Child()

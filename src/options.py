@@ -19,8 +19,8 @@ from gi.repository import GLib, Gdk, Gtk, Handy
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/ui/options.ui')
-class WfkgOptions(Gtk.Box):
-    __gtype_name__ = 'WfkgOptions'
+class Options(Gtk.Box):
+    __gtype_name__ = 'Options'
 
     #appstack = Gtk.Template.Child()
 

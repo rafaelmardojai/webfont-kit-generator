@@ -25,7 +25,7 @@ gi.require_version('Handy', '1')
 from gi.repository import GObject, Gdk, Gtk, Gio, Handy
 
 from .actions import Actions
-from .window import WebfontkitgeneratorWindow
+from .window import Window
 
 
 class Application(Gtk.Application, Actions):
@@ -51,7 +51,7 @@ class Application(Gtk.Application, Actions):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = WebfontkitgeneratorWindow(application=self)
+            self.window = Window(application=self)
         self.window.present()
 
 

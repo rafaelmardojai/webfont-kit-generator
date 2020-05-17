@@ -113,7 +113,7 @@ class Generator(object):
                     os.makedirs(out_folder)
 
                 font.save(outpath)
-                prefix = slug + '/' if self.css_out >= 1 else ''
+                prefix = slug + '/' if self.css_out == 1 else ''
                 css['src'].append('url(%s%s) format("%s")' % (prefix, outfile, format))
 
                 self.progress += 1
@@ -176,12 +176,6 @@ class Generator(object):
                 print(css_sheet, file=file)
 
             return css_sheets
-        elif self.css_out == 2:
-            css_sheet = ''
-            for family, css in families_css.items():
-                css_sheet += css
-
-            return css_sheet
 
         self._append_log(_('Generated %s.' % cssfile))
     def _dict_to_styles(self, style_dict):

@@ -54,7 +54,6 @@ class Options(Gtk.Box):
         css_out_model = Gio.ListStore.new(Handy.ValueObject)
         css_out_model.insert(0, Handy.ValueObject.new(_('File per font family')))
         css_out_model.insert(1, Handy.ValueObject.new(_('Single file')))
-        css_out_model.insert(2, Handy.ValueObject.new(_('In App')))
         self.css_out.bind_name_model(css_out_model, Handy.ValueObject.dup_string)
 
     def load_saved(self):

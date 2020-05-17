@@ -47,8 +47,8 @@ class Options(Gtk.Box):
 
         subsetting_model = Gio.ListStore.new(Handy.ValueObject)
         subsetting_model.insert(0, Handy.ValueObject.new(_('Western languages')))
-        subsetting_model.insert(1, Handy.ValueObject.new(_('Disabled')))
-        subsetting_model.insert(2, Handy.ValueObject.new(_('Custom')))
+        subsetting_model.insert(1, Handy.ValueObject.new(_('Custom')))
+        subsetting_model.insert(2, Handy.ValueObject.new(_('Disabled')))
         self.subsetting.bind_name_model(subsetting_model, Handy.ValueObject.dup_string)
 
         css_out_model = Gio.ListStore.new(Handy.ValueObject)

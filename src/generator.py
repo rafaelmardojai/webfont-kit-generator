@@ -38,7 +38,7 @@ class Generator(object):
 
         if ranges == 0:
             self.ranges = ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext']
-        elif ranges == 2:
+        elif ranges == 1:
             self.ranges = []
 
         total_ranges = 1 if not len(self.ranges) > 0 else len(self.ranges)

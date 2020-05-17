@@ -178,6 +178,7 @@ class Generator(object):
             return css_sheets
 
         self._append_log(_('Generated %s.' % cssfile))
+
     def _dict_to_styles(self, style_dict):
         properties = []
 
@@ -203,7 +204,6 @@ class Generator(object):
             'devanagari':   'U+0900-097F,U+1CD0-1CF6,U+1CF8-1CF9,U+200B-200D,' +
                             'U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FB'
         }
-
         return ranges[range]
 
     def _update_progressbar(self, reset=False):

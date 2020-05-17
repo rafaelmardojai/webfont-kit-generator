@@ -49,6 +49,7 @@ class WebfontkitgeneratorWindow(Handy.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        self.processing = False
         self.setup_widgets()
 
         self.fonts_list.connect('add', self._on_fonts_list_changed)

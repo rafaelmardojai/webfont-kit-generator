@@ -61,10 +61,8 @@ class Actions(object):
         self.window.open_fonts()
 
     def on_back(self, action, param):
-        name = self.window.appstack.get_visible_child_name()
-        if name is not 'generator':
+        if not self.window.processing:
             self.window.appstack.set_visible_child_name('main')
-
 
     def on_about(self, action, param):
         pass

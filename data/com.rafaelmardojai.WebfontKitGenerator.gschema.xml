@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="webfontkitgenerator">
-	<schema id="com.rafaelmardojai.WebfontKitGenerator" path="/com/rafaelmardojai/WebfontKitGenerator/">
-	</schema>
+  <schema id="com.rafaelmardojai.WebfontKitGenerator" path="/com/rafaelmardojai/WebfontKitGenerator/">
+    <key type="b" name="woff2">
+        <default>true</default>
+    </key>
+    <key type="b" name="woff">
+        <default>false</default>
+    </key>
+
+    <key type="i" name="subsetting">
+        <default>0</default>
+    </key>
+
+    <key type="i" name="cssfile">
+        <default>0</default>
+    </key>
+  </schema>
 </schemalist>

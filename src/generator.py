@@ -15,104 +15,184 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 import os
-from threading import Thread
+import re
 
-from gi.repository import GLib, Gtk
+from gettext import gettext as _
+from threading import Thread
+from gi.repository import GLib
 from fontTools.ttLib import TTFont
 from fontTools.subset import parse_unicodes, Subsetter
 
+
 class Generator(object):
 
-    def __init__(self, window, path, list, formats=['woff2', 'woff'], ranges=['latin', 'latin-ext', 'devanagari', 'vietnamese']):
+    def __init__(self, window, path, list, formats, ranges, css_out):
         self.window = window
         self.path = path
         self.list = list
         self.formats = formats
-        self.ranges = ranges
+        self.ranges = []
+        self.css_out = css_out
         self.css = {}
-        self.css_styles = {
-            'font-family': '',
-            'font-style': '',
-            'font-weight': '',
-            'font-display': 'swap',
-            'src': ''
-        }
 
-        self.total = (len(list) * len(formats)) * len(ranges)
+        if ranges == 0:
+            self.ranges = ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext']
+        elif ranges == 2:
+            self.ranges = []
+
+        total_ranges = 1 if not len(self.ranges) > 0 else len(self.ranges)
+        self.total = (len(list) * len(formats)) * total_ranges
         self.progress = 0
-
-        self.replace_all = False
-        #css_space = self.css[font.data['family-slug']]
 
     def run(self):
         self._update_progressbar(reset=True)
+        self.window.log.reset()
 
         thread = Thread(target=self.generate)
         thread.daemon = True
         thread.start()
 
     def generate(self):
-        self.window.appstack.set_visible_child_name('generator')
+        self.window.toggle_generation(True)
 
         for font in self.list:
-            slug = ''.join(font.data['family'].split()).lower()
-            self._generate_font(font.filename, font.data, slug)
+            self._generate_font(font.filename, font.data)
 
-        self.window.appstack.set_visible_child_name('finish')
+        css = self._generate_css()
+        self._append_log(_('Generation finished!'), bold=True)
 
-    def _generate_font(self, filename, data, slug):
+        self.window.toggle_generation(False)
+
+    def _generate_font(self, filename, data):
+        slug = data['family-slug']
+        name = data['name-slug']
         out_folder = os.path.join(self.path, slug)
 
-        if not os.path.exists(out_folder):
-            os.makedirs(out_folder)
+        self._append_log(_('Generating fonts for %s:' % data['name']), bold=True)
 
-        if self.ranges:
+        if len(self.ranges) >= 1:
             for range in self.ranges:
                 font = TTFont(filename)
-                name = data['name'] + '-' + range
                 subs = Subsetter()
-                subs.populate(unicodes=parse_unicodes(self.__get_range(range)))
-                subs.subset(font)
 
-                self._write_font(font, out_folder, name, range=range)
+                range_name = '-'.join([name, range])
+                unicode_range =  self.__get_range(range)
+
+                subs.populate(unicodes=parse_unicodes(unicode_range))
+                subs.subset(font)
+                self._write_font(font, data, out_folder, range_name, range=range)
                 font.close()
         else:
             font = TTFont(filename)
-            name = data['name']
-            self._write_font(font, out_folder, name)
+            self._write_font(font, data, out_folder, name)
             font.close()
 
-    def _write_font(self, font, out_folder, name, range=None):
+    def _write_font(self, font, data, out_folder, name, range=None):
         cmap = font.getBestCmap()
 
         if cmap:
+            slug  = data['family-slug']
+            self.css.setdefault(slug,{})
+
+            css = {
+                'font-family':  data['family'],
+                'font-style':   data['style'],
+                'font-weight':  data['weight'],
+                'font-display': 'swap',
+                'src':          list(data['local'])
+            }
+
             for format in self.formats:
+                count = len(font.getGlyphOrder()) - 1
                 font.flavor = format
-                outfile = os.path.join(out_folder, name + '.' + format)
-                font.save(outfile)
+                outfile = name + '.' + format
+                outpath = os.path.join(out_folder, outfile)
+
+                if not os.path.exists(out_folder):
+                    os.makedirs(out_folder)
+
+                font.save(outpath)
+                prefix = slug + '/' if self.css_out >= 1 else ''
+                css['src'].append('url(%s%s) format("%s")' % (prefix, outfile, format))
 
                 self.progress += 1
+                self._append_log(_('Generated %s with %s glyphs.' % (outfile, count)))
+
+            if range:
+                css['unicode-range'] = self.__get_range(range)
+            self.css[slug][name] = css
+
         else:
             self.progress += 1 * len(self.formats)
             text = range if range else name
-            print('No glyphs where found for ' + text)
+            self._append_log(_('No glyphs where found for %s. Skipping.' % text), italic=True)
 
         # Update progressbar
         GLib.idle_add(self._update_progressbar)
 
-    def _generate_css(self, styles, ranges):
-        _CSS_TEMPLATE = '''
-            @font-face {
+    def _generate_css(self):
+        ff_template = '''
+            /* {comment} */
+            @font-face {{
               {styles}
-            }
+            }}
             '''.strip()
+        ff_template = re.sub(r'^\s+|\s+$', '', ff_template, 0, re.MULTILINE)
 
+        css_sheets = []
+        families_css = {}
 
-        return _CSS_TEMPLATE.format(**{
-            'styles': _dict_to_styles(styles),
-        })
+        self._append_log(_('Generating CSS:'), bold=True)
+
+        for family, subset in self.css.items():
+            family_css = ''
+
+            for font, properties in subset.items():
+                ff = ff_template.format(**{
+                    'comment': font,
+                    'styles': self._dict_to_styles(properties),
+                })
+
+                family_css += ff
+
+            families_css[family] = family_css
+
+        if self.css_out == 0:
+            for family, css in families_css.items():
+                cssfile = os.path.join(self.path, family, family + '.css')
+                css_sheets.append(cssfile)
+                with open(cssfile, 'w') as file:
+                    print(css, file=file)
+            return css_sheets
+        elif self.css_out == 1:
+            css_sheet = ''
+            for family, css in families_css.items():
+                css_sheet += css
+
+            cssfile = os.path.join(self.path, 'stylesheet.css')
+            css_sheets.append(cssfile)
+            with open(cssfile, 'w') as file:
+                print(css_sheet, file=file)
+
+            return css_sheets
+        elif self.css_out == 2:
+            css_sheet = ''
+            for family, css in families_css.items():
+                css_sheet += css
+
+            return css_sheet
+
+        self._append_log(_('Generated %s.' % cssfile))
+    def _dict_to_styles(self, style_dict):
+        properties = []
+
+        for i, (k, v) in enumerate(style_dict.items()):
+            v = ', '.join(v) if isinstance(v, list) else v
+            properties.append('\t{}: {};'.format(k, v))
+
+        return '\n'.join(properties)
+        #return '; '.join(['{}: {}'.format(k, v) for k, v in style_dict.items()])
 
     def __get_range(self, range):
         ranges = {
@@ -132,10 +212,10 @@ class Generator(object):
 
         return ranges[range]
 
-    def _dict_to_styles(self, style_dict):
-        return '; '.join(['{}: {}'.format(k, v) for k, v in style_dict.items()])
-
     def _update_progressbar(self, reset=False):
         progress = 0 if reset else self.progress / self.total
         self.window.progressbar.set_fraction(progress)
+
+    def _append_log(self, text, bold=False, italic=False):
+        GLib.idle_add(self.window.log.append, text, bold, italic)
 

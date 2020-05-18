@@ -21,8 +21,9 @@ import gi
 gi.require_version('Gdk', '3.0')
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
+gi.require_version('GtkSource', '4')
 
-from gi.repository import GObject, Gdk, Gtk, Gio, Handy
+from gi.repository import GObject, Gdk, Gtk, Gio, Handy, GtkSource
 
 from .actions import Actions
 from .window import Window
@@ -36,6 +37,7 @@ class Application(Gtk.Application, Actions):
         self.window = None
 
         GObject.type_register(Handy.Column)
+        GObject.type_register(GtkSource.View)
         Actions.__init__(self)
 
     def do_startup(self):

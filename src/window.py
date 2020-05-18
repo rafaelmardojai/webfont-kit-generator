@@ -28,6 +28,7 @@ from .options import Options
 from .font_widget import WidgetFont
 from .generator import Generator
 from .log import Log
+from .sourceview import SourceView
 
 LOGGER = logging.getLogger('storiestyper')
 
@@ -37,8 +38,12 @@ class Window(Handy.ApplicationWindow):
     __gtype_name__ = 'Window'
 
     appstack = Gtk.Template.Child()
+
     progressbar = Gtk.Template.Child()
     progressbar_label = Gtk.Template.Child()
+
+    import_html_frame = Gtk.Template.Child()
+    import_css_frame = Gtk.Template.Child()
     log_column = Gtk.Template.Child()
 
     btn_generate = Gtk.Template.Child()
@@ -68,6 +73,14 @@ class Window(Handy.ApplicationWindow):
         self.log_column.add(self.log)
         self.log.show_all()
 
+        self.end_html = SourceView()
+        self.end_html.set_language('html')
+        self.import_html_frame.add(self.end_html)
+
+        self.end_css = SourceView()
+        self.end_css.set_language('css')
+        self.import_css_frame.add(self.end_css)
+
     def toggle_generation(self, toggle):
         self.processing = toggle
 
@@ -75,8 +88,6 @@ class Window(Handy.ApplicationWindow):
             self.appstack.set_visible_child_name('finished')
         else:
             self.appstack.set_visible_child_name('progress')
-
-
 
     def open_fonts(self, _widget=None):
         otf_filter = Gtk.FileFilter()

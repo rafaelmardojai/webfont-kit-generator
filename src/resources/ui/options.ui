@@ -58,48 +58,152 @@
                           </object>
                         </child>
                         <child>
-                          <object class="HdyComboRow" id="subsetting">
+                          <object class="HdyExpanderRow" id="subsetting">
                             <property name="title" translatable="yes">Subsetting</property>
                             <property name="visible">True</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkRevealer">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="reveal_child">True</property>
+                            <property name="show-enable-switch">True</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="orientation">horizontal</property>
-                                <property name="valign">center</property>
-                                <style>
-                                  <class name="inline-toolbar"/>
-                                </style>
+                                <property name="margin">8</property>
+                                <property name="halign">end</property>
                                 <child>
-                                  <object class="GtkCheckButton">
+                                  <object class="GtkGrid">
                                     <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="active">True</property>
-                                    <property name="label">WOFF2</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="column_homogeneous">True</property>
+                                    <child>
+                                      <object class="GtkCheckButton" id="latin">
+                                        <property name="label" translatable="yes">latin</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkSeparator">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="margin_top">4</property>
+                                        <property name="margin_bottom">4</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">2</property>
+                                        <property name="width">3</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="latin_ext">
+                                        <property name="label" translatable="yes">latin-ext</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="devanagari">
+                                        <property name="label" translatable="yes">devanagari</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">2</property>
+                                        <property name="top_attach">3</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="vietnamese">
+                                        <property name="label" translatable="yes">vietnamese</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">1</property>
+                                        <property name="top_attach">3</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="cyrillic">
+                                        <property name="label" translatable="yes">cyrillic</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">1</property>
+                                        <property name="top_attach">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="cyrillic_ext">
+                                        <property name="label" translatable="yes">cyrillic-ext</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">1</property>
+                                        <property name="top_attach">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="greek">
+                                        <property name="label" translatable="yes">greek</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">2</property>
+                                        <property name="top_attach">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCheckButton" id="greek_ext">
+                                        <property name="label" translatable="yes">greek-ext</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="draw_indicator">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">2</property>
+                                        <property name="top_attach">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
                                   </object>
-                                </child>
-                                <child>
-                                  <object class="GtkCheckButton" >
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="label">WOFF</property>
-                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
                                 </child>
                               </object>
                             </child>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="pack_type">end</property>
-                          </packing>
                         </child>
                       </object>
                     </child>

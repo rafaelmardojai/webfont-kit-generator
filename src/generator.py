@@ -32,16 +32,11 @@ class Generator(object):
         self.path = path
         self.list = list
         self.formats = formats
-        self.ranges = []
+        self.ranges = ranges
         self.css_out = css_out
         self.css = {}
 
-        if ranges == 0:
-            self.ranges = ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext', 'greek', 'greek-ext']
-        elif ranges == 1:
-            self.ranges = []
-
-        total_ranges = 1 if not len(self.ranges) > 0 else len(self.ranges)
+        total_ranges = len(ranges) if ranges else 1
         self.total = (len(list) * len(formats)) * total_ranges
         self.progress = 0
 
@@ -71,7 +66,7 @@ class Generator(object):
 
         self._append_log(_('Generating fonts for %s:' % data['name']), bold=True)
 
-        if len(self.ranges) >= 1:
+        if self.ranges:
             for range in self.ranges:
                 font = TTFont(filename)
                 subs = Subsetter()

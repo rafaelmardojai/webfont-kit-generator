@@ -8,8 +8,32 @@
         <default>false</default>
     </key>
 
-    <key type="i" name="subsetting">
-        <default>0</default>
+    <key type="b" name="subsetting">
+        <default>false</default>
+    </key>
+    <key type="b" name="latin">
+        <default>true</default>
+    </key>
+    <key type="b" name="latin-ext">
+        <default>true</default>
+    </key>
+    <key type="b" name="cyrillic">
+        <default>true</default>
+    </key>
+    <key type="b" name="cyrillic-ext">
+        <default>true</default>
+    </key>
+    <key type="b" name="greek">
+        <default>true</default>
+    </key>
+    <key type="b" name="greek-ext">
+        <default>true</default>
+    </key>
+    <key type="b" name="vietnamese">
+        <default>false</default>
+    </key>
+    <key type="b" name="devanagari">
+        <default>false</default>
     </key>
 
     <key type="i" name="cssfile">

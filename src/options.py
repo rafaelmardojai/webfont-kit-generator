@@ -23,14 +23,20 @@ from gi.repository import GLib, GObject, Gio, Gtk, Handy
 class Options(Gtk.Box):
     __gtype_name__ = 'Options'
 
-    #appstack = Gtk.Template.Child()
-
     # Fonts format check buttons
     format_woff2 = Gtk.Template.Child()
-    format_woff = Gtk.Template.Child()
+    format_woff  = Gtk.Template.Child()
 
     # Subsetting
-    subsetting = Gtk.Template.Child()
+    subsetting   = Gtk.Template.Child()
+    latin        = Gtk.Template.Child()
+    latin_ext    = Gtk.Template.Child()
+    cyrillic     = Gtk.Template.Child()
+    cyrillic_ext = Gtk.Template.Child()
+    greek        = Gtk.Template.Child()
+    greek_ext    = Gtk.Template.Child()
+    vietnamese   = Gtk.Template.Child()
+    devanagari   = Gtk.Template.Child()
 
     # CSS
     css_out = Gtk.Template.Child()
@@ -40,43 +46,43 @@ class Options(Gtk.Box):
 
         self.settings = Gio.Settings.new('com.rafaelmardojai.WebfontKitGenerator')
 
-        self.setup_combos()
+        self.setup()
         self.load_saved()
 
-    def setup_combos(self):
+    def setup(self):
 
-        subsetting_model = Gio.ListStore.new(Handy.ValueObject)
-        subsetting_model.insert(0, Handy.ValueObject.new(_('Western languages')))
-        subsetting_model.insert(1, Handy.ValueObject.new(_('Custom')))
-        subsetting_model.insert(2, Handy.ValueObject.new(_('Disabled')))
-        self.subsetting.bind_name_model(subsetting_model, Handy.ValueObject.dup_string)
-
+        #
         css_out_model = Gio.ListStore.new(Handy.ValueObject)
         css_out_model.insert(0, Handy.ValueObject.new(_('File per font family')))
         css_out_model.insert(1, Handy.ValueObject.new(_('Single file')))
         self.css_out.bind_name_model(css_out_model, Handy.ValueObject.dup_string)
 
     def load_saved(self):
-        toogle_buttons = [
+        self.subset_btns = [
+            [self.latin,        'latin'],
+            [self.latin_ext,    'latin-ext'],
+            [self.cyrillic,     'cyrillic'],
+            [self.cyrillic_ext, 'cyrillic-ext'],
+            [self.greek,        'greek'],
+            [self.greek_ext,    'greek-ext'],
+            [self.vietnamese,   'vietnamese'],
+            [self.devanagari,   'devanagari']
+        ]
+        toogle_btns = [
             [self.format_woff2, 'woff2'],
-            [self.format_woff, 'woff']
+            [self.format_woff,  'woff']
         ]
+        toogle_btns.extend(self.subset_btns)
 
-        combos = [
-            [self.subsetting, 'subsetting'],
-            [self.css_out, 'cssfile']
-        ]
-
-        for (button, name) in toogle_buttons:
-            button.set_active(self.settings.get_boolean(name))
+        for (button, name) in toogle_btns:
             self.settings.bind(name, button, 'active',
                                Gio.SettingsBindFlags.DEFAULT)
 
-        for (combo, name) in combos:
-            combo.set_selected_index(self.settings.get_int(name))
-            self.settings.bind(name, combo, 'selected-index',
+        self.settings.bind('cssfile', self.css_out, 'selected-index',
                                Gio.SettingsBindFlags.DEFAULT)
 
+        self.settings.bind('subsetting', self.subsetting, 'enable-expansion',
+                           Gio.SettingsBindFlags.DEFAULT)
 
     def get_formats(self):
         formats = []
@@ -92,7 +98,19 @@ class Options(Gtk.Box):
         return formats
 
     def get_subsetting(self):
-        return self.subsetting.get_selected_index()
+        list = []
+
+        if not self.subsetting.get_enable_expansion():
+            return None
+
+        for (button, name) in self.subset_btns:
+            if button.get_active():
+                list.append(name)
+
+        if len(list) == 0:
+            return None
+            print('no hay pe ctm 2')
+        return list
 
     def get_css_out(self):
         return self.css_out.get_selected_index()

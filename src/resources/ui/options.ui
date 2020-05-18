@@ -76,7 +76,7 @@
                                     <property name="column_homogeneous">True</property>
                                     <child>
                                       <object class="GtkCheckButton" id="latin">
-                                        <property name="label" translatable="yes">latin</property>
+                                        <property name="label">latin</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -102,7 +102,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="latin_ext">
-                                        <property name="label" translatable="yes">latin-ext</property>
+                                        <property name="label">latin-ext</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -115,7 +115,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="devanagari">
-                                        <property name="label" translatable="yes">devanagari</property>
+                                        <property name="label">devanagari</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -128,7 +128,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="vietnamese">
-                                        <property name="label" translatable="yes">vietnamese</property>
+                                        <property name="label">vietnamese</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -141,7 +141,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="cyrillic">
-                                        <property name="label" translatable="yes">cyrillic</property>
+                                        <property name="label">cyrillic</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -154,7 +154,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="cyrillic_ext">
-                                        <property name="label" translatable="yes">cyrillic-ext</property>
+                                        <property name="label">cyrillic-ext</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -167,7 +167,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="greek">
-                                        <property name="label" translatable="yes">greek</property>
+                                        <property name="label">greek</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -180,7 +180,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="greek_ext">
-                                        <property name="label" translatable="yes">greek-ext</property>
+                                        <property name="label">greek-ext</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">False</property>
@@ -190,9 +190,6 @@
                                         <property name="left_attach">2</property>
                                         <property name="top_attach">1</property>
                                       </packing>
-                                    </child>
-                                    <child>
-                                      <placeholder/>
                                     </child>
                                   </object>
                                   <packing>

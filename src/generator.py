@@ -54,6 +54,7 @@ class Generator(object):
             self._generate_font(font.filename, font.data)
 
         css = self._generate_css()
+        self._end_code(css)
         self._append_log(_('Generation finished!'), bold=True)
 
         self.window.toggle_generation(False)
@@ -169,6 +170,17 @@ class Generator(object):
 
     def _append_log(self, text, bold=False, italic=False):
         GLib.idle_add(self.window.log.append, text, bold, italic)
+
+    def _end_code(self, sheets):
+        html = []
+        css = []
+
+        for sheet in sheets:
+            html.append('<link href="%s" rel="stylesheet">' % sheet)
+            css.append("@import url('%s');" % sheet)
+
+        self.window.end_html.set_text('\n'.join(html))
+        self.window.end_css.set_text('\n'.join(css))
 
 
     '''

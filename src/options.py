@@ -112,8 +112,6 @@ class Options(Gtk.Box):
             print('no hay pe ctm 2')
         return list
 
-    def get_css_out(self):
+    def __get_css_out(self):
         return self.css_out.get_selected_index()
-
-    def _get_custom_subsetting(self):
-        pass
+        

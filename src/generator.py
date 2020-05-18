@@ -27,13 +27,12 @@ from fontTools.subset import parse_unicodes, Subsetter
 
 class Generator(object):
 
-    def __init__(self, window, path, list, formats, ranges, css_out):
+    def __init__(self, window, path, list, formats, ranges):
         self.window = window
         self.path = path
         self.list = list
         self.formats = formats
         self.ranges = ranges
-        self.css_out = css_out
         self.css = {}
 
         total_ranges = len(ranges) if ranges else 1
@@ -60,10 +59,7 @@ class Generator(object):
         self.window.toggle_generation(False)
 
     def _generate_font(self, filename, data):
-        slug = data['family-slug']
         name = data['name-slug']
-        out_folder = os.path.join(self.path, slug)
-
         self._append_log(_('Generating fonts for %s:' % data['name']), bold=True)
 
         if self.ranges:
@@ -71,23 +67,24 @@ class Generator(object):
                 font = TTFont(filename)
                 subs = Subsetter()
 
-                range_name = '-'.join([name, range])
                 unicode_range =  self.__get_range(range)
 
                 subs.populate(unicodes=parse_unicodes(unicode_range))
                 subs.subset(font)
-                self._write_font(font, data, out_folder, range_name, range=range)
+                self._write_font(font, data, range=range)
                 font.close()
         else:
             font = TTFont(filename)
-            self._write_font(font, data, out_folder, name)
+            self._write_font(font, data)
             font.close()
 
-    def _write_font(self, font, data, out_folder, name, range=None):
+    def _write_font(self, font, data, range=None):
         cmap = font.getBestCmap()
+        name = data['name-slug']
+        name = '-'.join([name, range]) if range else name
 
         if cmap:
-            slug  = data['family-slug']
+            slug = data['family-slug']
             self.css.setdefault(slug,{})
 
             css = {
@@ -101,18 +98,18 @@ class Generator(object):
             for format in self.formats:
                 count = len(font.getGlyphOrder()) - 1
                 font.flavor = format
-                outfile = name + '.' + format
-                outpath = os.path.join(out_folder, outfile)
 
-                if not os.path.exists(out_folder):
-                    os.makedirs(out_folder)
+                filename = name + '.' + format
+                filenameout = os.path.join(slug, filename)
+                outfolder = os.path.join(self.path, slug)
+                if not os.path.exists(outfolder):
+                    os.makedirs(outfolder)
 
-                font.save(outpath)
-                prefix = slug + '/' if self.css_out == 1 else ''
-                css['src'].append('url(%s%s) format("%s")' % (prefix, outfile, format))
+                font.save(os.path.join(self.path, filenameout))
+                css['src'].append('url(%s) format("%s")' % (filename, format))
 
                 self.progress += 1
-                self._append_log(_('Generated %s with %s glyphs.' % (outfile, count)))
+                self._append_log(_('Generated <i>%s</i> with <i>%s</i> glyphs.' % (filenameout, count)))
 
             if range:
                 css['unicode-range'] = self.__get_range(range)
@@ -142,37 +139,24 @@ class Generator(object):
 
         for family, subset in self.css.items():
             family_css = ''
-
             for font, properties in subset.items():
                 ff = ff_template.format(**{
                     'comment': font,
                     'styles': self.__dict_to_styles(properties),
                 })
-
-                family_css += ff
-
+                family_css += ff + '\n'
             families_css[family] = family_css
 
-        if self.css_out == 0:
-            for family, css in families_css.items():
-                cssfile = os.path.join(self.path, family, family + '.css')
-                css_sheets.append(cssfile)
-                with open(cssfile, 'w') as file:
-                    print(css, file=file)
-            return css_sheets
-        elif self.css_out == 1:
-            css_sheet = ''
-            for family, css in families_css.items():
-                css_sheet += css
+        for family, css in families_css.items():
+            filename = os.path.join(family, family + '.css')
+            css_sheets.append(filename)
 
-            cssfile = os.path.join(self.path, 'stylesheet.css')
-            css_sheets.append(cssfile)
-            with open(cssfile, 'w') as file:
-                print(css_sheet, file=file)
+            with open(os.path.join(self.path, filename), 'w') as f:
+                print(css, file=f)
 
-            return css_sheets
+            self._append_log(_('Generated <i>%s</i>.' % filename))
 
-        self._append_log(_('Generated %s.' % cssfile))
+        return css_sheets
 
 
     '''

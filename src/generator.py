@@ -146,7 +146,7 @@ class Generator(object):
             for font, properties in subset.items():
                 ff = ff_template.format(**{
                     'comment': font,
-                    'styles': self._dict_to_styles(properties),
+                    'styles': self.__dict_to_styles(properties),
                 })
 
                 family_css += ff
@@ -174,7 +174,24 @@ class Generator(object):
 
         self._append_log(_('Generated %s.' % cssfile))
 
-    def _dict_to_styles(self, style_dict):
+
+    '''
+
+    '''
+
+    def _update_progressbar(self, reset=False):
+        progress = 0 if reset else self.progress / self.total
+        self.window.progressbar.set_fraction(progress)
+
+    def _append_log(self, text, bold=False, italic=False):
+        GLib.idle_add(self.window.log.append, text, bold, italic)
+
+
+    '''
+    PRIVATE HELP FUNCTIONS
+    '''
+
+    def __dict_to_styles(self, style_dict):
         properties = []
 
         for i, (k, v) in enumerate(style_dict.items()):
@@ -200,11 +217,4 @@ class Generator(object):
                             'U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FB'
         }
         return ranges[range]
-
-    def _update_progressbar(self, reset=False):
-        progress = 0 if reset else self.progress / self.total
-        self.window.progressbar.set_fraction(progress)
-
-    def _append_log(self, text, bold=False, italic=False):
-        GLib.idle_add(self.window.log.append, text, bold, italic)
 

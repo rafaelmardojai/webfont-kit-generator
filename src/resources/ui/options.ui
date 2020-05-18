@@ -212,7 +212,7 @@
                         <child>
                           <object class="HdyComboRow" id="css_out">
                             <property name="title" translatable="yes">CSS out</property>
-                            <property name="visible">True</property>
+                            <property name="visible">False</property>
                           </object>
                         </child>
                       </object>

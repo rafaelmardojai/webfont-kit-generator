@@ -46,7 +46,4 @@ class SourceView(GtkSource.View):
     def set_text(self, text):
         self.text_buffer.set_text(text)
         self.show_all()
-
-    def reset(self):
-        self.text_buffer.set_text('')
         

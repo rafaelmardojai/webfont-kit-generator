@@ -9,14 +9,12 @@
 
 <p align="center"><strong>Create @font-face kits easily</strong></p>
 
-<center>
-
-![Screenshot](brand/screenshots/1.png)
-![Screenshot](brand/screenshots/2.png)
-![Screenshot](brand/screenshots/3.png)
-![Screenshot](brand/screenshots/4.png)
-
-</center>
+<p align="center">
+  <img src="brand/screenshots/1.png"/>
+  <img src="brand/screenshots/2.png"/>
+  <img src="brand/screenshots/3.png"/>
+  <img src="brand/screenshots/4.png"/>
+</p>
 
 ## Description
 

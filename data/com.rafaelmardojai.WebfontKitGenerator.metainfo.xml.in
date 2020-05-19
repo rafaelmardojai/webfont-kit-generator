@@ -9,6 +9,21 @@
   <launchable type="desktop-id">com.rafaelmardojai.WebfontKitGenerator.desktop</launchable>
   <developer_name>Rafael Mardojai CM</developer_name>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
-
+  
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/4.png</image>
+    </screenshot>
+  </screenshots>
+  
   <content_rating type="oars-1.1" />
 </component>

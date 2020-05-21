@@ -18,11 +18,13 @@
 import logging
 import os
 
+from threading import Thread
 from gettext import gettext as _
-from gi.repository import GLib, Gtk, Handy
+from gi.repository import GLib, Gio, Gtk, Handy
+from fontTools.ttLib import TTFont
 
 from .options import Options
-from .font_widget import WidgetFont
+from .font import Font, FontWidget
 from .generator import Generator
 from .log import Log
 from .sourceview import SourceView
@@ -59,8 +61,9 @@ class Window(Handy.ApplicationWindow):
 
         self.setup_widgets()
 
-        self.fonts_list.connect('add', self._on_fonts_list_changed)
-        self.fonts_list.connect('remove', self._on_fonts_list_changed)
+        self.model = Gio.ListStore.new(Font)
+        self.model.connect('items-changed', self._on_fonts_list_changed)
+        self.fonts_list.bind_model(self.model, self._create_font_widget)
 
         self.btn_generate.connect('clicked', self.on_generate)
 
@@ -106,31 +109,32 @@ class Window(Handy.ApplicationWindow):
 
         if response == Gtk.ResponseType.ACCEPT:
             filenames = filechooser.get_filenames()
-            GLib.idle_add(self.load_fonts, filenames)
-            #self.load_fonts(filenames)
+
             filechooser.destroy()
-            return
+
+            if filenames:
+                thread = Thread(target=self.load_fonts,
+                                args=(filenames,))
+                thread.daemon = True
+                thread.start()
 
         elif response == Gtk.ResponseType.REJECT:
             filechooser.destroy()
 
-    def load_fonts(self, filenames=None):
-        if filenames:
-            filename = filenames.pop(0)
+    def load_fonts(self, filenames):
+        fonts = []
+
+        for f in filenames:
             try:
-                if os.path.exists(filename):
-                    #self.status.push(filename)
-                    font_widget = WidgetFont()
-                    font_widget.show_all()
-                    font_widget.connect('loaded', self.on_loaded, filenames)
-                    font_widget.load(filename)
-                    self.fonts_list.add(font_widget)
+                if os.path.exists(f):
+                    ttfont = TTFont(f, lazy=True)
+                    data = self._get_font_data(ttfont['name'].getDebugName)
+                    ttfont.close()
+                    font = Font(f, data)
+                    GLib.idle_add(self.model.append, font)
 
             except Exception as e:
                 LOGGER.warning('Error Reading File: %r' % e)
-
-    def on_loaded(self, font_widget, filenames):
-        self.load_fonts(filenames)
 
     def on_generate(self, widget):
         filechooser = Gtk.FileChooserNative()
@@ -141,7 +145,7 @@ class Window(Handy.ApplicationWindow):
 
         if response == Gtk.ResponseType.ACCEPT:
             path = filechooser.get_filename()
-            generator = Generator(self, path, self.fonts_list,
+            generator = Generator(self, path, self.model,
                                   self.options.get_formats(),
                                   self.options.get_subsetting(),
                                   self.options.get_font_display())
@@ -151,15 +155,58 @@ class Window(Handy.ApplicationWindow):
         elif response == Gtk.ResponseType.REJECT:
             filechooser.destroy()
 
-    def _on_fonts_list_changed(self, container, widget):
-        children = self.fonts_list.get_children()
-        children = True if children else False
+    def _get_font_data(self, data_src):
+        data = {}
+        weights = {
+            'Thin':        '100',
+            'Extra-light': '200',
+            'Light':       '300',
+            'Regular':     '400',
+            'Medium':      '500',
+            'Semi-bold':   '600',
+            'Bold':        '700',
+            'Extra-bold':  '800',
+            'Black':       '900',
+        }
+
+        # Data used by UI
+        data['name'] = data_src(4)
+        data['version'] = data_src(5)
+        data['family'] = data_src(16) if data_src(16) else data_src(1)
+        data['style'] = 'normal'
+        data['weight'] = '400'
+
+        data['local'] = ['local("%s")' % data_src(4)]
+        if not data_src(6) == data_src(4):
+            data['local'].append('local("%s")' % data_src(6))
+
+        s = '-'
+        data['name-slug'] = s.join(data['name'].split()).lower()
+        data['family-slug'] = s.join(data['family'].split()).lower()
+
+        ws = data_src(17) if data_src(17) else data_src(2)
+        ws = ws.split()
+
+        for s in ws:
+            if s == 'Italic':
+                data['style'] = 'italic'
+            if s in weights:
+                data['weight'] = weights[s]
+
+        return data
+
+    def _create_font_widget(self, font):
+        widget = FontWidget(font, self.model)
+        return widget
+
+    def _on_fonts_list_changed(self, model, position, removed, added):
+        children = True if len(self.model) > 0 else False
 
         self.btn_generate.set_sensitive(children)
+        self.fonts_list.show_all()
 
         if children:
             self.fonts_stack.set_visible_child_name('fonts')
         else:
             self.fonts_stack.set_visible_child_name('empty')
 
-        

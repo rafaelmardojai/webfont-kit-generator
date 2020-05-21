@@ -23,11 +23,11 @@ webfontkitgenerator_sources = [
   'main.py',
   'actions.py',
   'window.py',
+  'font.py',
   'options.py',
   'generator.py',
   'log.py',
   'sourceview.py',
-  'font_widget.py',
 ]
 
 install_data(webfontkitgenerator_sources, install_dir: moduledir)

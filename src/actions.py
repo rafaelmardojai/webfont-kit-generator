@@ -65,5 +65,11 @@ class Actions(object):
             self.window.appstack.set_visible_child_name('main')
 
     def on_about(self, action, param):
-        pass
+        dialog = Gtk.Builder.new_from_resource(
+            '/com/rafaelmardojai/WebfontKitGenerator/ui/about.ui'
+        ).get_object('about')
+        dialog.set_transient_for(self.window)
+        dialog.set_modal(True)
+        dialog.present()
+        dialog.show_all()
  

@@ -3,6 +3,7 @@
   <gresource prefix="/com/rafaelmardojai/WebfontKitGenerator">
     <file>ui/window.ui</file>
     <file>ui/options.ui</file>
+    <file>ui/about.ui</file>
     <file>css/styles.css</file>
   </gresource>
 </gresources>

@@ -15,11 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import codecs
-import locale
 import logging
 import os
-import urllib
 
 from gettext import gettext as _
 from gi.repository import GLib, Gtk, Handy

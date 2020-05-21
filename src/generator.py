@@ -163,7 +163,7 @@ class Generator(object):
 
 
     '''
-
+    PRIVATE FUNCTIONS
     '''
 
     def _update_progressbar(self, reset=False):
@@ -186,7 +186,7 @@ class Generator(object):
 
 
     '''
-    PRIVATE HELP FUNCTIONS
+    SECRET HELP FUNCTIONS
     '''
 
     def __dict_to_styles(self, style_dict):

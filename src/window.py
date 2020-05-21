@@ -146,7 +146,8 @@ class Window(Handy.ApplicationWindow):
             path = filechooser.get_filename()
             generator = Generator(self, path, self.fonts_list,
                                   self.options.get_formats(),
-                                  self.options.get_subsetting())
+                                  self.options.get_subsetting(),
+                                  self.options.get_font_display())
             generator.run()
             filechooser.destroy()
 

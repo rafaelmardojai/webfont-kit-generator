@@ -39,7 +39,7 @@ class Options(Gtk.Box):
     devanagari   = Gtk.Template.Child()
 
     # CSS
-    css_out = Gtk.Template.Child()
+    font_display = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -50,12 +50,12 @@ class Options(Gtk.Box):
         self.load_saved()
 
     def setup(self):
-
-        #
-        css_out_model = Gio.ListStore.new(Handy.ValueObject)
-        css_out_model.insert(0, Handy.ValueObject.new(_('File per font family')))
-        css_out_model.insert(1, Handy.ValueObject.new(_('Single file')))
-        self.css_out.bind_name_model(css_out_model, Handy.ValueObject.dup_string)
+        # Setup font_display combo row
+        model = Gio.ListStore.new(Handy.ValueObject)
+        options = [_('Disabled'), 'auto', 'block', 'swap', 'fallback', 'optional']
+        for i, o in enumerate(options):
+            model.insert(i, Handy.ValueObject.new(o))
+        self.font_display.bind_name_model(model, Handy.ValueObject.dup_string)
 
     def load_saved(self):
         self.subset_btns = [
@@ -78,8 +78,8 @@ class Options(Gtk.Box):
             self.settings.bind(name, button, 'active',
                                Gio.SettingsBindFlags.DEFAULT)
 
-        self.settings.bind('cssfile', self.css_out, 'selected-index',
-                               Gio.SettingsBindFlags.DEFAULT)
+        self.settings.bind('font-display', self.font_display, 'selected-index',
+                           Gio.SettingsBindFlags.DEFAULT)
 
         self.settings.bind('subsetting', self.subsetting, 'enable-expansion',
                            Gio.SettingsBindFlags.DEFAULT)
@@ -112,6 +112,6 @@ class Options(Gtk.Box):
             print('no hay pe ctm 2')
         return list
 
-    def __get_css_out(self):
-        return self.css_out.get_selected_index()
+    def get_font_display(self):
+        return self.font_display.get_selected_index()
         

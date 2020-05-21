@@ -210,9 +210,10 @@
                         <property name="title" translatable="yes">CSS</property>
                         <property name="visible">True</property>
                         <child>
-                          <object class="HdyComboRow" id="css_out">
-                            <property name="title" translatable="yes">CSS out</property>
-                            <property name="visible">False</property>
+                          <object class="HdyComboRow" id="font_display">
+                            <property name="title" translatable="yes">Font display</property>
+                            <property name="subtitle" translatable="yes">The CSS font-display descriptor</property>
+                            <property name="visible">True</property>
                           </object>
                         </child>
                       </object>

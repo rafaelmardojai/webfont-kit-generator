@@ -27,12 +27,13 @@ from fontTools.subset import parse_unicodes, Subsetter
 
 class Generator(object):
 
-    def __init__(self, window, path, list, formats, ranges):
+    def __init__(self, window, path, list, formats, ranges, font_display):
         self.window = window
         self.path = path
         self.list = list
         self.formats = formats
         self.ranges = ranges
+        self.font_display = font_display
         self.css = {}
 
         total_ranges = len(ranges) if ranges else 1
@@ -92,7 +93,6 @@ class Generator(object):
                 'font-family':  data['family'],
                 'font-style':   data['style'],
                 'font-weight':  data['weight'],
-                'font-display': 'swap',
                 'src':          list(data['local'])
             }
 
@@ -114,6 +114,8 @@ class Generator(object):
 
             if range:
                 css['unicode-range'] = self.__get_range(range)
+            if self.font_display > 0:
+                css['font-display'] = self.__get_font_display(self.font_display)
             self.css[slug][name] = css
 
         else:
@@ -213,4 +215,8 @@ class Generator(object):
                             'U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FB'
         }
         return ranges[range]
+
+    def __get_font_display(self, fd):
+        fds = ['auto', 'block', 'swap', 'fallback', 'optional']
+        return fds[fd - 1]
 

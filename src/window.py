@@ -99,10 +99,13 @@ class Window(Handy.ApplicationWindow):
         ttf_filter.add_mime_type('font/ttf')
         ttf_filter.add_pattern('.ttf')
 
-        filechooser = Gtk.FileChooserNative()
+        filechooser = Gtk.FileChooserNative.new(
+            _('Open font files'),
+            self,
+            Gtk.FileChooserAction.OPEN,
+            None,
+            None)
         filechooser.set_select_multiple(True)
-        filechooser.set_transient_for(self)
-        #filechooser.set_modal(True)
         filechooser.add_filter(otf_filter)
         filechooser.add_filter(ttf_filter)
         response = filechooser.run()
@@ -122,8 +125,6 @@ class Window(Handy.ApplicationWindow):
             filechooser.destroy()
 
     def load_fonts(self, filenames):
-        fonts = []
-
         for f in filenames:
             try:
                 if os.path.exists(f):
@@ -137,10 +138,12 @@ class Window(Handy.ApplicationWindow):
                 LOGGER.warning('Error Reading File: %r' % e)
 
     def on_generate(self, widget):
-        filechooser = Gtk.FileChooserNative()
-        filechooser.set_action(Gtk.FileChooserAction.SELECT_FOLDER)
-        filechooser.set_transient_for(self)
-        filechooser.set_modal(True)
+        filechooser = Gtk.FileChooserNative.new(
+            _('Select output folder'),
+            self,
+            Gtk.FileChooserAction.SELECT_FOLDER,
+            None,
+            None)
         response = filechooser.run()
 
         if response == Gtk.ResponseType.ACCEPT:

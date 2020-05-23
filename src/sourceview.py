@@ -31,6 +31,7 @@ class SourceView(GtkSource.View):
         self.set_wrap_mode(Gtk.WrapMode.CHAR)
 
         self.text_buffer = self.get_buffer()
+        self.text_buffer.set_highlight_matching_brackets(False)
 
     def set_language(self, language):
         thread = Thread(target=self.load_language,

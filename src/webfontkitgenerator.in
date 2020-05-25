@@ -20,6 +20,7 @@
 import os
 import sys
 import signal
+import locale
 import gettext
 
 VERSION = '@VERSION@'
@@ -28,7 +29,12 @@ localedir = '@localedir@'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-gettext.install('webfontkitgenerator', localedir)
+
+locale.bindtextdomain('webfontkitgenerator', localedir)
+locale.textdomain('webfontkitgenerator')
+gettext.bindtextdomain('webfontkitgenerator', localedir)
+gettext.textdomain('webfontkitgenerator')
+locale.setlocale(locale.LC_ALL, '')
 
 if __name__ == '__main__':
     import gi

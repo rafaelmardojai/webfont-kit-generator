@@ -1,7 +1,10 @@
 data/com.rafaelmardojai.WebfontKitGenerator.desktop.in
-data/com.rafaelmardojai.WebfontKitGenerator.appdata.xml.in
+data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in
 data/com.rafaelmardojai.WebfontKitGenerator.gschema.xml
-src/window.ui
-src/main.py
+src/resources/ui/window.ui
+src/resources/ui/options.ui
+src/resources/ui/about.ui
 src/window.py
+src/options.py
+src/generator.py
 

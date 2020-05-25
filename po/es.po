@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 12:45-0500\n"
-"PO-Revision-Date: 2020-05-25 12:48-0500\n"
+"POT-Creation-Date: 2020-05-25 13:54-0500\n"
+"PO-Revision-Date: 2020-05-25 14:00-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -24,11 +24,26 @@ msgstr ""
 msgid "Webfont Kit Generator"
 msgstr ""
 
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Cree fácilmente los kits @font-face"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:10
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Webfont Kit Generator es una simple utilidad que te permite generar woff, "
+"woff2 y el CSS necesario desde formatos de tipografías no web (otf y ttf)."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+msgid "Webfont Kit Generator uses fontTools python library under the hood."
+msgstr ""
+"Webfont Kit Generator utiliza la librería Python fontTools internamente."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:18
 msgid "Rafael Mardojai CM"
 msgstr ""
 

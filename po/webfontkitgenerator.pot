@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 12:45-0500\n"
+"POT-Creation-Date: 2020-05-25 13:54-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,11 +22,23 @@ msgstr ""
 msgid "Webfont Kit Generator"
 msgstr ""
 
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr ""
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:10
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+msgid "Webfont Kit Generator uses fontTools python library under the hood."
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:18
 msgid "Rafael Mardojai CM"
 msgstr ""
 

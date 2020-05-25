@@ -23,7 +23,8 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
 gi.require_version('GtkSource', '4')
 
-from gi.repository import GObject, Gdk, Gtk, Gio, Handy, GtkSource
+from gettext import gettext as _
+from gi.repository import GLib, GObject, Gdk, Gtk, Gio, Handy
 
 from .actions import Actions
 from .window import Window
@@ -33,11 +34,11 @@ class Application(Gtk.Application, Actions):
     def __init__(self):
         super().__init__(application_id='com.rafaelmardojai.WebfontKitGenerator',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
+        GLib.set_application_name(_('Webfont Kit Generator'))
 
         self.window = None
 
         GObject.type_register(Handy.Column)
-        GObject.type_register(GtkSource.View)
         Actions.__init__(self)
 
     def do_startup(self):

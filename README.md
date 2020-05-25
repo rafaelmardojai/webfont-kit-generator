@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="data/icons/hicolor/com.rafaelmardojai.WebfontKitGenerator.svg" alt="Webfont Kit Generator" width="100" height="100"/><br>
+	<img src="brand/icon.svg" alt="Webfont Kit Generator" width="100" height="100"/><br>
 	Webfont Kit Generator
 </h1>
 
@@ -9,24 +9,25 @@
 
 <p align="center"><strong>Create @font-face kits easily</strong></p>
 
-<p align="center">
-  <img src="brand/screenshots/1.png"/>
-  <img src="brand/screenshots/2.png"/>
-  <img src="brand/screenshots/3.png"/>
-  <img src="brand/screenshots/4.png"/>
-</p>
-
 ## Description
 **Webfont Kit Generator** is a simple utility that allows you to generate **woff**, **woff2** and the necessary CSS boilerplate from non-web font formats (otf & ttf).
 
 Webfont Kit Generator uses [fontTools](https://github.com/fonttools/fonttools) python library under the hood.
 
 ## Installation
-
 Available soon in Flathub.
 
 ## Building
-Clone and run from GNOME Builder
+Clone and run from GNOME Builder.
+
+## Screenshots
+
+<p align="center">
+  <img src="brand/screenshots/1.png"/>
+  <img src="brand/screenshots/2.png"/>
+  <img src="brand/screenshots/3.png"/>
+  <img src="brand/screenshots/4.png"/>
+</p>
 
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/WebfontKitGenerator/graphs/contributors).

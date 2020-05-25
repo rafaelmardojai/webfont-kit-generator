@@ -109,7 +109,6 @@ class Options(Gtk.Box):
 
         if len(list) == 0:
             return None
-            print('no hay pe ctm 2')
         return list
 
     def get_font_display(self):

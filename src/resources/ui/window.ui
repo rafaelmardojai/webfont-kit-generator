@@ -107,24 +107,34 @@
                         <property name="can_focus">False</property>
                         <property name="valign">center</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">10</property>
+                        <property name="spacing">20</property>
                         <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="label" translatable="yes">No fonts selected</property>
                             <attributes>
-                              <attribute name="weight" value="bold"/>
+                              <attribute name="weight" value="ultrabold"/>
                               <attribute name="scale" value="2"/>
                             </attributes>
-                            <style>
-                              <class name="dim-label"/>
-                            </style>
                           </object>
                           <packing>
                             <property name="expand">True</property>
                             <property name="fill">True</property>
                             <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="pixel_size">128</property>
+                            <property name="icon_name">format-text-bold-symbolic</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
                           </packing>
                         </child>
                         <child>
@@ -136,14 +146,14 @@
                             <property name="halign">center</property>
                             <property name="action_name">app.open</property>
                             <style>
-                              <class name="suggested-action"/>.
+                              <class name="suggested-action"/>
                               <class name="rounded-button"/>
                             </style>
                           </object>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
-                            <property name="position">1</property>
+                            <property name="position">2</property>
                           </packing>
                         </child>
                       </object>

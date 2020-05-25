@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="128px" viewBox="0 0 128 128" width="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <linearGradient id="a" gradientTransform="matrix(0.196428 0 0 0.342105 6.59729 273.740051)" gradientUnits="userSpaceOnUse" x1="88.595886" x2="536.595886" y1="-449.394012" y2="-449.394012">
+        <stop offset="0" stop-color="#d5d3cf"/>
+        <stop offset="0.0384615" stop-color="#e3e2df"/>
+        <stop offset="0.0769231" stop-color="#c0bfbc"/>
+        <stop offset="0.923077" stop-color="#c0bfbc"/>
+        <stop offset="0.961538" stop-color="#e3e2df"/>
+        <stop offset="1" stop-color="#d5d3cf"/>
+    </linearGradient>
+    <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="68" x2="67.861115" y1="36.714844" y2="85.856194">
+        <stop offset="0" stop-color="#26a269" stop-opacity="0.010512"/>
+        <stop offset="0.308743" stop-color="#25d069" stop-opacity="0.996078"/>
+        <stop offset="0.660183" stop-color="#25d069" stop-opacity="0.996078"/>
+        <stop offset="1" stop-color="#26a269" stop-opacity="0"/>
+    </linearGradient>
+    <path d="m 32 16 h 72 c 4.417969 0 8 3.582031 8 8 v 88 c 0 4.417969 -3.582031 8 -8 8 h -72 c -4.417969 0 -8 -3.582031 -8 -8 v -88 c 0 -4.417969 3.582031 -8 8 -8 z m 0 0" fill="url(#a)"/>
+    <path d="m 32 8 h 72 c 4.417969 0 8 3.582031 8 8 v 92 c 0 4.417969 -3.582031 8 -8 8 h -72 c -4.417969 0 -8 -3.582031 -8 -8 v -92 c 0 -4.417969 3.582031 -8 8 -8 z m 0 0" fill="#f6f5f4"/>
+    <path d="m 84.457031 18 v 9.839844 h -5.679687 l -0.304688 -4.132813 h -6.796875 v 26.015625 l 3.957031 0.761719 v 4.4375 h -15.316406 v -4.4375 l 3.957032 -0.761719 v -26.015625 h -6.773438 l -0.300781 4.132813 h -5.65625 v -9.839844 z m 0 0" fill="#666666"/>
+    <path d="m 92.253906 73.542969 l -3.042968 0.378906 l -7.480469 32.078125 h -6.871094 l -6.769531 -24.367188 h -0.152344 l -6.769531 24.367188 h -6.875 l -7.53125 -32.078125 l -3.015625 -0.378906 v -4.464844 h 13.589844 v 4.464844 l -3.371094 0.582031 l 4.234375 20.234375 l 0.152343 0.027344 l 6.921876 -25.308594 h 5.453124 l 6.972657 25.308594 l 0.152343 -0.027344 l 4.210938 -20.234375 l -3.375 -0.582031 v -4.464844 h 13.566406 z m 0 0" fill="#666666"/>
+    <path d="m 64.269531 36.714844 v 22.09375 h -11.445312 l 15.265625 22.824218 l 15.085937 -22.824218 h -11.5 v -22.09375 z m 0 0" fill="url(#b)"/>
+</svg>

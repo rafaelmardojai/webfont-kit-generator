@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Webfont Kit Generator
+Comment=Create @font-face kits easily
 Exec=webfontkitgenerator
 Terminal=false
 Type=Application

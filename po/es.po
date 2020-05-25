@@ -1,0 +1,156 @@
+# Spanish translations for webfontkitgenerator package.
+# Copyright (C) 2020 THE webfontkitgenerator'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# Automatically generated, 2020.
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-25 12:45-0500\n"
+"PO-Revision-Date: 2020-05-25 12:48-0500\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
+"Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.36.0\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+msgid "Create @font-face kits easily"
+msgstr "Cree fácilmente los kits @font-face"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:10
+msgid "Rafael Mardojai CM"
+msgstr ""
+
+#: src/resources/ui/window.ui:51
+msgid "Generate"
+msgstr "Generar"
+
+#: src/resources/ui/window.ui:115
+msgid "No fonts selected"
+msgstr "No hay tipografías seleccionadas"
+
+#: src/resources/ui/window.ui:132
+msgid "Open Fonts"
+msgstr "Abrir Tipografías"
+
+#: src/resources/ui/window.ui:203
+msgid "Source Fonts"
+msgstr "Tipografías Fuente"
+
+#: src/resources/ui/window.ui:329
+msgid "Generarion finished!"
+msgstr "Generación finalizada!"
+
+#: src/resources/ui/window.ui:347
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Para vincular sus tipografías, copie el siguiente código en el encabezado de "
+"su HTML:"
+
+#: src/resources/ui/window.ui:369
+msgid "Or import it directly to you CSS:"
+msgstr "O importarlas directamente a tu CSS:"
+
+#: src/resources/ui/window.ui:396
+msgid "Information"
+msgstr "Información"
+
+#: src/resources/ui/window.ui:432
+msgid "Logs"
+msgstr "Registros"
+
+#: src/resources/ui/options.ui:29
+msgid "Fonts"
+msgstr "Tipografías"
+
+#: src/resources/ui/options.ui:33
+msgid "Font formats"
+msgstr "Formatos de tipografías"
+
+#: src/resources/ui/options.ui:62
+msgid "Subsetting"
+msgstr "Subconjunto"
+
+#: src/resources/ui/options.ui:210
+msgid "CSS"
+msgstr "CSS"
+
+#: src/resources/ui/options.ui:214
+msgid "Font display"
+msgstr "Visualización de las tipografías"
+
+#: src/resources/ui/options.ui:215
+msgid "The CSS font-display descriptor"
+msgstr "El descriptor CSS font-display"
+
+#: src/resources/ui/about.ui:10
+msgid ""
+"Create @font-face kits easily\n"
+"Basen on python fontTools library\n"
+"    "
+msgstr ""
+"Cree fácilmente los kits @font-face\n"
+"Basado en la librería Python fontTools"
+
+#: src/window.py:71
+msgid "Output Options"
+msgstr "Opciones de Salida"
+
+#: src/window.py:94
+msgid "OTF Fonts"
+msgstr "Fuentes OTF"
+
+#: src/window.py:98
+msgid "TTF Fonts"
+msgstr "Fuentes TTF"
+
+#: src/window.py:103
+msgid "Open font files"
+msgstr "Abrir archivos de tipografías"
+
+#: src/window.py:142
+msgid "Select output folder"
+msgstr "Seleccionar carpeta de salida"
+
+#: src/options.py:55
+msgid "Disabled"
+msgstr "Deshabilitado"
+
+#: src/generator.py:59
+msgid "Generation finished!"
+msgstr "Generación finalizada!"
+
+#: src/generator.py:65
+#, python-format
+msgid "Generating fonts for %s:"
+msgstr "Generando tipografías para %s:"
+
+#: src/generator.py:113
+#, python-format
+msgid "Generated <i>%s</i> with <i>%s</i> glyphs."
+msgstr "Generado <i>%s</i> con <i>%s</i> signos."
+
+#: src/generator.py:124
+#, python-format
+msgid "No glyphs where found for %s. Skipping."
+msgstr "No se encontraron signos para %s. Omitiendo."
+
+#: src/generator.py:141
+msgid "Generating CSS:"
+msgstr "Generando CSS:"
+
+#: src/generator.py:160
+#, python-format
+msgid "Generated <i>%s</i>."
+msgstr "Generado <i>%s</i>."

@@ -42,6 +42,5 @@ endif
 
 install_data(
   'com.rafaelmardojai.WebfontKitGenerator.svg',
-  install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps'),
-  rename: '@0@.svg'.format(application_id)
+  install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps')
 )

@@ -29,6 +29,7 @@ class Generator(object):
 
     def __init__(self, window, path, list, formats, ranges, font_display):
         self.window = window
+        self.stop = False
         self.path = path
         self.list = list
         self.formats = formats
@@ -43,22 +44,32 @@ class Generator(object):
     def run(self):
         self._update_progressbar(reset=True)
         self.window.log.reset()
+        self.window.cancel.connect('clicked', self.do_stop)
 
         thread = Thread(target=self.generate)
         thread.daemon = True
         thread.start()
 
+    def do_stop(self, widget=None):
+        self.stop = True
+        self.window.processing = False
+        self.window.appstack.set_visible_child_name('main')
+
     def generate(self):
-        self.window.toggle_generation(True)
+        self.window.processing = True
+        self.window.appstack.set_visible_child_name('progress')
 
         for font in self.list:
+            if self.stop:
+                return
             self._generate_font(font.filename, font.data)
 
         css = self._generate_css()
         self._end_code(css)
         self._append_log(_('Generation finished!'), bold=True)
 
-        self.window.toggle_generation(False)
+        self.window.processing = False
+        self.window.appstack.set_visible_child_name('finished')
 
     def _generate_font(self, filename, data):
         name = data['name-slug']

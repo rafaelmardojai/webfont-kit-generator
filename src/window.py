@@ -40,6 +40,7 @@ class Window(Handy.ApplicationWindow):
 
     progressbar = Gtk.Template.Child()
     progressbar_label = Gtk.Template.Child()
+    cancel = Gtk.Template.Child()
 
     import_html_frame = Gtk.Template.Child()
     import_css_frame = Gtk.Template.Child()
@@ -80,14 +81,6 @@ class Window(Handy.ApplicationWindow):
         self.end_css = SourceView()
         self.end_css.set_language('css')
         self.import_css_frame.add(self.end_css)
-
-    def toggle_generation(self, toggle):
-        self.processing = toggle
-
-        if not toggle:
-            self.appstack.set_visible_child_name('finished')
-        else:
-            self.appstack.set_visible_child_name('progress')
 
     def open_fonts(self, _widget=None):
         otf_filter = Gtk.FileFilter()

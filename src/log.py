@@ -27,7 +27,9 @@ class Log(Gtk.TextView):
         self.text_buffer = self.get_buffer()
 
         self.set_editable(False)
+        self.set_monospace(True)
         self.props.hexpand = True
+        self.props.margin = 20
 
         Gtk.StyleContext.add_class(self.get_style_context(), 'log')
 

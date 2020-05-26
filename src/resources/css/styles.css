@@ -28,6 +28,10 @@
   border-bottom: 1px solid @borders;
 }
 
+.sourceview {
+	padding: 6px;
+}
+
 .log text {
   background: @theme_bg_color;
 }

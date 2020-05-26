@@ -347,14 +347,16 @@
                                 <property name="can_focus">False</property>
                                 <property name="orientation">vertical</property>
                                 <property name="margin">20</property>
-                                <property name="spacing">6</property>
+                                <property name="spacing">12</property>
+                                <property name="valign">center</property>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="label" translatable="yes">Generarion finished!</property>
+                                    <property name="margin_bottom">20</property>
                                     <attributes>
-                                      <attribute name="weight" value="bold"/>
+                                      <attribute name="weight" value="ultrabold"/>
                                       <attribute name="scale" value="2"/>
                                     </attributes>
                                   </object>

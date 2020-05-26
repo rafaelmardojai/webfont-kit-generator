@@ -1,8 +1,22 @@
+.h4 {
+  font-weight: bold;
+}
+
 .rounded-button {
   border-radius: 34px;
   -gtk-outline-radius: 9999px;
   padding: 8px 16px;
   min-width: 120px;
+}
+
+.sub-box row:not(:last-child){
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.sub-left-box {
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+.expander revealer list row {
+  padding: 0;
 }
 
 .fonts-list {

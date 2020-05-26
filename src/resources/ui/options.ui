@@ -22,181 +22,187 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">20</property>
+                    <property name="spacing">12</property>
                     <property name="margin">20</property>
+
                     <child>
                       <object class="HdyPreferencesGroup">
                         <property name="title" translatable="yes">Fonts</property>
                         <property name="visible">True</property>
                         <child>
                           <object class="HdyActionRow">
-                            <property name="title" translatable="yes">Font formats</property>
+                            <property name="title">WOFF2</property>
                             <property name="visible">True</property>
+                            <property name="activatable_widget">format_woff2</property>
                             <child>
-                              <object class="GtkBox">
+                              <object class="GtkSwitch" id="format_woff2">
                                 <property name="visible">True</property>
-                                <property name="can_focus">False</property>
+                                <property name="can_focus">True</property>
                                 <property name="valign">center</property>
-                                <child>
-                                  <object class="GtkCheckButton" id="format_woff2">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="active">True</property>
-                                    <property name="sensitive">False</property>
-                                    <property name="label">WOFF2</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkCheckButton"  id="format_woff">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="label">WOFF</property>
-                                  </object>
-                                </child>
                               </object>
                             </child>
                           </object>
                         </child>
                         <child>
+                          <object class="HdyActionRow">
+                            <property name="title" translatable="yes">WOFF</property>
+                            <property name="visible">True</property>
+                            <property name="activatable_widget">format_woff</property>
+                            <child>
+                              <object class="GtkSwitch"  id="format_woff">
+                                <property name="visible">True</property>
+                                <property name="can_focus">True</property>
+                                <property name="valign">center</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="HdyPreferencesGroup">
+                        <property name="visible">True</property>
+                        <child>
                           <object class="HdyExpanderRow" id="subsetting">
                             <property name="title" translatable="yes">Subsetting</property>
+                            <property name="subtitle" translatable="yes">Limit the character set to reduce file size</property>
                             <property name="visible">True</property>
                             <property name="show-enable-switch">True</property>
                             <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="orientation">horizontal</property>
-                                <property name="margin">8</property>
-                                <property name="halign">end</property>
                                 <child>
-                                  <object class="GtkGrid">
+                                  <object class="GtkListBox">
                                     <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="column_homogeneous">True</property>
+                                    <property name="selection-mode">none</property>
+                                    <style>
+                                      <class name="sub-left-box"/>
+                                      <class name="sub-box"/>
+                                    </style>
                                     <child>
-                                      <object class="GtkCheckButton" id="latin">
-                                        <property name="label">latin</property>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Latin</property>
                                         <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
+                                        <property name="activatable_widget">latin</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="latin">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
                                       </object>
-                                      <packing>
-                                        <property name="left_attach">0</property>
-                                        <property name="top_attach">0</property>
-                                      </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkSeparator">
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Cyrillic</property>
                                         <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="margin_top">4</property>
-                                        <property name="margin_bottom">4</property>
+                                        <property name="activatable_widget">cyrillic</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="cyrillic">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
                                       </object>
-                                      <packing>
-                                        <property name="left_attach">0</property>
-                                        <property name="top_attach">2</property>
-                                        <property name="width">3</property>
-                                      </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkCheckButton" id="latin_ext">
-                                        <property name="label">latin-ext</property>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Greek</property>
                                         <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
+                                        <property name="activatable_widget">greek</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="greek">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
                                       </object>
-                                      <packing>
-                                        <property name="left_attach">0</property>
-                                        <property name="top_attach">1</property>
-                                      </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkCheckButton" id="devanagari">
-                                        <property name="label">devanagari</property>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Vietnamese</property>
                                         <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
+                                        <property name="activatable_widget">vietnamese</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="vietnamese">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
                                       </object>
-                                      <packing>
-                                        <property name="left_attach">2</property>
-                                        <property name="top_attach">3</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkCheckButton" id="vietnamese">
-                                        <property name="label">vietnamese</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
-                                      </object>
-                                      <packing>
-                                        <property name="left_attach">1</property>
-                                        <property name="top_attach">3</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkCheckButton" id="cyrillic">
-                                        <property name="label">cyrillic</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
-                                      </object>
-                                      <packing>
-                                        <property name="left_attach">1</property>
-                                        <property name="top_attach">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkCheckButton" id="cyrillic_ext">
-                                        <property name="label">cyrillic-ext</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
-                                      </object>
-                                      <packing>
-                                        <property name="left_attach">1</property>
-                                        <property name="top_attach">1</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkCheckButton" id="greek">
-                                        <property name="label">greek</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
-                                      </object>
-                                      <packing>
-                                        <property name="left_attach">2</property>
-                                        <property name="top_attach">0</property>
-                                      </packing>
-                                    </child>
-                                    <child>
-                                      <object class="GtkCheckButton" id="greek_ext">
-                                        <property name="label">greek-ext</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                        <property name="receives_default">False</property>
-                                        <property name="draw_indicator">True</property>
-                                      </object>
-                                      <packing>
-                                        <property name="left_attach">2</property>
-                                        <property name="top_attach">1</property>
-                                      </packing>
                                     </child>
                                   </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">0</property>
-                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkListBox">
+                                    <property name="visible">True</property>
+                                    <property name="selection-mode">none</property>
+                                    <style>
+                                      <class name="sub-box"/>
+                                    </style>
+                                    <child>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Latin Extended</property>
+                                        <property name="visible">True</property>
+                                        <property name="activatable_widget">latin_ext</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="latin_ext">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Cyrillic Extended</property>
+                                        <property name="visible">True</property>
+                                        <property name="activatable_widget">cyrillic_ext</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="cyrillic_ext">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Greek Extended</property>
+                                        <property name="visible">True</property>
+                                        <property name="activatable_widget">greek_ext</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="greek_ext">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="HdyActionRow">
+                                        <property name="title" translatable="yes">Devanagari</property>
+                                        <property name="visible">True</property>
+                                        <property name="activatable_widget">devanagari</property>
+                                        <child>
+                                          <object class="GtkSwitch" id="devanagari">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="valign">center</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
                                 </child>
                               </object>
                             </child>
@@ -209,6 +215,7 @@
                         <property name="description" translatable="yes"></property>
                         <property name="title" translatable="yes">CSS</property>
                         <property name="visible">True</property>
+                        <property name="margin_top">20</property>
                         <child>
                           <object class="HdyComboRow" id="font_display">
                             <property name="title" translatable="yes">Font display</property>

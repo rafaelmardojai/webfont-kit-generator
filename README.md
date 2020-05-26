@@ -9,13 +9,14 @@
 
 <p align="center"><strong>Create @font-face kits easily</strong></p>
 
+<p align="center">
+  <a href="https://flathub.org/apps/details/com.rafaelmardojai.WebfontKitGenerator"><img width="200" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png"/></a>
+</p>
+
 ## Description
 **Webfont Kit Generator** is a simple utility that allows you to generate **woff**, **woff2** and the necessary CSS boilerplate from non-web font formats (otf & ttf).
 
 Webfont Kit Generator uses [fontTools](https://github.com/fonttools/fonttools) python library under the hood.
-
-## Installation
-Available soon in Flathub.
 
 ## Building
 Clone and run from GNOME Builder.

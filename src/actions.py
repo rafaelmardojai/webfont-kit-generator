@@ -68,6 +68,7 @@ class Actions(object):
         dialog = Gtk.Builder.new_from_resource(
             '/com/rafaelmardojai/WebfontKitGenerator/ui/about.ui'
         ).get_object('about')
+        dialog.set_version(self.version)
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()

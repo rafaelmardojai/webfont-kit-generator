@@ -31,11 +31,12 @@ from .window import Window
 
 
 class Application(Gtk.Application, Actions):
-    def __init__(self):
+    def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.WebfontKitGenerator',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         GLib.set_application_name(_('Webfont Kit Generator'))
 
+        self.version = version
         self.window = None
 
         GObject.type_register(Handy.Column)
@@ -59,5 +60,5 @@ class Application(Gtk.Application, Actions):
 
 
 def main(version):
-    app = Application()
+    app = Application(version)
     return app.run(sys.argv)

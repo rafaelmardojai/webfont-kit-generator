@@ -6,7 +6,6 @@
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
     <property name="program_name">Webfont Kit Generator</property>
-    <property name="version">0.1.0</property>
     <property name="comments" translatable="yes">Create @font-face kits easily
 Basen on python fontTools library
     </property>

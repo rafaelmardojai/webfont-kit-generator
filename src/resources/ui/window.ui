@@ -354,7 +354,7 @@
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="label" translatable="yes">Generarion finished!</property>
+                                    <property name="label" translatable="yes">Generation finished!</property>
                                     <property name="margin_bottom">20</property>
                                     <attributes>
                                       <attribute name="weight" value="ultrabold"/>

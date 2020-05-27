@@ -142,6 +142,10 @@ class Window(Handy.ApplicationWindow):
             generator.run()
 
 
+    '''
+    PRIVATE
+    '''
+
     def _create_font_widget(self, font):
         widget = FontWidget(font, self.model)
         return widget

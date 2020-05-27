@@ -23,7 +23,9 @@ from gi.repository import GLib, GObject, Gio, Gtk, Handy
 class Options(Gtk.Box):
     __gtype_name__ = 'Options'
 
-    # Fonts format check buttons
+    directory_row = Gtk.Template.Child()
+
+    # Fonts format
     format_woff2 = Gtk.Template.Child()
     format_woff  = Gtk.Template.Child()
 
@@ -50,6 +52,14 @@ class Options(Gtk.Box):
         self.load_saved()
 
     def setup(self):
+        # Setup directory file chooser button
+        self.directory = Gtk.FileChooserButton.new(
+            _('Select output directory'),
+            Gtk.FileChooserAction.SELECT_FOLDER)
+        self.directory.props.valign = Gtk.Align.CENTER
+        self.directory.show_all()
+        self.directory_row.add(self.directory)
+
         # Setup font_display combo row
         model = Gio.ListStore.new(Handy.ValueObject)
         options = [_('Disabled'), 'auto', 'block', 'swap', 'fallback', 'optional']

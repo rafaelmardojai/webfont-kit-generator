@@ -22,9 +22,21 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">24</property>
+                    <property name="spacing">40</property>
                     <property name="margin_top">40</property>
                     <property name="margin_bottom">40</property>
+                    <child>
+                      <object class="HdyPreferencesGroup">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="HdyActionRow" id="directory_row">
+                            <property name="title" translatable="yes">Output directory</property>
+                            <property name="visible">True</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
                     <child>
                       <object class="HdyPreferencesGroup">
                         <property name="title" translatable="yes">Fonts</property>
@@ -276,7 +288,6 @@
                     </child>
                     <child>
                       <object class="HdyPreferencesGroup">
-                        <property name="description" translatable="yes"></property>
                         <property name="title" translatable="yes">CSS</property>
                         <property name="visible">True</property>
                         <child>

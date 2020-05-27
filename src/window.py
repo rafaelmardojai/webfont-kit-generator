@@ -58,12 +58,16 @@ class Window(Handy.ApplicationWindow):
 
         self.processing = False
         self.options = Options()
+        self.outpath = None
         self.log = Log(self.progressbar_label)
 
         self.setup_widgets()
 
+        self.options.directory.connect('file-set', self._update_outpath)
+        self.options.directory.connect('file-set', self._change_ready_state)
+
         self.model = Gio.ListStore.new(Font)
-        self.model.connect('items-changed', self._on_fonts_list_changed)
+        self.model.connect('items-changed', self._change_ready_state)
         self.fonts_list.bind_model(self.model, self._create_font_widget)
 
         self.btn_generate.connect('clicked', self.on_generate)
@@ -131,25 +135,32 @@ class Window(Handy.ApplicationWindow):
                 LOGGER.warning('Error Reading File: %r' % e)
 
     def on_generate(self, widget):
-        filechooser = Gtk.FileChooserNative.new(
-            _('Select output folder'),
-            self,
-            Gtk.FileChooserAction.SELECT_FOLDER,
-            None,
-            None)
-        response = filechooser.run()
-
-        if response == Gtk.ResponseType.ACCEPT:
-            path = filechooser.get_filename()
-            generator = Generator(self, path, self.model,
+            generator = Generator(self, self.outpath, self.model,
                                   self.options.get_formats(),
                                   self.options.get_subsetting(),
                                   self.options.get_font_display())
             generator.run()
-            filechooser.destroy()
 
-        elif response == Gtk.ResponseType.REJECT:
-            filechooser.destroy()
+
+    def _create_font_widget(self, font):
+        widget = FontWidget(font, self.model)
+        return widget
+
+    def _update_outpath(self, chooser):
+        self.outpath = chooser.get_filename()
+
+    def _change_ready_state(self, *args, **kwargs):
+        children = True if len(self.model) > 0 else False
+
+        if children and self.outpath:
+            self.btn_generate.set_sensitive(True)
+        else:
+            self.btn_generate.set_sensitive(False)
+
+        if children:
+            self.fonts_stack.set_visible_child_name('fonts')
+        else:
+            self.fonts_stack.set_visible_child_name('empty')
 
     def _get_font_data(self, data_src):
         data = {}
@@ -190,19 +201,4 @@ class Window(Handy.ApplicationWindow):
                 data['weight'] = weights[s]
 
         return data
-
-    def _create_font_widget(self, font):
-        widget = FontWidget(font, self.model)
-        return widget
-
-    def _on_fonts_list_changed(self, model, position, removed, added):
-        children = True if len(self.model) > 0 else False
-
-        self.btn_generate.set_sensitive(children)
-        self.fonts_list.show_all()
-
-        if children:
-            self.fonts_stack.set_visible_child_name('fonts')
-        else:
-            self.fonts_stack.set_visible_child_name('empty')
 

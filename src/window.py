@@ -58,13 +58,14 @@ class Window(Handy.ApplicationWindow):
 
         self.processing = False
         self.options = Options()
-        self.outpath = None
+        self.outpath = ''
         self.log = Log(self.progressbar_label)
 
         self.setup_widgets()
 
-        self.options.directory.connect('file-set', self._update_outpath)
-        self.options.directory.connect('file-set', self._change_ready_state)
+        self.options.browse.connect('clicked', self.set_outpath)
+        self.options.directory.connect('changed', self._update_outpath)
+        self.options.directory.connect('changed', self._change_ready_state)
 
         self.model = Gio.ListStore.new(Font)
         self.model.connect('items-changed', self._change_ready_state)
@@ -141,6 +142,21 @@ class Window(Handy.ApplicationWindow):
                                   self.options.get_font_display())
             generator.run()
 
+    def set_outpath(self, *args):
+        filechooser = Gtk.FileChooserNative.new(
+            _('Select output folder'),
+            self,
+            Gtk.FileChooserAction.SELECT_FOLDER,
+            None,
+            None)
+        response = filechooser.run()
+
+        if response == Gtk.ResponseType.ACCEPT:
+            path = filechooser.get_filename()
+            self.options.directory.set_text(path)
+
+        elif response == Gtk.ResponseType.REJECT:
+            filechooser.destroy()
 
     '''
     PRIVATE
@@ -150,13 +166,13 @@ class Window(Handy.ApplicationWindow):
         widget = FontWidget(font, self.model)
         return widget
 
-    def _update_outpath(self, chooser):
-        self.outpath = chooser.get_filename()
+    def _update_outpath(self, entry):
+        self.outpath = entry.get_text()
 
     def _change_ready_state(self, *args, **kwargs):
         children = True if len(self.model) > 0 else False
 
-        if children and self.outpath:
+        if children and self._check_path_access(self.outpath):
             self.btn_generate.set_sensitive(True)
         else:
             self.btn_generate.set_sensitive(False)
@@ -165,6 +181,11 @@ class Window(Handy.ApplicationWindow):
             self.fonts_stack.set_visible_child_name('fonts')
         else:
             self.fonts_stack.set_visible_child_name('empty')
+
+    def _check_path_access(self, path):
+        if os.access(path, os.W_OK) and os.path.exists(path):
+            return True
+        return False
 
     def _get_font_data(self, data_src):
         data = {}

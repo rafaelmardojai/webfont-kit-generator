@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import os
+
 from gettext import gettext as _
 from gi.repository import GLib, GObject, Gio, Gtk, Handy
 from fontTools.subset import parse_unicodes
@@ -24,7 +26,8 @@ from fontTools.subset import parse_unicodes
 class Options(Gtk.Box):
     __gtype_name__ = 'Options'
 
-    directory_row = Gtk.Template.Child()
+    browse = Gtk.Template.Child()
+    directory = Gtk.Template.Child()
 
     # Fonts format
     format_woff2 = Gtk.Template.Child()
@@ -54,13 +57,7 @@ class Options(Gtk.Box):
         self.load_saved()
 
     def setup(self):
-        # Setup directory file chooser button
-        self.directory = Gtk.FileChooserButton.new(
-            _('Select output directory'),
-            Gtk.FileChooserAction.SELECT_FOLDER)
-        self.directory.props.valign = Gtk.Align.CENTER
-        self.directory.show_all()
-        self.directory_row.add(self.directory)
+        self.directory.connect('changed', self._check_dir_entry)
 
         # Setup font_display combo row
         model = Gio.ListStore.new(Handy.ValueObject)
@@ -145,4 +142,12 @@ class Options(Gtk.Box):
 
     def get_font_display(self):
         return self.font_display.get_selected_index()
+        
+
+    def _check_dir_entry(self, entry):
+        path = entry.get_text()
+        if os.access(path, os.W_OK) and os.path.exists(path):
+            entry.get_style_context().remove_class('error')
+        else:
+            entry.get_style_context().add_class('error')
         

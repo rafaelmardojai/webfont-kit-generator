@@ -191,7 +191,7 @@ class Generator(object):
 
         for sheet in sheets:
             html.append('<link href="%s" rel="stylesheet">' % sheet)
-            css.append("@import url('%s');" % sheet)
+            css.append('@import url("%s");' % sheet)
 
         self.window.end_html.set_text('\n'.join(html))
         self.window.end_css.set_text('\n'.join(css))

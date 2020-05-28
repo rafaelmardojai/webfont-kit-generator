@@ -20,7 +20,7 @@ import os
 
 from threading import Thread
 from gettext import gettext as _
-from gi.repository import GLib, Gio, Gtk, Handy
+from gi.repository import GLib, Gio, Gdk, Gtk, Handy
 from fontTools.ttLib import TTFont
 
 from .options import Options
@@ -45,6 +45,7 @@ class Window(Handy.ApplicationWindow):
     import_html_frame = Gtk.Template.Child()
     import_css_frame = Gtk.Template.Child()
     log_column = Gtk.Template.Child()
+    open_files = Gtk.Template.Child()
 
     btn_generate = Gtk.Template.Child()
     btn_add_fonts = Gtk.Template.Child()
@@ -86,6 +87,8 @@ class Window(Handy.ApplicationWindow):
         self.end_css = SourceView()
         self.end_css.set_language('css')
         self.import_css_frame.add(self.end_css)
+
+        self.open_files.connect('clicked', self.open_generation_folder)
 
     def open_fonts(self, _widget=None):
         otf_filter = Gtk.FileFilter()
@@ -155,8 +158,20 @@ class Window(Handy.ApplicationWindow):
             path = filechooser.get_filename()
             self.options.directory.set_text(path)
 
+            filechooser.destroy()
+
+            if filenames:
+                thread = Thread(target=self.load_fonts,
+                                args=(filenames,))
+                thread.daemon = True
+                thread.start()
         elif response == Gtk.ResponseType.REJECT:
             filechooser.destroy()
+
+    def open_generation_folder(self, *args):
+        uri = 'file://' + self.outpath
+        Gtk.show_uri_on_window(self, uri, Gdk.CURRENT_TIME)
+
 
     '''
     PRIVATE

@@ -172,7 +172,8 @@
                             <child>
                               <object class="HdyColumn">
                                 <property name="visible">True</property>
-                                <property name="maximum-width">800</property>
+                                <property name="maximum-width">600</property>
+                                <property name="linear_growth_width">600</property>
                                 <child>
                                   <object class="GtkBox">
                                     <property name="visible">True</property>

@@ -15,7 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import logging
 import os
 
 from threading import Thread
@@ -23,13 +22,12 @@ from gettext import gettext as _
 from gi.repository import GLib, Gio, Gdk, Gtk, Handy
 from fontTools.ttLib import TTFont
 
-from .options import Options
-from .font import Font, FontWidget
 from .generator import Generator
+from .loader import Loader
+from .options import Options
 from .log import Log
 from .sourceview import SourceView
-
-LOGGER = logging.getLogger('storiestyper')
+from .font import Font, FontWidget
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/ui/window.ui')
@@ -109,34 +107,17 @@ class Window(Handy.ApplicationWindow):
         filechooser.set_select_multiple(True)
         filechooser.add_filter(otf_filter)
         filechooser.add_filter(ttf_filter)
-        response = filechooser.run()
 
+        filechooser.connect('response', self.on_load)
+        filechooser.run()
+
+    def on_load(self, filechooser, response):
         if response == Gtk.ResponseType.ACCEPT:
             filenames = filechooser.get_filenames()
 
-            filechooser.destroy()
-
             if filenames:
-                thread = Thread(target=self.load_fonts,
-                                args=(filenames,))
-                thread.daemon = True
-                thread.start()
-
-        elif response == Gtk.ResponseType.REJECT:
-            filechooser.destroy()
-
-    def load_fonts(self, filenames):
-        for f in filenames:
-            try:
-                if os.path.exists(f):
-                    ttfont = TTFont(f, lazy=True)
-                    data = self._get_font_data(ttfont['name'].getDebugName)
-                    ttfont.close()
-                    font = Font(f, data)
-                    GLib.idle_add(self.model.append, font)
-
-            except Exception as e:
-                LOGGER.warning('Error Reading File: %r' % e)
+                loader = Loader(self, self.model, filenames)
+                loader.load()
 
     def on_generate(self, widget):
             generator = Generator(self, self.outpath, self.model,
@@ -172,6 +153,7 @@ class Window(Handy.ApplicationWindow):
     def open_generation_dir(self, *args):
         uri = self.outURI
         Gtk.show_uri_on_window(self, uri, Gdk.CURRENT_TIME)
+        print(uri)
 
 
     '''
@@ -194,44 +176,4 @@ class Window(Handy.ApplicationWindow):
             self.fonts_stack.set_visible_child_name('fonts')
         else:
             self.fonts_stack.set_visible_child_name('empty')
-
-    def _get_font_data(self, data_src):
-        data = {}
-        weights = {
-            'Thin':        '100',
-            'Extra-light': '200',
-            'Light':       '300',
-            'Regular':     '400',
-            'Medium':      '500',
-            'Semi-bold':   '600',
-            'Bold':        '700',
-            'Extra-bold':  '800',
-            'Black':       '900',
-        }
-
-        # Data used by UI
-        data['name'] = data_src(4)
-        data['version'] = data_src(5)
-        data['family'] = data_src(16) if data_src(16) else data_src(1)
-        data['style'] = 'normal'
-        data['weight'] = '400'
-
-        data['local'] = ['local("%s")' % data_src(4)]
-        if not data_src(6) == data_src(4):
-            data['local'].append('local("%s")' % data_src(6))
-
-        s = '-'
-        data['name-slug'] = s.join(data['name'].split()).lower()
-        data['family-slug'] = s.join(data['family'].split()).lower()
-
-        ws = data_src(17) if data_src(17) else data_src(2)
-        ws = ws.split()
-
-        for s in ws:
-            if s == 'Italic':
-                data['style'] = 'italic'
-            if s in weights:
-                data['weight'] = weights[s]
-
-        return data
 

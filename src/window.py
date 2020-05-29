@@ -88,7 +88,7 @@ class Window(Handy.ApplicationWindow):
         self.end_css.set_language('css')
         self.import_css_frame.add(self.end_css)
 
-        self.open_files.connect('clicked', self.open_generation_folder)
+        self.open_files.connect('clicked', self.open_generation_dir)
 
     def open_fonts(self, _widget=None):
         otf_filter = Gtk.FileFilter()
@@ -147,7 +147,7 @@ class Window(Handy.ApplicationWindow):
 
     def set_outpath(self, *args):
         filechooser = Gtk.FileChooserNative.new(
-            _('Select output folder'),
+            _('Select output directory'),
             self,
             Gtk.FileChooserAction.SELECT_FOLDER,
             None,
@@ -169,7 +169,7 @@ class Window(Handy.ApplicationWindow):
         elif response == Gtk.ResponseType.REJECT:
             filechooser.destroy()
 
-    def open_generation_folder(self, *args):
+    def open_generation_dir(self, *args):
         uri = self.outURI
         Gtk.show_uri_on_window(self, uri, Gdk.CURRENT_TIME)
 

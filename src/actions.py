@@ -58,7 +58,8 @@ class Actions(object):
                 self.set_accels_for_action('app.' + a['name'], a['accels'])
 
     def on_open(self, action, param):
-        self.window.open_fonts()
+        if not self.window.processing:
+            self.window.open_fonts()
 
     def on_back(self, action, param):
         if not self.window.processing:

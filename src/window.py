@@ -60,14 +60,13 @@ class Window(Handy.ApplicationWindow):
 
         self.processing = False
         self.options = Options()
-        self.outpath = ''
+        self.outpath = None
+        self.outURI = None
         self.log = Log(self.progressbar_label)
 
         self.setup_widgets()
 
         self.options.browse.connect('clicked', self.set_outpath)
-        self.options.directory.connect('changed', self._update_outpath)
-        self.options.directory.connect('changed', self._change_ready_state)
 
         self.model = Gio.ListStore.new(Font)
         self.model.connect('items-changed', self._change_ready_state)
@@ -157,20 +156,21 @@ class Window(Handy.ApplicationWindow):
 
         if response == Gtk.ResponseType.ACCEPT:
             path = filechooser.get_filename()
-            self.options.directory.set_text(path)
+            uri = filechooser.get_uri()
+            name = os.path.basename(path)
 
+            self.outpath = path
+            self.outURI = uri
+            self.options.directory.set_label(name)
+
+            self._change_ready_state()
             filechooser.destroy()
 
-            if filenames:
-                thread = Thread(target=self.load_fonts,
-                                args=(filenames,))
-                thread.daemon = True
-                thread.start()
         elif response == Gtk.ResponseType.REJECT:
             filechooser.destroy()
 
     def open_generation_folder(self, *args):
-        uri = 'file://' + self.outpath
+        uri = self.outURI
         Gtk.show_uri_on_window(self, uri, Gdk.CURRENT_TIME)
 
 
@@ -182,13 +182,10 @@ class Window(Handy.ApplicationWindow):
         widget = FontWidget(font, self.model)
         return widget
 
-    def _update_outpath(self, entry):
-        self.outpath = entry.get_text()
-
     def _change_ready_state(self, *args, **kwargs):
         children = True if len(self.model) > 0 else False
 
-        if children and self._check_path_access(self.outpath):
+        if children and self.outpath:
             self.btn_generate.set_sensitive(True)
         else:
             self.btn_generate.set_sensitive(False)
@@ -197,11 +194,6 @@ class Window(Handy.ApplicationWindow):
             self.fonts_stack.set_visible_child_name('fonts')
         else:
             self.fonts_stack.set_visible_child_name('empty')
-
-    def _check_path_access(self, path):
-        if os.access(path, os.W_OK) and os.path.exists(path):
-            return True
-        return False
 
     def _get_font_data(self, data_src):
         data = {}

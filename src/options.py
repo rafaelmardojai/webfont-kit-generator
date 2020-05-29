@@ -57,8 +57,6 @@ class Options(Gtk.Box):
         self.load_saved()
 
     def setup(self):
-        self.directory.connect('changed', self._check_dir_entry)
-
         # Setup font_display combo row
         model = Gio.ListStore.new(Handy.ValueObject)
         options = [_('Disabled'), 'auto', 'block', 'swap', 'fallback', 'optional']
@@ -142,12 +140,4 @@ class Options(Gtk.Box):
 
     def get_font_display(self):
         return self.font_display.get_selected_index()
-        
-
-    def _check_dir_entry(self, entry):
-        path = entry.get_text()
-        if os.access(path, os.W_OK) and os.path.exists(path):
-            entry.get_style_context().remove_class('error')
-        else:
-            entry.get_style_context().add_class('error')
-        
+                

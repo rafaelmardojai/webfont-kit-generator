@@ -5,6 +5,7 @@
     <file>ui/options.ui</file>
     <file>ui/about.ui</file>
     <file>css/styles.css</file>
+    <file>splash.svg</file>
   </gresource>
 </gresources>
   

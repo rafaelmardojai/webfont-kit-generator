@@ -42,6 +42,7 @@ class Window(Handy.ApplicationWindow):
     progressbar_label = Gtk.Template.Child()
     cancel = Gtk.Template.Child()
 
+    finished_stack = Gtk.Template.Child()
     import_html_frame = Gtk.Template.Child()
     import_css_frame = Gtk.Template.Child()
     log_column = Gtk.Template.Child()

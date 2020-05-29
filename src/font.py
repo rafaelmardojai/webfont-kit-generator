@@ -26,6 +26,7 @@ class Font(GObject.Object):
         self.filename = filename
         self.data = data
 
+
 class FontWidget(Handy.ActionRow):
 
     def __init__(self, font, model, **kwargs):

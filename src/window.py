@@ -153,7 +153,6 @@ class Window(Handy.ApplicationWindow):
     def open_generation_dir(self, *args):
         uri = self.outURI
         Gtk.show_uri_on_window(self, uri, Gdk.CURRENT_TIME)
-        print(uri)
 
 
     '''

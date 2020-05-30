@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-30 09:35-0500\n"
-"PO-Revision-Date: 2020-05-25 14:00-0500\n"
+"PO-Revision-Date: 2020-05-30 09:47-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -53,7 +53,7 @@ msgstr "Generar"
 
 #: src/resources/ui/window.ui:115
 msgid "Add some fonts"
-msgstr ""
+msgstr "Agregue algunas tipografías"
 
 #: src/resources/ui/window.ui:141
 msgid "Open Fonts"
@@ -65,7 +65,7 @@ msgstr "Tipografías Fuente"
 
 #: src/resources/ui/window.ui:285
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: src/resources/ui/window.ui:373 src/generator.py:69
 msgid "Generation finished!"
@@ -82,9 +82,8 @@ msgid "Or import it directly to you CSS:"
 msgstr "O importarlas directamente a tu CSS:"
 
 #: src/resources/ui/window.ui:431
-#, fuzzy
 msgid "Open in Files"
-msgstr "Abrir archivos de tipografías"
+msgstr "Abrir en Archivos"
 
 #: src/resources/ui/window.ui:452
 msgid "Information"
@@ -95,17 +94,16 @@ msgid "Logs"
 msgstr "Registros"
 
 #: src/resources/ui/options.ui:36
-#, fuzzy
 msgid "Output directory"
-msgstr "Opciones de Salida"
+msgstr "Carpeta de Salida"
 
 #: src/resources/ui/options.ui:48
 msgid "Select a directory"
-msgstr ""
+msgstr "Seleccione una carpeta"
 
 #: src/resources/ui/options.ui:61
 msgid "Browse..."
-msgstr ""
+msgstr "Examinar..."
 
 #: src/resources/ui/options.ui:84
 msgid "Fonts"
@@ -121,49 +119,51 @@ msgstr "Subconjunto"
 
 #: src/resources/ui/options.ui:123
 msgid "Limit the character set to reduce file size"
-msgstr ""
+msgstr "Limite el conjunto de caracteres para reducir el tamaño del archivo"
 
 #: src/resources/ui/options.ui:145
 msgid "Latin"
-msgstr ""
+msgstr "Latín"
 
 #: src/resources/ui/options.ui:159
 msgid "Cyrillic"
-msgstr ""
+msgstr "Cirílico"
 
 #: src/resources/ui/options.ui:173
 msgid "Greek"
-msgstr ""
+msgstr "Griego"
 
 #: src/resources/ui/options.ui:187
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamita"
 
 #: src/resources/ui/options.ui:210
 msgid "Latin Extended"
-msgstr ""
+msgstr "Latín Extendido"
 
 #: src/resources/ui/options.ui:224
 msgid "Cyrillic Extended"
-msgstr ""
+msgstr "Cirílico Extendido"
 
 #: src/resources/ui/options.ui:238
 msgid "Greek Extended"
-msgstr ""
+msgstr "Griego Extendido"
 
 #: src/resources/ui/options.ui:252
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: src/resources/ui/options.ui:285
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
 #: src/resources/ui/options.ui:297
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
 msgstr ""
+"Valores Separados por comas. Valores hexadecimales individuales y/o rangos "
+"separados con guiones."
 
 #: src/resources/ui/options.ui:333
 msgid "CSS"
@@ -203,7 +203,6 @@ msgid "Open font files"
 msgstr "Abrir archivos de tipografías"
 
 #: src/window.py:131
-#, fuzzy
 msgid "Select output directory"
 msgstr "Seleccionar carpeta de salida"
 
@@ -237,7 +236,7 @@ msgstr "Generado <i>%s</i>."
 
 #: src/generator.py:173
 msgid "There is no CSS to generate."
-msgstr ""
+msgstr "No hay CSS para generar."
 
 #~ msgid "No fonts selected"
 #~ msgstr "No hay tipografías seleccionadas"

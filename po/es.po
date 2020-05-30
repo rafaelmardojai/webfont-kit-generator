@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 13:54-0500\n"
+"POT-Creation-Date: 2020-05-30 09:35-0500\n"
 "PO-Revision-Date: 2020-05-25 14:00-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
@@ -52,64 +52,132 @@ msgid "Generate"
 msgstr "Generar"
 
 #: src/resources/ui/window.ui:115
-msgid "No fonts selected"
-msgstr "No hay tipografías seleccionadas"
+msgid "Add some fonts"
+msgstr ""
 
-#: src/resources/ui/window.ui:132
+#: src/resources/ui/window.ui:141
 msgid "Open Fonts"
 msgstr "Abrir Tipografías"
 
-#: src/resources/ui/window.ui:203
+#: src/resources/ui/window.ui:216
 msgid "Source Fonts"
 msgstr "Tipografías Fuente"
 
-#: src/resources/ui/window.ui:329
-msgid "Generarion finished!"
+#: src/resources/ui/window.ui:285
+msgid "Cancel"
+msgstr ""
+
+#: src/resources/ui/window.ui:373 src/generator.py:69
+msgid "Generation finished!"
 msgstr "Generación finalizada!"
 
-#: src/resources/ui/window.ui:347
+#: src/resources/ui/window.ui:389
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Para vincular sus tipografías, copie el siguiente código en el encabezado de "
 "su HTML:"
 
-#: src/resources/ui/window.ui:369
+#: src/resources/ui/window.ui:411
 msgid "Or import it directly to you CSS:"
 msgstr "O importarlas directamente a tu CSS:"
 
-#: src/resources/ui/window.ui:396
+#: src/resources/ui/window.ui:431
+#, fuzzy
+msgid "Open in Files"
+msgstr "Abrir archivos de tipografías"
+
+#: src/resources/ui/window.ui:452
 msgid "Information"
 msgstr "Información"
 
-#: src/resources/ui/window.ui:432
+#: src/resources/ui/window.ui:488
 msgid "Logs"
 msgstr "Registros"
 
-#: src/resources/ui/options.ui:29
+#: src/resources/ui/options.ui:36
+#, fuzzy
+msgid "Output directory"
+msgstr "Opciones de Salida"
+
+#: src/resources/ui/options.ui:48
+msgid "Select a directory"
+msgstr ""
+
+#: src/resources/ui/options.ui:61
+msgid "Browse..."
+msgstr ""
+
+#: src/resources/ui/options.ui:84
 msgid "Fonts"
 msgstr "Tipografías"
 
-#: src/resources/ui/options.ui:33
-msgid "Font formats"
-msgstr "Formatos de tipografías"
+#: src/resources/ui/options.ui:102
+msgid "WOFF"
+msgstr ""
 
-#: src/resources/ui/options.ui:62
+#: src/resources/ui/options.ui:122
 msgid "Subsetting"
 msgstr "Subconjunto"
 
+#: src/resources/ui/options.ui:123
+msgid "Limit the character set to reduce file size"
+msgstr ""
+
+#: src/resources/ui/options.ui:145
+msgid "Latin"
+msgstr ""
+
+#: src/resources/ui/options.ui:159
+msgid "Cyrillic"
+msgstr ""
+
+#: src/resources/ui/options.ui:173
+msgid "Greek"
+msgstr ""
+
+#: src/resources/ui/options.ui:187
+msgid "Vietnamese"
+msgstr ""
+
 #: src/resources/ui/options.ui:210
+msgid "Latin Extended"
+msgstr ""
+
+#: src/resources/ui/options.ui:224
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: src/resources/ui/options.ui:238
+msgid "Greek Extended"
+msgstr ""
+
+#: src/resources/ui/options.ui:252
+msgid "Devanagari"
+msgstr ""
+
+#: src/resources/ui/options.ui:285
+msgid "Custom"
+msgstr ""
+
+#: src/resources/ui/options.ui:297
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+
+#: src/resources/ui/options.ui:333
 msgid "CSS"
 msgstr "CSS"
 
-#: src/resources/ui/options.ui:214
+#: src/resources/ui/options.ui:337
 msgid "Font display"
 msgstr "Visualización de las tipografías"
 
-#: src/resources/ui/options.ui:215
+#: src/resources/ui/options.ui:338
 msgid "The CSS font-display descriptor"
 msgstr "El descriptor CSS font-display"
 
-#: src/resources/ui/about.ui:10
+#: src/resources/ui/about.ui:9
 msgid ""
 "Create @font-face kits easily\n"
 "Basen on python fontTools library\n"
@@ -118,54 +186,64 @@ msgstr ""
 "Cree fácilmente los kits @font-face\n"
 "Basado en la librería Python fontTools"
 
-#: src/window.py:71
+#: src/window.py:76
 msgid "Output Options"
 msgstr "Opciones de Salida"
 
-#: src/window.py:94
+#: src/window.py:93
 msgid "OTF Fonts"
 msgstr "Fuentes OTF"
 
-#: src/window.py:98
+#: src/window.py:97
 msgid "TTF Fonts"
 msgstr "Fuentes TTF"
 
-#: src/window.py:103
+#: src/window.py:102
 msgid "Open font files"
 msgstr "Abrir archivos de tipografías"
 
-#: src/window.py:142
-msgid "Select output folder"
+#: src/window.py:131
+#, fuzzy
+msgid "Select output directory"
 msgstr "Seleccionar carpeta de salida"
 
-#: src/options.py:55
+#: src/options.py:62
 msgid "Disabled"
 msgstr "Deshabilitado"
 
-#: src/generator.py:59
-msgid "Generation finished!"
-msgstr "Generación finalizada!"
-
-#: src/generator.py:65
+#: src/generator.py:77
 #, python-format
 msgid "Generating fonts for %s:"
 msgstr "Generando tipografías para %s:"
 
-#: src/generator.py:113
+#: src/generator.py:123
 #, python-format
 msgid "Generated <i>%s</i> with <i>%s</i> glyphs."
 msgstr "Generado <i>%s</i> con <i>%s</i> signos."
 
-#: src/generator.py:124
+#: src/generator.py:134
 #, python-format
 msgid "No glyphs where found for %s. Skipping."
 msgstr "No se encontraron signos para %s. Omitiendo."
 
-#: src/generator.py:141
+#: src/generator.py:151
 msgid "Generating CSS:"
 msgstr "Generando CSS:"
 
-#: src/generator.py:160
+#: src/generator.py:170
 #, python-format
 msgid "Generated <i>%s</i>."
 msgstr "Generado <i>%s</i>."
+
+#: src/generator.py:173
+msgid "There is no CSS to generate."
+msgstr ""
+
+#~ msgid "No fonts selected"
+#~ msgstr "No hay tipografías seleccionadas"
+
+#~ msgid "Generarion finished!"
+#~ msgstr "Generación finalizada!"
+
+#~ msgid "Font formats"
+#~ msgstr "Formatos de tipografías"

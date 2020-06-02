@@ -120,7 +120,10 @@ class Generator(object):
                 css['src'].append('url(%s) format("%s")' % (filename, format))
 
                 self.progress += 1
-                self._append_log(_('Generated <i>%s</i> with <i>%s</i> glyphs.' % (filenameout, count)))
+                self._append_log(
+                    _('Generated <i>{filename}</i> with <i>{count}</i> glyphs.'.format(
+                    filename=filenameout,
+                    count=count)))
 
             if range:
                 css['unicode-range'] = self.ranges[range]

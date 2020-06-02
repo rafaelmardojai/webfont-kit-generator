@@ -107,7 +107,7 @@
                         <property name="can_focus">False</property>
                         <property name="valign">center</property>
                         <property name="orientation">vertical</property>
-                        <property name="spacing">24</property>
+                        <property name="spacing">48</property>
                         <child>
                           <object class="GtkLabel">
                             <property name="visible">True</property>
@@ -125,10 +125,36 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkImage">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="resource">/com/rafaelmardojai/WebfontKitGenerator/splash.svg</property>
+                            <property name="halign">center</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="icon_name">splash-a-symbolic</property>
+                                <property name="pixel_size">210</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="icon_name">splash-b-symbolic</property>
+                                <property name="pixel_size">210</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>

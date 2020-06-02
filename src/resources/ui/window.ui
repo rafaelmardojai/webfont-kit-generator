@@ -134,7 +134,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="icon_name">splash-a-symbolic</property>
-                                <property name="pixel_size">210</property>
+                                <property name="pixel_size">192</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -147,7 +147,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="icon_name">splash-b-symbolic</property>
-                                <property name="pixel_size">210</property>
+                                <property name="pixel_size">192</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>

@@ -70,8 +70,8 @@
                 {
                     "type":"git",
                     "url":"https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag":"v0.80.0",
-                    "commit":"b61eefde06040703026f49a0b979588e69f77d3a"
+                    "tag":"0.81.0",
+                    "commit":"4c9153abe3e936fb9bf3f4aa1c3c745ca222615b"
                 }
             ]
         },

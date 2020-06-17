@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-30 09:49-0500\n"
+"POT-Creation-Date: 2020-06-17 13:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,39 +50,39 @@ msgstr ""
 msgid "Add some fonts"
 msgstr ""
 
-#: src/resources/ui/window.ui:141
+#: src/resources/ui/window.ui:167
 msgid "Open Fonts"
 msgstr ""
 
-#: src/resources/ui/window.ui:216
+#: src/resources/ui/window.ui:242
 msgid "Source Fonts"
 msgstr ""
 
-#: src/resources/ui/window.ui:285
+#: src/resources/ui/window.ui:311
 msgid "Cancel"
 msgstr ""
 
-#: src/resources/ui/window.ui:373 src/generator.py:69
+#: src/resources/ui/window.ui:399 src/generator.py:69
 msgid "Generation finished!"
 msgstr ""
 
-#: src/resources/ui/window.ui:389
+#: src/resources/ui/window.ui:415
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 
-#: src/resources/ui/window.ui:411
+#: src/resources/ui/window.ui:437
 msgid "Or import it directly to you CSS:"
 msgstr ""
 
-#: src/resources/ui/window.ui:431
+#: src/resources/ui/window.ui:457
 msgid "Open in Files"
 msgstr ""
 
-#: src/resources/ui/window.ui:452
+#: src/resources/ui/window.ui:478
 msgid "Information"
 msgstr ""
 
-#: src/resources/ui/window.ui:488
+#: src/resources/ui/window.ui:514
 msgid "Logs"
 msgstr ""
 
@@ -200,25 +200,25 @@ msgstr ""
 msgid "Generating fonts for %s:"
 msgstr ""
 
-#: src/generator.py:123
-#, python-format
-msgid "Generated <i>%s</i> with <i>%s</i> glyphs."
+#: src/generator.py:124
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr ""
 
-#: src/generator.py:134
+#: src/generator.py:137
 #, python-format
 msgid "No glyphs where found for %s. Skipping."
 msgstr ""
 
-#: src/generator.py:151
+#: src/generator.py:154
 msgid "Generating CSS:"
 msgstr ""
 
-#: src/generator.py:170
+#: src/generator.py:173
 #, python-format
 msgid "Generated <i>%s</i>."
 msgstr ""
 
-#: src/generator.py:173
+#: src/generator.py:176
 msgid "There is no CSS to generate."
 msgstr ""

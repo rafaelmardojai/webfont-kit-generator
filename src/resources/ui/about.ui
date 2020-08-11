@@ -6,9 +6,7 @@
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
     <property name="program_name">Webfont Kit Generator</property>
-    <property name="comments" translatable="yes">Create @font-face kits easily
-Basen on python fontTools library
-    </property>
+    <property name="comments" translatable="yes">Create @font-face kits easily</property>
     <property name="website">https://github.com/rafaelmardojai/WebfontKitGenerator</property>
     <property name="authors">Rafael Mardojai CM</property>
     <property name="logo_icon_name">com.rafaelmardojai.WebfontKitGenerator</property>

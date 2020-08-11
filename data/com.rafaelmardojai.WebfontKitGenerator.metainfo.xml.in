@@ -9,9 +9,6 @@
     <p>
       Webfont Kit Generator is a simple utility that allows you to generate woff, woff2 and the necessary CSS boilerplate from non-web font formats (otf and ttf).
     </p>
-    <p>
-      Webfont Kit Generator uses fontTools python library under the hood.
-    </p>
   </description>  
   <url type="homepage">https://github.com/rafaelmardojai/WebfontKitGenerator</url>
   <url type="bugtracker">https://github.com/rafaelmardojai/WebfontKitGenerator/issues</url>

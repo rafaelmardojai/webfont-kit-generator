@@ -17,10 +17,8 @@
 
 import os
 
-from threading import Thread
 from gettext import gettext as _
-from gi.repository import GLib, Gio, Gdk, Gtk, Handy
-from fontTools.ttLib import TTFont
+from gi.repository import Gio, Gdk, Gtk, Handy
 
 from .generator import Generator
 from .loader import Loader

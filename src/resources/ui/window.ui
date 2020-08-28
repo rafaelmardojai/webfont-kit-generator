@@ -434,7 +434,7 @@
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="label" translatable="yes">Or import it directly to you CSS:</property>
+                                    <property name="label" translatable="yes">Or import it directly to your CSS:</property>
                                     <property name="halign">start</property>
                                   </object>
                                   <packing>

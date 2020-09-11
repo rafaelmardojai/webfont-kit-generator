@@ -72,5 +72,4 @@ class Actions(object):
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()
-        dialog.show_all()
  

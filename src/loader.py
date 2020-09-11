@@ -29,9 +29,6 @@ class Loader(object):
         self.model = model
         self.filenames = filenames
 
-        self.total = len(self.filenames)
-        self.progress = 0
-
     def load(self):
         self.window.processing = True
 

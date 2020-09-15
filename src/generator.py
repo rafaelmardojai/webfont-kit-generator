@@ -72,6 +72,8 @@ class Generator(object):
         self.window.appstack.set_visible_child_name('finished')
         self.window.finished_stack.set_visible_child_name('info')
 
+        return
+
     def _generate_font(self, filename, data):
         name = data['name-slug']
         self._append_log(_('Generating fonts for %s:' % data['name']), bold=True)
@@ -85,6 +87,7 @@ class Generator(object):
                 subs.subset(font)
                 self._write_font(font, data, range=range)
                 font.close()
+                del font
         else:
             font = TTFont(filename)
             self._write_font(font, data)

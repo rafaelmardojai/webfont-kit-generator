@@ -1,16 +1,16 @@
 {
-    "app-id":"com.rafaelmardojai.WebfontKitGenerator",
-    "runtime":"org.gnome.Platform",
-    "runtime-version":"3.36",
-    "sdk":"org.gnome.Sdk",
-    "command":"webfontkitgenerator",
-    "finish-args":[
+    "app-id" : "com.rafaelmardojai.WebfontKitGenerator",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.38",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "webfontkitgenerator",
+    "finish-args" : [
         "--share=ipc",
         "--device=dri",
         "--socket=fallback-x11",
         "--socket=wayland"
     ],
-    "cleanup":[
+    "cleanup" : [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -21,68 +21,68 @@
         "*.la",
         "*.a"
     ],
-    "modules":[
+    "modules" : [
         {
-            "name":"FontTools",
-            "buildsystem":"simple",
-            "build-commands":[
+            "name" : "FontTools",
+            "buildsystem" : "simple",
+            "build-commands" : [
                 "python3 setup.py install --prefix=/app --root=/"
             ],
-            "sources":[
+            "sources" : [
                 {
-                    "type":"archive",
-                    "url":"https://files.pythonhosted.org/packages/31/f7/00fc7b5126281ad00eb81df1349c645dffedcbce10a42a56d6cfb8ad155e/fonttools-4.11.0.zip",
-                    "sha256":"7fe5937206099ef284055b8c94798782e0993a740eed87f0dd262ed9870788aa"
+                    "type" : "archive",
+                    "url" : "https://files.pythonhosted.org/packages/31/f7/00fc7b5126281ad00eb81df1349c645dffedcbce10a42a56d6cfb8ad155e/fonttools-4.11.0.zip",
+                    "sha256" : "7fe5937206099ef284055b8c94798782e0993a740eed87f0dd262ed9870788aa"
                 }
             ],
-            "modules":[
+            "modules" : [
                 {
-                    "name":"Brotli",
-                    "buildsystem":"simple",
-                    "build-commands":[
+                    "name" : "Brotli",
+                    "buildsystem" : "simple",
+                    "build-commands" : [
                         "python3 setup.py install --prefix=/app --root=/"
                     ],
-                    "sources":[
+                    "sources" : [
                         {
-                            "type":"archive",
-                            "url":"https://files.pythonhosted.org/packages/cd/9c/7955895f5672ecc85270244582c6b53ff95bb4c24bf77bd9271d42351635/Brotli-1.0.7.zip",
-                            "sha256":"0538dc1744fd17c314d2adc409ea7d1b779783b89fd95bcfb0c2acc93a6ea5a7"
+                            "type" : "archive",
+                            "url" : "https://files.pythonhosted.org/packages/cd/9c/7955895f5672ecc85270244582c6b53ff95bb4c24bf77bd9271d42351635/Brotli-1.0.7.zip",
+                            "sha256" : "0538dc1744fd17c314d2adc409ea7d1b779783b89fd95bcfb0c2acc93a6ea5a7"
                         }
                     ]
                 }
             ]
         },
         {
-            "name":"libhandy",
-            "buildsystem":"meson",
-            "config-opts":[
+            "name" : "libhandy",
+            "buildsystem" : "meson",
+            "config-opts" : [
                 "-Dgtk_doc=false",
                 "-Dtests=false",
                 "-Dexamples=false",
                 "-Dvapi=false",
                 "-Dglade_catalog=disabled"
             ],
-            "cleanup":[
+            "cleanup" : [
                 "/include",
                 "/lib/pkgconfig"
             ],
-            "sources":[
+            "sources" : [
                 {
-                    "type":"git",
-                    "url":"https://gitlab.gnome.org/GNOME/libhandy.git",
-                    "tag":"0.81.0",
-                    "commit":"4c9153abe3e936fb9bf3f4aa1c3c745ca222615b"
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libhandy.git",
+                    "tag" : "1.0.2",
+                    "commit" : "465c00f8f80c27330be494ed7c0ba2ffe26321c4"
                 }
             ]
         },
         {
-            "name":"webfontkitgenerator",
-            "builddir":true,
-            "buildsystem":"meson",
-            "sources":[
+            "name" : "webfontkitgenerator",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "sources" : [
                 {
-                    "type":"git",
-                    "url":"."
+                    "type" : "dir",
+                    "url" : "."
                 }
             ]
         }

@@ -39,11 +39,12 @@ class Application(Gtk.Application, Actions):
         self.version = version
         self.window = None
 
-        GObject.type_register(Handy.Column)
         Actions.__init__(self)
 
     def do_startup(self):
         Gtk.Application.do_startup(self)
+
+        Handy.init()
 
         # Load CSS
         css_provider = Gtk.CssProvider()

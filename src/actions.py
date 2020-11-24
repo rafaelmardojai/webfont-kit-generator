@@ -71,5 +71,6 @@ class Actions(object):
         dialog.set_version(self.version)
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
+        dialog.connect('response', lambda dialog, response: dialog.destroy())
         dialog.present()
  

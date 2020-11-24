@@ -87,14 +87,13 @@ class Window(Handy.ApplicationWindow):
         self.open_files.connect('clicked', self.open_generation_dir)
 
     def open_fonts(self, _widget=None):
-        otf_filter = Gtk.FileFilter()
-        otf_filter.set_name(_('OTF Fonts'))
-        otf_filter.add_mime_type('font/otf')
-        otf_filter.add_pattern('.otf')
-        ttf_filter = Gtk.FileFilter()
-        ttf_filter.set_name(_('TTF Fonts'))
-        ttf_filter.add_mime_type('font/ttf')
-        ttf_filter.add_pattern('.ttf')
+        font_filter = Gtk.FileFilter()
+        font_filter.set_name(_('OTF & TTF'))
+        font_filter.add_mime_type('font/otf')
+        font_filter.add_pattern('.otf')
+        font_filter.add_mime_type('font/ttf')
+        font_filter.add_pattern('.ttf')
+
 
         filechooser = Gtk.FileChooserNative.new(
             _('Open font files'),
@@ -103,8 +102,7 @@ class Window(Handy.ApplicationWindow):
             None,
             None)
         filechooser.set_select_multiple(True)
-        filechooser.add_filter(otf_filter)
-        filechooser.add_filter(ttf_filter)
+        filechooser.add_filter(font_filter)
 
         filechooser.connect('response', self.on_load)
         filechooser.run()

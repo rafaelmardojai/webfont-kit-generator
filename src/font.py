@@ -44,8 +44,7 @@ class FontWidget(Handy.ActionRow):
         icon = Gtk.Image.new_from_icon_name('edit-delete-symbolic', Gtk.IconSize.MENU)
         btn_remove = Gtk.Button(valign=Gtk.Align.CENTER)
         btn_remove.add(icon)
-        btn_remove.get_style_context().add_class('destructive-action')
-        btn_remove.get_style_context().add_class('flat')
+        btn_remove.get_style_context().add_class('image-button')
         btn_remove.connect('clicked', self.remove_font)
         self.add(btn_remove)
 

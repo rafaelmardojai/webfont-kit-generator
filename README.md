@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="brand/icon.svg" alt="Webfont Kit Generator" width="100" height="100"/><br>
+	<img src="brand/icon.svg" alt="Webfont Kit Generator" width="128" height="128"/><br>
 	Webfont Kit Generator
 </h1>
 

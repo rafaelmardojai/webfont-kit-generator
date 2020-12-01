@@ -24,21 +24,22 @@ from .font import Font
 
 class Loader(object):
 
-    def __init__(self, window, model, filenames):
+    def __init__(self, window, model, files):
         self.window = window
         self.model = model
-        self.filenames = filenames
+        self.files = files
 
     def load(self):
         self.window.processing = True
 
-        for f in self.filenames:
+        for f in self.files:
             try:
-                if os.path.exists(f):
-                    ttfont = TTFont(f, lazy=True)
+                path = f.get_path()
+                if os.path.exists(path):
+                    ttfont = TTFont(path, lazy=True)
                     data = self._get_font_data(ttfont['name'].getDebugName)
                     ttfont.close()
-                    font = Font(f, data)
+                    font = Font(path, data)
                     self.model.append(font)
 
             except Exception as e:

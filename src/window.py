@@ -109,10 +109,10 @@ class Window(Handy.ApplicationWindow):
 
     def on_load(self, filechooser, response):
         if response == Gtk.ResponseType.ACCEPT:
-            filenames = filechooser.get_filenames()
+            files = filechooser.get_files()
 
-            if filenames:
-                loader = Loader(self, self.model, filenames)
+            if files:
+                loader = Loader(self, self.model, files)
                 loader.load()
 
     def on_generate(self, widget):

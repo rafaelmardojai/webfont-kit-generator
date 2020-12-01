@@ -62,7 +62,7 @@ class Generator(object):
         for font in self.list:
             if self.stop:
                 return
-            self._generate_font(font.filename, font.data)
+            self._generate_font(font.path, font.data)
 
         css = self._generate_css()
         self._end_code(css)

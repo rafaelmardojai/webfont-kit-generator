@@ -20,10 +20,10 @@ from gi.repository import GObject, Gtk, Handy
 
 class Font(GObject.Object):
 
-    def __init__(self, filename, data, **kwargs):
+    def __init__(self, path, data, **kwargs):
         super().__init__(**kwargs)
 
-        self.filename = filename
+        self.path = path
         self.data = data
 
 

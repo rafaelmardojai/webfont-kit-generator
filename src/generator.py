@@ -123,10 +123,9 @@ class Generator(object):
                 css['src'].append(f'url({filename}) format("{format}")')
 
                 self.progress += 1
-                self._append_log(
-                    _('Generated <i>{filename}</i> with <i>{count}</i> glyphs.'.format(
-                    filename=filenameout,
-                    count=count)))
+                gen_text = _('Generated <i>{filename}</i> with <i>{count}</i> glyphs.')
+                gen_text = gen_text.format(filename=filenameout, count=count)
+                self._append_log(gen_text)
 
             if range:
                 css['unicode-range'] = self.ranges[range]
@@ -137,7 +136,8 @@ class Generator(object):
         else:
             self.progress += 1 * len(self.formats)
             text = range if range else name
-            self._append_log(_('No glyphs where found for %s. Skipping.' % text), italic=True)
+            gen_text = _('No glyphs where found for {range}. Skipping.')
+            self._append_log(gen_text.format(range=text), italic=True)
 
         # Update progressbar
         GLib.idle_add(self._update_progressbar)
@@ -173,7 +173,8 @@ class Generator(object):
             with open(os.path.join(self.path, filename), 'w') as f:
                 print(css, file=f)
 
-            self._append_log(_('Generated <i>%s</i>.' % filename))
+            gen_text = _('Generated <i>{filename}</i>.')
+            self._append_log(gen_text.format(filename=filename))
 
         if len(css_sheets) == 0:
             self._append_log(_('There is no CSS to generate.'), italic=True)

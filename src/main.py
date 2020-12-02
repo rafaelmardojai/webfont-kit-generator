@@ -33,7 +33,7 @@ from .window import Window
 class Application(Gtk.Application, Actions):
     def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.WebfontKitGenerator',
-                         flags=Gio.ApplicationFlags.FLAGS_NONE)
+                         flags=Gio.ApplicationFlags.HANDLES_OPEN)
         GLib.set_application_name(_('Webfont Kit Generator'))
 
         self.version = version
@@ -58,6 +58,12 @@ class Application(Gtk.Application, Actions):
         if not self.window:
             self.window = Window(application=self)
         self.window.present()
+
+    def do_open(self, files, n_files, hint):
+        # Activate window first
+        self.activate()
+        # Load fonts
+        self.window.load_fonts(files)
 
 
 def main(version):

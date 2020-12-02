@@ -1,9 +1,10 @@
 [Desktop Entry]
 Name=Webfont Kit Generator
 Comment=Create @font-face kits easily
-Exec=webfontkitgenerator
+Exec=webfontkitgenerator %U
 Icon=com.rafaelmardojai.WebfontKitGenerator
 Terminal=false
 Type=Application
 Categories=Utility;GTK;
 StartupNotify=true
+MimeType=font/otf;font/ttf;

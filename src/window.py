@@ -94,7 +94,6 @@ class Window(Handy.ApplicationWindow):
         font_filter.add_mime_type('font/ttf')
         font_filter.add_pattern('.ttf')
 
-
         filechooser = Gtk.FileChooserNative.new(
             _('Open font files'),
             self,
@@ -104,16 +103,16 @@ class Window(Handy.ApplicationWindow):
         filechooser.set_select_multiple(True)
         filechooser.add_filter(font_filter)
 
-        filechooser.connect('response', self.on_load)
-        filechooser.run()
+        response = filechooser.run()
 
-    def on_load(self, filechooser, response):
         if response == Gtk.ResponseType.ACCEPT:
             files = filechooser.get_files()
-
             if files:
-                loader = Loader(self, self.model, files)
-                loader.load()
+                self.load_fonts(files)
+
+    def load_fonts(self, files):
+        loader = Loader(self, self.model, files)
+        loader.load()
 
     def on_generate(self, widget):
             generator = Generator(self, self.outpath, self.model,

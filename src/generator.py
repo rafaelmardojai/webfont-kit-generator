@@ -27,18 +27,18 @@ from fontTools.subset import parse_unicodes, Subsetter
 
 class Generator(object):
 
-    def __init__(self, window, path, list, formats, ranges, font_display):
+    def __init__(self, window, path, fonts_list, formats, ranges, font_display):
         self.window = window
         self.stop = False
         self.path = path
-        self.list = list
+        self.list = fonts_list
         self.formats = formats
         self.ranges = ranges
         self.font_display = font_display
         self.css = {}
 
         total_ranges = len(ranges) if ranges else 1
-        self.total = (len(list) * len(formats)) * total_ranges
+        self.total = (len(fonts_list) * len(formats)) * total_ranges
         self.progress = 0
 
     def run(self):
@@ -120,7 +120,7 @@ class Generator(object):
                     os.makedirs(outfolder)
 
                 font.save(os.path.join(self.path, filenameout))
-                css['src'].append('url(%s) format("%s")' % (filename, format))
+                css['src'].append(f'url({filename}) format("{format}")')
 
                 self.progress += 1
                 self._append_log(
@@ -197,8 +197,8 @@ class Generator(object):
         css = []
 
         for sheet in sheets:
-            html.append('<link href="%s" rel="stylesheet">' % sheet)
-            css.append('@import url("%s");' % sheet)
+            html.append(f'<link href="{sheet}" rel="stylesheet">')
+            css.append(f'@import url("{sheet}");')
 
         self.window.end_html.set_text('\n'.join(html))
         self.window.end_css.set_text('\n'.join(css))
@@ -216,7 +216,6 @@ class Generator(object):
             properties.append('\t{}: {};'.format(k, v))
 
         return '\n'.join(properties)
-        #return '; '.join(['{}: {}'.format(k, v) for k, v in style_dict.items()])
 
     def __get_font_display(self, fd):
         fds = ['auto', 'block', 'swap', 'fallback', 'optional']

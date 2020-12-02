@@ -19,7 +19,7 @@ import os
 
 from fontTools.ttLib import TTFont
 
-from .font import Font
+from webfontkitgenerator.font import Font
 
 
 class Loader(object):
@@ -77,9 +77,8 @@ class Loader(object):
         if not data_src(6) == data_src(4):
             data['local'].append('local("%s")' % data_src(6))
 
-        s = '-'
-        data['name-slug'] = s.join(data['name'].split()).lower()
-        data['family-slug'] = s.join(data['family'].split()).lower()
+        data['name-slug'] = '-'.join(data['name'].split()).lower()
+        data['family-slug'] = '-'.join(data['family'].split()).lower()
 
         ws = data_src(17) if data_src(17) else data_src(2)
         ws = ws.split()

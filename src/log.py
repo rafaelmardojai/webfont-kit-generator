@@ -35,8 +35,8 @@ class Log(Gtk.TextView):
 
     def append(self, text, bold=False, italic=False):
         end_iter = self.text_buffer.get_end_iter()
-        text = '<b>' + text + '</b>' if bold else text
-        text = '<i>' + text + '</i>' if italic else text
+        text = f'<b>{text}</b>' if bold else text
+        text = f'<i>{text}</i>' if italic else text
         text = text + '\n'
         self.text_buffer.insert_markup(end_iter, text, -1)
         self.progressbar_label.set_markup(text)

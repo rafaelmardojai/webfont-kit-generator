@@ -103,8 +103,8 @@ class Options(Gtk.Box):
         return formats
 
     def get_subsetting(self):
-        dict = {}
-        ranges = {
+        ranges = {}
+        preset_ranges = {
             'latin':        'U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,' +
                             'U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215',
             'latin-ext':    'U+0100-024F,U+0259,U+1E00-1EFF,U+20A0-20CF,U+2C60-2C7F,' +
@@ -124,17 +124,18 @@ class Options(Gtk.Box):
 
         for (button, name) in self.subset_btns:
             if button.get_active():
-                dict[name] = ranges[name]
+                ranges[name] = preset_ranges[name]
 
         try:
             if parse_unicodes(self.custom.get_text()):
-                dict['custom'] = self.custom.get_text()
+                ranges['custom'] = self.custom.get_text()
         except ValueError:
+            # TODO: show error
             pass
 
-        if len(dict) == 0:
+        if len(ranges) == 0:
             return None
-        return dict
+        return ranges
 
     def get_font_display(self):
         return self.font_display.get_selected_index()

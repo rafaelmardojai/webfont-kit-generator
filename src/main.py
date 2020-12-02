@@ -24,10 +24,10 @@ gi.require_version('Handy', '1')
 gi.require_version('GtkSource', '4')
 
 from gettext import gettext as _
-from gi.repository import GLib, GObject, Gdk, Gtk, Gio, Handy
+from gi.repository import Gdk, Gio, GLib, GObject, Gtk, Handy
 
-from .actions import Actions
-from .window import Window
+from webfontkitgenerator.actions import Actions
+from webfontkitgenerator.window import Window
 
 
 class Application(Gtk.Application, Actions):

@@ -18,14 +18,14 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import Gio, Gdk, Gtk, Handy
+from gi.repository import Gdk, Gio, GLib, Gtk, Handy
 
-from .generator import Generator
-from .loader import Loader
-from .options import Options
-from .log import Log
-from .sourceview import SourceView
-from .font import Font, FontWidget
+from webfontkitgenerator.generator import Generator
+from webfontkitgenerator.loader import Loader
+from webfontkitgenerator.options import Options
+from webfontkitgenerator.log import Log
+from webfontkitgenerator.sourceview import SourceView
+from webfontkitgenerator.font import Font, FontWidget
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/ui/window.ui')

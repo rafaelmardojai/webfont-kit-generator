@@ -43,7 +43,7 @@ class Window(Handy.ApplicationWindow):
         self.processing = False
         self.options = Options()
         self.outpath = None
-        self.outURI = None
+        self.outuri = None
         self.log = Log(self.progressbar_label)
 
         self.setup_widgets()
@@ -122,7 +122,7 @@ class Window(Handy.ApplicationWindow):
             name = os.path.basename(path)
 
             self.outpath = path
-            self.outURI = uri
+            self.outuri = uri
             self.options.directory.set_label(name)
 
             self._change_ready_state()

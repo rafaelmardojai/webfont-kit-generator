@@ -132,14 +132,34 @@ class Window(Handy.ApplicationWindow):
             filechooser.destroy()
 
     def open_generation_dir(self, *args):
-        uri = self.outURI
-        Gtk.show_uri_on_window(self, uri, Gdk.CURRENT_TIME)
+        Gio.app_info_launch_default_for_uri(self.outuri)
+
+        '''
+        fd = os.open(self.outuri, os.O_RDONLY)
+        # PyGObject
+        bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
+        proxy = Gio.DBusProxy.new_sync(bus, Gio.DBusProxyFlags.NONE, None,
+                                   'org.freedesktop.portal.Desktop',
+                                   '/org/freedesktop/portal/desktop',
+                                   'org.freedesktop.portal.OpenURI', None)
+
+        proxy.OpenDirectory('(sha{sv})', '', fd, {})
+        # dbus-python
+        bus = dbus.SessionBus()
+        portal = bus.get_object(
+            'org.freedesktop.portal.Desktop',
+            '/org/freedesktop/portal/desktop'
+        )
+        iface = dbus.Interface(portal, 'org.freedesktop.portal.OpenURI')
+        self._request_path = iface.OpenDirectory(
+            '', dbus.types.UnixFd(fd), dbus.Dictionary(signature='sv')
+        )
+        '''
 
 
     '''
     PRIVATE
     '''
-
     def _create_font_widget(self, font):
         widget = FontWidget(font, self.model)
         return widget

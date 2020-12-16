@@ -20,6 +20,18 @@ Webfont Kit Generator uses [fontTools](https://github.com/fonttools/fonttools) p
 
 ## Building
 Clone and run from GNOME Builder.
+Alternatively, you can build with `meson`.
+```bash
+meson builddir --prefix=/usr/local
+sudo ninja -C builddir install
+```
+## Other Methods of Installation
+
+| Distribution | Package | Maintainer |
+|:-:|:-:|:-:|
+| Ubuntu (PPA) | [`Stable Releases`](https://launchpad.net/~apandada1/+archive/ubuntu/webfontkitgenerator), [`Daily Builds`](https://launchpad.net/~apandada1/+archive/ubuntu/webfontkitgenerator-daily) | [Archisman Panigrahi](https://github.com/apandada1) |
+
+> It would be great if you can help us by building native packages for Arch, Fedora and other major distributions, and get them included in the official repositories.
 
 ## Screenshots
 

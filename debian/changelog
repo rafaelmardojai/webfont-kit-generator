@@ -1,0 +1,5 @@
+webfontkitgenerator (0.3.0) focal; urgency=medium
+
+  * generate debian package
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Wed, 16 Dec 2020 14:11:32 +0530

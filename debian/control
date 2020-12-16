@@ -1,0 +1,30 @@
+Source: webfontkitgenerator
+Section: gnome
+Priority: optional
+Maintainer: Rafael Mardojai CM <email@rafaelmardojai.com>
+Build-Depends: debhelper-compat(=10),
+	desktop-file-utils,
+	gettext,
+	meson (>= 0.50),
+	pkg-config,
+	libglib2.0-dev,
+	appstream
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://github.com/rafaelmardojai/WebfontKitGenerator
+Vcs-Browser: https://github.com/rafaelmardojai/WebfontKitGenerator
+Vcs-Git: https://github.com/rafaelmardojai/WebfontKitGenerator.git
+
+Package: webfontkitgenerator
+Architecture: all
+Depends: ${misc:Depends},
+	gir1.2-gtk-3.0,
+	gir1.2-gtksource-4,
+	libbrotli1,
+	python3-fonttools,
+	libhandy-1-0,
+	python3-gi
+Description: Create @font-face kits easily
+ Webfont Kit Generator is a simple utility that allows you to generate woff, woff2
+ and the necessary CSS boilerplate from non-web font formats (otf & ttf).
+ Webfont Kit Generator uses the fontTools python library under the hood.

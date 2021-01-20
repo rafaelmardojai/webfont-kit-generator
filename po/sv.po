@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# Åke Engelbrektson <eson@svenskasprakfiler.se>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 13:30-0500\n"
+"PO-Revision-Date: 2021-01-20 08:51+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: sv\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr "Webfont Kit Generator"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+msgid "Create @font-face kits easily"
+msgstr "Skapa @font-face-kit enkelt"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Webfont Kit Generator är ett enkelt verktyg som låterdig generera woff, "
+"woff2 och det nödvändiga CSS boilerplate från icke-web-font-format (otf och "
+"ttf)."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+msgid "Webfont Kit Generator uses fontTools python library under the hood."
+msgstr ""
+"Webfont Kit Generator använder fontTools python-bibliotek under huven."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:18
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: src/resources/ui/window.ui:51
+msgid "Generate"
+msgstr "Generera"
+
+#: src/resources/ui/window.ui:115
+msgid "Add some fonts"
+msgstr "Lägg några teckensnitt"
+
+#: src/resources/ui/window.ui:167
+msgid "Open Fonts"
+msgstr "Öppna teckensnitt"
+
+#: src/resources/ui/window.ui:242
+msgid "Source Fonts"
+msgstr "Källteckensnitt"
+
+#: src/resources/ui/window.ui:311
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/resources/ui/window.ui:399 src/generator.py:69
+msgid "Generation finished!"
+msgstr "Generering slutförd!"
+
+#: src/resources/ui/window.ui:415
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Kopiera in nedanstående kod i ditt HTML-huvud, för att länka dina "
+"teckensnitt:"
+
+#: src/resources/ui/window.ui:437
+msgid "Or import it directly to you CSS:"
+msgstr "Eller importera det direkt till din CSS:"
+
+#: src/resources/ui/window.ui:457
+msgid "Open in Files"
+msgstr "Öppna i filer"
+
+#: src/resources/ui/window.ui:478
+msgid "Information"
+msgstr "Information"
+
+#: src/resources/ui/window.ui:514
+msgid "Logs"
+msgstr "Loggar"
+
+#: src/resources/ui/options.ui:36
+msgid "Output directory"
+msgstr "Utdatamapp"
+
+#: src/resources/ui/options.ui:48
+msgid "Select a directory"
+msgstr "Välj en mapp"
+
+#: src/resources/ui/options.ui:61
+msgid "Browse..."
+msgstr "Bläddra..."
+
+#: src/resources/ui/options.ui:84
+msgid "Fonts"
+msgstr "Teckensnitt"
+
+#: src/resources/ui/options.ui:122
+msgid "Subsetting"
+msgstr "Underinställning"
+
+#: src/resources/ui/options.ui:123
+msgid "Limit the character set to reduce file size"
+msgstr "Begränsa teckenuppsättningen för att reducera filstorleken"
+
+#: src/resources/ui/options.ui:145
+msgid "Latin"
+msgstr "Latin"
+
+#: src/resources/ui/options.ui:159
+msgid "Cyrillic"
+msgstr "Cyrilliska"
+
+#: src/resources/ui/options.ui:173
+msgid "Greek"
+msgstr "Grekiska"
+
+#: src/resources/ui/options.ui:187
+msgid "Vietnamese"
+msgstr "Vietnamesiska"
+
+#: src/resources/ui/options.ui:210
+msgid "Latin Extended"
+msgstr "Latin utökad"
+
+#: src/resources/ui/options.ui:224
+msgid "Cyrillic Extended"
+msgstr "Cyrilliska utökad"
+
+#: src/resources/ui/options.ui:238
+msgid "Greek Extended"
+msgstr "Grekiska utökad"
+
+#: src/resources/ui/options.ui:252
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: src/resources/ui/options.ui:285
+msgid "Custom"
+msgstr "Anpassat"
+
+#: src/resources/ui/options.ui:297
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"Kommaseparerade värden. Enstaka hexvärden och/eller intervall som separeras "
+"med bindestreck."
+
+#: src/resources/ui/options.ui:333
+msgid "CSS"
+msgstr "CSS"
+
+#: src/resources/ui/options.ui:337
+msgid "Font display"
+msgstr "Teckensnittsvisning"
+
+#: src/resources/ui/options.ui:338
+msgid "The CSS font-display descriptor"
+msgstr "CSS teckensnitt"
+
+#: src/resources/ui/about.ui:9
+msgid ""
+"Create @font-face kits easily\n"
+"Basen on python fontTools library\n"
+"    "
+msgstr ""
+"Skapa @font-face-kit enkelt\n"
+"Baserat på python fontTools-bibliotek\n"
+"    "
+
+#: src/window.py:76
+msgid "Output Options"
+msgstr "Utdataalternativ"
+
+#: src/window.py:93
+msgid "OTF Fonts"
+msgstr "OTF-teckensnitt"
+
+#: src/window.py:97
+msgid "TTF Fonts"
+msgstr "TTF-teckensnitt"
+
+#: src/window.py:102
+msgid "Open font files"
+msgstr "Öppna teckensnittsfiler"
+
+#: src/window.py:131
+msgid "Select output directory"
+msgstr "Välj utdatamapp"
+
+#: src/options.py:62
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+#: src/generator.py:65
+#, python-format
+msgid "Generating fonts for %s:"
+msgstr "Genererar teckensnitt för %s:"
+
+#: src/generator.py:124
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "Genererade <i>{filename}</i> med <i>{count}</i> specialtecken."
+
+#: src/generator.py:137
+#, python-format
+msgid "No glyphs where found for %s. Skipping."
+msgstr "Inga specialtecken hittades för %s. Hoppar över."
+
+#: src/generator.py:154
+msgid "Generating CSS:"
+msgstr "Genererar CSS:"
+
+#: src/generator.py:173
+#, python-format
+msgid "Generated <i>%s</i>."
+msgstr "Genererade <i>%s</i>."
+
+#: src/generator.py:176
+msgid "There is no CSS to generate."
+msgstr "Det finns ingen CSS att generera."

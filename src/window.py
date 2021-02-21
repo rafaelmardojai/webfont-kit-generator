@@ -34,8 +34,11 @@ class Window(Handy.ApplicationWindow):
     btn_add_fonts = Gtk.Template.Child()
 
     stack = Gtk.Template.Child()
+    fonts_box = Gtk.Template.Child()
     fonts_stack = Gtk.Template.Child()
     fonts_list = Gtk.Template.Child()
+    browse = Gtk.Template.Child()
+    directory = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -48,7 +51,7 @@ class Window(Handy.ApplicationWindow):
 
         self.setup_widgets()
 
-        self.options.browse.connect('clicked', self.set_outpath)
+        self.browse.connect('clicked', self.set_outpath)
 
         self.model = Gio.ListStore.new(Font)
         self.model.connect('items-changed', self._change_ready_state)
@@ -57,7 +60,7 @@ class Window(Handy.ApplicationWindow):
         self.btn_generate.connect('clicked', self.on_generate)
 
     def setup_widgets(self):
-        self.stack.add_titled(self.options, 'options', _('Output Options'))
+        self.stack.add_titled(self.options, 'options', _('Options'))
 
         self.log_column.add(self.log)
         self.log.show_all()
@@ -123,7 +126,7 @@ class Window(Handy.ApplicationWindow):
 
             self.outpath = path
             self.outuri = uri
-            self.options.directory.set_label(name)
+            self.directory.set_label(name)
 
             self._change_ready_state()
             filechooser.destroy()

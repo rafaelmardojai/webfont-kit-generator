@@ -10,9 +10,6 @@ from fontTools.subset import parse_unicodes
 class Options(Gtk.Box):
     __gtype_name__ = 'Options'
 
-    browse = Gtk.Template.Child()
-    directory = Gtk.Template.Child()
-
     # Fonts format
     format_woff2 = Gtk.Template.Child()
     format_woff  = Gtk.Template.Child()

@@ -97,11 +97,66 @@
                       <property name="can_focus">False</property>
                       <property name="transition_type">crossfade</property>
                       <child>
-                        <object class="HdyStatusPage">
+                        <object class="GtkBox">
                           <property name="visible">True</property>
                           <property name="can_focus">False</property>
-                          <property name="icon-name">splash-a-symbolic</property>
-                          <property name="title" translatable="yes">Add some fonts</property>
+                          <property name="valign">center</property>
+                          <property name="orientation">vertical</property>
+                          <property name="spacing">48</property>
+                          <child>
+                            <object class="GtkLabel">
+                              <property name="visible">True</property>
+                              <property name="can_focus">False</property>
+                              <property name="label" translatable="yes">Add some fonts</property>
+                              <style>
+                                <class name="title"/>
+                                <class name="large-title"/>
+                              </style>
+                            </object>
+                            <packing>
+                              <property name="expand">True</property>
+                              <property name="fill">True</property>
+                              <property name="position">0</property>
+                            </packing>
+                          </child>
+                          <child>
+                            <object class="GtkBox">
+                              <property name="visible">True</property>
+                              <property name="can_focus">False</property>
+                              <property name="halign">center</property>
+                              <child>
+                                <object class="GtkImage">
+                                  <property name="visible">True</property>
+                                  <property name="can_focus">False</property>
+                                  <property name="icon_name">splash-a-symbolic</property>
+                                  <property name="pixel_size">192</property>
+                                </object>
+                                <packing>
+                                  <property name="expand">False</property>
+                                  <property name="fill">True</property>
+                                  <property name="position">1</property>
+                                </packing>
+                              </child>
+                              <child>
+                                <object class="GtkImage">
+                                  <property name="visible">True</property>
+                                  <property name="can_focus">False</property>
+                                  <property name="icon_name">splash-b-symbolic</property>
+                                  <property name="pixel_size">192</property>
+                                </object>
+                                <packing>
+                                  <property name="expand">False</property>
+                                  <property name="fill">True</property>
+                                  <property name="position">1</property>
+                                </packing>
+                              </child>
+                            </object>
+                            <packing>
+                              <property name="expand">False</property>
+                              <property name="fill">True</property>
+                              <property name="position">1</property>
+                            </packing>
+                          </child>
                           <child>
                             <object class="GtkButton">
                               <property name="label" translatable="yes">Open Fonts</property>
@@ -115,6 +170,11 @@
                                 <class name="rounded-button"/>
                               </style>
                             </object>
+                            <packing>
+                              <property name="expand">False</property>
+                              <property name="fill">True</property>
+                              <property name="position">2</property>
+                            </packing>
                           </child>
                         </object>
                         <packing>

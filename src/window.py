@@ -61,7 +61,7 @@ class Window(Handy.ApplicationWindow):
 
     def setup_widgets(self):
         self.stack.add_titled(self.options, 'options', _('Options'))
-        self.stack.child_set_property(self.options, 'icon-name', 'fonts-options-symbolic')
+        self.stack.child_set_property(self.options, 'icon-name', 'emblem-system-symbolic')
 
         self.log_column.add(self.log)
         self.log.show_all()

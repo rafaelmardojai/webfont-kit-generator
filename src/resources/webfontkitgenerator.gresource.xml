@@ -7,7 +7,6 @@
     <file>css/styles.css</file>
     <file preprocess="xml-stripblanks">icons/splash-a-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/splash-b-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/fonts-options-symbolic.svg</file>
   </gresource>
 </gresources>
   

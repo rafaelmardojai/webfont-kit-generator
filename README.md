@@ -30,8 +30,10 @@ sudo ninja -C builddir install
 | Distribution | Package | Maintainer |
 |:-:|:-:|:-:|
 | Ubuntu (PPA) | [`Stable Releases`](https://launchpad.net/~apandada1/+archive/ubuntu/webfontkitgenerator), [`Daily Builds`](https://launchpad.net/~apandada1/+archive/ubuntu/webfontkitgenerator-daily) | [Archisman Panigrahi](https://github.com/apandada1) |
+| Arch Linux (AUR) | [`webfontkitgenerator-git`](https://aur.archlinux.org/packages/webfontkitgenerator-git/) | [Archisman Panigrahi](https://github.com/apandada1) |
 
-> It would be great if you can help us by building native packages for Arch, Fedora and other major distributions, and get them included in the official repositories.
+> It would be great if you can help us by building native packages for Fedora, Solus and other major distributions, and get them included in the official repositories.
+
 
 ## Screenshots
 

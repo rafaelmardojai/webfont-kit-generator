@@ -76,6 +76,17 @@ class Window(Handy.ApplicationWindow):
 
         self.open_files.connect('clicked', self.open_generation_dir)
 
+        # Drag and drop
+        targetentry = Gtk.TargetEntry.new('text/plain', Gtk.TargetFlags(4), 0)
+        self.fonts_box.drag_dest_set(Gtk.DestDefaults.ALL, [targetentry],
+                                     Gdk.DragAction.COPY)
+        self.fonts_box.connect('drag-data-received', self.on_drag_and_drop)
+
+    def on_drag_and_drop(self, widget, drag_context, x, y, data, info, time):
+        filenames = data.get_text()
+        filenames = filenames.split()
+        self.load_fonts(filenames)
+
     def open_fonts(self, _widget=None):
         font_filter = Gtk.FileFilter()
         font_filter.set_name(_('OTF & TTF'))

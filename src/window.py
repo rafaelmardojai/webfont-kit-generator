@@ -135,13 +135,21 @@ class Window(Handy.ApplicationWindow):
             path = filechooser.get_filename()
             uri = filechooser.get_uri()
             name = os.path.basename(path)
-
-            self.outpath = path
-            self.outuri = uri
-            self.directory.set_label(name)
-
-            self._change_ready_state()
             filechooser.destroy()
+
+            if os.access(path, os.W_OK):
+                self.outpath = path
+                self.outuri = uri
+                self.directory.set_label(name)
+                self._change_ready_state()
+            else:
+                error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
+                    Gtk.ButtonsType.OK, _('Output directory error'))
+                error_dialog.format_secondary_text(
+                    _("You don't have write access to the selected directory."))
+                error_response = error_dialog.run()
+                if error_response == Gtk.ResponseType.OK:
+                    error_dialog.destroy()
 
         elif response == Gtk.ResponseType.REJECT:
             filechooser.destroy()

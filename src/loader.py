@@ -3,6 +3,8 @@
 
 import os
 
+from gettext import gettext as _
+from gi.repository import Gtk
 from fontTools.ttLib import TTFont
 
 from webfontkitgenerator.font import Font
@@ -20,16 +22,36 @@ class Loader(object):
 
         for f in self.files:
             try:
-                path = f.get_path()
-                if os.path.exists(path):
+                path = f if isinstance(f, str) else f.get_path()
+
+                if os.path.exists(path) and os.access(path, os.R_OK):
                     ttfont = TTFont(path, lazy=True)
                     data = self._get_font_data(ttfont['name'].getDebugName)
                     ttfont.close()
                     font = Font(path, data)
                     self.model.append(font)
+                else:
+                    error_dialog = Gtk.MessageDialog(self.window, 0,
+                                                     Gtk.MessageType.WARNING,
+                                                     Gtk.ButtonsType.OK,
+                                                     _('Font loading error'))
+                    error_text = _("You don't have read access to {font} or it doesn't exists.")
+                    error_dialog.format_secondary_text(error_text.format(font=path))
+                    error_response = error_dialog.run()
+                    if error_response == Gtk.ResponseType.OK:
+                        error_dialog.destroy()
 
             except Exception as e:
-                continue
+                error_dialog = Gtk.MessageDialog(self.window, 0,
+                                                 Gtk.MessageType.WARNING,
+                                                 Gtk.ButtonsType.OK,
+                                                 _('Font loading error'))
+                error_text = _('Something happened when trying to load {font}.')
+                error_text += '/n' + str(e)
+                error_dialog.format_secondary_text(error_text.format(font=path))
+                error_response = error_dialog.run()
+                if error_response == Gtk.ResponseType.OK:
+                    error_dialog.destroy()
 
         self.window.processing = False
 

@@ -56,7 +56,7 @@ class Loader(object):
                                                  Gtk.ButtonsType.OK,
                                                  _('Font loading error'))
                 error_text = _('Something happened when trying to load {font}.')
-                error_text += '/n' + str(e)
+                error_text += '\n' + str(e)
                 error_dialog.format_secondary_text(error_text.format(font=path))
                 error_response = error_dialog.run()
                 if error_response == Gtk.ResponseType.OK:

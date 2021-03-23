@@ -25,7 +25,11 @@ class Loader(object):
             try:
                 path = None
                 if isinstance(f, str):
-                    path = urlparse(f).path
+                    url_parsed = urlparse(f)
+                    if url_parsed.scheme == 'file':
+                        path = url_parsed.path
+                    else:
+                        continue
                 else:
                     path = f.get_path()
 

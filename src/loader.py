@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
+from urllib.parse import urlparse
 
 from gettext import gettext as _
 from gi.repository import Gtk
@@ -22,7 +23,11 @@ class Loader(object):
 
         for f in self.files:
             try:
-                path = f if isinstance(f, str) else f.get_path()
+                path = None
+                if isinstance(f, str):
+                    path = urlparse(f).path
+                else:
+                    path = f.get_path()
 
                 if os.path.exists(path) and os.access(path, os.R_OK):
                     ttfont = TTFont(path, lazy=True)

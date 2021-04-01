@@ -2,14 +2,14 @@
 # Copyright (C) 2020 THE webfontkitgenerator'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # Automatically generated, 2020.
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2020.
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-31 23:24-0500\n"
-"PO-Revision-Date: 2020-06-17 13:32-0500\n"
+"PO-Revision-Date: 2021-03-31 23:30-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -57,11 +57,11 @@ msgstr "Abrir Tipografías"
 
 #: src/resources/ui/window.ui:212
 msgid "Output directory"
-msgstr "Carpeta de Salida"
+msgstr "Directorio de salida"
 
 #: src/resources/ui/window.ui:224
 msgid "Select a directory"
-msgstr "Seleccione una carpeta"
+msgstr "Seleccione un directorio"
 
 #: src/resources/ui/window.ui:237
 msgid "Browse..."
@@ -87,7 +87,6 @@ msgstr ""
 "su HTML:"
 
 #: src/resources/ui/window.ui:465
-#, fuzzy
 msgid "Or import it directly to your CSS:"
 msgstr "O importarlas directamente a tu CSS:"
 
@@ -168,13 +167,12 @@ msgid "The CSS font-display descriptor"
 msgstr "El descriptor CSS font-display"
 
 #: src/window.py:63
-#, fuzzy
 msgid "Options"
-msgstr "Opciones de Salida"
+msgstr "Opciones"
 
 #: src/window.py:92
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF  y TTF"
 
 #: src/window.py:99
 msgid "Open font files"
@@ -182,16 +180,15 @@ msgstr "Abrir archivos de tipografías"
 
 #: src/window.py:127
 msgid "Select output directory"
-msgstr "Seleccionar carpeta de salida"
+msgstr "Seleccionar directorio de salida"
 
 #: src/window.py:147
-#, fuzzy
 msgid "Output directory error"
-msgstr "Carpeta de Salida"
+msgstr "Error de directorio de salida"
 
 #: src/window.py:149
 msgid "You don't have write access to the selected directory."
-msgstr ""
+msgstr "No tienes acceso de escritura al directorio seleccionado"
 
 #: src/options.py:43
 msgid "Disabled"
@@ -208,18 +205,18 @@ msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Generado <i>{filename}</i> con <i>{count}</i> signos."
 
 #: src/generator.py:125
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr "No se encontraron signos para %s. Omitiendo."
+msgstr "No se encontraron signos para {range}. Omitiendo."
 
 #: src/generator.py:143
 msgid "Generating CSS:"
 msgstr "Generando CSS:"
 
 #: src/generator.py:162
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Generated <i>{filename}</i>."
-msgstr "Generado <i>%s</i>."
+msgstr "Generado <i>{filename}</i>."
 
 #: src/generator.py:166
 msgid "There is no CSS to generate."
@@ -227,17 +224,17 @@ msgstr "No hay CSS para generar."
 
 #: src/loader.py:46 src/loader.py:57
 msgid "Font loading error"
-msgstr ""
+msgstr "Error de carga de tipografía"
 
 #: src/loader.py:47
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
-msgstr ""
+msgstr "No tienes acceso de lectura a {font} o no existe."
 
 #: src/loader.py:58
 #, python-brace-format
 msgid "Something happened when trying to load {font}."
-msgstr ""
+msgstr "Algo ocurrió cuando se  intentaba cargar {font}."
 
 #~ msgid "Webfont Kit Generator uses fontTools python library under the hood."
 #~ msgstr ""

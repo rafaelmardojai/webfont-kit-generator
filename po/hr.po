@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-31 23:24-0500\n"
-"PO-Revision-Date: 2021-02-25 16:46+0100\n"
+"PO-Revision-Date: 2021-04-01 15:10+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -86,7 +86,6 @@ msgstr ""
 "Za povezivanje fontova, kopiraj i umetni sljedeći kod u zaglavlje HTML-a:"
 
 #: src/resources/ui/window.ui:465
-#, fuzzy
 msgid "Or import it directly to your CSS:"
 msgstr "Ili ga izravno uvezi u CSS:"
 
@@ -96,7 +95,7 @@ msgstr "Otvori u datotekama"
 
 #: src/resources/ui/window.ui:497
 msgid "Information"
-msgstr "Informacija"
+msgstr "Informacije"
 
 #: src/resources/ui/window.ui:533
 msgid "Logs"
@@ -167,13 +166,12 @@ msgid "The CSS font-display descriptor"
 msgstr "CSS oznaka „font-display”"
 
 #: src/window.py:63
-#, fuzzy
 msgid "Options"
-msgstr "Opcije rezultata"
+msgstr "Opcije"
 
 #: src/window.py:92
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF i TTF"
 
 #: src/window.py:99
 msgid "Open font files"
@@ -184,13 +182,12 @@ msgid "Select output directory"
 msgstr "Odaberi mapu rezultata"
 
 #: src/window.py:147
-#, fuzzy
 msgid "Output directory error"
-msgstr "Mapa rezultata"
+msgstr "Greška mape rezultata"
 
 #: src/window.py:149
 msgid "You don't have write access to the selected directory."
-msgstr ""
+msgstr "Nemaš pravo pisanja u odabranu mapu."
 
 #: src/options.py:43
 msgid "Disabled"
@@ -204,21 +201,21 @@ msgstr "Izrađuju se fontovi za %s:"
 #: src/generator.py:112
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
-msgstr "Izrađen je font <i>{filename}</i> s <i>{count}</i> grafema."
+msgstr "Izrađena je datoteka <i>{filename}</i> s <i>{count}</i> grafema."
 
 #: src/generator.py:125
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr "Za %s nije pronađen nijedan grafem. Preskače se."
+msgstr "Za {range} nije pronađen nijedan grafem. Preskače se."
 
 #: src/generator.py:143
 msgid "Generating CSS:"
-msgstr "Izrađuje se CSS:"
+msgstr "Izrada CSS-a:"
 
 #: src/generator.py:162
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Generated <i>{filename}</i>."
-msgstr "Izrađen je <i>%s</i>."
+msgstr "Izrađena je datoteka <i>{filename}</i>."
 
 #: src/generator.py:166
 msgid "There is no CSS to generate."
@@ -226,35 +223,14 @@ msgstr "Nema CSS-a koji bi se mogao izraditi."
 
 #: src/loader.py:46 src/loader.py:57
 msgid "Font loading error"
-msgstr ""
+msgstr "Greška tijekom učitavanja fonta"
 
 #: src/loader.py:47
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
-msgstr ""
+msgstr "Nemaš dozvole za čitanje fonta {font} ili font ne postoji."
 
 #: src/loader.py:58
 #, python-brace-format
 msgid "Something happened when trying to load {font}."
-msgstr ""
-
-#~ msgid "Webfont Kit Generator uses fontTools python library under the hood."
-#~ msgstr "Webfont Kit Generator koristi python biblioteku fontTools."
-
-#~ msgid "Source Fonts"
-#~ msgstr "Fontovi izvora"
-
-#~ msgid ""
-#~ "Create @font-face kits easily\n"
-#~ "Basen on python fontTools library\n"
-#~ "    "
-#~ msgstr ""
-#~ "Stvori @font-face pakete jednostavno\n"
-#~ "pomoću python biblioteke fontTools\n"
-#~ "    "
-
-#~ msgid "OTF Fonts"
-#~ msgstr "OTF fontovi"
-
-#~ msgid "TTF Fonts"
-#~ msgstr "TTF fontovi"
+msgstr "Došlo je do greške tijekom učitavanja fonta {font}."

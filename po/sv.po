@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 13:30-0500\n"
+"POT-Creation-Date: 2021-03-31 23:24-0500\n"
 "PO-Revision-Date: 2021-01-20 08:51+0100\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: sv\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -25,6 +25,7 @@ msgstr "Webfont Kit Generator"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+#: src/resources/ui/about.ui:9
 msgid "Create @font-face kits easily"
 msgstr "Skapa @font-face-kit enkelt"
 
@@ -38,122 +39,115 @@ msgstr ""
 "woff2 och det nödvändiga CSS boilerplate från icke-web-font-format (otf och "
 "ttf)."
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
-msgid "Webfont Kit Generator uses fontTools python library under the hood."
-msgstr ""
-"Webfont Kit Generator använder fontTools python-bibliotek under huven."
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:18
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: src/resources/ui/window.ui:51
+#: src/resources/ui/window.ui:48
 msgid "Generate"
 msgstr "Generera"
 
-#: src/resources/ui/window.ui:115
+#: src/resources/ui/window.ui:110
 msgid "Add some fonts"
 msgstr "Lägg några teckensnitt"
 
-#: src/resources/ui/window.ui:167
+#: src/resources/ui/window.ui:162
 msgid "Open Fonts"
 msgstr "Öppna teckensnitt"
 
-#: src/resources/ui/window.ui:242
-msgid "Source Fonts"
-msgstr "Källteckensnitt"
+#: src/resources/ui/window.ui:212
+msgid "Output directory"
+msgstr "Utdatamapp"
 
-#: src/resources/ui/window.ui:311
+#: src/resources/ui/window.ui:224
+msgid "Select a directory"
+msgstr "Välj en mapp"
+
+#: src/resources/ui/window.ui:237
+msgid "Browse..."
+msgstr "Bläddra..."
+
+#: src/resources/ui/window.ui:266 src/resources/ui/window.ui:308
+#: src/resources/ui/options.ui:33
+msgid "Fonts"
+msgstr "Teckensnitt"
+
+#: src/resources/ui/window.ui:366
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/resources/ui/window.ui:399 src/generator.py:69
+#: src/resources/ui/window.ui:433 src/generator.py:55
 msgid "Generation finished!"
 msgstr "Generering slutförd!"
 
-#: src/resources/ui/window.ui:415
+#: src/resources/ui/window.ui:451
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Kopiera in nedanstående kod i ditt HTML-huvud, för att länka dina "
 "teckensnitt:"
 
-#: src/resources/ui/window.ui:437
-msgid "Or import it directly to you CSS:"
+#: src/resources/ui/window.ui:465
+#, fuzzy
+msgid "Or import it directly to your CSS:"
 msgstr "Eller importera det direkt till din CSS:"
 
-#: src/resources/ui/window.ui:457
+#: src/resources/ui/window.ui:477
 msgid "Open in Files"
 msgstr "Öppna i filer"
 
-#: src/resources/ui/window.ui:478
+#: src/resources/ui/window.ui:497
 msgid "Information"
 msgstr "Information"
 
-#: src/resources/ui/window.ui:514
+#: src/resources/ui/window.ui:533
 msgid "Logs"
 msgstr "Loggar"
 
-#: src/resources/ui/options.ui:36
-msgid "Output directory"
-msgstr "Utdatamapp"
-
-#: src/resources/ui/options.ui:48
-msgid "Select a directory"
-msgstr "Välj en mapp"
-
-#: src/resources/ui/options.ui:61
-msgid "Browse..."
-msgstr "Bläddra..."
-
-#: src/resources/ui/options.ui:84
-msgid "Fonts"
-msgstr "Teckensnitt"
-
-#: src/resources/ui/options.ui:122
+#: src/resources/ui/options.ui:71
 msgid "Subsetting"
 msgstr "Underinställning"
 
-#: src/resources/ui/options.ui:123
+#: src/resources/ui/options.ui:72
 msgid "Limit the character set to reduce file size"
 msgstr "Begränsa teckenuppsättningen för att reducera filstorleken"
 
-#: src/resources/ui/options.ui:145
+#: src/resources/ui/options.ui:94
 msgid "Latin"
 msgstr "Latin"
 
-#: src/resources/ui/options.ui:159
+#: src/resources/ui/options.ui:108
 msgid "Cyrillic"
 msgstr "Cyrilliska"
 
-#: src/resources/ui/options.ui:173
+#: src/resources/ui/options.ui:122
 msgid "Greek"
 msgstr "Grekiska"
 
-#: src/resources/ui/options.ui:187
+#: src/resources/ui/options.ui:136
 msgid "Vietnamese"
 msgstr "Vietnamesiska"
 
-#: src/resources/ui/options.ui:210
+#: src/resources/ui/options.ui:159
 msgid "Latin Extended"
 msgstr "Latin utökad"
 
-#: src/resources/ui/options.ui:224
+#: src/resources/ui/options.ui:173
 msgid "Cyrillic Extended"
 msgstr "Cyrilliska utökad"
 
-#: src/resources/ui/options.ui:238
+#: src/resources/ui/options.ui:187
 msgid "Greek Extended"
 msgstr "Grekiska utökad"
 
-#: src/resources/ui/options.ui:252
+#: src/resources/ui/options.ui:201
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: src/resources/ui/options.ui:285
+#: src/resources/ui/options.ui:234
 msgid "Custom"
 msgstr "Anpassat"
 
-#: src/resources/ui/options.ui:297
+#: src/resources/ui/options.ui:246
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
@@ -161,49 +155,45 @@ msgstr ""
 "Kommaseparerade värden. Enstaka hexvärden och/eller intervall som separeras "
 "med bindestreck."
 
-#: src/resources/ui/options.ui:333
+#: src/resources/ui/options.ui:282
 msgid "CSS"
 msgstr "CSS"
 
-#: src/resources/ui/options.ui:337
+#: src/resources/ui/options.ui:286
 msgid "Font display"
 msgstr "Teckensnittsvisning"
 
-#: src/resources/ui/options.ui:338
+#: src/resources/ui/options.ui:287
 msgid "The CSS font-display descriptor"
 msgstr "CSS teckensnitt"
 
-#: src/resources/ui/about.ui:9
-msgid ""
-"Create @font-face kits easily\n"
-"Basen on python fontTools library\n"
-"    "
-msgstr ""
-"Skapa @font-face-kit enkelt\n"
-"Baserat på python fontTools-bibliotek\n"
-"    "
-
-#: src/window.py:76
-msgid "Output Options"
+#: src/window.py:63
+#, fuzzy
+msgid "Options"
 msgstr "Utdataalternativ"
 
-#: src/window.py:93
-msgid "OTF Fonts"
-msgstr "OTF-teckensnitt"
+#: src/window.py:92
+msgid "OTF & TTF"
+msgstr ""
 
-#: src/window.py:97
-msgid "TTF Fonts"
-msgstr "TTF-teckensnitt"
-
-#: src/window.py:102
+#: src/window.py:99
 msgid "Open font files"
 msgstr "Öppna teckensnittsfiler"
 
-#: src/window.py:131
+#: src/window.py:127
 msgid "Select output directory"
 msgstr "Välj utdatamapp"
 
-#: src/options.py:62
+#: src/window.py:147
+#, fuzzy
+msgid "Output directory error"
+msgstr "Utdatamapp"
+
+#: src/window.py:149
+msgid "You don't have write access to the selected directory."
+msgstr ""
+
+#: src/options.py:43
 msgid "Disabled"
 msgstr "Inaktiverad"
 
@@ -212,25 +202,61 @@ msgstr "Inaktiverad"
 msgid "Generating fonts for %s:"
 msgstr "Genererar teckensnitt för %s:"
 
-#: src/generator.py:124
+#: src/generator.py:112
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Genererade <i>{filename}</i> med <i>{count}</i> specialtecken."
 
-#: src/generator.py:137
-#, python-format
-msgid "No glyphs where found for %s. Skipping."
+#: src/generator.py:125
+#, fuzzy, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
 msgstr "Inga specialtecken hittades för %s. Hoppar över."
 
-#: src/generator.py:154
+#: src/generator.py:143
 msgid "Generating CSS:"
 msgstr "Genererar CSS:"
 
-#: src/generator.py:173
-#, python-format
-msgid "Generated <i>%s</i>."
+#: src/generator.py:162
+#, fuzzy, python-brace-format
+msgid "Generated <i>{filename}</i>."
 msgstr "Genererade <i>%s</i>."
 
-#: src/generator.py:176
+#: src/generator.py:166
 msgid "There is no CSS to generate."
 msgstr "Det finns ingen CSS att generera."
+
+#: src/loader.py:46 src/loader.py:57
+msgid "Font loading error"
+msgstr ""
+
+#: src/loader.py:47
+#, python-brace-format
+msgid "You don't have read access to {font} or it doesn't exists."
+msgstr ""
+
+#: src/loader.py:58
+#, python-brace-format
+msgid "Something happened when trying to load {font}."
+msgstr ""
+
+#~ msgid "Webfont Kit Generator uses fontTools python library under the hood."
+#~ msgstr ""
+#~ "Webfont Kit Generator använder fontTools python-bibliotek under huven."
+
+#~ msgid "Source Fonts"
+#~ msgstr "Källteckensnitt"
+
+#~ msgid ""
+#~ "Create @font-face kits easily\n"
+#~ "Basen on python fontTools library\n"
+#~ "    "
+#~ msgstr ""
+#~ "Skapa @font-face-kit enkelt\n"
+#~ "Baserat på python fontTools-bibliotek\n"
+#~ "    "
+
+#~ msgid "OTF Fonts"
+#~ msgstr "OTF-teckensnitt"
+
+#~ msgid "TTF Fonts"
+#~ msgstr "TTF-teckensnitt"

@@ -7,4 +7,4 @@ src/resources/ui/about.ui
 src/window.py
 src/options.py
 src/generator.py
-
+src/loader.py

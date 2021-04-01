@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-31 23:24-0500\n"
-"PO-Revision-Date: 2021-01-20 08:51+0100\n"
+"PO-Revision-Date: 2021-04-01 07:44+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -87,7 +87,6 @@ msgstr ""
 "teckensnitt:"
 
 #: src/resources/ui/window.ui:465
-#, fuzzy
 msgid "Or import it directly to your CSS:"
 msgstr "Eller importera det direkt till din CSS:"
 
@@ -168,13 +167,12 @@ msgid "The CSS font-display descriptor"
 msgstr "CSS teckensnitt"
 
 #: src/window.py:63
-#, fuzzy
 msgid "Options"
-msgstr "Utdataalternativ"
+msgstr "Alternativ"
 
 #: src/window.py:92
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF & TTF"
 
 #: src/window.py:99
 msgid "Open font files"
@@ -185,13 +183,12 @@ msgid "Select output directory"
 msgstr "Välj utdatamapp"
 
 #: src/window.py:147
-#, fuzzy
 msgid "Output directory error"
-msgstr "Utdatamapp"
+msgstr "Utdatamappfel"
 
 #: src/window.py:149
 msgid "You don't have write access to the selected directory."
-msgstr ""
+msgstr "Du har inte skrivrättighet i den valda mappen."
 
 #: src/options.py:43
 msgid "Disabled"
@@ -208,18 +205,18 @@ msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Genererade <i>{filename}</i> med <i>{count}</i> specialtecken."
 
 #: src/generator.py:125
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr "Inga specialtecken hittades för %s. Hoppar över."
+msgstr "Inga specialtecken hittades för {range}. Hoppar över."
 
 #: src/generator.py:143
 msgid "Generating CSS:"
 msgstr "Genererar CSS:"
 
 #: src/generator.py:162
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Generated <i>{filename}</i>."
-msgstr "Genererade <i>%s</i>."
+msgstr "Genererade <i>{filename}</i>."
 
 #: src/generator.py:166
 msgid "There is no CSS to generate."
@@ -227,17 +224,17 @@ msgstr "Det finns ingen CSS att generera."
 
 #: src/loader.py:46 src/loader.py:57
 msgid "Font loading error"
-msgstr ""
+msgstr "Fel vid teckensnittsinläsning"
 
 #: src/loader.py:47
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
-msgstr ""
+msgstr "Du har inte läsrättighet till {font}, eller så finns den inte."
 
 #: src/loader.py:58
 #, python-brace-format
 msgid "Something happened when trying to load {font}."
-msgstr ""
+msgstr "Något hände vid inläsning av {font}."
 
 #~ msgid "Webfont Kit Generator uses fontTools python library under the hood."
 #~ msgstr ""

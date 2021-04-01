@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-31 23:24-0500\n"
+"PO-Revision-Date: 2021-04-01 15:11+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr "Webfont Kit Generator"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+#: src/resources/ui/about.ui:9
+msgid "Create @font-face kits easily"
+msgstr "Einfaches Erstellen von @font-face Paketen"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Webfont Kit Generator ist ein einfaches Dienstprogramm zum Erstellen von "
+"woff, woff2 Schriften inklusive erforderlicher CSS Eigenschaften aus otf "
+"und ttf Schriftformaten."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: src/resources/ui/window.ui:48
+msgid "Generate"
+msgstr "Erstellen"
+
+#: src/resources/ui/window.ui:110
+msgid "Add some fonts"
+msgstr "Schriften hinzufügen"
+
+#: src/resources/ui/window.ui:162
+msgid "Open Fonts"
+msgstr "Schriften öffnen"
+
+#: src/resources/ui/window.ui:212
+msgid "Output directory"
+msgstr "Ausgabeverzeichnis"
+
+#: src/resources/ui/window.ui:224
+msgid "Select a directory"
+msgstr "Verzeichnis auswählen"
+
+#: src/resources/ui/window.ui:237
+msgid "Browse..."
+msgstr "Durchsuchen …"
+
+#: src/resources/ui/window.ui:266 src/resources/ui/window.ui:308
+#: src/resources/ui/options.ui:33
+msgid "Fonts"
+msgstr "Schriften"
+
+#: src/resources/ui/window.ui:366
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/resources/ui/window.ui:433 src/generator.py:55
+msgid "Generation finished!"
+msgstr "Erstellung fertiggestellt!"
+
+#: src/resources/ui/window.ui:451
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Um Schriften zu verknüpfen, kopiere folgenden Code in den Kopf der HTML-"
+"Datei:"
+
+#: src/resources/ui/window.ui:465
+msgid "Or import it directly to your CSS:"
+msgstr "Oder importiere ihn in die CSS Datei:"
+
+#: src/resources/ui/window.ui:477
+msgid "Open in Files"
+msgstr "In Dateien öffnen"
+
+#: src/resources/ui/window.ui:497
+msgid "Information"
+msgstr "Information"
+
+#: src/resources/ui/window.ui:533
+msgid "Logs"
+msgstr "Protokolle"
+
+#: src/resources/ui/options.ui:71
+msgid "Subsetting"
+msgstr "Untergruppen"
+
+#: src/resources/ui/options.ui:72
+msgid "Limit the character set to reduce file size"
+msgstr "Zeichensatz begrenzen, um Dateigröße zu verringern"
+
+#: src/resources/ui/options.ui:94
+msgid "Latin"
+msgstr "Lateinisch"
+
+#: src/resources/ui/options.ui:108
+msgid "Cyrillic"
+msgstr "Kyrillisch"
+
+#: src/resources/ui/options.ui:122
+msgid "Greek"
+msgstr "Griechisch"
+
+#: src/resources/ui/options.ui:136
+msgid "Vietnamese"
+msgstr "Vietnamesisch"
+
+#: src/resources/ui/options.ui:159
+msgid "Latin Extended"
+msgstr "Lateinisch, erweitert"
+
+#: src/resources/ui/options.ui:173
+msgid "Cyrillic Extended"
+msgstr "Kyrillisch, erweitert"
+
+#: src/resources/ui/options.ui:187
+msgid "Greek Extended"
+msgstr "Griechisch, erweitert"
+
+#: src/resources/ui/options.ui:201
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: src/resources/ui/options.ui:234
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: src/resources/ui/options.ui:246
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"Komma getrennte Werte. Einzelne, mit Bindestrichen getrennte, sechsstellige "
+"Werte und/oder Bereiche."
+
+#: src/resources/ui/options.ui:282
+msgid "CSS"
+msgstr "CSS"
+
+#: src/resources/ui/options.ui:286
+msgid "Font display"
+msgstr "Schrift-Anzeige"
+
+#: src/resources/ui/options.ui:287
+msgid "The CSS font-display descriptor"
+msgstr "CSS-Eigenschaft „font-display“"
+
+#: src/window.py:63
+msgid "Options"
+msgstr "Optionen"
+
+#: src/window.py:92
+msgid "OTF & TTF"
+msgstr "OTF und TTF"
+
+#: src/window.py:99
+msgid "Open font files"
+msgstr "Schriftdateien öffnen"
+
+#: src/window.py:127
+msgid "Select output directory"
+msgstr "Ausgabeverzeichnis wählen"
+
+#: src/window.py:147
+msgid "Output directory error"
+msgstr "Fehler im Ausgabeverzeichnis"
+
+#: src/window.py:149
+msgid "You don't have write access to the selected directory."
+msgstr "Du hast keinen Schreibzugriff auf das ausgewählte Verzeichnis."
+
+#: src/options.py:43
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: src/generator.py:65
+#, python-format
+msgid "Generating fonts for %s:"
+msgstr "Schriften werden erstellt für %s:"
+
+#: src/generator.py:112
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "<i>{filename}</i> wurde erstellt mit <i>{count}</i> Glyphen."
+
+#: src/generator.py:125
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "Für den Bereich {range} wurden keine Glyphen gefunden. Überspringen."
+
+#: src/generator.py:143
+msgid "Generating CSS:"
+msgstr "Erstellung der CSS-Datei:"
+
+#: src/generator.py:162
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "Datei <i>{filename}</i> erstellt."
+
+#: src/generator.py:166
+msgid "There is no CSS to generate."
+msgstr "Es kann kein CSS generiert werden."
+
+#: src/loader.py:46 src/loader.py:57
+msgid "Font loading error"
+msgstr "Fehler beim Laden der Schrift"
+
+#: src/loader.py:47
+#, python-brace-format
+msgid "You don't have read access to {font} or it doesn't exists."
+msgstr ""
+"Du hast keinen Lesezugriff auf die Schrift {font} oder sie existiert nicht."
+
+#: src/loader.py:58
+#, python-brace-format
+msgid "Something happened when trying to load {font}."
+msgstr "Fehler beim Laden der Schrift {font}."

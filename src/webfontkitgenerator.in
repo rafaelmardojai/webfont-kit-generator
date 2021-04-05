@@ -34,7 +34,6 @@ locale.bindtextdomain('webfontkitgenerator', localedir)
 locale.textdomain('webfontkitgenerator')
 gettext.bindtextdomain('webfontkitgenerator', localedir)
 gettext.textdomain('webfontkitgenerator')
-locale.setlocale(locale.LC_ALL, '')
 
 if __name__ == '__main__':
     import gi

@@ -48,11 +48,11 @@ msgstr "Generovať"
 
 #: src/resources/ui/window.ui:110
 msgid "Add some fonts"
-msgstr "Pridajte fonty"
+msgstr "Pridajte písma"
 
 #: src/resources/ui/window.ui:162
 msgid "Open Fonts"
-msgstr "Otvoriť fonty"
+msgstr "Otvoriť písma"
 
 #: src/resources/ui/window.ui:212
 msgid "Output directory"
@@ -69,7 +69,7 @@ msgstr "Vyhľadať..."
 #: src/resources/ui/window.ui:266 src/resources/ui/window.ui:308
 #: src/resources/ui/options.ui:33
 msgid "Fonts"
-msgstr "Fonty"
+msgstr "Písma"
 
 #: src/resources/ui/window.ui:366
 msgid "Cancel"
@@ -173,11 +173,11 @@ msgstr "Výstupné nastavenia"
 
 #: src/window.py:92
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF a TTF"
 
 #: src/window.py:99
 msgid "Open font files"
-msgstr "Otvoriť súbory fontov"
+msgstr "Otvoriť súbory písiem"
 
 #: src/window.py:127
 msgid "Select output directory"
@@ -190,7 +190,7 @@ msgstr "Výstupný adresár"
 
 #: src/window.py:149
 msgid "You don't have write access to the selected directory."
-msgstr ""
+msgstr "Nemáte dostatočné práva na zápis do zvolehéno adresára."
 
 #: src/options.py:43
 msgid "Disabled"
@@ -199,7 +199,7 @@ msgstr "Zakázané"
 #: src/generator.py:65
 #, python-format
 msgid "Generating fonts for %s:"
-msgstr "Generuje sa font pre %s:"
+msgstr "Generuje sa písmo pre %s:"
 
 #: src/generator.py:112
 #, python-brace-format
@@ -209,7 +209,7 @@ msgstr "Vygenerované <i>{filename}</i> s <i>{count}</i> znakmi."
 #: src/generator.py:125
 #, fuzzy, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr "Pre %s sa nenašli žiadne znaky. Preskakujem."
+msgstr "Pre glyfy sa nenašli žiadne znaky. Preskakujem."
 
 #: src/generator.py:143
 msgid "Generating CSS:"
@@ -226,23 +226,23 @@ msgstr "Žiadne CSS na vygenerovanie."
 
 #: src/loader.py:46 src/loader.py:57
 msgid "Font loading error"
-msgstr ""
+msgstr "Chyba pri nahrávaní písma"
 
 #: src/loader.py:47
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
-msgstr ""
+msgstr "Nemáte právo na čítanie písma {font}, alebo neexistuje."
 
 #: src/loader.py:58
 #, python-brace-format
 msgid "Something happened when trying to load {font}."
-msgstr ""
+msgstr "Niečo sa pokazilo počas nahrávania písma {font}."
 
 #~ msgid "Webfont Kit Generator uses fontTools python library under the hood."
 #~ msgstr "Webfont Kit Generator využíva pythonovú knižnicu fontTools."
 
 #~ msgid "Source Fonts"
-#~ msgstr "Zdroj fontov"
+#~ msgstr "Zdroj písiem"
 
 #~ msgid ""
 #~ "Create @font-face kits easily\n"

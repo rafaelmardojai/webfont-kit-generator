@@ -33,9 +33,23 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/4.png</image>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/5.png</image>
+    </screenshot>
   </screenshots>
   
   <releases>
+    <release version="0.4.0" date="2020-05-02">
+      <description>
+        <ul>
+          <li>Open fonts from file manager</li>
+          <li>Drag and Drop support</li>
+          <li>User interface improvements</li>
+          <li>Performance improvements</li>
+          <li>Bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.3.0" date="2020-06-17">
       <description>
         <ul>

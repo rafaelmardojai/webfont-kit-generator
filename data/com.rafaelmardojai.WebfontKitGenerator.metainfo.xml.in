@@ -10,8 +10,8 @@
       Webfont Kit Generator is a simple utility that allows you to generate woff, woff2 and the necessary CSS boilerplate from non-web font formats (otf and ttf).
     </p>
   </description>  
-  <url type="homepage">https://github.com/rafaelmardojai/WebfontKitGenerator</url>
-  <url type="bugtracker">https://github.com/rafaelmardojai/WebfontKitGenerator/issues</url>
+  <url type="homepage">https://github.com/rafaelmardojai/webfont-kit-generator</url>
+  <url type="bugtracker">https://github.com/rafaelmardojai/webfont-kit-generator/issues</url>
   <url type="donation">https://rafaelmardojai.com/donate/</url>
   <developer_name>Rafael Mardojai CM</developer_name>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
@@ -22,19 +22,19 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/1.png</image>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/2.png</image>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/2.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/3.png</image>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/3.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/4.png</image>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/4.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/WebfontKitGenerator/master/brand/screenshots/5.png</image>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/5.png</image>
     </screenshot>
   </screenshots>
   

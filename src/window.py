@@ -77,7 +77,7 @@ class Window(Handy.ApplicationWindow):
         self.open_files.connect('clicked', self.open_generation_dir)
 
         # Drag and drop
-        targetentry = Gtk.TargetEntry.new('text/plain', Gtk.TargetFlags(4), 0)
+        targetentry = Gtk.TargetEntry.new('text/plain', 0, 0)
         self.drag_dest_set(Gtk.DestDefaults.ALL, [targetentry], Gdk.DragAction.COPY)
         self.connect('drag-data-received', self.on_drag_and_drop)
 

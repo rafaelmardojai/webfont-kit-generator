@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 from gettext import gettext as _
 from gi.repository import Gtk
@@ -32,6 +32,7 @@ class Loader(object):
                         continue
                 else:
                     path = f.get_path()
+                path = unquote(path)
 
                 if os.path.exists(path) and os.access(path, os.R_OK):
                     ttfont = TTFont(path, lazy=True)

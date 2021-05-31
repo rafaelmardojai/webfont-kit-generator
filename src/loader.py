@@ -63,6 +63,7 @@ class Loader(object):
                     error_dialog.destroy()
 
         self.window.processing = False
+        self.window.stack.set_visible_child_name('main')
 
 
     '''

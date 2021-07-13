@@ -11,35 +11,32 @@
         "--socket=wayland",
         "--filesystem=home"
     ],
-
     "modules" : [
         {
-            "name" : "FontTools",
-            "buildsystem" : "simple",
-            "build-commands" : [
-                "python3 setup.py install --prefix=/app --root=/"
+            "name": "python3-FontTools",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"FontTools\" --no-build-isolation"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://files.pythonhosted.org/packages/31/f7/00fc7b5126281ad00eb81df1349c645dffedcbce10a42a56d6cfb8ad155e/fonttools-4.11.0.zip",
-                    "sha256" : "7fe5937206099ef284055b8c94798782e0993a740eed87f0dd262ed9870788aa"
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c6/38/54454a225deb3af95d369dc7fa5ad050ec27d0e7ed491f057c015f69c47e/fonttools-4.25.0.zip",
+                    "sha256": "4c9e42265d48264da8a001ce94933fb90b69e035738ba7839be7357534aeab0b"
                 }
+            ]
+        },
+        {
+            "name": "python3-Brotli",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Brotli\" --no-build-isolation"
             ],
-            "modules" : [
+            "sources": [
                 {
-                    "name" : "Brotli",
-                    "buildsystem" : "simple",
-                    "build-commands" : [
-                        "python3 setup.py install --prefix=/app --root=/"
-                    ],
-                    "sources" : [
-                        {
-                            "type" : "archive",
-                            "url" : "https://files.pythonhosted.org/packages/cd/9c/7955895f5672ecc85270244582c6b53ff95bb4c24bf77bd9271d42351635/Brotli-1.0.7.zip",
-                            "sha256" : "0538dc1744fd17c314d2adc409ea7d1b779783b89fd95bcfb0c2acc93a6ea5a7"
-                        }
-                    ]
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2a/18/70c32fe9357f3eea18598b23aa9ed29b1711c3001835f7cf99a9818985d0/Brotli-1.0.9.zip",
+                    "sha256": "4d1b810aa0ed773f81dceda2cc7b403d01057458730e309856356d4ef4188438"
                 }
             ]
         },

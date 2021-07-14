@@ -109,6 +109,8 @@ class Window(Handy.ApplicationWindow):
             files = filechooser.get_files()
             if files:
                 self.load_fonts(files)
+        
+        filechooser.destroy()
 
     def load_fonts(self, files):
         loader = Loader(self, self.model, files)

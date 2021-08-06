@@ -1,0 +1,236 @@
+# Czech translations for webfontkitgenerator package.
+# Copyright (C) 2021 THE webfontkitgenerator'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# Vojtěch Perník <translations@pervoj.cz>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-31 23:24-0500\n"
+"PO-Revision-Date: 2021-08-06 14:42+0200\n"
+"Last-Translator: Vojtěch Perník <translations@pervoj.cz>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+"X-Generator: Gtranslator 40.0\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr "Generátor webových sad písem"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+#: src/resources/ui/about.ui:9
+msgid "Create @font-face kits easily"
+msgstr "Vytvářejte sady @font-face jednoduše"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Generátor webových sad písem je jednoduchý nástroj, který vám umožňuje "
+"generovat woff, woff2 a nezbytnou CSS šablonu z ne-webových formátů písem "
+"(otf a ttf)."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: src/resources/ui/window.ui:48
+msgid "Generate"
+msgstr "Generovat"
+
+#: src/resources/ui/window.ui:110
+msgid "Add some fonts"
+msgstr "Přidejte nějaké fonty"
+
+#: src/resources/ui/window.ui:162
+msgid "Open Fonts"
+msgstr "Otevřít fonty"
+
+#: src/resources/ui/window.ui:212
+msgid "Output directory"
+msgstr "Výstupní adresář"
+
+#: src/resources/ui/window.ui:224
+msgid "Select a directory"
+msgstr "Vyberte adresář"
+
+#: src/resources/ui/window.ui:237
+msgid "Browse..."
+msgstr "Procházet..."
+
+#: src/resources/ui/window.ui:266 src/resources/ui/window.ui:308
+#: src/resources/ui/options.ui:33
+msgid "Fonts"
+msgstr "Fonty"
+
+#: src/resources/ui/window.ui:366
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: src/resources/ui/window.ui:433 src/generator.py:55
+msgid "Generation finished!"
+msgstr "Generování skončilo!"
+
+#: src/resources/ui/window.ui:451
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Chcete-li načíst svá písma, zkopírujte níže uvedený kód do hlavičky HTML:"
+
+#: src/resources/ui/window.ui:465
+msgid "Or import it directly to your CSS:"
+msgstr "Nebo je naimportujte přímo do CSS:"
+
+#: src/resources/ui/window.ui:477
+msgid "Open in Files"
+msgstr "Otevřít v Souborech"
+
+#: src/resources/ui/window.ui:497
+msgid "Information"
+msgstr "Informace"
+
+#: src/resources/ui/window.ui:533
+msgid "Logs"
+msgstr "Logy"
+
+#: src/resources/ui/options.ui:71
+msgid "Subsetting"
+msgstr "Podmnožina"
+
+#: src/resources/ui/options.ui:72
+msgid "Limit the character set to reduce file size"
+msgstr "Omezením znakové sady zmenšíte velikost souboru"
+
+#: src/resources/ui/options.ui:94
+msgid "Latin"
+msgstr "Latinka"
+
+#: src/resources/ui/options.ui:108
+msgid "Cyrillic"
+msgstr "Cyrilice"
+
+#: src/resources/ui/options.ui:122
+msgid "Greek"
+msgstr "Řecká abeceda"
+
+#: src/resources/ui/options.ui:136
+msgid "Vietnamese"
+msgstr "Vietnamská abeceda"
+
+#: src/resources/ui/options.ui:159
+msgid "Latin Extended"
+msgstr "Rozšířená latinka"
+
+#: src/resources/ui/options.ui:173
+msgid "Cyrillic Extended"
+msgstr "Rozšířená cyrilice"
+
+#: src/resources/ui/options.ui:187
+msgid "Greek Extended"
+msgstr "Rozšířená řecká abeceda"
+
+#: src/resources/ui/options.ui:201
+msgid "Devanagari"
+msgstr "Dévanágarí"
+
+#: src/resources/ui/options.ui:234
+msgid "Custom"
+msgstr "Vlastní"
+
+#: src/resources/ui/options.ui:246
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"Hodnoty oddělené čárkami. Jednotlivé hexadecimální hodnoty a/nebo rozsahy "
+"oddělené spojovníky."
+
+#: src/resources/ui/options.ui:282
+msgid "CSS"
+msgstr "CSS"
+
+#: src/resources/ui/options.ui:286
+msgid "Font display"
+msgstr "Font display"
+
+#: src/resources/ui/options.ui:287
+msgid "The CSS font-display descriptor"
+msgstr "CSS deskriptor font-display"
+
+#: src/window.py:63
+msgid "Options"
+msgstr "Možnosti"
+
+#: src/window.py:92
+msgid "OTF & TTF"
+msgstr "OTF a TTF"
+
+#: src/window.py:99
+msgid "Open font files"
+msgstr "Otevřít soubory písem"
+
+#: src/window.py:127
+msgid "Select output directory"
+msgstr "Vybrat výstupní adresář"
+
+#: src/window.py:147
+msgid "Output directory error"
+msgstr "Chyba výstupního adresáře"
+
+#: src/window.py:149
+msgid "You don't have write access to the selected directory."
+msgstr "K vybranému adresáři nemáte právo k zápisu."
+
+#: src/options.py:43
+msgid "Disabled"
+msgstr "Zakázáno"
+
+#: src/generator.py:65
+#, python-format
+msgid "Generating fonts for %s:"
+msgstr "Generování fontů pro %s:"
+
+#: src/generator.py:112
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "Vygenerováno <i>{filename}</i> s <i>{count}</i> glyfy."
+
+#: src/generator.py:125
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "Pro {range} nebyly nalezeny žádné glyfy. Vynechávám."
+
+#: src/generator.py:143
+msgid "Generating CSS:"
+msgstr "Generování CSS:"
+
+#: src/generator.py:162
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "Vygenerováno <i>{filename}</i>."
+
+#: src/generator.py:166
+msgid "There is no CSS to generate."
+msgstr "Není třeba generovat žádné CSS."
+
+#: src/loader.py:46 src/loader.py:57
+msgid "Font loading error"
+msgstr "Nepodařilo se načíst písmo"
+
+#: src/loader.py:47
+#, python-brace-format
+msgid "You don't have read access to {font} or it doesn't exists."
+msgstr "K {font} nemáte právo ke čtení nebo soubor neexistuje."
+
+#: src/loader.py:58
+#, python-brace-format
+msgid "Something happened when trying to load {font}."
+msgstr "Něco se stalo při načítání {font}."

@@ -1,0 +1,237 @@
+# Galician translations for webfontkitgenerator package.
+# Copyright (C) 2021 THE webfontkitgenerator'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# Fran Dieguez <frandieguez@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-31 23:24-0500\n"
+"PO-Revision-Date: 2021-09-11 22:52+0200\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 40.0\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr "Xerador de Kits de Fontes Web"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+#: src/resources/ui/about.ui:9
+msgid "Create @font-face kits easily"
+msgstr "Cree kits de @font-face facilmente"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"O Xerador de kits de fontes de web é unha utilidade sinxela que lle permite "
+"xerar woff, woff2 e o código CSS necesario para os formatos de fonte non web "
+"(otf e ttf)."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: src/resources/ui/window.ui:48
+msgid "Generate"
+msgstr "Xerar"
+
+#: src/resources/ui/window.ui:110
+msgid "Add some fonts"
+msgstr "Engadir algúns tipos de letra"
+
+#: src/resources/ui/window.ui:162
+msgid "Open Fonts"
+msgstr "Abrir tipos de letra"
+
+#: src/resources/ui/window.ui:212
+msgid "Output directory"
+msgstr "Cartafol de saída"
+
+#: src/resources/ui/window.ui:224
+msgid "Select a directory"
+msgstr "Seleccione un cartafol"
+
+#: src/resources/ui/window.ui:237
+msgid "Browse..."
+msgstr "Explorar…"
+
+#: src/resources/ui/window.ui:266 src/resources/ui/window.ui:308
+#: src/resources/ui/options.ui:33
+msgid "Fonts"
+msgstr "Tipos de letra"
+
+#: src/resources/ui/window.ui:366
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/resources/ui/window.ui:433 src/generator.py:55
+msgid "Generation finished!"
+msgstr "Xeración finalizada!"
+
+#: src/resources/ui/window.ui:451
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Para ligar os seus tipos de letra, copie o código de abaixo na cabeceira do "
+"seu HTML:"
+
+#: src/resources/ui/window.ui:465
+msgid "Or import it directly to your CSS:"
+msgstr "Ou impórteo directmente desde o seu CSS:"
+
+#: src/resources/ui/window.ui:477
+msgid "Open in Files"
+msgstr "Abrir en Ficheiros"
+
+#: src/resources/ui/window.ui:497
+msgid "Information"
+msgstr "Información"
+
+#: src/resources/ui/window.ui:533
+msgid "Logs"
+msgstr "Rexistros"
+
+#: src/resources/ui/options.ui:71
+msgid "Subsetting"
+msgstr "Subconxuntos"
+
+#: src/resources/ui/options.ui:72
+msgid "Limit the character set to reduce file size"
+msgstr "Limitar o conxunto de caracteres para reducir o tamaño de ficheiro"
+
+#: src/resources/ui/options.ui:94
+msgid "Latin"
+msgstr "Latín"
+
+#: src/resources/ui/options.ui:108
+msgid "Cyrillic"
+msgstr "Cirílico"
+
+#: src/resources/ui/options.ui:122
+msgid "Greek"
+msgstr "Grego"
+
+#: src/resources/ui/options.ui:136
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: src/resources/ui/options.ui:159
+msgid "Latin Extended"
+msgstr "Latín extendido"
+
+#: src/resources/ui/options.ui:173
+msgid "Cyrillic Extended"
+msgstr "Cirílico extendido"
+
+#: src/resources/ui/options.ui:187
+msgid "Greek Extended"
+msgstr "Grego extendido"
+
+#: src/resources/ui/options.ui:201
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: src/resources/ui/options.ui:234
+msgid "Custom"
+msgstr "Personalizado"
+
+#: src/resources/ui/options.ui:246
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"Valores separados por comas. Valores hexadecimais sinxelos e/ou rangos "
+"separados por guións."
+
+#: src/resources/ui/options.ui:282
+msgid "CSS"
+msgstr "CSS"
+
+#: src/resources/ui/options.ui:286
+msgid "Font display"
+msgstr "Visualización do tipo de letra"
+
+#: src/resources/ui/options.ui:287
+msgid "The CSS font-display descriptor"
+msgstr "O descritor de CSS de font-display"
+
+#: src/window.py:63
+msgid "Options"
+msgstr "Opcións"
+
+#: src/window.py:92
+msgid "OTF & TTF"
+msgstr "OTF e TTF"
+
+#: src/window.py:99
+msgid "Open font files"
+msgstr "Abrir ficheiros de tipos de letra"
+
+#: src/window.py:127
+msgid "Select output directory"
+msgstr "Seleccione un cartafol de saída"
+
+#: src/window.py:147
+msgid "Output directory error"
+msgstr "Erro no cartafol de saída"
+
+#: src/window.py:149
+msgid "You don't have write access to the selected directory."
+msgstr "Non ten permisos de escritura no cartafol seleccionado"
+
+#: src/options.py:43
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: src/generator.py:65
+#, python-format
+msgid "Generating fonts for %s:"
+msgstr "Xerando tipos de letra para %s:"
+
+#: src/generator.py:112
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "Xerado <i>{filename}</i> con glifos <i>{count}</i>."
+
+#: src/generator.py:125
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "Non se atoparon glifos para {range}. Omitindo."
+
+#: src/generator.py:143
+msgid "Generating CSS:"
+msgstr "Xerando CSS:"
+
+#: src/generator.py:162
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "<i>{filename}</i> xerado."
+
+#: src/generator.py:166
+msgid "There is no CSS to generate."
+msgstr "Non hai CSS xerado."
+
+#: src/loader.py:46 src/loader.py:57
+msgid "Font loading error"
+msgstr "Erro ao cargar o tipo de letra"
+
+#: src/loader.py:47
+#, python-brace-format
+msgid "You don't have read access to {font} or it doesn't exists."
+msgstr "Non ten acceso de lectura a {font} ou non existe."
+
+#: src/loader.py:58
+#, python-brace-format
+msgid "Something happened when trying to load {font}."
+msgstr "Algo pasou ao tentar cargar {font}."

@@ -8,12 +8,13 @@ jobs:
     name: "Flatpak Builder"
     runs-on: ubuntu-latest
     container:
-      image: docker.io/bilelmoussaoui/flatpak-github-actions
+      image: bilelmoussaoui/flatpak-github-actions:gnome-nightly
       options: --privileged
     steps:
     - uses: actions/checkout@v2
-    - uses: bilelmoussaoui/flatpak-github-actions@v2
+    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
       with:
-        bundle: "webfontkitgenerator-dev.flatpak"
+        bundle: "webfont-kit-generator-devel.flatpak"
         manifest-path: "com.rafaelmardojai.WebfontKitGenerator.json"
         run-tests: "true"
+        cache-key: flatpak-builder-${{ github.sha }}

@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, Gtk, Handy
+from gi.repository import Adw, Gio, Gtk
 from fontTools.subset import parse_unicodes
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/ui/options.ui')
+@Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/options.ui')
 class Options(Gtk.Box):
     __gtype_name__ = 'Options'
 
@@ -38,13 +38,6 @@ class Options(Gtk.Box):
         self.load_saved()
 
     def setup(self):
-        # Setup font_display combo row
-        model = Gio.ListStore.new(Handy.ValueObject)
-        options = [_('Disabled'), 'auto', 'block', 'swap', 'fallback', 'optional']
-        for i, o in enumerate(options):
-            model.insert(i, Handy.ValueObject.new(o))
-        self.font_display.bind_name_model(model, Handy.ValueObject.dup_string)
-
         self.custom.connect('changed', self._validate_subsetting)
 
     def load_saved(self):
@@ -68,7 +61,7 @@ class Options(Gtk.Box):
             self.settings.bind(name, button, 'active',
                                Gio.SettingsBindFlags.DEFAULT)
 
-        self.settings.bind('font-display', self.font_display, 'selected-index',
+        self.settings.bind('font-display', self.font_display, 'selected',
                            Gio.SettingsBindFlags.DEFAULT)
 
         self.settings.bind('subsetting', self.subsetting, 'enable-expansion',
@@ -122,14 +115,13 @@ class Options(Gtk.Box):
         return ranges
 
     def get_font_display(self):
-        return self.font_display.get_selected_index()
+        return self.font_display.get_selected()
 
     def _validate_subsetting(self, _entry):
         try:
             parse_unicodes(self.custom.get_text())
-            if Gtk.StyleContext.has_class(self.custom.get_style_context(), 'error'):
-                Gtk.StyleContext.remove_class(self.custom.get_style_context(), 'error')
+            if self.custom.get_style_context().has_class('error'):
+                self.custom.get_style_context().remove_class('error')
         except Exception:
-            if not Gtk.StyleContext.has_class(self.custom.get_style_context(), 'error'):
-                Gtk.StyleContext.add_class(self.custom.get_style_context(), 'error')
-                
+            if not self.custom.get_style_context().has_class('error'):
+                self.custom.get_style_context().add_class('error')

@@ -14,20 +14,19 @@ from webfontkitgenerator.font import Font
 
 class Loader(object):
 
-    def __init__(self, window, model, files):
+    def __init__(self, window, model):
         self.window = window
         self.model = model
-        self.files = files
 
-    def run(self):
-        thread = Thread(target=self.load)
+    def load(self, files):
+        thread = Thread(target=self._load, args=(files,))
         thread.daemon = True
         thread.start()
         
-    def load(self):
+    def _load(self, files):
         self.window.processing = True
 
-        for f in self.files:
+        for f in files:
             try:
                 path = None
                 if isinstance(f, str):
@@ -46,7 +45,7 @@ class Loader(object):
                     ttfont.close()
                     font = Font(path, data)
                     GLib.idle_add(self.model.append, font)
-                    GLib.idle_add(self.window.stack.set_visible_child_name, 'main')
+                    GLib.idle_add(self.window.viewstack.set_visible_child_name, 'main')
                 else:
                     error_text = _("You don't have read access to {font} or it doesn't exists.")
                     GLib.idle_add(
@@ -65,11 +64,6 @@ class Loader(object):
                 )
 
         self.window.processing = False
-
-
-    '''
-    PRIVATE FUNCTIONS
-    '''
 
     def _show_error_dialog(self, title, text):
         error_dialog = Gtk.MessageDialog(self.window, 0,

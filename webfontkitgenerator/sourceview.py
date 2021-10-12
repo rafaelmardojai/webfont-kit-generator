@@ -8,16 +8,21 @@ from gi.repository import GLib, Gtk, GtkSource
 
 class SourceView(GtkSource.View):
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self):
+        super().__init__()
 
         self.set_show_line_numbers(True)
         self.set_monospace(True)
         self.set_editable(False)
         self.set_wrap_mode(Gtk.WrapMode.CHAR)
+        self.props.hexpand = True
 
         self.text_buffer = self.get_buffer()
         self.text_buffer.set_highlight_matching_brackets(False)
+
+        ssm = GtkSource.StyleSchemeManager()
+        self.adwaita = ssm.get_scheme('Adwaita')
+        self.adwaita_dark = ssm.get_scheme('Adwaita-dark')
 
     def set_language(self, language):
         thread = Thread(target=self.load_language,
@@ -32,5 +37,9 @@ class SourceView(GtkSource.View):
 
     def set_text(self, text):
         self.text_buffer.set_text(text)
-        self.show_all()
-        
+
+    def set_dark_scheme(self, state):
+        if state:
+            self.text_buffer.set_style_scheme(self.adwaita_dark)
+        else:
+            self.text_buffer.set_style_scheme(self.adwaita)

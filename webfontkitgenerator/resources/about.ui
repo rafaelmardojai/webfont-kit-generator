@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.0 -->
 <interface>
-  <requires lib="gtk+" version="3.22"/>
   <object class="GtkAboutDialog" id="about">
-    <property name="can_focus">False</property>
-    <property name="type_hint">dialog</property>
     <property name="program_name">Webfont Kit Generator</property>
     <property name="comments" translatable="yes">Create @font-face kits easily</property>
     <property name="website">https://github.com/rafaelmardojai/WebfontKitGenerator</property>

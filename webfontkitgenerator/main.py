@@ -4,19 +4,18 @@
 import sys
 import gi
 
-gi.require_version('Gdk', '3.0')
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-gi.require_version('GtkSource', '4')
+gi.require_version('Gdk', '4.0')
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+gi.require_version('GtkSource', '5')
 
 from gettext import gettext as _
-from gi.repository import Gdk, Gio, GLib, GObject, Gtk, Handy
+from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
 
-from webfontkitgenerator.actions import Actions
 from webfontkitgenerator.window import Window
 
 
-class Application(Gtk.Application, Actions):
+class Application(Adw.Application):
     def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.WebfontKitGenerator',
                          flags=Gio.ApplicationFlags.HANDLES_OPEN)
@@ -25,19 +24,10 @@ class Application(Gtk.Application, Actions):
         self.version = version
         self.window = None
 
-        Actions.__init__(self)
+        self.setup_actions()
 
     def do_startup(self):
-        Gtk.Application.do_startup(self)
-
-        Handy.init()
-
-        # Load CSS
-        css_provider = Gtk.CssProvider()
-        css_provider.load_from_resource('/com/rafaelmardojai/WebfontKitGenerator/css/styles.css')
-        screen = Gdk.Screen.get_default()
-        style_context = Gtk.StyleContext()
-        style_context.add_provider_for_screen(screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
+        Adw.Application.do_startup(self)
 
     def do_activate(self):
         self.window = self.props.active_window
@@ -51,6 +41,24 @@ class Application(Gtk.Application, Actions):
         # Load fonts
         self.window.load_fonts(files)
 
+    def setup_actions(self):
+        about = Gio.SimpleAction.new('about', None)
+        about.connect('activate', self._on_about)
+        self.add_action(about)
+        
+        self.set_accels_for_action('win.open', ['<Ctl>o'])
+        self.set_accels_for_action('win.generate', ['<Ctl>Return'])
+        self.set_accels_for_action('win.back', ['Escape'])
+    
+    def _on_about(self, action, param):
+        dialog = Gtk.Builder.new_from_resource(
+            '/com/rafaelmardojai/WebfontKitGenerator/about.ui'
+        ).get_object('about')
+        dialog.set_version(self.version)
+        dialog.set_transient_for(self.window)
+        dialog.set_modal(True)
+        dialog.present()
+ 
 
 def main(version):
     app = Application(version)

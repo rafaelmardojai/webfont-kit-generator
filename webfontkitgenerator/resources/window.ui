@@ -169,7 +169,8 @@
                                                         </object>
                                                       </child>
                                                       <child>
-                                                        <object class="GtkListView" id="fonts_list">
+                                                        <object class="GtkListBox" id="fonts_list">
+                                                          <property name="selection-mode">none</property>
                                                           <style>
                                                             <class name="content"/>
                                                           </style>

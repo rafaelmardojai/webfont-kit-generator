@@ -21,7 +21,6 @@ configure_file(
 webfontkitgenerator_sources = [
   '__init__.py',
   'main.py',
-  'actions.py',
   'window.py',
   'font.py',
   'options.py',

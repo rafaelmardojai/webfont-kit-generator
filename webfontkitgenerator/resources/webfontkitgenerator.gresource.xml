@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/rafaelmardojai/WebfontKitGenerator">
-    <file>ui/window.ui</file>
-    <file>ui/options.ui</file>
-    <file>ui/about.ui</file>
-    <file>css/styles.css</file>
-    <file preprocess="xml-stripblanks">icons/splash-a-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/splash-b-symbolic.svg</file>
+    <file>window.ui</file>
+    <file>options.ui</file>
+    <file>about.ui</file>
+    <file>style.css</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/splash-a-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/splash-b-symbolic.svg</file>
   </gresource>
 </gresources>
   

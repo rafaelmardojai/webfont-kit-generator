@@ -19,23 +19,20 @@ class Font(GObject.Object):
 class FontRow(Adw.ActionRow):
     __gtype_name__ = "FontRow"
 
-    position = GObject.Property(type=int)
-
-    def __init__(self):
+    def __init__(self, font_data):
         super().__init__()
+
+        self.set_title(font_data['name'])
+        subtitle = ' / '.join((
+            font_data['family'], font_data['style'], font_data['weight']
+        ))
+        self.set_subtitle(subtitle)
 
         btn_remove = Gtk.Button(valign=Gtk.Align.CENTER)
         btn_remove.set_icon_name('edit-delete-symbolic')
         btn_remove.connect('clicked', self.remove_font)
-        self.add_suffix(btn_remove)
-
-    def set_data(self, data):
-        self.set_title(data['name'])
-        subtitle = ' / '.join((
-            data['family'], data['style'], data['weight']
-        ))
-        self.set_subtitle(subtitle)
+        self.add_suffix(btn_remove) 
     
     def remove_font(self, _widget):
-        self.activate_action('win.remove-font', GLib.Variant.new_uint32(self.position))
+        self.activate_action('win.remove-font', GLib.Variant.new_uint32(self.get_index()))
 

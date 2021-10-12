@@ -77,12 +77,7 @@ class Window(Adw.ApplicationWindow):
         self.open_files.connect('clicked', self.open_generation_dir)
 
         # Setup fonts list
-        selection = Gtk.NoSelection.new(self.model)
-        factory = Gtk.SignalListItemFactory.new()
-        factory.connect('setup', self._on_fonts_list_setup)
-        factory.connect('bind', self._on_fonts_list_bind)
-        self.fonts_list.set_model(selection)
-        self.fonts_list.set_factory(factory)
+        self.fonts_list.bind_model(self.model, self._create_font_row)
         self.model.connect('items-changed', lambda _l, _p, _r, _a: self._check_ready_state())
         
         # Setup log text view
@@ -194,16 +189,9 @@ class Window(Adw.ApplicationWindow):
                 if error_response == Gtk.ResponseType.OK:
                     error_dialog.destroy()
 
-    def _on_fonts_list_setup(self, _factory, item):
-        widget = FontRow()
-        item.set_child(widget)
-
-    def _on_fonts_list_bind(self, _factory, list_item):
-        font = list_item.get_item()
-        widget = list_item.get_child()
-
-        widget.position = list_item.get_position()
-        widget.set_data(font.data)
+    def _create_font_row(self, font):
+        widget = FontRow(font.data)
+        return widget
 
     def _on_drop(self, _target, value, _x, _y):
         if isinstance(value, Gdk.FileList) and self.appstack.get_visible_child_name() == 'main':

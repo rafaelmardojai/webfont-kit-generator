@@ -22,7 +22,8 @@ class Loader(object):
         thread = Thread(target=self._load, args=(files,))
         thread.daemon = True
         thread.start()
-        
+
+
     def _load(self, files):
         self.window.processing = True
 

@@ -14,8 +14,8 @@
     </section>
   </menu>
   <template class="Window" parent="AdwApplicationWindow">
-    <property name="default_width">800</property>
-    <property name="default_height">600</property>
+    <property name="default_width">700</property>
+    <property name="default_height">500</property>
     <property name="content">
       <object class="GtkStack" id="appstack">
         <property name="transition_type">crossfade</property>
@@ -26,10 +26,11 @@
               <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="AdwHeaderBar" id="headerbar">
+                  <object class="GtkHeaderBar" id="headerbar">
                     <property name="title-widget">
                       <object class="AdwViewSwitcher">
                         <property name="stack">viewstack</property>
+                        <property name="policy">wide</property>
                       </object>
                     </property>
                     <child>
@@ -43,15 +44,6 @@
                         <property name="menu-model">app-menu</property>
                         <property name="focus-on-click">False</property>
                         <property name="direction">none</property>
-                      </object>
-                    </child>
-                    <child type="end">
-                      <object class="GtkButton" id="btn_generate">
-                        <property name="label" translatable="yes">Generate</property>
-                        <property name="action_name">win.generate</property>
-                        <style>
-                          <class name="suggested-action"/>
-                        </style>
                       </object>
                     </child>
                   </object>
@@ -123,78 +115,43 @@
                                   <object class="GtkStackPage">
                                     <property name="name">fonts</property>
                                     <property name="child">
-                                      <object class="GtkScrolledWindow">
-                                      <child>
-                                        <object class="GtkViewport">
-                                          <child>
-                                            <object class="AdwClamp">
-                                              <property name="margin_start">24</property>
-                                              <property name="margin_end">24</property>
-                                              <child>
-                                                <object class="GtkBox">
-                                                  <property name="orientation">vertical</property>
-                                                  <property name="margin_top">48</property>
-                                                  <property name="margin_bottom">48</property>
-                                                  <property name="spacing">48</property>
-                                                  <child>
-                                                    <object class="AdwPreferencesGroup">
-                                                      <child>
-                                                        <object class="AdwActionRow">
-                                                          <property name="title" translatable="yes">Output directory</property>
-                                                          <child>
-                                                            <object class="GtkBox">
-                                                              <property name="spacing">12</property>
-                                                              <property name="valign">center</property>
-                                                              <child>
-                                                                <object class="GtkLabel" id="directory">
-                                                                  <property name="label" translatable="yes">Select a directory</property>
-                                                                  <property name="valign">center</property>
-                                                                  <style>
-                                                                    <class name="heading"/>
-                                                                  </style>
-                                                                </object>
-                                                              </child>
-                                                              <child>
-                                                                <object class="GtkButton">
-                                                                  <property name="label" translatable="yes">Browse...</property>
-                                                                  <property name="action_name">win.set-outpath</property>
-                                                                </object>
-                                                              </child>
-                                                            </object>
-                                                          </child>
-                                                        </object>
-                                                      </child>
-                                                    </object>
-                                                  </child>
-                                                  <child>
-                                                    <object class="GtkBox">
-                                                      <property name="orientation">vertical</property>
-                                                      <child>
-                                                        <object class="GtkLabel">
-                                                          <property name="label" translatable="yes">Fonts</property>
-                                                          <property name="halign">start</property>
-                                                          <property name="margin-bottom">12</property>
-                                                          <style>
-                                                            <class name="heading"/>
-                                                          </style>
-                                                        </object>
-                                                      </child>
-                                                      <child>
-                                                        <object class="GtkListBox" id="fonts_list">
-                                                          <property name="selection-mode">none</property>
-                                                          <style>
-                                                            <class name="content"/>
-                                                          </style>
-                                                        </object>
-                                                      </child>
-                                                    </object>
-                                                  </child>
-                                                </object>
-                                              </child>
-                                            </object>
-                                          </child>
-                                        </object>
-                                      </child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">vertical</property>
+                                        <child>
+                                          <object class="GtkScrolledWindow">
+                                            <property name="vexpand">True</property>
+                                            <child>
+                                              <object class="GtkViewport">
+                                                <child>
+                                                  <object class="AdwClamp">
+                                                    <property name="margin_start">24</property>
+                                                    <property name="margin_end">24</property>
+                                                    <child>
+                                                      <object class="GtkBox">
+                                                        <property name="orientation">vertical</property>
+                                                        <property name="margin_top">48</property>
+                                                        <property name="margin_bottom">48</property>
+                                                        <child>
+                                                          <object class="GtkBox">
+                                                            <property name="orientation">vertical</property>
+                                                            <child>
+                                                              <object class="GtkListBox" id="fonts_list">
+                                                                <property name="selection-mode">none</property>
+                                                                <style>
+                                                                  <class name="content"/>
+                                                                </style>
+                                                              </object>
+                                                            </child>
+                                                          </object>
+                                                        </child>
+                                                      </object>
+                                                    </child>
+                                                  </object>
+                                                </child>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
                                       </object>
                                     </property>
                                   </object>
@@ -205,6 +162,58 @@
                         </property>
                       </object>
                     </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkRevealer" id="path_revealer">
+                    <property name="transition-type">slide-up</property>
+                    <property name="child">
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkSeparator"></object>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="margin_top">12</property>
+                            <property name="margin_end">12</property>
+                            <property name="margin_start">12</property>
+                            <property name="margin_bottom">12</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="spacing">12</property>
+                                <property name="valign">center</property>
+                                <property name="hexpand">True</property>
+                                <child>
+                                  <object class="GtkLabel" id="directory">
+                                    <property name="label" translatable="yes">Select Output Directory</property>
+                                    <property name="valign">center</property>
+                                    <style>
+                                      <class name="heading"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="label" translatable="yes">Browse...</property>
+                                    <property name="action_name">win.set-outpath</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton">
+                                <property name="label" translatable="yes">Generate</property>
+                                <property name="action_name">win.generate</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
                   </object>
                 </child>
               </object>
@@ -260,10 +269,11 @@
               <object class="GtkBox">
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="AdwHeaderBar">
+                  <object class="GtkHeaderBar">
                     <property name="title-widget">
                       <object class="AdwViewSwitcher">
                         <property name="stack">finished_viewstack</property>
+                        <property name="policy">wide</property>
                       </object>
                     </property>
                     <child>

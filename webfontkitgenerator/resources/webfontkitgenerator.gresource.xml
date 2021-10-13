@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/rafaelmardojai/WebfontKitGenerator">
+    <file compressed="true" preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">shortcuts.ui</file>
     <file>window.ui</file>
     <file>options.ui</file>
     <file>about.ui</file>

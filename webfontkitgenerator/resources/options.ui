@@ -22,9 +22,9 @@
                         <child>
                           <object class="AdwActionRow">
                             <property name="title">WOFF2</property>
-                            <property name="activatable_widget">format_woff2</property>
+                            <property name="activatable_widget">woff2</property>
                             <child>
-                              <object class="GtkSwitch" id="format_woff2">
+                              <object class="GtkSwitch" id="woff2">
                                 <property name="valign">center</property>
                               </object>
                             </child>
@@ -33,9 +33,9 @@
                         <child>
                           <object class="AdwActionRow">
                             <property name="title">WOFF</property>
-                            <property name="activatable_widget">format_woff</property>
+                            <property name="activatable_widget">woff</property>
                             <child>
-                              <object class="GtkSwitch"  id="format_woff">
+                              <object class="GtkSwitch"  id="woff">
                                 <property name="valign">center</property>
                               </object>
                             </child>

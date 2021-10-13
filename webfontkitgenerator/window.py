@@ -4,7 +4,7 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import Adw, Gdk, Gio, GLib, Gtk
+from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
 
 from webfontkitgenerator.generator import Generator
 from webfontkitgenerator.loader import Loader
@@ -17,6 +17,8 @@ from webfontkitgenerator.font import Font, FontRow
 @Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/window.ui')
 class Window(Adw.ApplicationWindow):
     __gtype_name__ = 'Window'
+
+    processing = GObject.Property(type=bool, default=False)
 
     appstack = Gtk.Template.Child()
 
@@ -40,7 +42,6 @@ class Window(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self.processing = False
         self.options = Options()
         self.outpath = None
         self.outuri = None
@@ -140,6 +141,7 @@ class Window(Adw.ApplicationWindow):
     def open_generation_dir(self, _widget):
         Gio.app_info_launch_default_for_uri(self.outuri)
 
+
     def _on_open(self, _action, _param):
         if self.appstack.get_visible_child_name() == 'main':
             self.fontschooser.show()
@@ -215,4 +217,3 @@ class Window(Adw.ApplicationWindow):
         dark = self.style_manager.get_dark()
         self.end_html.set_dark_scheme(dark)
         self.end_css.set_dark_scheme(dark)
-

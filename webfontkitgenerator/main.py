@@ -35,7 +35,7 @@ class Application(Adw.Application):
             self.window = Window(application=self)
         self.window.present()
 
-    def do_open(self, files, n_files, hint):
+    def do_open(self, files, _n_files, _hint):
         # Activate window first
         self.activate()
         # Load fonts
@@ -45,13 +45,14 @@ class Application(Adw.Application):
         about = Gio.SimpleAction.new('about', None)
         about.connect('activate', self._on_about)
         self.add_action(about)
-        
+
         self.set_accels_for_action('win.open', ['<Ctl>o'])
         self.set_accels_for_action('win.set-outpath', ['<Ctl>d'])
         self.set_accels_for_action('win.generate', ['<Ctl>Return'])
         self.set_accels_for_action('win.back', ['Escape'])
-    
-    def _on_about(self, action, param):
+
+
+    def _on_about(self, _action, _param):
         dialog = Gtk.Builder.new_from_resource(
             '/com/rafaelmardojai/WebfontKitGenerator/about.ui'
         ).get_object('about')

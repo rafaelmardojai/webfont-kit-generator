@@ -1,12 +1,12 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
 from threading import Thread
 from gi.repository import GLib, Gtk, GtkSource
 
 
 class SourceView(GtkSource.View):
+    __gtype_name__ = "SourceView"
 
     def __init__(self):
         super().__init__()

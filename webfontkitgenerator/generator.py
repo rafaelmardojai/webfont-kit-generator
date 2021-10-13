@@ -60,6 +60,7 @@ class Generator(object):
 
         return
 
+
     def _generate_font(self, filename, data):
         name = data['name-slug']
         self._append_log(_('Generating fonts for %s:' % data['name']), bold=True)
@@ -167,11 +168,6 @@ class Generator(object):
 
         return css_sheets
 
-
-    '''
-    PRIVATE FUNCTIONS
-    '''
-
     def _update_progressbar(self, reset=False):
         progress = 0 if reset else self.progress / self.total
         self.window.progressbar.set_fraction(progress)
@@ -190,10 +186,6 @@ class Generator(object):
         self.window.end_html.set_text('\n'.join(html))
         self.window.end_css.set_text('\n'.join(css))
 
-
-    '''
-    SECRET HELP FUNCTIONS
-    '''
 
     def __dict_to_styles(self, style_dict):
         properties = []

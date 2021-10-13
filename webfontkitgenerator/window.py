@@ -47,14 +47,14 @@ class Window(Adw.ApplicationWindow):
         self.model = Gio.ListStore.new(Font)
 
         self.fontschooser = Gtk.FileChooserNative.new(
-            _('Open font files'),
+            _('Open Font Files'),
             self,
             Gtk.FileChooserAction.OPEN,
             None,
             None
         )
         self.outpathchooser = Gtk.FileChooserNative.new(
-            _('Open font files'),
+            _('Select Output Directory'),
             self,
             Gtk.FileChooserAction.SELECT_FOLDER,
             None,
@@ -140,10 +140,12 @@ class Window(Adw.ApplicationWindow):
         Gio.app_info_launch_default_for_uri(self.outuri)
 
     def _on_open(self, _action, _param):
-        self.fontschooser.show()
+        if self.appstack.get_visible_child_name() == 'main':
+            self.fontschooser.show()
 
     def _on_set_outpath(self, _action, _param):
-        self.outpathchooser.show()
+        if self.appstack.get_visible_child_name() == 'main':
+            self.outpathchooser.show()
 
     def _on_generate(self, _action, _param):
         generator = Generator(

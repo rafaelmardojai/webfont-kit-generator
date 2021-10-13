@@ -175,10 +175,9 @@
                         </child>
                         <child>
                           <object class="GtkBox">
-                            <property name="margin_top">12</property>
-                            <property name="margin_end">12</property>
-                            <property name="margin_start">12</property>
-                            <property name="margin_bottom">12</property>
+                            <style>
+                              <class name="bottom-box"/>
+                            </style>
                             <child>
                               <object class="GtkBox">
                                 <property name="spacing">12</property>

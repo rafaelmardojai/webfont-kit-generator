@@ -46,7 +46,6 @@ class Loader(object):
                     ttfont.close()
                     font = Font(path, data)
                     GLib.idle_add(self.model.append, font)
-                    GLib.idle_add(self.window.viewstack.set_visible_child_name, 'main')
                 else:
                     error_text = _("You don't have read access to {font} or it doesn't exists.")
                     GLib.idle_add(

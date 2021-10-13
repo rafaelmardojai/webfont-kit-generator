@@ -25,3 +25,7 @@
 .log text {
   background: @theme_bg_color;
 }
+
+.bottom-box {
+  padding: 12px;
+}

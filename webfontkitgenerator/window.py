@@ -34,6 +34,7 @@ class Window(Adw.ApplicationWindow):
     fonts_box = Gtk.Template.Child()
     fonts_stack = Gtk.Template.Child()
     fonts_list = Gtk.Template.Child()
+    path_revealer = Gtk.Template.Child()
     directory = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
@@ -199,12 +200,13 @@ class Window(Adw.ApplicationWindow):
         if isinstance(value, Gdk.FileList) and self.appstack.get_visible_child_name() == 'main':
             self.load_fonts(value)
 
-    def _check_ready_state(self, *args, **kwargs):
-        self.lookup_action('generate').set_enabled(
-            self.model.get_n_items() > 0 and self.outpath
-        )
+    def _check_ready_state(self):
+        items = self.model.get_n_items() > 0
 
-        if self.model.get_n_items() > 0:
+        self.lookup_action('generate').set_enabled(items and self.outpath)
+        self.path_revealer.set_reveal_child(items)
+
+        if items:
             self.fonts_stack.set_visible_child_name('fonts')
         else:
             self.fonts_stack.set_visible_child_name('empty')

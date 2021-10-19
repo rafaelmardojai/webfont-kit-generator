@@ -1,0 +1,236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-31 23:24-0500\n"
+"PO-Revision-Date: 2021-10-19 08:09+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: Quentin PAGÈS\n"
+"Language: oc\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr "Generador de kits de poliças"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+#: src/resources/ui/about.ui:9
+msgid "Create @font-face kits easily"
+msgstr "Crear de kits @font-face facilament"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Generador de kits de poliças es un utilitari simple per permetre de generat "
+"de woff, woff2 e çò necessari en CSS per las poliças al format non-web (otf "
+"e ttf)."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: src/resources/ui/window.ui:48
+msgid "Generate"
+msgstr "Generar"
+
+#: src/resources/ui/window.ui:110
+msgid "Add some fonts"
+msgstr "Apondre de poliças"
+
+#: src/resources/ui/window.ui:162
+msgid "Open Fonts"
+msgstr "Dobrir poliças"
+
+#: src/resources/ui/window.ui:212
+msgid "Output directory"
+msgstr "Repertòri de sortida"
+
+#: src/resources/ui/window.ui:224
+msgid "Select a directory"
+msgstr "Seleccionar un repertòri"
+
+#: src/resources/ui/window.ui:237
+msgid "Browse..."
+msgstr "Percórrer..."
+
+#: src/resources/ui/window.ui:266 src/resources/ui/window.ui:308
+#: src/resources/ui/options.ui:33
+msgid "Fonts"
+msgstr "Poliças"
+
+#: src/resources/ui/window.ui:366
+msgid "Cancel"
+msgstr "Anullar"
+
+#: src/resources/ui/window.ui:433 src/generator.py:55
+msgid "Generation finished!"
+msgstr "Generacion terminada !"
+
+#: src/resources/ui/window.ui:451
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Per ligar vòstras poliças, copiatz lo còdi çai-jos dins l’entèsta HEAD de "
+"vòstre HTML :"
+
+#: src/resources/ui/window.ui:465
+msgid "Or import it directly to your CSS:"
+msgstr "O importatz-la dirèctament dins vòstre CSS :"
+
+#: src/resources/ui/window.ui:477
+msgid "Open in Files"
+msgstr "Dobrir dins Fichièrs"
+
+#: src/resources/ui/window.ui:497
+msgid "Information"
+msgstr "Informacions"
+
+#: src/resources/ui/window.ui:533
+msgid "Logs"
+msgstr "Jornals"
+
+#: src/resources/ui/options.ui:71
+msgid "Subsetting"
+msgstr "Jos-paramètres"
+
+#: src/resources/ui/options.ui:72
+msgid "Limit the character set to reduce file size"
+msgstr "Limitar lo jòc de caractèrs per reduire la talha del fichièr"
+
+#: src/resources/ui/options.ui:94
+msgid "Latin"
+msgstr "Latin"
+
+#: src/resources/ui/options.ui:108
+msgid "Cyrillic"
+msgstr "Cirillic"
+
+#: src/resources/ui/options.ui:122
+msgid "Greek"
+msgstr "Grèc"
+
+#: src/resources/ui/options.ui:136
+msgid "Vietnamese"
+msgstr "Vietnamian"
+
+#: src/resources/ui/options.ui:159
+msgid "Latin Extended"
+msgstr "Latin espandit"
+
+#: src/resources/ui/options.ui:173
+msgid "Cyrillic Extended"
+msgstr "Cirillic espandit"
+
+#: src/resources/ui/options.ui:187
+msgid "Greek Extended"
+msgstr "Grèc espandit"
+
+#: src/resources/ui/options.ui:201
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: src/resources/ui/options.ui:234
+msgid "Custom"
+msgstr "Personalizar"
+
+#: src/resources/ui/options.ui:246
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"Valors separadas per de virgulas. Valors hex solas e/o una plaja separada "
+"per de jonhents."
+
+#: src/resources/ui/options.ui:282
+msgid "CSS"
+msgstr "CSS"
+
+#: src/resources/ui/options.ui:286
+msgid "Font display"
+msgstr "Afichatge de la poliça"
+
+#: src/resources/ui/options.ui:287
+msgid "The CSS font-display descriptor"
+msgstr "Lo descriptor CSS font-display"
+
+#: src/window.py:63
+msgid "Options"
+msgstr "Opcions"
+
+#: src/window.py:92
+msgid "OTF & TTF"
+msgstr "OTF & TTF"
+
+#: src/window.py:99
+msgid "Open font files"
+msgstr "Dobrir los fichièrs de poliça"
+
+#: src/window.py:127
+msgid "Select output directory"
+msgstr "Seleccionar un repertòri de sortida"
+
+#: src/window.py:147
+msgid "Output directory error"
+msgstr "Error del repertòri de sortida"
+
+#: src/window.py:149
+msgid "You don't have write access to the selected directory."
+msgstr "Avètz pas l’autorizacion d’escriure al repertòri seleccionat."
+
+#: src/options.py:43
+msgid "Disabled"
+msgstr "Desactivat"
+
+#: src/generator.py:65
+#, python-format
+msgid "Generating fonts for %s:"
+msgstr "Generacion de las poliças per %s :"
+
+#: src/generator.py:112
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr " <i>{filename}</i> generat amb <i>{count}</i> glifes."
+
+#: src/generator.py:125
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "Cap de glife pas trobat per {range}. Ignorar."
+
+#: src/generator.py:143
+msgid "Generating CSS:"
+msgstr "Generacion del CSS :"
+
+#: src/generator.py:162
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "<i>{filename}</i> generat."
+
+#: src/generator.py:166
+msgid "There is no CSS to generate."
+msgstr "I a pas cap de CSS de generar."
+
+#: src/loader.py:46 src/loader.py:57
+msgid "Font loading error"
+msgstr "Error de cargament de la poliça"
+
+#: src/loader.py:47
+#, python-brace-format
+msgid "You don't have read access to {font} or it doesn't exists."
+msgstr "Avètz pas l’autorizacion de legir {font} o existís pas."
+
+#: src/loader.py:58
+#, python-brace-format
+msgid "Something happened when trying to load {font}."
+msgstr "Quicòm se's passat pendent l’ensag de cargament de {font}."

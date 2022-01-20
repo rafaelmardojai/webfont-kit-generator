@@ -1,11 +1,4 @@
 
-.rounded-button {
-  border-radius: 34px;
-  -gtk-outline-radius: 9999px;
-  padding: 8px 16px;
-  min-width: 120px;
-}
-
 .sub-box row:not(:last-child){
   border-bottom: 1px solid @borders;
 }
@@ -18,8 +11,8 @@
 
 .sourceview {
   border: 1px solid @borders;
-  border-radius: 9px;
-  padding: 6px 0;
+  border-radius: 12px;
+  padding: 12px 0;
 }
 
 .log text {

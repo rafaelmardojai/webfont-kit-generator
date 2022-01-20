@@ -103,7 +103,7 @@
                                             <property name="action_name">win.open</property>
                                             <style>
                                               <class name="suggested-action"/>
-                                              <class name="rounded-button"/>
+                                              <class name="pill"/>
                                             </style>
                                           </object>
                                         </child>

@@ -187,13 +187,8 @@ class Window(Adw.ApplicationWindow):
                 self.directory.set_label(name)
                 self._check_ready_state()
             else:
-                error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
-                    Gtk.ButtonsType.OK, _('Output directory error'))
-                error_dialog.format_secondary_text(
-                    _("You don't have write access to the selected directory."))
-                error_response = error_dialog.run()
-                if error_response == Gtk.ResponseType.OK:
-                    error_dialog.destroy()
+                error = Adw.Toast.new(_("You don't have write access to the selected directory."))
+                self.toasts.add_toast(error)
 
     def _create_font_row(self, font):
         widget = FontRow(font.data)

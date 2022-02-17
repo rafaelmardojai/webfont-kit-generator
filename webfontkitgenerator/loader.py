@@ -6,7 +6,7 @@ from urllib.parse import urlparse, unquote
 
 from gettext import gettext as _
 from threading import Thread
-from gi.repository import GLib, Gtk
+from gi.repository import Adw, GLib, Gtk
 from fontTools.ttLib import TTFont
 
 from webfontkitgenerator.font import Font
@@ -49,31 +49,24 @@ class Loader(object):
                 else:
                     error_text = _("You don't have read access to {font} or it doesn't exists.")
                     GLib.idle_add(
-                        self._show_error_dialog,
-                        _('Font loading error'),
+                        self._show_error,
                         error_text.format(font=path)
                     )
 
-            except Exception as e:
-                error_text = _('Something happened when trying to load {font}.')
-                error_text += '\n' + str(e)
+            except Exception as exc:
+                print('Error loading ' + path)
+                print(exc)
+                error_text = _('Error: {error}.')
                 GLib.idle_add(
-                    self._show_error_dialog,
-                    _('Font loading error'),
-                    error_text.format(font=path)
+                    self._show_error,
+                    error_text.format(error=exc)
                 )
 
         self.window.processing = False
 
-    def _show_error_dialog(self, title, text):
-        error_dialog = Gtk.MessageDialog(self.window, 0,
-                                        Gtk.MessageType.WARNING,
-                                        Gtk.ButtonsType.OK,
-                                        title)
-        error_dialog.format_secondary_text(text)
-        error_response = error_dialog.run()
-        if error_response == Gtk.ResponseType.OK:
-            error_dialog.destroy()
+    def _show_error(self, text):
+        error = Adw.Toast.new(text)
+        self.window.toasts.add_toast(error)
 
     def _get_font_data(self, data_src):
         data = {}

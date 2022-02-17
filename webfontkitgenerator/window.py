@@ -38,6 +38,7 @@ class Window(Adw.ApplicationWindow):
     fonts_list = Gtk.Template.Child()
     path_revealer = Gtk.Template.Child()
     directory = Gtk.Template.Child()
+    toasts = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -45,7 +46,7 @@ class Window(Adw.ApplicationWindow):
         self.options = Options()
         self.outpath = None
         self.outuri = None
-        self.log = Log(self.progressbar_label)
+        self.log = Log()
         self.model = Gio.ListStore.new(Font)
 
         self.fontschooser = Gtk.FileChooserNative.new(

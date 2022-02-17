@@ -28,7 +28,8 @@ class Generator(object):
         self.progress = 0
 
     def run(self):
-        self._update_progressbar(reset=True)
+        self.window.progressbar.set_fraction(0)
+        self.window.progressbar_label.set_label('')
         self.window.log.reset()
         self.window.cancel.connect('clicked', self.do_stop)
 
@@ -42,6 +43,7 @@ class Generator(object):
         self.window.appstack.set_visible_child_name('main')
 
     def generate(self):
+        GLib.timeout_add(50, self._on_progressbar_timeout, None)
         self.window.processing = True
         self.window.appstack.set_visible_child_name('progress')
 
@@ -63,7 +65,10 @@ class Generator(object):
 
     def _generate_font(self, filename, data):
         name = data['name-slug']
-        self._append_log(_('Generating fonts for %s:' % data['name']), bold=True)
+        log_text = _('Generating fonts for {name}:')
+        self._append_log(log_text.format(name=data['name']), bold=True)
+        progress_text = _('Generating {name}')
+        self._set_progressbar_text(progress_text.format(name=data['name']))
 
         if self.ranges:
             for range, unicodes in self.ranges.items():
@@ -126,9 +131,6 @@ class Generator(object):
             gen_text = _('No glyphs where found for {range}. Skipping.')
             self._append_log(gen_text.format(range=text), italic=True)
 
-        # Update progressbar
-        GLib.idle_add(self._update_progressbar)
-
     def _generate_css(self):
         ff_template = '''
             /* {comment} */
@@ -142,6 +144,7 @@ class Generator(object):
         families_css = {}
 
         self._append_log(_('Generating CSS:'), bold=True)
+        self._set_progressbar_text(_('Finishing'))
 
         for family, subset in self.css.items():
             family_css = ''
@@ -168,9 +171,13 @@ class Generator(object):
 
         return css_sheets
 
-    def _update_progressbar(self, reset=False):
-        progress = 0 if reset else self.progress / self.total
+    def _on_progressbar_timeout(self, _data):
+        progress = self.progress / self.total
         self.window.progressbar.set_fraction(progress)
+        return progress != 1
+
+    def _set_progressbar_text(self, text):
+        GLib.idle_add(self.window.progressbar_label.set_label, text)
 
     def _append_log(self, text, bold=False, italic=False):
         GLib.idle_add(self.window.log.append, text, bold, italic)

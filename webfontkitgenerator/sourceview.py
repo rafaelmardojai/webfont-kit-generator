@@ -14,7 +14,7 @@ class SourceView(GtkSource.View):
         self.set_show_line_numbers(True)
         self.set_monospace(True)
         self.set_editable(False)
-        self.set_wrap_mode(Gtk.WrapMode.CHAR)
+        self.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
         self.props.hexpand = True
 
         self.text_buffer = self.get_buffer()

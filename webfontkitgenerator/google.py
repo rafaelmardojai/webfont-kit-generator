@@ -1,0 +1,379 @@
+# Copyright 2020-2021 Rafael Mardojai CM
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import json
+import os
+import re
+from urllib.parse import urlparse, parse_qs
+
+from gettext import gettext as _
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Soup
+
+
+GOOGLE_API_URL = 'https://www.googleapis.com/webfonts/v1/webfonts?key={}'
+GITHUB_CHECK_URL = 'https://api.github.com/repos/google/fonts/branches/main'
+XDG_DATA_DIR = os.path.join(GLib.get_user_data_dir(), 'webfont-kit-generator')
+DATA_FILE = os.path.join(XDG_DATA_DIR, 'google-fonts.json')
+
+
+@Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/google.ui')
+class GoogleDialog(Adw.Window):
+    __gtype_name__ = 'GoogleDialog'
+
+    stack = Gtk.Template.Child()
+    url_entry = Gtk.Template.Child()
+    error_revealer = Gtk.Template.Child()
+    error_label = Gtk.Template.Child()
+    download_btn = Gtk.Template.Child()
+    progress = Gtk.Template.Child()
+    progressbar = Gtk.Template.Child()
+    cancel_btn = Gtk.Template.Child()
+
+    def __init__(self, window, **kwargs):
+        super().__init__(**kwargs)
+
+        self.window = window
+        self.settings = self.window.options.settings
+        self.cancellable = Gio.Cancellable.new()
+        self.session = Soup.Session()
+        self.session.set_user_agent('Webfont Kit Generator')
+        self.errors = []
+        # Google Fonts
+        self.google_sha = ''
+        # Families to lockup
+        self.families = {}
+        # Progress
+        self.total = 0
+        self.pending = 0
+        # Files to import
+        self.files = []
+
+        self.url_entry.connect('changed', self._on_entry_changed)
+        self.url_entry.connect('icon-press', self._on_entry_icon)
+        self.download_btn.connect('clicked', self._on_download_clicked)
+        self.cancel_btn.connect('clicked', self._on_cancel_clicked)
+
+    def load_fonts_data(self):
+        def on_check_response(session, result):
+            is_data_outdated = False
+            try:
+                response = session.send_and_read_finish(result)
+                data = self._read_response(response)
+                sha = data['commit']['sha']
+                saved_sha = self.settings.get_string('google-fonts-sha')
+                if sha != saved_sha:
+                    is_data_outdated = True
+                    self.google_sha = sha
+            except Exception as exc:
+                print(exc)
+                # Use cached version
+                self.find_on_data()
+
+            if is_data_outdated:
+                self._get_google_data()
+            else:
+                # Use cached version
+                self.find_on_data()
+
+        # Loading feedback
+        self.stack.set_visible_child_name('loading')
+        self.progressbar.set_text('')
+        self.progress.set_title(_('Loading Google Fonts Database'))
+        GLib.timeout_add(50, self._on_progressbar_timeout, None)
+
+        if self._local_data_exists():
+            """
+            First check if the local fonts data is outdated by checking
+            google/fonts Github repo activity.
+            """
+            message = Soup.Message.new('GET', GITHUB_CHECK_URL)
+            self.session.send_and_read_async(message, 0, self.cancellable, on_check_response)
+        else:
+            self._get_google_data()
+
+    def find_on_data(self, data=None):
+        if not data:
+            data = self._get_local_data()
+
+        files = {}
+        for family in self.families:
+            results = list(filter(
+                lambda x: x['family'] == family['name'], data
+            ))
+            if results:
+                results = results[0]
+                for variant in family['variants']:
+                    if variant in results['files']:
+                        if family['name'] not in files:
+                            files[family['name']] = {}
+                        name = ' '.join([family['name'], variant])
+                        files[family['name']][name] = results['files'][variant]
+                        self.total += 1
+                    else:
+                        error = _("Couldn't find the {variant} variant for {family_name}.")
+                        error = error.format(variant=variant, family_name=family['name'])
+                        self.errors.append(error)
+            else:
+                error = _("Couldn't find the {family_name} font family.")
+                error = error.format(family_name=family['name'])
+                self.errors.append(error)
+
+        if files:
+            self._download_files(files)
+        else:
+            self.errors = [_("Couldn't find any fonts for the given url.")]
+            self.terminate_dialog()
+
+    def parse_api_v1(self, query):
+        pass
+
+    def parse_api_v2(self, query):
+        families = []
+        query = parse_qs(query)
+        if 'family' in query:
+            for family in query['family']:
+                # Parse family_name, axis_tag_list, axis_tuple_list
+                data = re.split(':|@', family)
+                # Create new dict to store the familiy
+                family = {}
+
+                if len(data) == 1:
+                    family['name'] = data[0]
+                    family['variants'] = ['regular']
+                elif len(data) == 3:
+                    family['name'] = data[0]
+                    # axis_tag_list = data[1].split(',')
+                    variants = []
+                    for variant in data[2].split(';'):
+                        variant_data = variant.split(',')
+                        variant_id = ''
+                        if len(variant_data) == 1:
+                            if variant_data[0] == '400':
+                                variant_id = 'regular'
+                            else:
+                                variant_id = variant_data[0]
+                        elif len(variant_data) == 2:
+                            if variant_data[0] == '1':
+                                if variant_data[1] == '400':
+                                    variant_id = 'italic'
+                                else:
+                                    variant_id = variant_data[1] + 'italic'
+                            else:
+                                variant_id = variant_data[1]
+                        variants.append(variant_id)
+
+                    family['variants'] = variants
+                else:
+                    continue
+                families.append(family)
+            return families
+
+    def invalid_url(self):
+        self.url_entry.get_style_context().add_class('error')
+        self.download_btn.set_sensitive(False)
+        self.error_label.set_text(_('Please set a valid url'))
+        self.error_revealer.set_reveal_child(True)
+
+    def invalid_api_version(self):
+        self.url_entry.get_style_context().add_class('error')
+        self.download_btn.set_sensitive(False)
+        self.error_label.set_text(_('Update your url to CSS API v2'))
+        self.error_revealer.set_reveal_child(True)
+
+    def valid_url(self):
+        self.url_entry.get_style_context().remove_class('error')
+        self.error_revealer.set_reveal_child(False)
+        self.download_btn.set_sensitive(True)
+
+    def terminate_dialog(self, cancel=False):
+        if not cancel:
+            #self.stack.set_visible_child_name('main')
+            if self.files:
+                self.window.load_fonts(self.files)
+            
+            for error in self.errors:
+                error = Adw.Toast.new(error)
+                self.window.toasts.add_toast(error)
+
+        self.close()
+
+    def _download_files(self, files):
+        def on_file_downloaded(session, result, user_data):
+            (family, name) = user_data
+            progress_text = _('Downloading {name}')
+            self.progress.set_title(progress_text.format(name=family))
+
+            failed = True
+            try:
+                font_bytes = session.send_and_read_finish(result)
+                if font_bytes:
+                    (font, _iostream) = Gio.File.new_tmp(None)
+                    outstream = font.replace(None, False, Gio.FileCreateFlags.NONE, None)
+                    outstream.write_bytes_async(font_bytes, 0, self.cancellable, on_file_writed, (name, font))
+                    failed = False
+            except GLib.GError as exc:
+                print(exc)
+                self.pending -= 1
+
+            if failed:
+                error = _("Couldn't download the font file for {name}.")
+                error = error.format(name=name)
+                self.errors.append(error)
+
+        def on_file_writed(outstream, result, user_data):
+            (name, font) = user_data
+            failed = True
+            self.pending -= 1
+            try:
+                bites = outstream.write_bytes_finish(result)
+                outstream.close()
+                self.files.append(font)
+                failed = False
+            except GLib.GError as exc:
+                print(exc)
+
+            if failed:
+                error = _("Couldn't write the font file for {name}.")
+                error = error.format(name=name)
+                self.errors.append(error)
+
+            if not self.pending:
+                self.terminate_dialog()
+
+        self.pending = self.total
+        self.progressbar.set_text(None)
+
+        for family, variants in files.items():
+            for name, url in variants.items():
+                message = Soup.Message.new('GET', url)
+                self.session.send_and_read_async(message, 0, self.cancellable, on_file_downloaded, (family, name))
+
+    def _get_local_data(self):
+        data = None
+        try:
+            with open(DATA_FILE) as json_file:
+                data = json.load(json_file)
+        except Exception as exc:
+            print(exc)
+        return data
+
+    def _local_data_exists(self):
+        return os.path.exists(DATA_FILE)
+
+    def _get_google_data(self):
+        # Get data from Google
+        api_key = self.settings.get_string('google-api-key')
+        api_url = GOOGLE_API_URL.format(api_key)
+        message = Soup.Message.new('GET', api_url)
+        self.session.send_and_read_async(message, 0, self.cancellable, self._on_google_response)
+
+    def _on_google_response(self, session, result):
+        try:
+            response = session.send_and_read_finish(result)
+            data = self._read_response(response)
+
+            if 'kind' in data:
+                try:
+                    if not self._local_data_exists():
+                        os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+
+                    # Save to data file
+                    with open(DATA_FILE, 'w') as outfile:
+                        json.dump(data['items'], outfile, indent=2)
+
+                    if self.google_sha:
+                        self.settings.set_string('google-fonts-sha', self.google_sha)
+
+                    self.find_on_data(data['items'])
+                except Exception as exc:
+                    print(exc)
+        except GLib.GError as exc:
+            print(exc)
+            error = _("Couldn't download the Google Fonts data.")
+            self.errors.append(error)
+            self.terminate_dialog()
+
+    def _on_download_clicked(self, _button):
+        url = self.url_entry.get_text()
+        parsed = urlparse(url)
+
+        families = self.parse_api_v2(parsed.query)
+        self.families = families
+        if self.families:
+            self.load_fonts_data()
+        else:
+            self.invalid_url()
+
+    def _on_entry_changed(self, _entry):
+        url = self.url_entry.get_text()
+
+        if url:
+            self.url_entry.set_icon_from_icon_name(
+                Gtk.EntryIconPosition.SECONDARY,
+                'edit-clear-symbolic'
+            )
+
+            parsed = urlparse(url)
+            if parsed.netloc == 'fonts.googleapis.com':
+                if parsed.path == '/css':
+                    # API version 1
+                    self.invalid_api_version()
+                elif parsed.path == '/css2':
+                    # API version 2
+                    self.valid_url()
+                else:
+                    # Unknown API path
+                    self.invalid_url()
+            else:
+                # No API url
+                self.invalid_url()
+        else:
+            self.url_entry.get_style_context().remove_class('error')
+            self.error_revealer.set_reveal_child(False)
+            self.url_entry.set_icon_from_icon_name(
+                Gtk.EntryIconPosition.SECONDARY,
+                'edit-paste-symbolic'
+            )
+
+    def _on_cancel_clicked(self, _button):
+        if not self.cancellable.is_cancelled():
+            self.cancellable.cancel()
+            self.terminate_dialog(cancel=True)
+
+    def _on_entry_icon(self, _entry, pos):
+        if pos == Gtk.EntryIconPosition.SECONDARY:
+            text = self.url_entry.get_text()
+            if text:
+                self.url_entry.set_text('')
+            else:
+                self._paste_text()
+
+    def _paste_text(self):
+        clipboard = Gdk.Display.get_default().get_clipboard()
+
+        def on_paste(clipboard, result):
+            text = clipboard.read_text_finish(result)
+            if text is not None:
+                self.url_entry.set_text(text)
+
+        clipboard.read_text_async(None, on_paste)
+
+    def _on_progressbar_timeout(self, _data):
+        if self.total and self.pending:
+            progress = self.total - self.pending
+            progress = progress / self.total
+            self.progressbar.set_fraction(progress)
+        else:
+            self.progressbar.pulse()
+        return True
+
+    def _read_response(self, response):
+        response_data = {}
+        try:
+            response_data = json.loads(
+                response.get_data()
+            ) if response else {}
+        except Exception as exc:
+            print(exc)
+        return response_data
+

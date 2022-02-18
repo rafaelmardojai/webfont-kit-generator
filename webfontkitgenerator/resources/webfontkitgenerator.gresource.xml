@@ -5,6 +5,7 @@
     <file>window.ui</file>
     <file>options.ui</file>
     <file>about.ui</file>
+    <file>google.ui</file>
     <file>style.css</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/splash-a-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/splash-b-symbolic.svg</file>

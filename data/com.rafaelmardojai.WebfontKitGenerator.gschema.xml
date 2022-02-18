@@ -39,5 +39,12 @@
     <key type="i" name="font-display">
         <default>0</default>
     </key>
+
+    <key type="s" name="google-api-key">
+        <default>'AIzaSyD8Uy0-Lhp20KwXzvED4E2OE5Y_YQmTEfA'</default>
+    </key>
+    <key type="s" name="google-fonts-sha">
+        <default>''</default>
+    </key>
   </schema>
 </schemalist>

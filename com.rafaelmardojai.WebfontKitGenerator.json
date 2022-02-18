@@ -5,8 +5,10 @@
     "sdk" : "org.gnome.Sdk",
     "command" : "webfontkitgenerator",
     "finish-args" : [
+        "--share=network",
         "--share=ipc",
         "--device=dri",
+        "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
         "--filesystem=home"

@@ -25,6 +25,7 @@ webfontkitgenerator_sources = [
   'font.py',
   'options.py',
   'generator.py',
+  'google.py',
   'loader.py',
   'log.py',
   'sourceview.py',

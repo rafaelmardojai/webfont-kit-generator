@@ -231,29 +231,27 @@
             <property name="child">
               <object class="GtkWindowHandle">
                 <child>
-                  <object class="AdwClamp">
+                  <object class="AdwStatusPage" id="progress">
                     <child>
-                      <object class="GtkBox">
-                        <property name="orientation">vertical</property>
-                        <property name="spacing">12</property>
-                        <property name="valign">center</property>
+                      <object class="AdwClamp">
                         <child>
-                          <object class="GtkProgressBar" id="progressbar">
-                            <property name="show-text">True</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="progressbar_label">
-                            <property name="halign">center</property>
-                            <style>
-                              <class name="dim-label"/>
-                            </style>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="cancel">
-                            <property name="label" translatable="yes">Cancel</property>
-                            <property name="halign">center</property>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">36</property>
+                            <child>
+                              <object class="GtkProgressBar" id="progressbar">
+                                <property name="show-text">True</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="cancel">
+                                <property name="label" translatable="yes">Cancel</property>
+                                <property name="halign">center</property>
+                                <style>
+                                  <class name="pill"/>
+                                </style>
+                              </object>
+                            </child>
                           </object>
                         </child>
                       </object>

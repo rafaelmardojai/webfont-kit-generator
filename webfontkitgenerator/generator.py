@@ -29,7 +29,7 @@ class Generator(object):
 
     def run(self):
         self.window.progressbar.set_fraction(0)
-        self.window.progressbar_label.set_label('')
+        self.window.progress.set_title('')
         self.window.log.reset()
         self.window.cancel.connect('clicked', self.do_stop)
 
@@ -68,7 +68,7 @@ class Generator(object):
         log_text = _('Generating fonts for {name}:')
         self._append_log(log_text.format(name=data['name']), bold=True)
         progress_text = _('Generating {name}')
-        self._set_progressbar_text(progress_text.format(name=data['name']))
+        self._set_progressbar_text(progress_text.format(name=data['family']))
 
         if self.ranges:
             for range, unicodes in self.ranges.items():
@@ -177,7 +177,7 @@ class Generator(object):
         return progress != 1
 
     def _set_progressbar_text(self, text):
-        GLib.idle_add(self.window.progressbar_label.set_label, text)
+        GLib.idle_add(self.window.progress.set_title, text)
 
     def _append_log(self, text, bold=False, italic=False):
         GLib.idle_add(self.window.log.append, text, bold, italic)

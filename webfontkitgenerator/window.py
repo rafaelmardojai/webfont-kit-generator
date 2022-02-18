@@ -23,7 +23,7 @@ class Window(Adw.ApplicationWindow):
     appstack = Gtk.Template.Child()
 
     progressbar = Gtk.Template.Child()
-    progressbar_label = Gtk.Template.Child()
+    progress = Gtk.Template.Child()
     cancel = Gtk.Template.Child()
 
     finished_viewstack = Gtk.Template.Child()

@@ -2,6 +2,13 @@
 <interface>
   <menu id="app-menu">
     <section>
+      <attribute name="id">importers-section</attribute>
+      <item>
+        <attribute name="label" translatable="yes">Import from Google Fonts</attribute>
+        <attribute name="action">win.google</attribute>
+      </item>
+    </section>
+    <section>
       <attribute name="id">help-section</attribute>
       <item>
         <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>

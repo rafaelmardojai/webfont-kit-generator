@@ -7,6 +7,7 @@ from gettext import gettext as _
 from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
 
 from webfontkitgenerator.generator import Generator
+from webfontkitgenerator.google import GoogleDialog
 from webfontkitgenerator.loader import Loader
 from webfontkitgenerator.options import Options
 from webfontkitgenerator.log import Log
@@ -122,6 +123,10 @@ class Window(Adw.ApplicationWindow):
         open_.connect('activate', self._on_open)
         self.add_action(open_)
 
+        google = Gio.SimpleAction.new('google', None)
+        google.connect('activate', self._on_google)
+        self.add_action(google)
+
         set_outpath = Gio.SimpleAction.new('set-outpath', None)
         set_outpath.connect('activate', self._on_set_outpath)
         self.add_action(set_outpath)
@@ -142,10 +147,15 @@ class Window(Adw.ApplicationWindow):
     def open_generation_dir(self, _widget):
         Gio.app_info_launch_default_for_uri(self.outuri)
 
-
     def _on_open(self, _action, _param):
         if self.appstack.get_visible_child_name() == 'main':
             self.fontschooser.show()
+
+    def _on_google(self, _action, _param):
+        dialog = GoogleDialog(self)
+        dialog.set_transient_for(self)
+        dialog.set_modal(True)
+        dialog.present()
 
     def _on_set_outpath(self, _action, _param):
         if self.appstack.get_visible_child_name() == 'main':

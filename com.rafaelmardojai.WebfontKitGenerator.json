@@ -23,8 +23,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c6/38/54454a225deb3af95d369dc7fa5ad050ec27d0e7ed491f057c015f69c47e/fonttools-4.25.0.zip",
-                    "sha256": "4c9e42265d48264da8a001ce94933fb90b69e035738ba7839be7357534aeab0b"
+                    "url": "https://files.pythonhosted.org/packages/cb/d9/8f4b6d56afb0c034c65a12902df9d7b41e1ede88bf89baf19d172e9396c3/fonttools-4.31.2.zip",
+                    "sha256": "236b29aee6b113e8f7bee28779c1230a86ad2aac9a74a31b0aedf57e7dfb62a4"
                 }
             ]
         },

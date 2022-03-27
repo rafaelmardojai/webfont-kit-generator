@@ -376,4 +376,3 @@ class GoogleDialog(Adw.Window):
         except Exception as exc:
             print(exc)
         return response_data
-

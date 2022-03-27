@@ -85,7 +85,7 @@ class Loader(object):
         # Data used by UI
         data['name'] = data_src(4)
         data['version'] = data_src(5)
-        data['family'] = data_src(16) if data_src(16) else data_src(1)
+        data['family'] = data_src(16) or data_src(1)
         data['style'] = 'normal'
         data['weight'] = '400'
 
@@ -96,7 +96,7 @@ class Loader(object):
         data['name-slug'] = '-'.join(data['name'].split()).lower()
         data['family-slug'] = '-'.join(data['family'].split()).lower()
 
-        ws = data_src(17) if data_src(17) else data_src(2)
+        ws = data_src(17) or data_src(2)
         ws = ws.split()
 
         for s in ws:

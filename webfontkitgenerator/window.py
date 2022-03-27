@@ -112,7 +112,7 @@ class Window(Adw.ApplicationWindow):
         # Drag and drop
         drop_target = Gtk.DropTarget.new(Gdk.FileList, Gdk.DragAction.COPY)
         drop_target.connect("drop", self._on_drop)
-        # self.add_controller(drop_target)
+        self.add_controller(drop_target)
 
     def setup_actions(self):
         remove_font = Gio.SimpleAction.new('remove-font', GLib.VariantType.new('u'))
@@ -206,7 +206,7 @@ class Window(Adw.ApplicationWindow):
 
     def _on_drop(self, _target, value, _x, _y):
         if isinstance(value, Gdk.FileList) and self.appstack.get_visible_child_name() == 'main':
-            self.load_fonts(value)
+            self.load_fonts(value.get_files())
 
     def _check_ready_state(self):
         items = self.model.get_n_items() > 0

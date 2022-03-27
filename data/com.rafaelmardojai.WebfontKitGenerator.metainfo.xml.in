@@ -39,6 +39,17 @@
   </screenshots>
   
   <releases>
+    <release version="1.0.0" date="2022-03-27">
+      <description>
+        <ul>
+          <li>Ported to GTK4 and libadwaita</li>
+          <li>New Google Fonts importer</li>
+          <li>New app icon by Tobias Bernard</li>
+          <li>Major UI improvements</li>
+          <li>Code cleanup and improvements</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.5.0" date="2021-07-13">
       <description>
         <ul>

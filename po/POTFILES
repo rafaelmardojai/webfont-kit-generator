@@ -5,6 +5,7 @@ webfontkitgenerator/resources/window.ui
 webfontkitgenerator/resources/options.ui
 webfontkitgenerator/resources/google.ui
 webfontkitgenerator/resources/about.ui
+webfontkitgenerator/resources/shortcuts.ui
 webfontkitgenerator/window.py
 webfontkitgenerator/options.py
 webfontkitgenerator/generator.py

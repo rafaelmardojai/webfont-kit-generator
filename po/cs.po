@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-27 10:03-0500\n"
+"POT-Creation-Date: 2022-03-28 19:32-0300\n"
 "PO-Revision-Date: 2021-08-06 14:42+0200\n"
 "Last-Translator: Vojtěch Perník <translations@pervoj.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -42,6 +42,83 @@ msgstr ""
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:45
+msgid "Ported to GTK4 and libadwaita"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:46
+msgid "New Google Fonts importer"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:47
+msgid "New app icon by Tobias Bernard"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:48
+msgid "Major UI improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:49
+msgid "Code cleanup and improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:56
+msgid "Drag and drop bug fix"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:57
+msgid "Fonts loader fixes"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:58
+msgid "Added Brazilian Portuguese translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:59
+msgid "Added Dutch translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:66
+msgid "Open fonts from file manager"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:67
+msgid "Drag and Drop support"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:68
+msgid "User interface improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:69
+msgid "Performance improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:70
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:87
+msgid "Bug fixes"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:77
+msgid "UI tweaks"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:78
+msgid "Code improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:85
+msgid "Add custom subsetting support"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:86
+msgid "Design and UX improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:93
+msgid "Initial release."
+msgstr ""
 
 #: webfontkitgenerator/resources/window.ui:7
 #: webfontkitgenerator/resources/google.ui:34
@@ -194,6 +271,40 @@ msgstr ""
 #: webfontkitgenerator/resources/google.ui:72
 msgid "Download Fonts"
 msgstr ""
+
+#: webfontkitgenerator/resources/shortcuts.ui:11
+#, fuzzy
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generovat"
+
+#: webfontkitgenerator/resources/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr ""
+
+#: webfontkitgenerator/resources/shortcuts.ui:20
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Open Fonts"
+msgstr "Otevřít fonty"
+
+#: webfontkitgenerator/resources/shortcuts.ui:26
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Select Output Directory"
+msgstr "Vybrat výstupní adresář"
+
+#: webfontkitgenerator/resources/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "Google Fonts Importer"
+msgstr ""
+
+#: webfontkitgenerator/resources/shortcuts.ui:38
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Generate"
+msgstr "Generovat"
 
 #: webfontkitgenerator/window.py:54
 #, fuzzy

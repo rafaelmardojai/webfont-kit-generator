@@ -2,21 +2,24 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-12 20:47-0500\n"
-"PO-Revision-Date: 2022-03-28 20:11-0300\n"
-"Last-Translator: Gustavo Costa <xfgusta@gmail.com>\n"
-"Language-Team: \n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2022-04-13 02:00+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/rafaelmardojai/teams/135056/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0.1\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -73,7 +76,8 @@ msgstr "Fontes"
 msgid "Add some fonts"
 msgstr "Adicione algumas fontes"
 
-#: webfontkitgenerator/resources/window.ui:199 webfontkitgenerator/window.py:61
+#: webfontkitgenerator/resources/window.ui:199
+#: webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
 msgstr "Selecione o diretório de saída"
 
@@ -330,73 +334,3 @@ msgstr "Você não tem acesso de leitura para {font} ou ela não existe."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Erro: {error}."
-
-#~ msgid "Ported to GTK4 and libadwaita"
-#~ msgstr "Portado para GTK4 e libadwaita"
-
-#~ msgid "New Google Fonts importer"
-#~ msgstr "Novo importador do Google Fonts"
-
-#~ msgid "New app icon by Tobias Bernard"
-#~ msgstr "Ícone novo para o aplicativo feito por Tobias Bernard"
-
-#~ msgid "Major UI improvements"
-#~ msgstr "Melhorias na interface do usuário"
-
-#~ msgid "Code cleanup and improvements"
-#~ msgstr "Limpeza de código e melhorias"
-
-#~ msgid "Drag and drop bug fix"
-#~ msgstr "Correção de bug no arrastar e soltar"
-
-#~ msgid "Fonts loader fixes"
-#~ msgstr "Correções no carregador de fontes"
-
-#~ msgid "Added Brazilian Portuguese translation"
-#~ msgstr "Adicionada tradução para o português brasileiro"
-
-#~ msgid "Added Dutch translation"
-#~ msgstr "Adicionada tradução para o holandês"
-
-#~ msgid "Open fonts from file manager"
-#~ msgstr "Abrir fontes a partir do gerenciador de arquivos"
-
-#~ msgid "Drag and Drop support"
-#~ msgstr "Suporte para arrastar e soltar"
-
-#~ msgid "User interface improvements"
-#~ msgstr "Melhorias na interface do usuário"
-
-#~ msgid "Performance improvements"
-#~ msgstr "Melhorias de desempenho"
-
-#~ msgid "Bug fixes"
-#~ msgstr "Correções de bugs"
-
-#~ msgid "UI tweaks"
-#~ msgstr "Ajustes de IU"
-
-#~ msgid "Code improvements"
-#~ msgstr "Melhorias no código"
-
-#~ msgid "Add custom subsetting support"
-#~ msgstr "Adicionado suporte a subconjuntos personalizados"
-
-#~ msgid "Design and UX improvements"
-#~ msgstr "Melhorias de design e UX"
-
-#~ msgid "Initial release."
-#~ msgstr "Lançamento inicial."
-
-#~ msgid "Output directory"
-#~ msgstr "Diretório de saída"
-
-#~ msgid "Select a directory"
-#~ msgstr "Selecionar um diretório"
-
-#~ msgid "Output directory error"
-#~ msgstr "Erro no diretório de saída"
-
-#, python-brace-format
-#~ msgid "Something happened when trying to load {font}."
-#~ msgstr "Algo ocorreu ao tentar carregar {font}."

@@ -46,6 +46,6 @@ install_data(
 )
 
 install_data(
-  'com.rafaelmardojai.WebfontKitGenerator-symbolic',
+  'com.rafaelmardojai.WebfontKitGenerator-symbolic.svg',
   install_dir: join_paths(get_option('datadir'), 'icons/hicolor/symbolic/apps')
 )

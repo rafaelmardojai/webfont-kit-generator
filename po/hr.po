@@ -2,25 +2,27 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Milo Ivir <mail@milotype.de>, 2022
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-28 19:32-0300\n"
+"POT-Creation-Date: 2022-04-12 20:47-0500\n"
 "PO-Revision-Date: 2022-04-07 15:00+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>, 2022\n"
-"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/teams/135056/hr/)\n"
+"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/"
+"teams/135056/hr/)\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -45,83 +47,6 @@ msgstr ""
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:45
-msgid "Ported to GTK4 and libadwaita"
-msgstr "Prevedeno za GTK4 i libadwaita"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:46
-msgid "New Google Fonts importer"
-msgstr "Novi način uvoza Google Fonts fontova"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:47
-msgid "New app icon by Tobias Bernard"
-msgstr "Nova ikona programa. Autor: Tobias Bernard"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:48
-msgid "Major UI improvements"
-msgstr "Značajna poboljšana u korisničkom sučelju"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:49
-msgid "Code cleanup and improvements"
-msgstr "Čišćenje i poboljšanja koda"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:56
-msgid "Drag and drop bug fix"
-msgstr "Ispravljena greška funkcije povuci-i-ispusti"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:57
-msgid "Fonts loader fixes"
-msgstr "Ispravci učitavača fontova"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:58
-msgid "Added Brazilian Portuguese translation"
-msgstr "Dodan je prijevod za brazilski portugalski"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:59
-msgid "Added Dutch translation"
-msgstr "Dodan je prijevod za nizozemski"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:66
-msgid "Open fonts from file manager"
-msgstr "Otvori fontove iz upravljača datoteka"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:67
-msgid "Drag and Drop support"
-msgstr "Podrška za povuci-i-ispusti"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:68
-msgid "User interface improvements"
-msgstr "Poboljšanja korisničkog sučelja"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:69
-msgid "Performance improvements"
-msgstr "Poboljšanja performance"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:70
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:87
-msgid "Bug fixes"
-msgstr "Ispravci grešaka"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:77
-msgid "UI tweaks"
-msgstr "Podešavanja korisničkog sučelja"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:78
-msgid "Code improvements"
-msgstr "Poboljšanja koda"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:85
-msgid "Add custom subsetting support"
-msgstr "Dodana je podrška za prilagođene podskupove znakova"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:86
-msgid "Design and UX improvements"
-msgstr "Poboljšan dizajn i korisničko iskustvo"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:93
-msgid "Initial release."
-msgstr "Prvo izdanje."
 
 #: webfontkitgenerator/resources/window.ui:7
 #: webfontkitgenerator/resources/google.ui:34
@@ -154,8 +79,7 @@ msgstr "Fontovi"
 msgid "Add some fonts"
 msgstr "Dodaj fontove"
 
-#: webfontkitgenerator/resources/window.ui:199
-#: webfontkitgenerator/window.py:61
+#: webfontkitgenerator/resources/window.ui:199 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
 msgstr "Odaberi mapu rezultata"
 
@@ -412,3 +336,60 @@ msgstr "Nemaš prava za čitanje fonta {font} ili font ne postoji."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Greška: {error}."
+
+#~ msgid "Ported to GTK4 and libadwaita"
+#~ msgstr "Prevedeno za GTK4 i libadwaita"
+
+#~ msgid "New Google Fonts importer"
+#~ msgstr "Novi način uvoza Google Fonts fontova"
+
+#~ msgid "New app icon by Tobias Bernard"
+#~ msgstr "Nova ikona programa. Autor: Tobias Bernard"
+
+#~ msgid "Major UI improvements"
+#~ msgstr "Značajna poboljšana u korisničkom sučelju"
+
+#~ msgid "Code cleanup and improvements"
+#~ msgstr "Čišćenje i poboljšanja koda"
+
+#~ msgid "Drag and drop bug fix"
+#~ msgstr "Ispravljena greška funkcije povuci-i-ispusti"
+
+#~ msgid "Fonts loader fixes"
+#~ msgstr "Ispravci učitavača fontova"
+
+#~ msgid "Added Brazilian Portuguese translation"
+#~ msgstr "Dodan je prijevod za brazilski portugalski"
+
+#~ msgid "Added Dutch translation"
+#~ msgstr "Dodan je prijevod za nizozemski"
+
+#~ msgid "Open fonts from file manager"
+#~ msgstr "Otvori fontove iz upravljača datoteka"
+
+#~ msgid "Drag and Drop support"
+#~ msgstr "Podrška za povuci-i-ispusti"
+
+#~ msgid "User interface improvements"
+#~ msgstr "Poboljšanja korisničkog sučelja"
+
+#~ msgid "Performance improvements"
+#~ msgstr "Poboljšanja performance"
+
+#~ msgid "Bug fixes"
+#~ msgstr "Ispravci grešaka"
+
+#~ msgid "UI tweaks"
+#~ msgstr "Podešavanja korisničkog sučelja"
+
+#~ msgid "Code improvements"
+#~ msgstr "Poboljšanja koda"
+
+#~ msgid "Add custom subsetting support"
+#~ msgstr "Dodana je podrška za prilagođene podskupove znakova"
+
+#~ msgid "Design and UX improvements"
+#~ msgstr "Poboljšan dizajn i korisničko iskustvo"
+
+#~ msgid "Initial release."
+#~ msgstr "Prvo izdanje."

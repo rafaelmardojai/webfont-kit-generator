@@ -2,25 +2,27 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Vojtěch Perník <develop@pervoj.cz>, 2022
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-28 19:32-0300\n"
+"POT-Creation-Date: 2022-04-12 20:47-0500\n"
 "PO-Revision-Date: 2022-04-07 15:00+0000\n"
 "Last-Translator: Vojtěch Perník <develop@pervoj.cz>, 2022\n"
-"Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/cs/)\n"
+"Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/"
+"cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -46,83 +48,6 @@ msgstr ""
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:45
-msgid "Ported to GTK4 and libadwaita"
-msgstr "Portováno na GTK4 a libadwaita"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:46
-msgid "New Google Fonts importer"
-msgstr "Nové importování z Google Fonts"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:47
-msgid "New app icon by Tobias Bernard"
-msgstr "Nová ikona od Tobiase Bernarda"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:48
-msgid "Major UI improvements"
-msgstr "Důležitá vylepšení UI"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:49
-msgid "Code cleanup and improvements"
-msgstr "Zlepšení kódové základny"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:56
-msgid "Drag and drop bug fix"
-msgstr "Opraven problém s „táhni a pusť“"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:57
-msgid "Fonts loader fixes"
-msgstr "Opraveno načítání fontů"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:58
-msgid "Added Brazilian Portuguese translation"
-msgstr "Přidán překlad do brazilské portugalštiny"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:59
-msgid "Added Dutch translation"
-msgstr "Přidán holandský překlad"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:66
-msgid "Open fonts from file manager"
-msgstr "Otevírání fontů ze správce souborů"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:67
-msgid "Drag and Drop support"
-msgstr "Podpora „táhni a pusť“"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:68
-msgid "User interface improvements"
-msgstr "Vylepšení UI"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:69
-msgid "Performance improvements"
-msgstr "Vylepšení výkonu"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:70
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:87
-msgid "Bug fixes"
-msgstr "Opravy chyb"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:77
-msgid "UI tweaks"
-msgstr "Vylepšení UI"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:78
-msgid "Code improvements"
-msgstr "Zlepšení kódové základny"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:85
-msgid "Add custom subsetting support"
-msgstr "Přidána podpora vlastních podmnožin znakové sady"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:86
-msgid "Design and UX improvements"
-msgstr "Vylepšení designu a UX"
-
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:93
-msgid "Initial release."
-msgstr "První vydání"
 
 #: webfontkitgenerator/resources/window.ui:7
 #: webfontkitgenerator/resources/google.ui:34
@@ -155,8 +80,7 @@ msgstr "Fonty"
 msgid "Add some fonts"
 msgstr "Přidejte nějaké fonty"
 
-#: webfontkitgenerator/resources/window.ui:199
-#: webfontkitgenerator/window.py:61
+#: webfontkitgenerator/resources/window.ui:199 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
 msgstr "Vyprat výstupní adresář"
 
@@ -413,3 +337,60 @@ msgstr "K {font} nemáte právo ke čtení nebo soubor neexistuje."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Chyba: {error}."
+
+#~ msgid "Ported to GTK4 and libadwaita"
+#~ msgstr "Portováno na GTK4 a libadwaita"
+
+#~ msgid "New Google Fonts importer"
+#~ msgstr "Nové importování z Google Fonts"
+
+#~ msgid "New app icon by Tobias Bernard"
+#~ msgstr "Nová ikona od Tobiase Bernarda"
+
+#~ msgid "Major UI improvements"
+#~ msgstr "Důležitá vylepšení UI"
+
+#~ msgid "Code cleanup and improvements"
+#~ msgstr "Zlepšení kódové základny"
+
+#~ msgid "Drag and drop bug fix"
+#~ msgstr "Opraven problém s „táhni a pusť“"
+
+#~ msgid "Fonts loader fixes"
+#~ msgstr "Opraveno načítání fontů"
+
+#~ msgid "Added Brazilian Portuguese translation"
+#~ msgstr "Přidán překlad do brazilské portugalštiny"
+
+#~ msgid "Added Dutch translation"
+#~ msgstr "Přidán holandský překlad"
+
+#~ msgid "Open fonts from file manager"
+#~ msgstr "Otevírání fontů ze správce souborů"
+
+#~ msgid "Drag and Drop support"
+#~ msgstr "Podpora „táhni a pusť“"
+
+#~ msgid "User interface improvements"
+#~ msgstr "Vylepšení UI"
+
+#~ msgid "Performance improvements"
+#~ msgstr "Vylepšení výkonu"
+
+#~ msgid "Bug fixes"
+#~ msgstr "Opravy chyb"
+
+#~ msgid "UI tweaks"
+#~ msgstr "Vylepšení UI"
+
+#~ msgid "Code improvements"
+#~ msgstr "Zlepšení kódové základny"
+
+#~ msgid "Add custom subsetting support"
+#~ msgstr "Přidána podpora vlastních podmnožin znakové sady"
+
+#~ msgid "Design and UX improvements"
+#~ msgstr "Vylepšení designu a UX"
+
+#~ msgid "Initial release."
+#~ msgstr "První vydání"

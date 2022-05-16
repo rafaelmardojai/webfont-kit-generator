@@ -6,3 +6,4 @@ build-aux/.flatpak-builder/
 *.ui.in~
 *.ui~
 .flatpak/
+.vscode/

@@ -169,19 +169,19 @@ class GoogleDialog(Adw.Window):
             return families
 
     def invalid_url(self):
-        self.url_entry.get_style_context().add_class('error')
+        self.url_entry.add_css_class('error')
         self.download_btn.set_sensitive(False)
         self.error_label.set_text(_('Please set a valid url'))
         self.error_revealer.set_reveal_child(True)
 
     def invalid_api_version(self):
-        self.url_entry.get_style_context().add_class('error')
+        self.url_entry.add_css_class('error')
         self.download_btn.set_sensitive(False)
         self.error_label.set_text(_('Update your url to CSS API v2'))
         self.error_revealer.set_reveal_child(True)
 
     def valid_url(self):
-        self.url_entry.get_style_context().remove_class('error')
+        self.url_entry.remove_css_class('error')
         self.error_revealer.set_reveal_child(False)
         self.download_btn.set_sensitive(True)
 
@@ -328,7 +328,7 @@ class GoogleDialog(Adw.Window):
                 # No API url
                 self.invalid_url()
         else:
-            self.url_entry.get_style_context().remove_class('error')
+            self.url_entry.remove_css_class('error')
             self.error_revealer.set_reveal_child(False)
             self.url_entry.set_icon_from_icon_name(
                 Gtk.EntryIconPosition.SECONDARY,

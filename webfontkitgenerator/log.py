@@ -17,7 +17,7 @@ class Log(Gtk.TextView):
         self.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
         self.props.hexpand = True
 
-        self.get_style_context().add_class('log')
+        self.add_css_class('log')
 
     def append(self, text, bold=False, italic=False):
         end_iter = self.text_buffer.get_end_iter()

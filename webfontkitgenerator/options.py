@@ -111,8 +111,8 @@ class Options(Gtk.Box):
     def _validate_subsetting(self, _entry):
         try:
             parse_unicodes(self.custom.get_text())
-            if self.custom.get_style_context().has_class('error'):
-                self.custom.get_style_context().remove_class('error')
+            if self.custom.has_css_class('error'):
+                self.custom.remove_css_class('error')
         except Exception:
-            if not self.custom.get_style_context().has_class('error'):
-                self.custom.get_style_context().add_class('error')
+            if not self.custom.has_css_class('error'):
+                self.custom.add_css_lass('error')

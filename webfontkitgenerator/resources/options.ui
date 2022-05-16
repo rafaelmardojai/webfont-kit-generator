@@ -69,7 +69,7 @@
                                             <property name="title" translatable="yes">Latin</property>
                                             <property name="activatable_widget">latin</property>
                                             <child>
-                                              <object class="GtkSwitch" id="latin">
+                                              <object class="GtkCheckButton" id="latin">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -80,7 +80,7 @@
                                             <property name="title" translatable="yes">Cyrillic</property>
                                             <property name="activatable_widget">cyrillic</property>
                                             <child>
-                                              <object class="GtkSwitch" id="cyrillic">
+                                              <object class="GtkCheckButton" id="cyrillic">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -91,7 +91,7 @@
                                             <property name="title" translatable="yes">Greek</property>
                                             <property name="activatable_widget">greek</property>
                                             <child>
-                                              <object class="GtkSwitch" id="greek">
+                                              <object class="GtkCheckButton" id="greek">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -102,7 +102,7 @@
                                             <property name="title" translatable="yes">Vietnamese</property>
                                             <property name="activatable_widget">vietnamese</property>
                                             <child>
-                                              <object class="GtkSwitch" id="vietnamese">
+                                              <object class="GtkCheckButton" id="vietnamese">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -121,7 +121,7 @@
                                             <property name="title" translatable="yes">Latin Extended</property>
                                             <property name="activatable_widget">latin_ext</property>
                                             <child>
-                                              <object class="GtkSwitch" id="latin_ext">
+                                              <object class="GtkCheckButton" id="latin_ext">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -132,7 +132,7 @@
                                             <property name="title" translatable="yes">Cyrillic Extended</property>
                                             <property name="activatable_widget">cyrillic_ext</property>
                                             <child>
-                                              <object class="GtkSwitch" id="cyrillic_ext">
+                                              <object class="GtkCheckButton" id="cyrillic_ext">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -143,7 +143,7 @@
                                             <property name="title" translatable="yes">Greek Extended</property>
                                             <property name="activatable_widget">greek_ext</property>
                                             <child>
-                                              <object class="GtkSwitch" id="greek_ext">
+                                              <object class="GtkCheckButton" id="greek_ext">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>
@@ -155,7 +155,7 @@
                                             <property name="visible">True</property>
                                             <property name="activatable_widget">devanagari</property>
                                             <child>
-                                              <object class="GtkSwitch" id="devanagari">
+                                              <object class="GtkCheckButton" id="devanagari">
                                                 <property name="valign">center</property>
                                               </object>
                                             </child>

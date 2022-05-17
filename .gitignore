@@ -7,3 +7,4 @@ build-aux/.flatpak-builder/
 *.ui~
 .flatpak/
 .vscode/
+venv/

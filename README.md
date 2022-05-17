@@ -49,6 +49,9 @@ sudo ninja -C builddir install
   <img src="brand/screenshots/4.png"/>
 </p>
 
+## Translations
+Webfont Kit Generator is translated into several languages. If your language is missing or incomplete, please help to [translate Webfont Kit Generator in Transifex](https://www.transifex.com/rafaelmardojai/webfont-kit-generator/).
+
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/WebfontKitGenerator/graphs/contributors).
 

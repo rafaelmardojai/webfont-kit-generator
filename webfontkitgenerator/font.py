@@ -29,7 +29,9 @@ class FontRow(Adw.ActionRow):
         self.set_subtitle(subtitle)
 
         btn_remove = Gtk.Button(valign=Gtk.Align.CENTER)
-        btn_remove.set_icon_name('edit-delete-symbolic')
+        btn_remove.set_icon_name('webfontkitgenerator-remove-symbolic')
+        btn_remove.add_css_class('flat')
+        btn_remove.add_css_class('circular')
         btn_remove.connect('clicked', self.remove_font)
         self.add_suffix(btn_remove) 
     

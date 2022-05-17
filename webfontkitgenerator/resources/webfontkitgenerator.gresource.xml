@@ -9,6 +9,7 @@
     <file>style.css</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/splash-a-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/splash-b-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/webfontkitgenerator-remove-symbolic.svg</file>
   </gresource>
 </gresources>
   

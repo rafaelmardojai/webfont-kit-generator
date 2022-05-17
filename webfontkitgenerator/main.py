@@ -1,6 +1,7 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+
 import sys
 import gi
 
@@ -10,16 +11,18 @@ gi.require_version('Adw', '1')
 gi.require_version('GtkSource', '5')
 gi.require_version('Soup', '3.0')
 
-from gettext import gettext as _
-from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
+from gettext import gettext as _  # noqa: E402
+from gi.repository import Adw, Gio, GLib, Gtk  # noqa: E402
 
-from webfontkitgenerator.window import Window
+from webfontkitgenerator.window import Window  # noqa: E402
 
 
 class Application(Adw.Application):
     def __init__(self, version):
-        super().__init__(application_id='com.rafaelmardojai.WebfontKitGenerator',
-                         flags=Gio.ApplicationFlags.HANDLES_OPEN)
+        super().__init__(
+            application_id='com.rafaelmardojai.WebfontKitGenerator',
+            flags=Gio.ApplicationFlags.HANDLES_OPEN
+        )
         GLib.set_application_name(_('Webfont Kit Generator'))
 
         self.version = version
@@ -53,7 +56,6 @@ class Application(Adw.Application):
         self.set_accels_for_action('win.generate', ['<Ctl>Return'])
         self.set_accels_for_action('win.back', ['Escape'])
 
-
     def _on_about(self, _action, _param):
         dialog = Gtk.Builder.new_from_resource(
             '/com/rafaelmardojai/WebfontKitGenerator/about.ui'
@@ -62,7 +64,7 @@ class Application(Adw.Application):
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()
- 
+
 
 def main(version):
     app = Application(version)

@@ -33,8 +33,10 @@ class FontRow(Adw.ActionRow):
         btn_remove.add_css_class('flat')
         btn_remove.add_css_class('circular')
         btn_remove.connect('clicked', self.remove_font)
-        self.add_suffix(btn_remove) 
-    
-    def remove_font(self, _widget):
-        self.activate_action('win.remove-font', GLib.Variant.new_uint32(self.get_index()))
+        self.add_suffix(btn_remove)
 
+    def remove_font(self, _widget):
+        self.activate_action(
+            'win.remove-font',
+            GLib.Variant.new_uint32(self.get_index())
+        )

@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from threading import Thread
-from gi.repository import GLib, Gtk, GtkSource
+from gi.repository import Gtk, GtkSource
 
 
 class SourceView(GtkSource.View):

@@ -6,7 +6,7 @@ from urllib.parse import urlparse, unquote
 
 from gettext import gettext as _
 from threading import Thread
-from gi.repository import Adw, GLib, Gtk
+from gi.repository import Adw, GLib
 from fontTools.ttLib import TTFont
 
 from webfontkitgenerator.font import Font
@@ -22,7 +22,6 @@ class Loader(object):
         thread = Thread(target=self._load, args=(files,))
         thread.daemon = True
         thread.start()
-
 
     def _load(self, files):
         self.window.processing = True
@@ -47,7 +46,9 @@ class Loader(object):
                     font = Font(path, data)
                     GLib.idle_add(self.model.append, font)
                 else:
-                    error_text = _("You don't have read access to {font} or it doesn't exists.")
+                    error_text = _(
+                        "You don't have read access to {font} or it doesn't exists."
+                    )
                     GLib.idle_add(
                         self._show_error,
                         error_text.format(font=path)
@@ -106,4 +107,3 @@ class Loader(object):
                 data['weight'] = weights[s]
 
         return data
-

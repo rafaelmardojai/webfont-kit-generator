@@ -15,7 +15,9 @@ from webfontkitgenerator.sourceview import SourceView
 from webfontkitgenerator.font import Font, FontRow
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/WebfontKitGenerator/window.ui')
+@Gtk.Template(
+    resource_path='/com/rafaelmardojai/WebfontKitGenerator/window.ui'
+)
 class Window(Adw.ApplicationWindow):
     __gtype_name__ = 'Window'
 
@@ -82,8 +84,11 @@ class Window(Adw.ApplicationWindow):
 
         # Setup fonts list
         self.fonts_list.bind_model(self.model, self._create_font_row)
-        self.model.connect('items-changed', lambda _l, _p, _r, _a: self._check_ready_state())
-        
+        self.model.connect(
+            'items-changed',
+            lambda _l, _p, _r, _a: self._check_ready_state()
+        )
+
         # Setup log text view
         self.log_column.set_child(self.log)
 
@@ -107,7 +112,9 @@ class Window(Adw.ApplicationWindow):
         self.fontschooser.connect('response', self._on_fontschooser_response)
 
         # Setup outpath folder chooser
-        self.outpathchooser.connect('response', self._on_outpathchooser_response)
+        self.outpathchooser.connect(
+            'response', self._on_outpathchooser_response
+        )
 
         # Drag and drop
         drop_target = Gtk.DropTarget.new(Gdk.FileList, Gdk.DragAction.COPY)
@@ -115,7 +122,9 @@ class Window(Adw.ApplicationWindow):
         self.add_controller(drop_target)
 
     def setup_actions(self):
-        remove_font = Gio.SimpleAction.new('remove-font', GLib.VariantType.new('u'))
+        remove_font = Gio.SimpleAction.new(
+            'remove-font', GLib.VariantType.new('u')
+        )
         remove_font.connect('activate', self._on_remove_font)
         self.add_action(remove_font)
 
@@ -139,7 +148,7 @@ class Window(Adw.ApplicationWindow):
         back = Gio.SimpleAction.new('back', None)
         back.connect('activate', self._on_back)
         self.add_action(back)
-        
+
     def load_fonts(self, files):
         loader = Loader(self, self.model)
         loader.load(files)
@@ -173,7 +182,7 @@ class Window(Adw.ApplicationWindow):
     def _on_back(self, _action, _param):
         if not self.processing:
             self.appstack.set_visible_child_name('main')
-    
+
     def _on_remove_font(self, _action, param):
         self.model.remove(param.get_uint32())
 
@@ -197,7 +206,9 @@ class Window(Adw.ApplicationWindow):
                 self.directory.set_label(name)
                 self._check_ready_state()
             else:
-                error = Adw.Toast.new(_("You don't have write access to the selected directory."))
+                error = Adw.Toast.new(
+                    _("You don't have write access to the selected directory.")
+                )
                 self.toasts.add_toast(error)
 
     def _create_font_row(self, font):
@@ -205,7 +216,10 @@ class Window(Adw.ApplicationWindow):
         return widget
 
     def _on_drop(self, _target, value, _x, _y):
-        if isinstance(value, Gdk.FileList) and self.appstack.get_visible_child_name() == 'main':
+        if (
+            isinstance(value, Gdk.FileList)
+            and self.appstack.get_visible_child_name() == 'main'
+        ):
             self.load_fonts(value.get_files())
 
     def _check_ready_state(self):

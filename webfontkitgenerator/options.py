@@ -115,4 +115,4 @@ class Options(Gtk.Box):
                 self.custom.remove_css_class('error')
         except Exception:
             if not self.custom.has_css_class('error'):
-                self.custom.add_css_lass('error')
+                self.custom.add_css_class('error')

@@ -11,7 +11,6 @@ from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Soup
 
 
 GOOGLE_API_URL = 'https://www.googleapis.com/webfonts/v1/webfonts?key={}'
-GITHUB_CHECK_URL = 'https://api.github.com/repos/google/fonts/branches/main'
 XDG_DATA_DIR = os.path.join(GLib.get_user_data_dir(), 'webfont-kit-generator')
 DATA_FILE = os.path.join(XDG_DATA_DIR, 'google-fonts.json')
 
@@ -54,73 +53,99 @@ class GoogleDialog(Adw.Window):
         self.cancel_btn.connect('clicked', self._on_cancel_clicked)
 
     def load_fonts_data(self):
-        def on_check_response(session, result):
-            is_data_outdated = False
-            try:
-                response = session.send_and_read_finish(result)
-                data = self._read_response(response)
-                sha = data['commit']['sha']
-                saved_sha = self.settings.get_string('google-fonts-sha')
-                if sha != saved_sha:
-                    is_data_outdated = True
-                    self.google_sha = sha
-            except Exception as exc:
-                print(exc)
-                # Use cached version
-                self.find_on_data()
-
-            if is_data_outdated:
-                self._get_google_data()
-            else:
-                # Use cached version
-                self.find_on_data()
-
         # Loading feedback
         self.stack.set_visible_child_name('loading')
         self.progressbar.set_text('')
         self.progress.set_title(_('Loading Google Fonts Database'))
         GLib.timeout_add(50, self._on_progressbar_timeout, None)
 
+        # Get data from Google
+        api_key = self.settings.get_string('google-api-key')
+        api_url = GOOGLE_API_URL.format(api_key)
+        message = Soup.Message.new('GET', api_url)
+
         if self._local_data_exists():
-            """
-            First check if the local fonts data is outdated by checking
-            google/fonts Github repo activity.
-            """
-            message = Soup.Message.new('GET', GITHUB_CHECK_URL)
-            self.session.send_and_read_async(message, 0, self.cancellable, on_check_response)
-        else:
-            self._get_google_data()
+            request_headers = message.get_request_headers()
+            request_headers.append('If-None-Match', self.settings.get_string('google-fonts-sha'))
+       
+        self.session.send_and_read_async(message, 0, self.cancellable, self.on_google_response, message)
+
+    def on_google_response(self, session, result, message):
+            failed = True
+            try:
+                response = session.send_and_read_finish(result)
+                data = self._read_response(response)
+                status = message.get_status()
+                response_headers = message.get_response_headers()
+
+                print(f'Response Status {status.get_phrase(message.props.status_code)}')
+
+                if status == Soup.Status.OK and 'kind' in data:
+                    try:
+                        if not self._local_data_exists():
+                            os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+
+                        # Save to data file
+                        with open(DATA_FILE, 'w') as outfile:
+                            json.dump(data['items'], outfile, indent=2)
+
+                        # Save ETag
+                        self.settings.set_string('google-fonts-sha', response_headers.get_one('ETag') or '')
+
+                        self.find_on_data(data['items'])
+                        failed = False
+                    except Exception as exc:
+                        print(exc)
+
+                elif status == Soup.Status.NOT_MODIFIED or self._local_data_exists():
+                    self.find_on_data()
+                    failed = False
+                    
+            except GLib.GError as exc:
+                print(exc)
+
+            if failed:
+                error = _("Couldn't download the Google Fonts data.")
+                self.errors.append(error)
+                self.terminate_dialog()
 
     def find_on_data(self, data=None):
         if not data:
             data = self._get_local_data()
 
-        files = {}
+        files = {} # Where files to download will be stored
         for family in self.families:
+            # Filter data with wanted families
             results = list(filter(
                 lambda x: x['family'] == family['name'], data
             ))
+
             if results:
-                results = results[0]
-                for variant in family['variants']:
-                    if variant in results['files']:
+                results = results[0] # Get first result
+                for variant in family['variants']: # Check for wanted variants
+                    if variant in results['files']: # If variant available
+                        # Store variant files to download
                         if family['name'] not in files:
                             files[family['name']] = {}
                         name = ' '.join([family['name'], variant])
                         files[family['name']][name] = results['files'][variant]
-                        self.total += 1
-                    else:
+                        self.total += 1 # Increase count of total files to download
+                    else: # If variant not available
+                        # Add error to list of errors shown after dialog is terminated 
                         error = _("Couldn't find the {variant} variant for {family_name}.")
                         error = error.format(variant=variant, family_name=family['name'])
                         self.errors.append(error)
             else:
+                # If no family found, add error to list
                 error = _("Couldn't find the {family_name} font family.")
                 error = error.format(family_name=family['name'])
                 self.errors.append(error)
 
         if files:
+            # Download found files
             self._download_files(files)
         else:
+            # If not files found at all, show general error and terminate dialog
             self.errors = [_("Couldn't find any fonts for the given url.")]
             self.terminate_dialog()
 
@@ -187,10 +212,11 @@ class GoogleDialog(Adw.Window):
 
     def terminate_dialog(self, cancel=False):
         if not cancel:
-            #self.stack.set_visible_child_name('main')
+            # Load downloaded files
             if self.files:
                 self.window.load_fonts(self.files)
             
+            # Show found errors
             for error in self.errors:
                 error = Adw.Toast.new(error)
                 self.window.toasts.add_toast(error)
@@ -259,39 +285,6 @@ class GoogleDialog(Adw.Window):
 
     def _local_data_exists(self):
         return os.path.exists(DATA_FILE)
-
-    def _get_google_data(self):
-        # Get data from Google
-        api_key = self.settings.get_string('google-api-key')
-        api_url = GOOGLE_API_URL.format(api_key)
-        message = Soup.Message.new('GET', api_url)
-        self.session.send_and_read_async(message, 0, self.cancellable, self._on_google_response)
-
-    def _on_google_response(self, session, result):
-        try:
-            response = session.send_and_read_finish(result)
-            data = self._read_response(response)
-
-            if 'kind' in data:
-                try:
-                    if not self._local_data_exists():
-                        os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
-
-                    # Save to data file
-                    with open(DATA_FILE, 'w') as outfile:
-                        json.dump(data['items'], outfile, indent=2)
-
-                    if self.google_sha:
-                        self.settings.set_string('google-fonts-sha', self.google_sha)
-
-                    self.find_on_data(data['items'])
-                except Exception as exc:
-                    print(exc)
-        except GLib.GError as exc:
-            print(exc)
-            error = _("Couldn't download the Google Fonts data.")
-            self.errors.append(error)
-            self.terminate_dialog()
 
     def _on_download_clicked(self, _button):
         url = self.url_entry.get_text()

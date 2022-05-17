@@ -56,4 +56,4 @@ Webfont Kit Generator is translated into several languages. If your language is 
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/WebfontKitGenerator/graphs/contributors).
 
 ## Donate
-If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM).
+If you want to support my work, you can donate me, [here you can find how](https://rafaelmardojai.com/donate/).

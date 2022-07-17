@@ -43,6 +43,15 @@
   </screenshots>
   
   <releases>
+    <release version="1.0.1" date="2022-07-16">
+      <description>
+        <ul>
+          <li>Update translations</li>
+          <li>Fixed symbolic icon installation</li>
+          <li>Code cleanup</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2022-03-27">
       <description>
         <ul>

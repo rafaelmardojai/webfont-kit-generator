@@ -6,6 +6,7 @@
     <property name="website">https://github.com/rafaelmardojai/WebfontKitGenerator</property>
     <property name="authors">Rafael Mardojai CM</property>
     <property name="logo_icon_name">com.rafaelmardojai.WebfontKitGenerator</property>
+    <property name="translator-credits" translatable="yes" comments="Replace me with your names.">translator-credits</property>
     <property name="license_type">gpl-3-0</property>
   </object>
 </interface>

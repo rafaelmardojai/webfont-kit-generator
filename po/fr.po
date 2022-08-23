@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Vasco Compain <vasco.gribouille@gmail.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-12 20:47-0500\n"
+"PO-Revision-Date: 2022-04-13 02:00+0000\n"
+"Last-Translator: Vasco Compain <vasco.gribouille@gmail.com>, 2022\n"
+"Language-Team: French (https://www.transifex.com/rafaelmardojai/teams/135056/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+msgid "Webfont Kit Generator"
+msgstr "Genérateur de Kit Webfont"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+#: webfontkitgenerator/resources/about.ui:5
+msgid "Create @font-face kits easily"
+msgstr "Créez des kits @font-face facilement"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Genérateur de Kit Webfont est un logiciel utilitaire qui vous permet de "
+"genérer des des fichiers .woff, .woff2 et les fichiers CSS correspondant "
+"depuis les formats non web (.otf et .ttf)."
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: webfontkitgenerator/resources/window.ui:7
+#: webfontkitgenerator/resources/google.ui:34
+msgid "Import from Google Fonts"
+msgstr "Importer depuis Google Fonts"
+
+#: webfontkitgenerator/resources/window.ui:14
+msgid "_Keyboard Shortcuts"
+msgstr "_Raccourcis Claviers"
+
+#: webfontkitgenerator/resources/window.ui:18
+msgid "_About Webfont Kit Generator"
+msgstr "_A propos du Genérateur de Kit Webfont"
+
+#: webfontkitgenerator/resources/window.ui:48
+#: webfontkitgenerator/resources/window.ui:112
+msgid "Open Fonts"
+msgstr "Selectionner des polices"
+
+#: webfontkitgenerator/resources/window.ui:55
+msgid "Menu"
+msgstr "Menu"
+
+#: webfontkitgenerator/resources/window.ui:69
+#: webfontkitgenerator/resources/options.ui:21
+msgid "Fonts"
+msgstr "Polices"
+
+#: webfontkitgenerator/resources/window.ui:87
+msgid "Add some fonts"
+msgstr "Ajouter des polices"
+
+#: webfontkitgenerator/resources/window.ui:199
+#: webfontkitgenerator/window.py:61
+msgid "Select Output Directory"
+msgstr "Choisir le dossier de destination"
+
+#: webfontkitgenerator/resources/window.ui:208
+msgid "Browse..."
+msgstr "Naviguer..."
+
+#: webfontkitgenerator/resources/window.ui:216
+msgid "Generate"
+msgstr "Générer"
+
+#: webfontkitgenerator/resources/window.ui:255
+#: webfontkitgenerator/resources/google.ui:110
+msgid "Cancel"
+msgstr "Annuler"
+
+#: webfontkitgenerator/resources/window.ui:300
+msgid "Information"
+msgstr "Status"
+
+#: webfontkitgenerator/resources/window.ui:308
+#: webfontkitgenerator/generator.py:57
+msgid "Generation finished!"
+msgstr "Génération terminée !"
+
+#: webfontkitgenerator/resources/window.ui:319
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"Pour utiliser vos polices, copiez le code ci-dessous dans la section head de"
+" votre HTML:"
+
+#: webfontkitgenerator/resources/window.ui:328
+msgid "Or import it directly to your CSS:"
+msgstr "Ou importez directement dans votre CSS:"
+
+#: webfontkitgenerator/resources/window.ui:337
+msgid "Open in Files"
+msgstr "Afficher dans les fichiers"
+
+#: webfontkitgenerator/resources/window.ui:358
+msgid "Logs"
+msgstr "Journaux"
+
+#: webfontkitgenerator/resources/options.ui:50
+msgid "Subsetting"
+msgstr "Sous-ensembles"
+
+#: webfontkitgenerator/resources/options.ui:51
+msgid "Limit the character set to reduce file size"
+msgstr "Limitez les types de caractères pour reduire la taille des fichiers."
+
+#: webfontkitgenerator/resources/options.ui:69
+msgid "Latin"
+msgstr "Latin"
+
+#: webfontkitgenerator/resources/options.ui:80
+msgid "Cyrillic"
+msgstr "Cyrilique"
+
+#: webfontkitgenerator/resources/options.ui:91
+msgid "Greek"
+msgstr "Grec"
+
+#: webfontkitgenerator/resources/options.ui:102
+msgid "Vietnamese"
+msgstr "Vietnamien"
+
+#: webfontkitgenerator/resources/options.ui:121
+msgid "Latin Extended"
+msgstr "Latin Étendu"
+
+#: webfontkitgenerator/resources/options.ui:132
+msgid "Cyrillic Extended"
+msgstr "Cyrilique Étendu"
+
+#: webfontkitgenerator/resources/options.ui:143
+msgid "Greek Extended"
+msgstr "Grec Étendu"
+
+#: webfontkitgenerator/resources/options.ui:154
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: webfontkitgenerator/resources/options.ui:182
+msgid "Custom"
+msgstr "Customisé"
+
+#: webfontkitgenerator/resources/options.ui:188
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"Séparez les valeurs par des virgules. Valeurs uniques hexadécimales et/ou "
+"intervalle séparé par des tirets."
+
+#: webfontkitgenerator/resources/options.ui:214
+msgid "CSS"
+msgstr "CSS"
+
+#: webfontkitgenerator/resources/options.ui:217
+msgid "Font display"
+msgstr "Affichage des polices"
+
+#: webfontkitgenerator/resources/options.ui:218
+msgid "The CSS font-display descriptor"
+msgstr "La propriétée CSS font-display"
+
+#: webfontkitgenerator/resources/options.ui:222
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: webfontkitgenerator/resources/google.ui:35
+msgid "Download fonts from Google Fonts for self-hosting"
+msgstr "Télécharger les polices depuis Google Fonts pour les hébérger."
+
+#: webfontkitgenerator/resources/google.ui:72
+msgid "Download Fonts"
+msgstr "Télécharger les polices"
+
+#: webfontkitgenerator/resources/shortcuts.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Général"
+
+#: webfontkitgenerator/resources/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Afficher les raccourcis clavier"
+
+#: webfontkitgenerator/resources/shortcuts.ui:20
+msgctxt "shortcut window"
+msgid "Open Fonts"
+msgstr "Selectionner des polices"
+
+#: webfontkitgenerator/resources/shortcuts.ui:26
+msgctxt "shortcut window"
+msgid "Select Output Directory"
+msgstr "Choisir le dossier de destination"
+
+#: webfontkitgenerator/resources/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "Google Fonts Importer"
+msgstr "Importer depuis Google Fonts"
+
+#: webfontkitgenerator/resources/shortcuts.ui:38
+msgctxt "shortcut window"
+msgid "Generate"
+msgstr "Générer"
+
+#: webfontkitgenerator/window.py:54
+msgid "Open Font Files"
+msgstr "Séléctionner des fichiers de police"
+
+#. Setup view stack pages
+#: webfontkitgenerator/window.py:77
+msgid "Options"
+msgstr "Paramètres"
+
+#: webfontkitgenerator/window.py:100
+msgid "OTF & TTF"
+msgstr "OTF et TTF"
+
+#: webfontkitgenerator/window.py:200
+msgid "You don't have write access to the selected directory."
+msgstr "Vous n'avez pas la permission d'écrire dans le dossier séléctionné."
+
+#: webfontkitgenerator/generator.py:68
+#, python-brace-format
+msgid "Generating fonts for {name}:"
+msgstr "Génération des polices pour {name}:"
+
+#: webfontkitgenerator/generator.py:70
+#, python-brace-format
+msgid "Generating {name}"
+msgstr "Génération de {name}"
+
+#: webfontkitgenerator/generator.py:118
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "<i>{filename}</i> généré avec <i>{count}</i> glyphes."
+
+#: webfontkitgenerator/generator.py:131
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "Aucun gplyhe n'a été trouvé pour {range}, il sera ignoré."
+
+#: webfontkitgenerator/generator.py:146
+msgid "Generating CSS:"
+msgstr "Génération du CSS:"
+
+#: webfontkitgenerator/generator.py:147
+msgid "Finishing"
+msgstr "Complétion"
+
+#: webfontkitgenerator/generator.py:166
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "<i>{filename}</i> généré."
+
+#: webfontkitgenerator/generator.py:170
+msgid "There is no CSS to generate."
+msgstr "Il n'y a pas de CSS à générer."
+
+#: webfontkitgenerator/google.py:81
+msgid "Loading Google Fonts Database"
+msgstr "Chargement de la base de donnée de Google Fonts"
+
+#: webfontkitgenerator/google.py:113
+#, python-brace-format
+msgid "Couldn't find the {variant} variant for {family_name}."
+msgstr ""
+"Impossible de trouver la variante {variant} de la famille {family_name}."
+
+#: webfontkitgenerator/google.py:117
+#, python-brace-format
+msgid "Couldn't find the {family_name} font family."
+msgstr "Impossible de trouver la famille de police {family_name}."
+
+#: webfontkitgenerator/google.py:124
+msgid "Couldn't find any fonts for the given url."
+msgstr "Aucune police n'a été trouvée a cette addresse."
+
+#: webfontkitgenerator/google.py:174
+msgid "Please set a valid url"
+msgstr "Merci de saisir une URL valide"
+
+#: webfontkitgenerator/google.py:180
+msgid "Update your url to CSS API v2"
+msgstr "Mettez à jour votre URL vers la CSS API v2"
+
+#: webfontkitgenerator/google.py:203
+#, python-brace-format
+msgid "Downloading {name}"
+msgstr "Téléchargement de {name}"
+
+#: webfontkitgenerator/google.py:219
+#, python-brace-format
+msgid "Couldn't download the font file for {name}."
+msgstr "Impossible de télécharger le fichier de police pour {name}."
+
+#: webfontkitgenerator/google.py:236
+#, python-brace-format
+msgid "Couldn't write the font file for {name}."
+msgstr "Impossible d'écrire le fichier de police pour {name}."
+
+#: webfontkitgenerator/google.py:292
+msgid "Couldn't download the Google Fonts data."
+msgstr "Impossible de télécharger les données de Google Fonts."
+
+#: webfontkitgenerator/loader.py:50
+#, python-brace-format
+msgid "You don't have read access to {font} or it doesn't exists."
+msgstr ""
+"Vous n'avez pas la permission de lire le fichier {font} ou celui-ci n'existe"
+" pas,"
+
+#: webfontkitgenerator/loader.py:59
+#, python-brace-format
+msgid "Error: {error}."
+msgstr "Erreur: {error}."

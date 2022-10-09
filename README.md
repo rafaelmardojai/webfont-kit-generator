@@ -47,6 +47,8 @@ sudo ninja -C builddir install
   <img src="brand/screenshots/2.png"/>
   <img src="brand/screenshots/3.png"/>
   <img src="brand/screenshots/4.png"/>
+  <img src="brand/screenshots/5.png"/>
+  <img src="brand/screenshots/6.png"/>
 </p>
 
 ## Translations

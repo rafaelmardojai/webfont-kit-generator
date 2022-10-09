@@ -40,6 +40,9 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/5.png</image>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/6.png</image>
+    </screenshot>
   </screenshots>
   <releases>
     <release version="1.0.1" date="2022-07-16">

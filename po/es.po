@@ -1,28 +1,30 @@
-# Spanish translations for webfontkitgenerator package.
-# Copyright (C) 2020 THE webfontkitgenerator'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
-# Automatically generated, 2020.
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2020-2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-09 08:58-0500\n"
-"PO-Revision-Date: 2021-03-31 23:30-0500\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
-"Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
-"Language: es\n"
+"PO-Revision-Date: 2022-04-13 02:00+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
+"Language-Team: Spanish (https://www.transifex.com/rafaelmardojai/teams/135056/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 msgid "Webfont Kit Generator"
-msgstr ""
+msgstr "Webfont Kit Generator"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
@@ -44,23 +46,25 @@ msgid ""
 "Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
+"Webfont Kit Generator también incluye una herramienta para descargar fuentes"
+" de Google Fonts para autoo-alojamiento."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
-msgstr ""
+msgstr "Rafael Mardojai CM"
 
 #: webfontkitgenerator/resources/window.ui:7
 #: webfontkitgenerator/resources/google.ui:34
 msgid "Import from Google Fonts"
-msgstr ""
+msgstr "Importar desde Google Fonts"
 
 #: webfontkitgenerator/resources/window.ui:14
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Atajos del _teclado"
 
 #: webfontkitgenerator/resources/window.ui:18
 msgid "_About Webfont Kit Generator"
-msgstr ""
+msgstr "_Acerca de Webfont Kit Generator"
 
 #: webfontkitgenerator/resources/window.ui:48
 #: webfontkitgenerator/resources/window.ui:112
@@ -69,7 +73,7 @@ msgstr "Abrir Tipografías"
 
 #: webfontkitgenerator/resources/window.ui:55
 msgid "Menu"
-msgstr ""
+msgstr "Menú "
 
 #: webfontkitgenerator/resources/window.ui:69
 #: webfontkitgenerator/resources/options.ui:21
@@ -80,8 +84,8 @@ msgstr "Tipografías"
 msgid "Add some fonts"
 msgstr "Agregue algunas tipografías"
 
-#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
-#, fuzzy
+#: webfontkitgenerator/resources/window.ui:208
+#: webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Seleccionar directorio de salida"
 
@@ -110,8 +114,8 @@ msgstr "Generación finalizada!"
 #: webfontkitgenerator/resources/window.ui:331
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
-"Para vincular sus tipografías, copie el siguiente código en el encabezado de "
-"su HTML:"
+"Para vincular sus tipografías, copie el siguiente código en el encabezado de"
+" su HTML:"
 
 #: webfontkitgenerator/resources/window.ui:340
 msgid "Or import it directly to your CSS:"
@@ -195,36 +199,33 @@ msgstr "Deshabilitado"
 
 #: webfontkitgenerator/resources/google.ui:35
 msgid "Download fonts from Google Fonts for self-hosting"
-msgstr ""
+msgstr "Descargar tipografías desde Google Fonts para auto-hospedaje"
 
 #: webfontkitgenerator/resources/google.ui:72
 msgid "Download Fonts"
-msgstr ""
+msgstr "Descargar tipografías"
 
 #. Replace me with your names.
 #: webfontkitgenerator/resources/about.ui:10
 msgid "translator-credits"
-msgstr ""
+msgstr "Rafael Mardojai CM"
 
 #: webfontkitgenerator/resources/shortcuts.ui:11
-#, fuzzy
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Generar"
+msgstr "General"
 
 #: webfontkitgenerator/resources/shortcuts.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Mostrar atajos de teclado"
 
 #: webfontkitgenerator/resources/shortcuts.ui:20
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Open Fonts"
-msgstr "Abrir Tipografías"
+msgstr "Abrir Tipografías "
 
 #: webfontkitgenerator/resources/shortcuts.ui:26
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Select Output Directory"
 msgstr "Seleccionar directorio de salida"
@@ -232,16 +233,14 @@ msgstr "Seleccionar directorio de salida"
 #: webfontkitgenerator/resources/shortcuts.ui:32
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
-msgstr ""
+msgstr "Importador de Google Fonts"
 
 #: webfontkitgenerator/resources/shortcuts.ui:38
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Generar"
 
 #: webfontkitgenerator/window.py:56
-#, fuzzy
 msgid "Open Font Files"
 msgstr "Abrir archivos de tipografías"
 
@@ -260,14 +259,14 @@ msgstr "No tienes acceso de escritura al directorio seleccionado"
 
 #. name = data['name-slug']
 #: webfontkitgenerator/generator.py:67
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Generating fonts for {name}:"
-msgstr "Generando tipografías para %s:"
+msgstr "Generando tipografías para {name}:"
 
 #: webfontkitgenerator/generator.py:69
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Generating {name}"
-msgstr "Generando CSS:"
+msgstr "Generando {name}"
 
 #: webfontkitgenerator/generator.py:118
 #, python-brace-format
@@ -285,7 +284,7 @@ msgstr "Generando CSS:"
 
 #: webfontkitgenerator/generator.py:148
 msgid "Finishing"
-msgstr ""
+msgstr "Finalizando"
 
 #: webfontkitgenerator/generator.py:167
 #, python-brace-format
@@ -298,52 +297,52 @@ msgstr "No hay CSS para generar."
 
 #: webfontkitgenerator/google.py:61
 msgid "Loading Google Fonts Database"
-msgstr ""
+msgstr "Cargando la base de datos de Google Fonts"
 
 #: webfontkitgenerator/google.py:126
 msgid "Couldn't download the Google Fonts data."
-msgstr ""
+msgstr "No se pudo descargar la data de Google Fonts."
 
 #. If variant not available
 #. Save error to show it after dialog is terminated
 #: webfontkitgenerator/google.py:154
 #, python-brace-format
 msgid "Couldn't find the {variant} variant for {family_name}."
-msgstr ""
+msgstr "No se pudo encontrar la variante {variant} para {family_name}."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:162
 #, python-brace-format
 msgid "Couldn't find the {family_name} font family."
-msgstr ""
+msgstr "No se pudo encontrar la familia tipográfica {family_name}."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:171
 msgid "Couldn't find any fonts for the given url."
-msgstr ""
+msgstr "No se encontraron tipografías para la url"
 
 #: webfontkitgenerator/google.py:221
 msgid "Please set a valid url"
-msgstr ""
+msgstr "Por favor, ingrese una url valida"
 
 #: webfontkitgenerator/google.py:227
 msgid "Update your url to CSS API v2"
-msgstr ""
+msgstr "Actualiza tu url a CSS API v2"
 
 #: webfontkitgenerator/google.py:251
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Downloading {name}"
-msgstr "Error de carga de tipografía"
+msgstr "Descargando {name}"
 
 #: webfontkitgenerator/google.py:275
 #, python-brace-format
 msgid "Couldn't download the font file for {name}."
-msgstr ""
+msgstr "No se pudo descargar el archivo para {name}."
 
 #: webfontkitgenerator/google.py:292
 #, python-brace-format
 msgid "Couldn't write the font file for {name}."
-msgstr ""
+msgstr "No se pudo escribir la archivo para {name}."
 
 #: webfontkitgenerator/loader.py:50
 #, python-brace-format
@@ -353,47 +352,4 @@ msgstr "No tienes acceso de lectura a {font} o no existe."
 #: webfontkitgenerator/loader.py:60
 #, python-brace-format
 msgid "Error: {error}."
-msgstr ""
-
-#~ msgid "Output directory"
-#~ msgstr "Directorio de salida"
-
-#~ msgid "Select a directory"
-#~ msgstr "Seleccione un directorio"
-
-#~ msgid "Output directory error"
-#~ msgstr "Error de directorio de salida"
-
-#, python-brace-format
-#~ msgid "Something happened when trying to load {font}."
-#~ msgstr "Algo ocurrió cuando se  intentaba cargar {font}."
-
-#~ msgid "Webfont Kit Generator uses fontTools python library under the hood."
-#~ msgstr ""
-#~ "Webfont Kit Generator utiliza la librería Python fontTools internamente."
-
-#~ msgid "Source Fonts"
-#~ msgstr "Tipografías Fuente"
-
-#~ msgid ""
-#~ "Create @font-face kits easily\n"
-#~ "Basen on python fontTools library\n"
-#~ "    "
-#~ msgstr ""
-#~ "Cree fácilmente los kits @font-face\n"
-#~ "Basado en la librería Python fontTools"
-
-#~ msgid "OTF Fonts"
-#~ msgstr "Fuentes OTF"
-
-#~ msgid "TTF Fonts"
-#~ msgstr "Fuentes TTF"
-
-#~ msgid "No fonts selected"
-#~ msgstr "No hay tipografías seleccionadas"
-
-#~ msgid "Generarion finished!"
-#~ msgstr "Generación finalizada!"
-
-#~ msgid "Font formats"
-#~ msgstr "Formatos de tipografías"
+msgstr "Error: {error}."

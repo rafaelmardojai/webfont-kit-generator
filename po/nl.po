@@ -2,25 +2,24 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Heimen Stoffels <vistausss@fastmail.com>, 2022
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-09 08:58-0500\n"
-"PO-Revision-Date: 2022-04-07 15:00+0000\n"
+"PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022\n"
-"Language-Team: Dutch (https://www.transifex.com/rafaelmardojai/teams/135056/"
-"nl/)\n"
-"Language: nl\n"
+"Language-Team: Dutch (https://www.transifex.com/rafaelmardojai/teams/135056/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
@@ -44,11 +43,12 @@ msgstr ""
 "boilerplatebestanden creëren uit reguliere lettertypebestanden (otf en ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
-#, fuzzy
 msgid ""
 "Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
 "Fonts for self-hosting."
-msgstr "Download lettertypen van Google Fonts om zelf te hosten"
+msgstr ""
+"Weblettertype-generator bevat tevens de mogelijkheid om lettertypen te "
+"downloaden van Google Fonts."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
@@ -85,7 +85,8 @@ msgstr "Lettertypen"
 msgid "Add some fonts"
 msgstr "Lettertypen toevoegen"
 
-#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
+#: webfontkitgenerator/resources/window.ui:208
+#: webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Kies een uitvoermap"
 
@@ -208,7 +209,7 @@ msgstr "Lettertypen downloaden"
 #. Replace me with your names.
 #: webfontkitgenerator/resources/about.ui:10
 msgid "translator-credits"
-msgstr ""
+msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 
 #: webfontkitgenerator/resources/shortcuts.ui:11
 msgctxt "shortcut window"
@@ -353,60 +354,3 @@ msgstr "Je hebt geen leestoegang tot {font} of het lettertype bestaat niet."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Foutmelding: {error}."
-
-#~ msgid "Ported to GTK4 and libadwaita"
-#~ msgstr "Gemigreerd naar GTK4 en libadwaita"
-
-#~ msgid "New Google Fonts importer"
-#~ msgstr "Nieuw: Google Fonts-importhulpmiddel"
-
-#~ msgid "New app icon by Tobias Bernard"
-#~ msgstr "Nieuw app-pictogram, ontworpen door Tobias Bernard"
-
-#~ msgid "Major UI improvements"
-#~ msgstr "Grote verbeteringen aan de vormgeving"
-
-#~ msgid "Code cleanup and improvements"
-#~ msgstr "Onderliggende code opgeruimd en waar mogelijk verbeterd"
-
-#~ msgid "Drag and drop bug fix"
-#~ msgstr "Probleem omtrent slepen-en-neerzetten opgelost"
-
-#~ msgid "Fonts loader fixes"
-#~ msgstr "Probleem omtrent laden van lettertypen opgelost"
-
-#~ msgid "Added Brazilian Portuguese translation"
-#~ msgstr "Nieuw: Braziliaans-Portugese vertaling"
-
-#~ msgid "Added Dutch translation"
-#~ msgstr "Nieuw: Nederlandse vertaling"
-
-#~ msgid "Open fonts from file manager"
-#~ msgstr "Open lettertypen via de bestandsbeheerder"
-
-#~ msgid "Drag and Drop support"
-#~ msgstr "Ondersteuning voor slepen-en-neerzetten"
-
-#~ msgid "User interface improvements"
-#~ msgstr "Verbeteringen aan de vormgeving"
-
-#~ msgid "Performance improvements"
-#~ msgstr "Prestatieverbeteringen"
-
-#~ msgid "Bug fixes"
-#~ msgstr "Diverse problemen opgelost"
-
-#~ msgid "UI tweaks"
-#~ msgstr "Verbeteringen aan de vormgeving"
-
-#~ msgid "Code improvements"
-#~ msgstr "Verbetering van de onderliggende code"
-
-#~ msgid "Add custom subsetting support"
-#~ msgstr "Nieuw: ondersteuning voor aangepaste subinstellingen"
-
-#~ msgid "Design and UX improvements"
-#~ msgstr "Diverse ontwerp- en gebruiksverbeteringen"
-
-#~ msgid "Initial release."
-#~ msgstr "Eerste uitgave"

@@ -45,6 +45,14 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.0.2" date="2022-10-09">
+      <description>
+        <ul>
+          <li>Use new Adwaita about window</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2022-07-16">
       <description>
         <ul>

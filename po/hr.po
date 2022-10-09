@@ -2,10 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-#
+# Milo Ivir <mail@milotype.de>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,15 +14,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-09 08:58-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
-"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/"
-"teams/135056/hr/)\n"
-"Language: hr\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>, 2022\n"
+"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/teams/135056/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -44,11 +43,12 @@ msgstr ""
 "fontova zajedno s potrebnim CSS podacima iz otf i ttf fontova."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
-#, fuzzy
 msgid ""
 "Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
 "Fonts for self-hosting."
-msgstr "Preuzmi fontove s Google Fonts za vlastiti hosting fontova"
+msgstr ""
+"Webfont Kit Generator također uključuje alat za preuzimanje fontova sa "
+"stranice Google Fonts za samostalni hosting."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
@@ -85,7 +85,8 @@ msgstr "Fontovi"
 msgid "Add some fonts"
 msgstr "Dodaj fontove"
 
-#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
+#: webfontkitgenerator/resources/window.ui:208
+#: webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Odaberi mapu rezultata"
 
@@ -207,7 +208,7 @@ msgstr "Preuzmi fontove"
 #. Replace me with your names.
 #: webfontkitgenerator/resources/about.ui:10
 msgid "translator-credits"
-msgstr ""
+msgstr "Milo Ivir <mail@milotype.de>"
 
 #: webfontkitgenerator/resources/shortcuts.ui:11
 msgctxt "shortcut window"

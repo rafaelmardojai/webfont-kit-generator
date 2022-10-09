@@ -2,24 +2,26 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 20:47-0500\n"
+"POT-Creation-Date: 2022-10-09 08:58-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
-"Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/cs/)\n"
+"Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/"
+"cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -28,7 +30,7 @@ msgstr "Generátor webových sad písem"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
-#: webfontkitgenerator/resources/about.ui:5
+#: webfontkitgenerator/resources/about.ui:6
 msgid "Create @font-face kits easily"
 msgstr "Vytvářejte sady @font-face jednoduše"
 
@@ -42,7 +44,14 @@ msgstr ""
 "generovat woff, woff2 a nezbytnou CSS šablonu z ne-webových formátů písem "
 "(otf a ttf)."
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
+msgid ""
+"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Fonts for self-hosting."
+msgstr "Stáhnout fonty z Google Fonts pro vlastní hostování"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
@@ -77,47 +86,46 @@ msgstr "Fonty"
 msgid "Add some fonts"
 msgstr "Přidejte nějaké fonty"
 
-#: webfontkitgenerator/resources/window.ui:199
-#: webfontkitgenerator/window.py:61
+#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Vyprat výstupní adresář"
 
-#: webfontkitgenerator/resources/window.ui:208
+#: webfontkitgenerator/resources/window.ui:220
 msgid "Browse..."
 msgstr "Procházet..."
 
-#: webfontkitgenerator/resources/window.ui:216
+#: webfontkitgenerator/resources/window.ui:228
 msgid "Generate"
 msgstr "Generovat"
 
-#: webfontkitgenerator/resources/window.ui:255
+#: webfontkitgenerator/resources/window.ui:267
 #: webfontkitgenerator/resources/google.ui:110
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: webfontkitgenerator/resources/window.ui:300
+#: webfontkitgenerator/resources/window.ui:312
 msgid "Information"
 msgstr "Informace"
 
-#: webfontkitgenerator/resources/window.ui:308
+#: webfontkitgenerator/resources/window.ui:320
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Generování skončilo!"
 
-#: webfontkitgenerator/resources/window.ui:319
+#: webfontkitgenerator/resources/window.ui:331
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Chcete-li načíst svá písma, zkopírujte níže uvedený kód do hlavičky HTML:"
 
-#: webfontkitgenerator/resources/window.ui:328
+#: webfontkitgenerator/resources/window.ui:340
 msgid "Or import it directly to your CSS:"
 msgstr "Nebo je naimportujte přímo do CSS:"
 
-#: webfontkitgenerator/resources/window.ui:337
+#: webfontkitgenerator/resources/window.ui:349
 msgid "Open in Files"
 msgstr "Otevřít v Souborech"
 
-#: webfontkitgenerator/resources/window.ui:358
+#: webfontkitgenerator/resources/window.ui:370
 msgid "Logs"
 msgstr "Logy"
 
@@ -197,6 +205,11 @@ msgstr "Stáhnout fonty z Google Fonts pro vlastní hostování"
 msgid "Download Fonts"
 msgstr "Stáhnout fonty"
 
+#. Replace me with your names.
+#: webfontkitgenerator/resources/about.ui:10
+msgid "translator-credits"
+msgstr ""
+
 #: webfontkitgenerator/resources/shortcuts.ui:11
 msgctxt "shortcut window"
 msgid "General"
@@ -227,29 +240,30 @@ msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Generovat"
 
-#: webfontkitgenerator/window.py:54
+#: webfontkitgenerator/window.py:56
 msgid "Open Font Files"
 msgstr "Otevřít soubory fontů"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:77
+#: webfontkitgenerator/window.py:79
 msgid "Options"
 msgstr "Možnosti"
 
-#: webfontkitgenerator/window.py:100
+#: webfontkitgenerator/window.py:105
 msgid "OTF & TTF"
 msgstr "OTF a TTF"
 
-#: webfontkitgenerator/window.py:200
+#: webfontkitgenerator/window.py:210
 msgid "You don't have write access to the selected directory."
 msgstr "K vybranému adresáři nemáte právo k zápisu."
 
-#: webfontkitgenerator/generator.py:68
+#. name = data['name-slug']
+#: webfontkitgenerator/generator.py:67
 #, python-brace-format
 msgid "Generating fonts for {name}:"
 msgstr "Generování fontů pro {name}:"
 
-#: webfontkitgenerator/generator.py:70
+#: webfontkitgenerator/generator.py:69
 #, python-brace-format
 msgid "Generating {name}"
 msgstr "Generování {name}"
@@ -259,79 +273,83 @@ msgstr "Generování {name}"
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Vygenerováno <i>{filename}</i> s <i>{count}</i> glyfy."
 
-#: webfontkitgenerator/generator.py:131
+#: webfontkitgenerator/generator.py:132
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
 msgstr "Pro {range} nebyly nalezeny žádné glyfy. Vynechávám."
 
-#: webfontkitgenerator/generator.py:146
+#: webfontkitgenerator/generator.py:147
 msgid "Generating CSS:"
 msgstr "Generování CSS:"
 
-#: webfontkitgenerator/generator.py:147
+#: webfontkitgenerator/generator.py:148
 msgid "Finishing"
 msgstr "Dokončuje se"
 
-#: webfontkitgenerator/generator.py:166
+#: webfontkitgenerator/generator.py:167
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
 msgstr "Vygenerováno <i>{filename}</i>."
 
-#: webfontkitgenerator/generator.py:170
+#: webfontkitgenerator/generator.py:171
 msgid "There is no CSS to generate."
 msgstr "Není třeba generovat žádné CSS."
 
-#: webfontkitgenerator/google.py:81
+#: webfontkitgenerator/google.py:61
 msgid "Loading Google Fonts Database"
 msgstr "Načítá se databáze Google Fonts"
 
-#: webfontkitgenerator/google.py:113
+#: webfontkitgenerator/google.py:126
+msgid "Couldn't download the Google Fonts data."
+msgstr "Nepodařilo se stáhnout data z Google Fonts."
+
+#. If variant not available
+#. Save error to show it after dialog is terminated
+#: webfontkitgenerator/google.py:154
 #, python-brace-format
 msgid "Couldn't find the {variant} variant for {family_name}."
 msgstr "Nepodařilo se najít variantu {variant} pro {family_name}."
 
-#: webfontkitgenerator/google.py:117
+#. If no family found, add error to list
+#: webfontkitgenerator/google.py:162
 #, python-brace-format
 msgid "Couldn't find the {family_name} font family."
 msgstr "Nepodařilo se najít font {family_name}."
 
-#: webfontkitgenerator/google.py:124
+#. If not files found at all, show general error and terminate
+#: webfontkitgenerator/google.py:171
 msgid "Couldn't find any fonts for the given url."
 msgstr "Pro zadanou URL se nepodařilo najít žádné fonty."
 
-#: webfontkitgenerator/google.py:174
+#: webfontkitgenerator/google.py:221
 msgid "Please set a valid url"
 msgstr "Prosím, zadejte platnou URL"
 
-#: webfontkitgenerator/google.py:180
+#: webfontkitgenerator/google.py:227
 msgid "Update your url to CSS API v2"
 msgstr "Aktualizujte svou URL pro CSS API v2"
 
-#: webfontkitgenerator/google.py:203
+#: webfontkitgenerator/google.py:251
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Stahuje se {name}"
 
-#: webfontkitgenerator/google.py:219
+#: webfontkitgenerator/google.py:275
 #, python-brace-format
 msgid "Couldn't download the font file for {name}."
 msgstr "Nepodařilo se najít soubor fontu pro {name}."
 
-#: webfontkitgenerator/google.py:236
+#: webfontkitgenerator/google.py:292
 #, python-brace-format
 msgid "Couldn't write the font file for {name}."
 msgstr "Nepodařilo se zapsat soubor fontu pro {name}."
-
-#: webfontkitgenerator/google.py:292
-msgid "Couldn't download the Google Fonts data."
-msgstr "Nepodařilo se stáhnout data z Google Fonts."
 
 #: webfontkitgenerator/loader.py:50
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
 msgstr "K {font} nemáte právo ke čtení nebo soubor neexistuje."
 
-#: webfontkitgenerator/loader.py:59
+#: webfontkitgenerator/loader.py:60
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Chyba: {error}."

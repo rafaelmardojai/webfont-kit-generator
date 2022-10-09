@@ -2,24 +2,26 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-12 20:47-0500\n"
+"POT-Creation-Date: 2022-10-09 08:58-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
-"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/teams/135056/hr/)\n"
+"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/"
+"teams/135056/hr/)\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -28,7 +30,7 @@ msgstr "Webfont Kit Generator"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
-#: webfontkitgenerator/resources/about.ui:5
+#: webfontkitgenerator/resources/about.ui:6
 msgid "Create @font-face kits easily"
 msgstr "Stvori @font-face pakete jednostavno"
 
@@ -41,7 +43,14 @@ msgstr ""
 "Webfont Kit Generator je jednostavan uslužni program za izradu woff i woff2 "
 "fontova zajedno s potrebnim CSS podacima iz otf i ttf fontova."
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:16
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
+msgid ""
+"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Fonts for self-hosting."
+msgstr "Preuzmi fontove s Google Fonts za vlastiti hosting fontova"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
@@ -76,47 +85,46 @@ msgstr "Fontovi"
 msgid "Add some fonts"
 msgstr "Dodaj fontove"
 
-#: webfontkitgenerator/resources/window.ui:199
-#: webfontkitgenerator/window.py:61
+#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Odaberi mapu rezultata"
 
-#: webfontkitgenerator/resources/window.ui:208
+#: webfontkitgenerator/resources/window.ui:220
 msgid "Browse..."
 msgstr "Pregledaj …"
 
-#: webfontkitgenerator/resources/window.ui:216
+#: webfontkitgenerator/resources/window.ui:228
 msgid "Generate"
 msgstr "Generiraj"
 
-#: webfontkitgenerator/resources/window.ui:255
+#: webfontkitgenerator/resources/window.ui:267
 #: webfontkitgenerator/resources/google.ui:110
 msgid "Cancel"
 msgstr "Prekini"
 
-#: webfontkitgenerator/resources/window.ui:300
+#: webfontkitgenerator/resources/window.ui:312
 msgid "Information"
 msgstr "Informacije"
 
-#: webfontkitgenerator/resources/window.ui:308
+#: webfontkitgenerator/resources/window.ui:320
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Generiranje je gotovo!"
 
-#: webfontkitgenerator/resources/window.ui:319
+#: webfontkitgenerator/resources/window.ui:331
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Za povezivanje fontova, kopiraj i umetni sljedeći kod u zaglavlje HTML-a:"
 
-#: webfontkitgenerator/resources/window.ui:328
+#: webfontkitgenerator/resources/window.ui:340
 msgid "Or import it directly to your CSS:"
 msgstr "Ili ga izravno uvezi u CSS:"
 
-#: webfontkitgenerator/resources/window.ui:337
+#: webfontkitgenerator/resources/window.ui:349
 msgid "Open in Files"
 msgstr "Otvori u datotekama"
 
-#: webfontkitgenerator/resources/window.ui:358
+#: webfontkitgenerator/resources/window.ui:370
 msgid "Logs"
 msgstr "Dnevnici"
 
@@ -196,6 +204,11 @@ msgstr "Preuzmi fontove s Google Fonts za vlastiti hosting fontova"
 msgid "Download Fonts"
 msgstr "Preuzmi fontove"
 
+#. Replace me with your names.
+#: webfontkitgenerator/resources/about.ui:10
+msgid "translator-credits"
+msgstr ""
+
 #: webfontkitgenerator/resources/shortcuts.ui:11
 msgctxt "shortcut window"
 msgid "General"
@@ -226,29 +239,30 @@ msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Generiraj"
 
-#: webfontkitgenerator/window.py:54
+#: webfontkitgenerator/window.py:56
 msgid "Open Font Files"
 msgstr "Otvori datoteke fontova"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:77
+#: webfontkitgenerator/window.py:79
 msgid "Options"
 msgstr "Opcije"
 
-#: webfontkitgenerator/window.py:100
+#: webfontkitgenerator/window.py:105
 msgid "OTF & TTF"
 msgstr "OTF i TTF"
 
-#: webfontkitgenerator/window.py:200
+#: webfontkitgenerator/window.py:210
 msgid "You don't have write access to the selected directory."
 msgstr "Nemaš prava za pisanje u odabranu mapu."
 
-#: webfontkitgenerator/generator.py:68
+#. name = data['name-slug']
+#: webfontkitgenerator/generator.py:67
 #, python-brace-format
 msgid "Generating fonts for {name}:"
 msgstr "Generiranje fontova za {name}:"
 
-#: webfontkitgenerator/generator.py:70
+#: webfontkitgenerator/generator.py:69
 #, python-brace-format
 msgid "Generating {name}"
 msgstr "Generira se {name}"
@@ -258,79 +272,83 @@ msgstr "Generira se {name}"
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Generirana je datoteka <i>{filename}</i> s <i>{count}</i> grafema."
 
-#: webfontkitgenerator/generator.py:131
+#: webfontkitgenerator/generator.py:132
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
 msgstr "Za {range} nije pronađen nijedan grafem. Preskače se."
 
-#: webfontkitgenerator/generator.py:146
+#: webfontkitgenerator/generator.py:147
 msgid "Generating CSS:"
 msgstr "Generiranje CSS-a:"
 
-#: webfontkitgenerator/generator.py:147
+#: webfontkitgenerator/generator.py:148
 msgid "Finishing"
 msgstr "Završavanje"
 
-#: webfontkitgenerator/generator.py:166
+#: webfontkitgenerator/generator.py:167
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
 msgstr "Generirana je datoteka <i>{filename}</i>."
 
-#: webfontkitgenerator/generator.py:170
+#: webfontkitgenerator/generator.py:171
 msgid "There is no CSS to generate."
 msgstr "Nema CSS-a koji bi se mogao generirati."
 
-#: webfontkitgenerator/google.py:81
+#: webfontkitgenerator/google.py:61
 msgid "Loading Google Fonts Database"
 msgstr "Učitavanje Google Fonts baze podataka"
 
-#: webfontkitgenerator/google.py:113
+#: webfontkitgenerator/google.py:126
+msgid "Couldn't download the Google Fonts data."
+msgstr "Nije bilo moguće preuzeti Google Fonts podatke."
+
+#. If variant not available
+#. Save error to show it after dialog is terminated
+#: webfontkitgenerator/google.py:154
 #, python-brace-format
 msgid "Couldn't find the {variant} variant for {family_name}."
 msgstr "Varijanta {variant} za {family_name} nije pronađena.."
 
-#: webfontkitgenerator/google.py:117
+#. If no family found, add error to list
+#: webfontkitgenerator/google.py:162
 #, python-brace-format
 msgid "Couldn't find the {family_name} font family."
 msgstr "Obitelj fontova {family_name} nije pronađena."
 
-#: webfontkitgenerator/google.py:124
+#. If not files found at all, show general error and terminate
+#: webfontkitgenerator/google.py:171
 msgid "Couldn't find any fonts for the given url."
 msgstr "U postavljenoj URL adresi nema fontova."
 
-#: webfontkitgenerator/google.py:174
+#: webfontkitgenerator/google.py:221
 msgid "Please set a valid url"
 msgstr "Postavi ispravnu URL adresu"
 
-#: webfontkitgenerator/google.py:180
+#: webfontkitgenerator/google.py:227
 msgid "Update your url to CSS API v2"
 msgstr "Aktualiziraj svoju URL adresu na CSS API v2"
 
-#: webfontkitgenerator/google.py:203
+#: webfontkitgenerator/google.py:251
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Preuzima se {name}"
 
-#: webfontkitgenerator/google.py:219
+#: webfontkitgenerator/google.py:275
 #, python-brace-format
 msgid "Couldn't download the font file for {name}."
 msgstr "Nije bilo moguće preuzeti datoteku fonta za {name}."
 
-#: webfontkitgenerator/google.py:236
+#: webfontkitgenerator/google.py:292
 #, python-brace-format
 msgid "Couldn't write the font file for {name}."
 msgstr "Nije bilo moguće zapisati datoteku fonta za {name}."
-
-#: webfontkitgenerator/google.py:292
-msgid "Couldn't download the Google Fonts data."
-msgstr "Nije bilo moguće preuzeti Google Fonts podatke."
 
 #: webfontkitgenerator/loader.py:50
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
 msgstr "Nemaš prava za čitanje fonta {font} ili font ne postoji."
 
-#: webfontkitgenerator/loader.py:59
+#: webfontkitgenerator/loader.py:60
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Greška: {error}."

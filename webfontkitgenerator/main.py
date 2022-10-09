@@ -1,7 +1,6 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-
 import sys
 import gi
 

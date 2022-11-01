@@ -181,7 +181,7 @@ class GoogleDialog(Adw.Window):
             for family in query['family']:
                 # Parse family_name, axis_tag_list, axis_tuple_list
                 data = re.split(':|@', family)
-                # Create new dict to store the familiy
+                # Create new dict to store the family
                 family = {}
 
                 if len(data) == 1:

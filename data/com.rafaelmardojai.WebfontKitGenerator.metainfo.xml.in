@@ -10,7 +10,7 @@
       Webfont Kit Generator is a simple utility that allows you to generate woff, woff2 and the necessary CSS boilerplate from non-web font formats (otf and ttf).
     </p>
     <p>
-      Webfont Kit Generator also inlcudes a tool to Download fonts from Google Fonts for self-hosting.
+      Webfont Kit Generator also includes a tool to Download fonts from Google Fonts for self-hosting.
     </p>
   </description>  
   <url type="homepage">https://github.com/rafaelmardojai/webfont-kit-generator</url>

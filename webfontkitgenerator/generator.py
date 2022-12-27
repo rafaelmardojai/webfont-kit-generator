@@ -191,8 +191,8 @@ class Generator(object):
             html.append(f'<link href="{sheet}" rel="stylesheet">')
             css.append(f'@import url("{sheet}");')
 
-        self.window.end_html.set_text('\n'.join(html))
-        self.window.end_css.set_text('\n'.join(css))
+        self.window.src_html.set_text('\n'.join(html))
+        self.window.src_css.set_text('\n'.join(css))
 
     def _dict_to_styles(self, style_dict):
         properties = []

@@ -30,8 +30,8 @@ class Window(Adw.ApplicationWindow):
     cancel = Gtk.Template.Child()
 
     finished_viewstack = Gtk.Template.Child()
-    import_html_box = Gtk.Template.Child()
-    import_css_box = Gtk.Template.Child()
+    src_html: SourceView = Gtk.Template.Child()
+    src_css: SourceView = Gtk.Template.Child()
     log_column = Gtk.Template.Child()
     open_files = Gtk.Template.Child()
 
@@ -70,10 +70,6 @@ class Window(Adw.ApplicationWindow):
         self.setup_widgets()
         self.setup_actions()
 
-        self.style_manager = self.get_application().get_style_manager()
-        self.style_manager.connect('notify::dark', self._on_dark_style)
-        self._on_dark_style(None, None)
-
     def setup_widgets(self):
         # Setup view stack pages
         page = self.viewstack.add_titled(self.options, 'options', _('Options'))
@@ -91,14 +87,6 @@ class Window(Adw.ApplicationWindow):
 
         # Setup log text view
         self.log_column.set_child(self.log)
-
-        # Setup source views
-        self.end_html = SourceView()
-        self.end_html.set_language('html')
-        self.import_html_box.append(self.end_html)
-        self.end_css = SourceView()
-        self.end_css.set_language('css')
-        self.import_css_box.append(self.end_css)
 
         # Setup fonts file chooser
         fonts_filter = Gtk.FileFilter()
@@ -232,8 +220,3 @@ class Window(Adw.ApplicationWindow):
             self.fonts_stack.set_visible_child_name('fonts')
         else:
             self.fonts_stack.set_visible_child_name('empty')
-
-    def _on_dark_style(self, _obj, _pspec):
-        dark = self.style_manager.get_dark()
-        self.end_html.set_dark_scheme(dark)
-        self.end_css.set_dark_scheme(dark)

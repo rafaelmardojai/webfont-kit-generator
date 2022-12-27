@@ -333,7 +333,9 @@
                                               </object>
                                             </child>
                                             <child>
-                                              <object class="GtkBox" id="import_html_box"></object>
+                                              <object class="SourceView" id="src_html">
+                                                <property name="language">html</property>
+                                              </object>
                                             </child>
                                             <child>
                                               <object class="GtkLabel">
@@ -342,7 +344,9 @@
                                               </object>
                                             </child>
                                             <child>
-                                              <object class="GtkBox" id="import_css_box"></object>
+                                              <object class="SourceView" id="src_css">
+                                                <property name="language">css</property>
+                                              </object>
                                             </child>
                                             <child>
                                               <object class="GtkButton" id="open_files">

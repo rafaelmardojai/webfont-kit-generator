@@ -32,7 +32,7 @@ msgstr "Webfont Kit Generator"
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 #: webfontkitgenerator/resources/about.ui:6
 msgid "Create @font-face kits easily"
-msgstr "Creëer eenvoudig @font-face-sets"
+msgstr "Creëer eenvoudig kits voor @font-face"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""

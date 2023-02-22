@@ -258,7 +258,7 @@ msgstr "OTF en TTF"
 
 #: webfontkitgenerator/window.py:210
 msgid "You don't have write access to the selected directory."
-msgstr "Je hebt geen schrijftoegang tot de gekozen map."
+msgstr "U heeft geen schrijftoegang tot de gekozen map."
 
 #. name = data['name-slug']
 #: webfontkitgenerator/generator.py:67
@@ -283,7 +283,7 @@ msgstr "Geen glieven aangetroffen binnen {range}. Overgeslagen."
 
 #: webfontkitgenerator/generator.py:147
 msgid "Generating CSS:"
-msgstr "Bezig met genereren van css:"
+msgstr "Bezig met genereren van CSS:"
 
 #: webfontkitgenerator/generator.py:148
 msgid "Finishing"
@@ -296,7 +296,7 @@ msgstr "<i>{filename}</i>. is gegenereerd."
 
 #: webfontkitgenerator/generator.py:171
 msgid "There is no CSS to generate."
-msgstr "Er is geen te genereren css."
+msgstr "Er is geen te genereren CSS."
 
 #: webfontkitgenerator/google.py:61
 msgid "Loading Google Fonts Database"
@@ -326,7 +326,7 @@ msgstr "Er zijn geen lettertypen aangetroffen op de opgegeven url."
 
 #: webfontkitgenerator/google.py:221
 msgid "Please set a valid url"
-msgstr "Geef een geldige url op"
+msgstr "Geef een geldige URL op"
 
 #: webfontkitgenerator/google.py:227
 msgid "Update your url to CSS API v2"
@@ -350,7 +350,7 @@ msgstr "Het lettertypebestand van ‘{name}’ kan niet worden weggeschreven."
 #: webfontkitgenerator/loader.py:50
 #, python-brace-format
 msgid "You don't have read access to {font} or it doesn't exists."
-msgstr "Je hebt geen leestoegang tot {font} of het lettertype bestaat niet."
+msgstr "U heeft geen leestoegang tot {font} of het lettertype bestaat niet."
 
 #: webfontkitgenerator/loader.py:60
 #, python-brace-format

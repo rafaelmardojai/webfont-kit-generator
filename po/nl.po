@@ -5,7 +5,6 @@
 # 
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# Heimen Stoffels <vistausss@fastmail.com>, 2022
 # Philip Goto <philip.goto@gmail.com>, 2023
 # 
 #, fuzzy
@@ -66,7 +65,7 @@ msgstr "_Sneltoetsen"
 
 #: webfontkitgenerator/resources/window.ui:18
 msgid "_About Webfont Kit Generator"
-msgstr "Over Weblettertype-gener_ator"
+msgstr "_Over Webfont Kit Generator"
 
 #: webfontkitgenerator/resources/window.ui:48
 #: webfontkitgenerator/resources/window.ui:112
@@ -89,7 +88,7 @@ msgstr "Lettertypen toevoegen"
 #: webfontkitgenerator/resources/window.ui:208
 #: webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
-msgstr "Kies een uitvoermap"
+msgstr "Uitvoermap selecteren"
 
 #: webfontkitgenerator/resources/window.ui:220
 msgid "Browse..."
@@ -116,12 +115,12 @@ msgstr "Het genereren is voltooid!"
 #: webfontkitgenerator/resources/window.ui:331
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
-"Je kunt je lettertypen linken door de volgende code toe te voegen aan de "
-"head-sectie van je html:"
+"U kunt uw lettertypen linken door de volgende code toe te voegen aan de "
+"head-sectie van uw HTML:"
 
 #: webfontkitgenerator/resources/window.ui:340
 msgid "Or import it directly to your CSS:"
-msgstr "Of importeer ze direct in je css-bestand:"
+msgstr "Of importeer ze direct in uw css-bestand:"
 
 #: webfontkitgenerator/resources/window.ui:349
 msgid "Open in Files"
@@ -193,7 +192,7 @@ msgstr "Lettertypeweergave"
 
 #: webfontkitgenerator/resources/options.ui:218
 msgid "The CSS font-display descriptor"
-msgstr "De css-font-displayomschrijving"
+msgstr "De CSS-descriptor font-display"
 
 #: webfontkitgenerator/resources/options.ui:222
 msgid "Disabled"
@@ -210,7 +209,9 @@ msgstr "Lettertypen downloaden"
 #. Replace me with your names.
 #: webfontkitgenerator/resources/about.ui:10
 msgid "translator-credits"
-msgstr "Heimen Stoffels <vistausss@fastmail.com>"
+msgstr ""
+"Heimen Stoffels <vistausss@fastmail.com>\n"
+"Philip Goto <philip.goto@gmail.com>"
 
 #: webfontkitgenerator/resources/shortcuts.ui:11
 msgctxt "shortcut window"
@@ -230,7 +231,7 @@ msgstr "Lettertypen openen"
 #: webfontkitgenerator/resources/shortcuts.ui:26
 msgctxt "shortcut window"
 msgid "Select Output Directory"
-msgstr "Kies een uitvoermap"
+msgstr "Uitvoermap selecteren"
 
 #: webfontkitgenerator/resources/shortcuts.ui:32
 msgctxt "shortcut window"

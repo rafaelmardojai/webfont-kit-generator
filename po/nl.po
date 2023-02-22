@@ -58,7 +58,7 @@ msgstr "Rafael Mardojai CM"
 #: webfontkitgenerator/resources/window.ui:7
 #: webfontkitgenerator/resources/google.ui:34
 msgid "Import from Google Fonts"
-msgstr "Importeren van Google Fonts"
+msgstr "Importeren vanuit Google Fonts"
 
 #: webfontkitgenerator/resources/window.ui:14
 msgid "_Keyboard Shortcuts"

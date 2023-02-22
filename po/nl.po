@@ -330,7 +330,7 @@ msgstr "Geef een geldige URL op"
 
 #: webfontkitgenerator/google.py:227
 msgid "Update your url to CSS API v2"
-msgstr "Werk je url bij naar CSS-api v2"
+msgstr "Werk uw URL bij naar CSS-api v2"
 
 #: webfontkitgenerator/google.py:251
 #, python-brace-format

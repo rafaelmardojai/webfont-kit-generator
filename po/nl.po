@@ -40,7 +40,7 @@ msgid ""
 "woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
 "ttf)."
 msgstr ""
-"Met Weblettertype-generator kun je eenvoudig woff-, woff2- en css-"
+"Met Webfont Kit Generator kunt u eenvoudig woff-, woff2- en css-"
 "boilerplatebestanden creëren uit reguliere lettertypebestanden (otf en ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
@@ -48,7 +48,7 @@ msgid ""
 "Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Weblettertype-generator bevat tevens de mogelijkheid om lettertypen te "
+"Webfont Kit Generator bevat tevens de mogelijkheid om lettertypen te "
 "downloaden van Google Fonts."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20

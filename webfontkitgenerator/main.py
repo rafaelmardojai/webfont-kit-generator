@@ -4,16 +4,18 @@
 import sys
 import gi
 
-gi.require_version('Gdk', '4.0')
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-gi.require_version('GtkSource', '5')
-gi.require_version('Soup', '3.0')
+from gettext import gettext as _
+try:
+    gi.require_version('Gdk', '4.0')
+    gi.require_version('Gtk', '4.0')
+    gi.require_version('Adw', '1')
+    gi.require_version('GtkSource', '5')
+    gi.require_version('Soup', '3.0')
+    from gi.repository import Adw, Gio, GLib, Gtk
+except ImportError or ValueError as exc:
+    print('Error: GIR Dependencies not met.', exc)
 
-from gettext import gettext as _  # noqa: E402
-from gi.repository import Adw, Gio, GLib, Gtk  # noqa: E402
-
-from webfontkitgenerator.window import Window  # noqa: E402
+from webfontkitgenerator.window import Window
 
 
 class Application(Adw.Application):

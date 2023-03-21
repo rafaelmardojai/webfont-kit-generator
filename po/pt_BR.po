@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 08:58-0500\n"
+"POT-Creation-Date: 2023-03-21 11:13-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/rafaelmardojai/"
@@ -45,7 +45,7 @@ msgstr ""
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 #, fuzzy
 msgid ""
-"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr "Baixe fontes do Google Fonts para auto-hospedagem"
 
@@ -72,7 +72,8 @@ msgid "Open Fonts"
 msgstr "Abrir fontes"
 
 #: webfontkitgenerator/resources/window.ui:55
-msgid "Menu"
+#, fuzzy
+msgid "Main Menu"
 msgstr "Menu"
 
 #: webfontkitgenerator/resources/window.ui:69
@@ -101,29 +102,33 @@ msgstr "Gerar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: webfontkitgenerator/resources/window.ui:312
+#: webfontkitgenerator/resources/window.ui:302
+msgid "Back"
+msgstr ""
+
+#: webfontkitgenerator/resources/window.ui:313
 msgid "Information"
 msgstr "Informação"
 
-#: webfontkitgenerator/resources/window.ui:320
+#: webfontkitgenerator/resources/window.ui:321
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Geração terminada!"
 
-#: webfontkitgenerator/resources/window.ui:331
+#: webfontkitgenerator/resources/window.ui:332
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Para vincular suas fontes, copie o código abaixo no cabeçalho do seu HTML:"
 
-#: webfontkitgenerator/resources/window.ui:340
+#: webfontkitgenerator/resources/window.ui:343
 msgid "Or import it directly to your CSS:"
 msgstr "Ou importe diretamente para o seu CSS:"
 
-#: webfontkitgenerator/resources/window.ui:349
+#: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
 msgstr "Abrir em Arquivos"
 
-#: webfontkitgenerator/resources/window.ui:370
+#: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"
 msgstr "Logs"
 
@@ -243,15 +248,15 @@ msgid "Open Font Files"
 msgstr "Abrir arquivos de fonte"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:79
+#: webfontkitgenerator/window.py:75
 msgid "Options"
 msgstr "Opções"
 
-#: webfontkitgenerator/window.py:105
+#: webfontkitgenerator/window.py:93
 msgid "OTF & TTF"
 msgstr "OTF e TTF"
 
-#: webfontkitgenerator/window.py:210
+#: webfontkitgenerator/window.py:198
 msgid "You don't have write access to the selected directory."
 msgstr "Você não tem acesso de escrita ao diretório selecionado."
 

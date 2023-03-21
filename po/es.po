@@ -2,24 +2,26 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 08:58-0500\n"
+"POT-Creation-Date: 2023-03-21 11:13-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/rafaelmardojai/teams/135056/es/)\n"
+"Language-Team: Spanish (https://www.transifex.com/rafaelmardojai/"
+"teams/135056/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -42,12 +44,13 @@ msgstr ""
 "woff2 y el CSS necesario desde formatos de tipografías no web (otf y ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
 msgid ""
-"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Webfont Kit Generator también incluye una herramienta para descargar fuentes"
-" de Google Fonts para autoo-alojamiento."
+"Webfont Kit Generator también incluye una herramienta para descargar fuentes "
+"de Google Fonts para autoo-alojamiento."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
@@ -72,7 +75,8 @@ msgid "Open Fonts"
 msgstr "Abrir Tipografías"
 
 #: webfontkitgenerator/resources/window.ui:55
-msgid "Menu"
+#, fuzzy
+msgid "Main Menu"
 msgstr "Menú "
 
 #: webfontkitgenerator/resources/window.ui:69
@@ -84,8 +88,7 @@ msgstr "Tipografías"
 msgid "Add some fonts"
 msgstr "Agregue algunas tipografías"
 
-#: webfontkitgenerator/resources/window.ui:208
-#: webfontkitgenerator/window.py:63
+#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Seleccionar directorio de salida"
 
@@ -102,30 +105,34 @@ msgstr "Generar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: webfontkitgenerator/resources/window.ui:312
+#: webfontkitgenerator/resources/window.ui:302
+msgid "Back"
+msgstr ""
+
+#: webfontkitgenerator/resources/window.ui:313
 msgid "Information"
 msgstr "Información"
 
-#: webfontkitgenerator/resources/window.ui:320
+#: webfontkitgenerator/resources/window.ui:321
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Generación finalizada!"
 
-#: webfontkitgenerator/resources/window.ui:331
+#: webfontkitgenerator/resources/window.ui:332
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
-"Para vincular sus tipografías, copie el siguiente código en el encabezado de"
-" su HTML:"
+"Para vincular sus tipografías, copie el siguiente código en el encabezado de "
+"su HTML:"
 
-#: webfontkitgenerator/resources/window.ui:340
+#: webfontkitgenerator/resources/window.ui:343
 msgid "Or import it directly to your CSS:"
 msgstr "O importarlas directamente a tu CSS:"
 
-#: webfontkitgenerator/resources/window.ui:349
+#: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
 msgstr "Abrir en Archivos"
 
-#: webfontkitgenerator/resources/window.ui:370
+#: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"
 msgstr "Registros"
 
@@ -245,15 +252,15 @@ msgid "Open Font Files"
 msgstr "Abrir archivos de tipografías"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:79
+#: webfontkitgenerator/window.py:75
 msgid "Options"
 msgstr "Opciones"
 
-#: webfontkitgenerator/window.py:105
+#: webfontkitgenerator/window.py:93
 msgid "OTF & TTF"
 msgstr "OTF  y TTF"
 
-#: webfontkitgenerator/window.py:210
+#: webfontkitgenerator/window.py:198
 msgid "You don't have write access to the selected directory."
 msgstr "No tienes acceso de escritura al directorio seleccionado"
 

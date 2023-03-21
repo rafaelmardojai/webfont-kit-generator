@@ -2,24 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Luna Jernberg <bittin@cafe8bitar.se>, 2023
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 08:58-0500\n"
+"POT-Creation-Date: 2023-03-21 11:13-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2023\n"
-"Language-Team: Swedish (https://www.transifex.com/rafaelmardojai/teams/135056/sv/)\n"
+"Language-Team: Swedish (https://www.transifex.com/rafaelmardojai/"
+"teams/135056/sv/)\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
@@ -44,8 +45,9 @@ msgstr ""
 "ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
 msgid ""
-"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
 "Webfont Kit Generator innehåller också ett verktyg för att ladda ner "
@@ -74,7 +76,8 @@ msgid "Open Fonts"
 msgstr "Öppna teckensnitt"
 
 #: webfontkitgenerator/resources/window.ui:55
-msgid "Menu"
+#, fuzzy
+msgid "Main Menu"
 msgstr "Meny"
 
 #: webfontkitgenerator/resources/window.ui:69
@@ -86,8 +89,7 @@ msgstr "Teckensnitt"
 msgid "Add some fonts"
 msgstr "Lägg några teckensnitt"
 
-#: webfontkitgenerator/resources/window.ui:208
-#: webfontkitgenerator/window.py:63
+#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Välj utdatamapp"
 
@@ -104,30 +106,34 @@ msgstr "Generera"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: webfontkitgenerator/resources/window.ui:312
+#: webfontkitgenerator/resources/window.ui:302
+msgid "Back"
+msgstr ""
+
+#: webfontkitgenerator/resources/window.ui:313
 msgid "Information"
 msgstr "Information"
 
-#: webfontkitgenerator/resources/window.ui:320
+#: webfontkitgenerator/resources/window.ui:321
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Generering slutförd!"
 
-#: webfontkitgenerator/resources/window.ui:331
+#: webfontkitgenerator/resources/window.ui:332
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Kopiera in nedanstående kod i ditt HTML-huvud, för att länka dina "
 "teckensnitt:"
 
-#: webfontkitgenerator/resources/window.ui:340
+#: webfontkitgenerator/resources/window.ui:343
 msgid "Or import it directly to your CSS:"
 msgstr "Eller importera det direkt till din CSS:"
 
-#: webfontkitgenerator/resources/window.ui:349
+#: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
 msgstr "Öppna i filer"
 
-#: webfontkitgenerator/resources/window.ui:370
+#: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"
 msgstr "Loggar"
 
@@ -249,15 +255,15 @@ msgid "Open Font Files"
 msgstr "Öppna teckensnittsfiler"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:79
+#: webfontkitgenerator/window.py:75
 msgid "Options"
 msgstr "Alternativ"
 
-#: webfontkitgenerator/window.py:105
+#: webfontkitgenerator/window.py:93
 msgid "OTF & TTF"
 msgstr "OTF & TTF"
 
-#: webfontkitgenerator/window.py:210
+#: webfontkitgenerator/window.py:198
 msgid "You don't have write access to the selected directory."
 msgstr "Du har inte skrivrättighet i den valda mappen."
 

@@ -2,25 +2,27 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Vojtěch Perník <translations@pervoj.cz>, 2023
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 08:58-0500\n"
+"POT-Creation-Date: 2023-03-21 11:13-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Vojtěch Perník <translations@pervoj.cz>, 2023\n"
-"Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/cs/)\n"
+"Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/"
+"cs/)\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -44,8 +46,9 @@ msgstr ""
 "(otf a ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
 msgid ""
-"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
 "Aplikace také obsahuje nástroj pro stahování písem ze serveru Google Fonts "
@@ -74,7 +77,8 @@ msgid "Open Fonts"
 msgstr "Otevřít fonty"
 
 #: webfontkitgenerator/resources/window.ui:55
-msgid "Menu"
+#, fuzzy
+msgid "Main Menu"
 msgstr "Menu"
 
 #: webfontkitgenerator/resources/window.ui:69
@@ -86,8 +90,7 @@ msgstr "Fonty"
 msgid "Add some fonts"
 msgstr "Přidejte nějaké fonty"
 
-#: webfontkitgenerator/resources/window.ui:208
-#: webfontkitgenerator/window.py:63
+#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
 msgstr "Vyprat výstupní adresář"
 
@@ -104,29 +107,33 @@ msgstr "Generovat"
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: webfontkitgenerator/resources/window.ui:312
+#: webfontkitgenerator/resources/window.ui:302
+msgid "Back"
+msgstr ""
+
+#: webfontkitgenerator/resources/window.ui:313
 msgid "Information"
 msgstr "Informace"
 
-#: webfontkitgenerator/resources/window.ui:320
+#: webfontkitgenerator/resources/window.ui:321
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Generování skončilo!"
 
-#: webfontkitgenerator/resources/window.ui:331
+#: webfontkitgenerator/resources/window.ui:332
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Chcete-li načíst svá písma, zkopírujte níže uvedený kód do hlavičky HTML:"
 
-#: webfontkitgenerator/resources/window.ui:340
+#: webfontkitgenerator/resources/window.ui:343
 msgid "Or import it directly to your CSS:"
 msgstr "Nebo je naimportujte přímo do CSS:"
 
-#: webfontkitgenerator/resources/window.ui:349
+#: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
 msgstr "Otevřít v Souborech"
 
-#: webfontkitgenerator/resources/window.ui:370
+#: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"
 msgstr "Logy"
 
@@ -246,15 +253,15 @@ msgid "Open Font Files"
 msgstr "Otevřít soubory fontů"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:79
+#: webfontkitgenerator/window.py:75
 msgid "Options"
 msgstr "Možnosti"
 
-#: webfontkitgenerator/window.py:105
+#: webfontkitgenerator/window.py:93
 msgid "OTF & TTF"
 msgstr "OTF a TTF"
 
-#: webfontkitgenerator/window.py:210
+#: webfontkitgenerator/window.py:198
 msgid "You don't have write access to the selected directory."
 msgstr "K vybranému adresáři nemáte právo k zápisu."
 

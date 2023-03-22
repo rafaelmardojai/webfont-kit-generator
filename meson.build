@@ -1,5 +1,5 @@
 project('webfontkitgenerator',
-          version: '1.0.2',
+          version: '1.0.3',
     meson_version: '>= 0.60.0',
   default_options: [ 'warning_level=2',
                    ],

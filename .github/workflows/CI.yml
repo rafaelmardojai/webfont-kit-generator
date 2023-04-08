@@ -11,8 +11,8 @@ jobs:
       image: bilelmoussaoui/flatpak-github-actions:gnome-nightly
       options: --privileged
     steps:
-    - uses: actions/checkout@v2
-    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
+    - uses: actions/checkout@v3
+    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: "webfont-kit-generator-devel.flatpak"
         manifest-path: "com.rafaelmardojai.WebfontKitGenerator.json"

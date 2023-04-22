@@ -6,16 +6,17 @@
 # Translators:
 # Sabri Ünal <libreajans@gmail.com>, 2022
 # Alperen İsa Nalbant <afacanc38@yaani.com>, 2022
+# eren ince <erenince@proton.me>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 08:58-0500\n"
+"POT-Creation-Date: 2023-03-21 11:13-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Alperen İsa Nalbant <afacanc38@yaani.com>, 2022\n"
-"Language-Team: Turkish (https://www.transifex.com/rafaelmardojai/teams/135056/tr/)\n"
+"Last-Translator: eren ince <erenince@proton.me>, 2023\n"
+"Language-Team: Turkish (https://app.transifex.com/rafaelmardojai/teams/135056/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,11 +46,11 @@ msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 msgid ""
-"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Webfont Kit Oluşturucu ayrıca kendi kendine barındırma için Google Fonts'dan"
-" yazı tipleri indirmek için bir araç sunar."
+"Webfont Kit Generator ayrıca kendi kendine barındırma için Google Fonts'tan "
+"yazı tiplerini indirmek için bir araç içerir."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
@@ -74,8 +75,8 @@ msgid "Open Fonts"
 msgstr "Yazı Tiplerini Aç"
 
 #: webfontkitgenerator/resources/window.ui:55
-msgid "Menu"
-msgstr "Menü"
+msgid "Main Menu"
+msgstr "Ana Menü"
 
 #: webfontkitgenerator/resources/window.ui:69
 #: webfontkitgenerator/resources/options.ui:21
@@ -104,30 +105,34 @@ msgstr "Oluştur"
 msgid "Cancel"
 msgstr "İptal"
 
-#: webfontkitgenerator/resources/window.ui:312
+#: webfontkitgenerator/resources/window.ui:302
+msgid "Back"
+msgstr "Geri"
+
+#: webfontkitgenerator/resources/window.ui:313
 msgid "Information"
 msgstr "Bilgilendirme"
 
-#: webfontkitgenerator/resources/window.ui:320
+#: webfontkitgenerator/resources/window.ui:321
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Oluşturma tamamlandı!"
 
-#: webfontkitgenerator/resources/window.ui:331
+#: webfontkitgenerator/resources/window.ui:332
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Yazı tiplerinizi kullanmak için aşağıdaki kodu HTML'nizin head etiketine "
 "ekleyin:"
 
-#: webfontkitgenerator/resources/window.ui:340
+#: webfontkitgenerator/resources/window.ui:343
 msgid "Or import it directly to your CSS:"
 msgstr "Ya da doğrudan CSS'inizin içine ekleyin:"
 
-#: webfontkitgenerator/resources/window.ui:349
+#: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
 msgstr "Dosyalar'da aç"
 
-#: webfontkitgenerator/resources/window.ui:370
+#: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"
 msgstr "Günlükler"
 
@@ -249,15 +254,15 @@ msgid "Open Font Files"
 msgstr "Yazı Tipi Dosyalarını Aç"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:79
+#: webfontkitgenerator/window.py:75
 msgid "Options"
 msgstr "Tercihler"
 
-#: webfontkitgenerator/window.py:105
+#: webfontkitgenerator/window.py:93
 msgid "OTF & TTF"
 msgstr "OTF ve TTF"
 
-#: webfontkitgenerator/window.py:210
+#: webfontkitgenerator/window.py:198
 msgid "You don't have write access to the selected directory."
 msgstr "Seçilen dizinde yazma iznine sahip değilsiniz."
 

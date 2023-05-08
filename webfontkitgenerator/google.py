@@ -69,16 +69,11 @@ class GoogleDialog(Adw.Window):
         if self._local_data_exists():
             request_headers = message.get_request_headers()
             request_headers.append(
-                'If-None-Match',
-                self.settings.get_string('google-fonts-sha')
+                'If-None-Match', self.settings.get_string('google-fonts-sha')
             )
 
         self.session.send_and_read_async(
-            message,
-            0,
-            self.cancellable,
-            self.on_google_response,
-            message
+            message, 0, self.cancellable, self.on_google_response, message
         )
 
     def on_google_response(self, session, result, message):
@@ -104,7 +99,7 @@ class GoogleDialog(Adw.Window):
                     # Save ETag
                     self.settings.set_string(
                         'google-fonts-sha',
-                        response_headers.get_one('ETag') or ''
+                        response_headers.get_one('ETag') or '',
                     )
 
                     self.find_on_data(data['items'])
@@ -113,8 +108,7 @@ class GoogleDialog(Adw.Window):
                     print(exc)
 
             elif (
-                status == Soup.Status.NOT_MODIFIED
-                or self._local_data_exists()
+                status == Soup.Status.NOT_MODIFIED or self._local_data_exists()
             ):
                 self.find_on_data()
                 failed = False
@@ -123,7 +117,7 @@ class GoogleDialog(Adw.Window):
             print(exc)
 
         if failed:
-            error = _("Couldn't download the Google Fonts data.")
+            error = _('Couldn’t download the Google Fonts data.')
             self.errors.append(error)
             self.terminate_dialog()
 
@@ -134,9 +128,9 @@ class GoogleDialog(Adw.Window):
         files = {}  # Where files to download will be stored
         for family in self.families:
             # Filter data with wanted families
-            results = list(filter(
-                lambda x: x['family'] == family['name'], data
-            ))
+            results = list(
+                filter(lambda x: x['family'] == family['name'], data)
+            )
 
             if results:
                 results = results[0]  # Get first result
@@ -151,15 +145,16 @@ class GoogleDialog(Adw.Window):
                         self.total += 1
                     else:  # If variant not available
                         # Save error to show it after dialog is terminated
-                        error = _("Couldn't find the {variant} variant for {family_name}.")
+                        error = _(
+                            'Couldn’t find the {variant} variant for {family_name}.'
+                        )
                         error = error.format(
-                            variant=variant,
-                            family_name=family['name']
+                            variant=variant, family_name=family['name']
                         )
                         self.errors.append(error)
             else:
                 # If no family found, add error to list
-                error = _("Couldn't find the {family_name} font family.")
+                error = _('Couldn’t find the {family_name} font family.')
                 error = error.format(family_name=family['name'])
                 self.errors.append(error)
 
@@ -168,7 +163,7 @@ class GoogleDialog(Adw.Window):
             self._download_files(files)
         else:
             # If not files found at all, show general error and terminate
-            self.errors = [_("Couldn't find any fonts for the given url.")]
+            self.errors = [_('Couldn’t find any fonts for the given url.')]
             self.terminate_dialog()
 
     def parse_api_v1(self, query):
@@ -257,14 +252,14 @@ class GoogleDialog(Adw.Window):
                 if font_bytes:
                     (font, _iostream) = Gio.File.new_tmp(None)
                     outstream = font.replace(
-                        None, False,
-                        Gio.FileCreateFlags.NONE, None
+                        None, False, Gio.FileCreateFlags.NONE, None
                     )
                     outstream.write_bytes_async(
-                        font_bytes, 0,
+                        font_bytes,
+                        0,
                         self.cancellable,
                         on_file_writed,
-                        (name, font)
+                        (name, font),
                     )
                     failed = False
             except GLib.GError as exc:
@@ -272,7 +267,7 @@ class GoogleDialog(Adw.Window):
                 self.pending -= 1
 
             if failed:
-                error = _("Couldn't download the font file for {name}.")
+                error = _('Couldn’t download the font file for {name}.')
                 error = error.format(name=name)
                 self.errors.append(error)
 
@@ -289,7 +284,7 @@ class GoogleDialog(Adw.Window):
                 print(exc)
 
             if failed:
-                error = _("Couldn't write the font file for {name}.")
+                error = _('Couldn’t write the font file for {name}.')
                 error = error.format(name=name)
                 self.errors.append(error)
 
@@ -303,10 +298,11 @@ class GoogleDialog(Adw.Window):
             for name, url in variants.items():
                 message = Soup.Message.new('GET', url)
                 self.session.send_and_read_async(
-                    message, 0,
+                    message,
+                    0,
                     self.cancellable,
                     on_file_downloaded,
-                    (family, name)
+                    (family, name),
                 )
 
     def _get_local_data(self):
@@ -337,8 +333,7 @@ class GoogleDialog(Adw.Window):
 
         if url:
             self.url_entry.set_icon_from_icon_name(
-                Gtk.EntryIconPosition.SECONDARY,
-                'edit-clear-symbolic'
+                Gtk.EntryIconPosition.SECONDARY, 'edit-clear-symbolic'
             )
 
             parsed = urlparse(url)
@@ -359,8 +354,7 @@ class GoogleDialog(Adw.Window):
             self.url_entry.remove_css_class('error')
             self.error_revealer.set_reveal_child(False)
             self.url_entry.set_icon_from_icon_name(
-                Gtk.EntryIconPosition.SECONDARY,
-                'edit-paste-symbolic'
+                Gtk.EntryIconPosition.SECONDARY, 'edit-paste-symbolic'
             )
 
     def _on_cancel_clicked(self, _button):
@@ -398,9 +392,7 @@ class GoogleDialog(Adw.Window):
     def _read_response(self, response):
         response_data = {}
         try:
-            response_data = json.loads(
-                response.get_data()
-            ) if response else {}
+            response_data = json.loads(response.get_data()) if response else {}
         except Exception as exc:
             print(exc)
         return response_data

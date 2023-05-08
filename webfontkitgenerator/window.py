@@ -53,18 +53,14 @@ class Window(Adw.ApplicationWindow):
         self.model = Gio.ListStore.new(Font)
 
         self.fontschooser = Gtk.FileChooserNative.new(
-            _('Open Font Files'),
-            self,
-            Gtk.FileChooserAction.OPEN,
-            None,
-            None
+            _('Open Font Files'), self, Gtk.FileChooserAction.OPEN, None, None
         )
         self.outpathchooser = Gtk.FileChooserNative.new(
             _('Select Output Directory'),
             self,
             Gtk.FileChooserAction.SELECT_FOLDER,
             None,
-            None
+            None,
         )
 
         self.setup_widgets()
@@ -81,8 +77,7 @@ class Window(Adw.ApplicationWindow):
         # Setup fonts list
         self.fonts_list.bind_model(self.model, self._create_font_row)
         self.model.connect(
-            'items-changed',
-            lambda _l, _p, _r, _a: self._check_ready_state()
+            'items-changed', lambda _l, _p, _r, _a: self._check_ready_state()
         )
 
         # Setup log text view
@@ -160,10 +155,12 @@ class Window(Adw.ApplicationWindow):
 
     def _on_generate(self, _action, _param):
         generator = Generator(
-            self, self.outpath, self.model,
+            self,
+            self.outpath,
+            self.model,
             self.options.get_formats(),
             self.options.get_subsetting(),
-            self.options.get_font_display()
+            self.options.get_font_display(),
         )
         generator.run()
 
@@ -195,7 +192,7 @@ class Window(Adw.ApplicationWindow):
                 self._check_ready_state()
             else:
                 error = Adw.Toast.new(
-                    _("You don't have write access to the selected directory.")
+                    _('You don’t have write access to the selected directory.')
                 )
                 self.toasts.add_toast(error)
 

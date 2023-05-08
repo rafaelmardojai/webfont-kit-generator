@@ -23,9 +23,9 @@ class FontRow(Adw.ActionRow):
         super().__init__()
 
         self.set_title(font_data['name'])
-        subtitle = ' / '.join((
-            font_data['family'], font_data['style'], font_data['weight']
-        ))
+        subtitle = ' / '.join(
+            (font_data['family'], font_data['style'], font_data['weight'])
+        )
         self.set_subtitle(subtitle)
 
         btn_remove = Gtk.Button(valign=Gtk.Align.CENTER)
@@ -37,6 +37,5 @@ class FontRow(Adw.ActionRow):
 
     def remove_font(self, _widget):
         self.activate_action(
-            'win.remove-font',
-            GLib.Variant.new_uint32(self.get_index())
+            'win.remove-font', GLib.Variant.new_uint32(self.get_index())
         )

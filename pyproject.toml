@@ -1,0 +1,12 @@
+[project]
+name = "webfontkitgenerator"
+
+dependencies = [
+    "fontTools",
+    "Brotli"
+]
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+skip-string-normalization = true

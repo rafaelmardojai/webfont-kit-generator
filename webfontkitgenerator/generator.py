@@ -12,8 +12,9 @@ from fontTools.subset import parse_unicodes, Subsetter
 
 
 class Generator(object):
-
-    def __init__(self, window, path, fonts_list, formats, ranges, font_display):
+    def __init__(
+        self, window, path, fonts_list, formats, ranges, font_display
+    ):
         self.window = window
         self.stop = False
         self.path = path
@@ -94,10 +95,10 @@ class Generator(object):
             self.css.setdefault(slug, {})
 
             css = {
-                'font-family':  data['family'],
-                'font-style':   data['style'],
-                'font-weight':  data['weight'],
-                'src':          list(data['local'])
+                'font-family': data['family'],
+                'font-style': data['style'],
+                'font-weight': data['weight'],
+                'src': list(data['local']),
             }
 
             for format in self.formats:
@@ -150,10 +151,12 @@ class Generator(object):
         for family, subset in self.css.items():
             family_css = ''
             for font, properties in subset.items():
-                ff = ff_template.format(**{
-                    'comment': font,
-                    'styles': self._dict_to_styles(properties),
-                })
+                ff = ff_template.format(
+                    **{
+                        'comment': font,
+                        'styles': self._dict_to_styles(properties),
+                    }
+                )
                 family_css += ff + '\n'
             families_css[family] = family_css
 

@@ -5,6 +5,7 @@ import sys
 import gi
 
 from gettext import gettext as _
+
 try:
     gi.require_version('Gdk', '4.0')
     gi.require_version('Gtk', '4.0')
@@ -22,7 +23,7 @@ class Application(Adw.Application):
     def __init__(self, version):
         super().__init__(
             application_id='com.rafaelmardojai.WebfontKitGenerator',
-            flags=Gio.ApplicationFlags.HANDLES_OPEN
+            flags=Gio.ApplicationFlags.HANDLES_OPEN,
         )
         GLib.set_application_name(_('Webfont Kit Generator'))
 

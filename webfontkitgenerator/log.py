@@ -5,21 +5,22 @@ from gi.repository import Gtk
 
 
 class Log(Gtk.TextView):
-    __gtype_name__ = "Log"
+    __gtype_name__ = 'Log'
 
     def __init__(self):
         super().__init__()
 
         self.text_buffer = self.get_buffer()
 
-        self.set_editable(False)
-        self.set_monospace(True)
-        self.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
+        self.props.editable = False
+        self.props.monospace = True
+        self.props.wrap_mode = Gtk.WrapMode.WORD_CHAR
         self.props.hexpand = True
 
         self.add_css_class('log')
 
-    def append(self, text, bold=False, italic=False):
+    def append(self, text: str, bold: bool = False, italic: bool = False):
+        """Append text to the log"""
         end_iter = self.text_buffer.get_end_iter()
         text = f'<b>{text}</b>' if bold else text
         text = f'<i>{text}</i>' if italic else text
@@ -27,5 +28,6 @@ class Log(Gtk.TextView):
         self.text_buffer.insert_markup(end_iter, text, -1)
 
     def reset(self):
-        startIter, endIter = self.text_buffer.get_bounds()
-        self.text_buffer.delete(startIter, endIter)
+        """Clear the log"""
+        star, end = self.text_buffer.get_bounds()
+        self.text_buffer.delete(star, end)

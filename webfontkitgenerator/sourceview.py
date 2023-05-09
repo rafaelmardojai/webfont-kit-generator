@@ -16,7 +16,7 @@ class SourceView(GtkSource.View):
         self.props.wrap_mode = Gtk.WrapMode.WORD_CHAR
         self.props.hexpand = True
 
-        self._language = ''
+        self._language = ''  # Save ser language for syntax
         self._lm = GtkSource.LanguageManager()
 
         self.text_buffer = self.get_buffer()

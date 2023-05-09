@@ -123,8 +123,8 @@ class Generator(object):
 
             if range:
                 css['unicode-range'] = self.ranges[range]
-            if self.font_display > 0:
-                css['font-display'] = self._get_font_display(self.font_display)
+            if self.font_display is not None:
+                css['font-display'] = self.font_display
             self.css[slug][name] = css
 
         else:
@@ -205,7 +205,3 @@ class Generator(object):
             properties.append('\t{}: {};'.format(k, v))
 
         return '\n'.join(properties)
-
-    def _get_font_display(self, fd):
-        fds = ['auto', 'block', 'swap', 'fallback', 'optional']
-        return fds[fd - 1]

@@ -199,6 +199,7 @@
                                         <property name="valign">center</property>
                                         <property name="margin_top">12</property>
                                         <property name="placeholder-text">0021-007E,00E7,00EB,00C7,00CB</property>
+                                        <signal name="changed" handler="_validate_subsetting" swapped="no"/>
                                       </object>
                                     </child>
                                   </object>

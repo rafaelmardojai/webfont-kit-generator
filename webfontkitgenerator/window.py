@@ -77,6 +77,7 @@ class Window(Adw.ApplicationWindow):
             'items-changed', lambda _l, _p, _r, _a: self._check_ready_state()
         )
         self.fonts_list.bind_model(self.model, self._create_font_row)
+        self.loader = Loader(self, self.model)  # Load fonts to the list model
 
         # Drag and drop
         drop_target = Gtk.DropTarget.new(Gdk.FileList, Gdk.DragAction.COPY)
@@ -112,8 +113,7 @@ class Window(Adw.ApplicationWindow):
         self.add_action(back)
 
     def load_fonts(self, files):
-        loader = Loader(self, self.model)
-        loader.load(files)
+        self.loader.load(files)
 
     @Gtk.Template.Callback()
     def _open_generation_dir(self, _button):

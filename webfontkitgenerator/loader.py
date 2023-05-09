@@ -1,11 +1,10 @@
-# Copyright 2020-2021 Rafael Mardojai CM
+# Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
 from urllib.parse import urlparse, unquote
 
 from gettext import gettext as _
-from threading import Thread
 from gi.repository import Adw, GLib
 from fontTools.ttLib import TTFont
 
@@ -18,11 +17,6 @@ class Loader(object):
         self.model = model
 
     def load(self, files):
-        thread = Thread(target=self._load, args=(files,))
-        thread.daemon = True
-        thread.start()
-
-    def _load(self, files):
         self.window.processing = True
 
         for f in files:
@@ -46,7 +40,7 @@ class Loader(object):
                     GLib.idle_add(self.model.append, font)
                 else:
                     error_text = _(
-                        'You don’t have read access to {font} or it doesn’t exists.'
+                        'You don’t have read access to {font} or it doesn’t exists.'  # noqa
                     )
                     GLib.idle_add(
                         self._show_error, error_text.format(font=path)

@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Rafael Mardojai CM
+# Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import json
@@ -21,14 +21,13 @@ DATA_FILE = os.path.join(XDG_DATA_DIR, 'google-fonts.json')
 class GoogleDialog(Adw.Window):
     __gtype_name__ = 'GoogleDialog'
 
-    stack = Gtk.Template.Child()
-    url_entry = Gtk.Template.Child()
-    error_revealer = Gtk.Template.Child()
-    error_label = Gtk.Template.Child()
-    download_btn = Gtk.Template.Child()
-    progress = Gtk.Template.Child()
-    progressbar = Gtk.Template.Child()
-    cancel_btn = Gtk.Template.Child()
+    stack: Gtk.Stack = Gtk.Template.Child()
+    url_entry: Gtk.Entry = Gtk.Template.Child()
+    error_revealer: Gtk.Revealer = Gtk.Template.Child()
+    error_label: Gtk.Label = Gtk.Template.Child()
+    download_btn: Gtk.Button = Gtk.Template.Child()
+    progress: Adw.StatusPage = Gtk.Template.Child()
+    progressbar: Gtk.ProgressBar = Gtk.Template.Child()
 
     def __init__(self, window, **kwargs):
         super().__init__(**kwargs)
@@ -48,11 +47,6 @@ class GoogleDialog(Adw.Window):
         self.pending = 0
         # Files to import
         self.files = []
-
-        self.url_entry.connect('changed', self._on_entry_changed)
-        self.url_entry.connect('icon-press', self._on_entry_icon)
-        self.download_btn.connect('clicked', self._on_download_clicked)
-        self.cancel_btn.connect('clicked', self._on_cancel_clicked)
 
     def load_fonts_data(self):
         # Loading feedback
@@ -146,7 +140,7 @@ class GoogleDialog(Adw.Window):
                     else:  # If variant not available
                         # Save error to show it after dialog is terminated
                         error = _(
-                            'Couldn’t find the {variant} variant for {family_name}.'
+                            'Couldn’t find the {variant} variant for {family_name}.'  # noqa
                         )
                         error = error.format(
                             variant=variant, family_name=family['name']
@@ -317,6 +311,7 @@ class GoogleDialog(Adw.Window):
     def _local_data_exists(self):
         return os.path.exists(DATA_FILE)
 
+    @Gtk.Template.Callback()
     def _on_download_clicked(self, _button):
         url = self.url_entry.get_text()
         parsed = urlparse(url)
@@ -328,6 +323,7 @@ class GoogleDialog(Adw.Window):
         else:
             self.invalid_url()
 
+    @Gtk.Template.Callback()
     def _on_entry_changed(self, _entry):
         url = self.url_entry.get_text()
 
@@ -357,11 +353,13 @@ class GoogleDialog(Adw.Window):
                 Gtk.EntryIconPosition.SECONDARY, 'edit-paste-symbolic'
             )
 
+    @Gtk.Template.Callback()
     def _on_cancel_clicked(self, _button):
         if not self.cancellable.is_cancelled():
             self.cancellable.cancel()
             self.terminate_dialog(cancel=True)
 
+    @Gtk.Template.Callback()
     def _on_entry_icon(self, _entry, pos):
         if pos == Gtk.EntryIconPosition.SECONDARY:
             text = self.url_entry.get_text()

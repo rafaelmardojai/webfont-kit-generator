@@ -50,6 +50,8 @@
                                           <property name="halign">center</property>
                                           <property name="placeholder-text">https://fonts.googleapis.com/css2?family=Roboto</property>
                                           <property name="secondary-icon-name">edit-paste-symbolic</property>
+                                          <signal name="changed" handler="_on_entry_changed" swapped="no"/>
+                                          <signal name="icon-press" handler="_on_entry_icon" swapped="no"/>
                                         </object>
                                       </child>
                                       <child>
@@ -71,6 +73,7 @@
                                     <property name="sensitive">False</property>
                                     <property name="label" translatable="yes">Download Fonts</property>
                                     <property name="halign">center</property>
+                                    <signal name="clicked" handler="_on_download_clicked" swapped="no"/>
                                     <style>
                                       <class name="suggested-action"/>
                                       <class name="pill"/>
@@ -109,6 +112,7 @@
                               <object class="GtkButton" id="cancel_btn">
                                 <property name="label" translatable="yes">Cancel</property>
                                 <property name="halign">center</property>
+                                <signal name="clicked" handler="_on_cancel_clicked" swapped="no"/>
                                 <style>
                                   <class name="pill"/>
                                 </style>

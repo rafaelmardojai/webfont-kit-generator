@@ -59,7 +59,7 @@ class Generator(object):
 
         self.window.processing = False
         self.window.appstack.set_visible_child_name('finished')
-        self.window.finished_viewstack.set_visible_child_name('info')
+        self.window.finished_stack.set_visible_child_name('info')
 
         return
 

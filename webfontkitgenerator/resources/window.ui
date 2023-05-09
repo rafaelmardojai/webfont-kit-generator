@@ -26,6 +26,7 @@
     <property name="content">
       <object class="GtkStack" id="appstack">
         <property name="transition_type">crossfade</property>
+        <signal name="notify::visible-child-name" handler="_on_appstack_changes" swapped="no"/>
         <child>
           <object class="GtkStackPage">
             <property name="name">main</property>
@@ -69,7 +70,7 @@
                             <property name="title" translatable="yes">Fonts</property>
                             <property name="icon-name">font-x-generic-symbolic</property>
                             <property name="child">
-                              <object class="GtkBox" id="fonts_box">
+                              <object class="GtkBox">
                                 <child>
                                   <object class="GtkStack" id="fonts_stack">
                                     <property name="transition_type">crossfade</property>
@@ -173,6 +174,16 @@
                             </property>
                           </object>
                         </child>
+                        <child>
+                          <object class="AdwViewStackPage">
+                            <property name="name">options</property>
+                            <property name="title" translatable="yes">Options</property>
+                            <property name="icon-name">emblem-system-symbolic</property>
+                            <property name="child">
+                              <object class="Options" id="options"/>
+                            </property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                     <child>
@@ -218,7 +229,7 @@
                                     <child>
                                       <object class="GtkButton">
                                         <property name="label" translatable="yes">Browse...</property>
-                                        <property name="action_name">win.set-outpath</property>
+                                        <property name="action_name">win.set-dir</property>
                                       </object>
                                     </child>
                                   </object>
@@ -291,7 +302,7 @@
                   <object class="GtkHeaderBar">
                     <property name="title-widget">
                       <object class="AdwViewSwitcher">
-                        <property name="stack">finished_viewstack</property>
+                        <property name="stack">finished_stack</property>
                         <property name="policy">wide</property>
                       </object>
                     </property>
@@ -305,7 +316,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="AdwViewStack" id="finished_viewstack">
+                  <object class="AdwViewStack" id="finished_stack">
                     <child>
                       <object class="AdwViewStackPage">
                         <property name="name">info</property>
@@ -350,10 +361,14 @@
                                               </object>
                                             </child>
                                             <child>
-                                              <object class="GtkButton" id="open_files">
+                                              <object class="GtkButton">
                                                 <property name="label" translatable="yes">Open in Files</property>
                                                 <property name="halign">center</property>
                                                 <property name="margin_top">20</property>
+                                                <signal name="clicked" handler="_open_generation_dir" swapped="no"/>
+                                                <style>
+                                                  <class name="pill"/>
+                                                </style>
                                               </object>
                                             </child>
                                           </object>
@@ -383,8 +398,11 @@
                                 <child>
                                   <object class="GtkViewport">
                                     <child>
-                                      <object class="AdwClamp" id="log_column">
+                                      <object class="AdwClamp">
                                         <property name="margin_top">20</property>
+                                        <child>
+                                          <object class="Log" id="log"/>
+                                        </child>
                                       </object>
                                     </child>
                                   </object>

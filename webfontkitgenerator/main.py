@@ -54,7 +54,7 @@ class Application(Adw.Application):
 
         self.set_accels_for_action('win.open', ['<Ctl>o'])
         self.set_accels_for_action('win.google', ['<Ctl>g'])
-        self.set_accels_for_action('win.set-outpath', ['<Ctl>d'])
+        self.set_accels_for_action('win.set-dir', ['<Ctl>d'])
         self.set_accels_for_action('win.generate', ['<Ctl>Return'])
         self.set_accels_for_action('win.back', ['Escape'])
 

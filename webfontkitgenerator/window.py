@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Rafael Mardojai CM
+# Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
@@ -21,87 +21,66 @@ from webfontkitgenerator.font import Font, FontRow
 class Window(Adw.ApplicationWindow):
     __gtype_name__ = 'Window'
 
-    processing = GObject.Property(type=bool, default=False)
+    processing: bool = GObject.Property(type=bool, default=False)
 
-    appstack = Gtk.Template.Child()
+    # Main app stack
+    appstack: Gtk.Stack = Gtk.Template.Child()
 
-    progressbar = Gtk.Template.Child()
-    progress = Gtk.Template.Child()
-    cancel = Gtk.Template.Child()
+    # Progress View
+    progressbar: Gtk.ProgressBar = Gtk.Template.Child()
+    progress: Adw.StatusPage = Gtk.Template.Child()
+    cancel: Gtk.Button = Gtk.Template.Child()
 
-    finished_viewstack = Gtk.Template.Child()
+    # Finished View
+    finished_stack: Gtk.Stack = Gtk.Template.Child()
     src_html: SourceView = Gtk.Template.Child()
     src_css: SourceView = Gtk.Template.Child()
-    log_column = Gtk.Template.Child()
-    open_files = Gtk.Template.Child()
+    log: Log = Gtk.Template.Child()
 
-    viewstack = Gtk.Template.Child()
-    fonts_box = Gtk.Template.Child()
-    fonts_stack = Gtk.Template.Child()
-    fonts_list = Gtk.Template.Child()
-    path_revealer = Gtk.Template.Child()
-    directory = Gtk.Template.Child()
-    toasts = Gtk.Template.Child()
+    # Fonts list and options view
+    viewstack: Gtk.Stack = Gtk.Template.Child()
+    fonts_stack: Gtk.Stack = Gtk.Template.Child()
+    fonts_list: Gtk.ListBox = Gtk.Template.Child()
+    options: Options = Gtk.Template.Child()
+    path_revealer: Gtk.Revealer = Gtk.Template.Child()
+    directory: Gtk.Label = Gtk.Template.Child()
+    toasts: Adw.ToastOverlay = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self.options = Options()
-        self.outpath = None
-        self.outuri = None
-        self.log = Log()
-        self.model = Gio.ListStore.new(Font)
-
-        self.fontschooser = Gtk.FileChooserNative.new(
-            _('Open Font Files'), self, Gtk.FileChooserAction.OPEN, None, None
-        )
-        self.outpathchooser = Gtk.FileChooserNative.new(
-            _('Select Output Directory'),
-            self,
-            Gtk.FileChooserAction.SELECT_FOLDER,
-            None,
-            None,
-        )
-
-        self.setup_widgets()
         self.setup_actions()
 
-    def setup_widgets(self):
-        # Setup view stack pages
-        page = self.viewstack.add_titled(self.options, 'options', _('Options'))
-        page.set_icon_name('emblem-system-symbolic')
+        # Out directory chooser
+        self.out_dir: Gio.File | None = None  # Store selected dir
+        self.out_dir_chooser = Gtk.FileDialog()
+        self.out_dir_chooser.props.title = _('Select Output Directory')
 
-        # Setup buttons
-        self.open_files.connect('clicked', self.open_generation_dir)
+        # Fonts chooser
+        self.fonts_chooser = Gtk.FileDialog()
+        self.fonts_chooser.props.title = _('Open Font Files')
 
-        # Setup fonts list
-        self.fonts_list.bind_model(self.model, self._create_font_row)
-        self.model.connect(
-            'items-changed', lambda _l, _p, _r, _a: self._check_ready_state()
-        )
-
-        # Setup log text view
-        self.log_column.set_child(self.log)
-
-        # Setup fonts file chooser
         fonts_filter = Gtk.FileFilter()
         fonts_filter.set_name(_('OTF & TTF'))
         fonts_filter.add_mime_type('font/otf')
         fonts_filter.add_pattern('.otf')
         fonts_filter.add_mime_type('font/ttf')
         fonts_filter.add_pattern('.ttf')
-        self.fontschooser.add_filter(fonts_filter)
-        self.fontschooser.set_select_multiple(True)
-        self.fontschooser.connect('response', self._on_fontschooser_response)
 
-        # Setup outpath folder chooser
-        self.outpathchooser.connect(
-            'response', self._on_outpathchooser_response
+        filters = Gio.ListStore.new(Gtk.FileFilter)
+        filters.append(fonts_filter)
+        self.fonts_chooser.props.filters = filters
+
+        # Setup fonts list
+        self.model = Gio.ListStore.new(Font)
+        self.model.connect(
+            'items-changed', lambda _l, _p, _r, _a: self._check_ready_state()
         )
+        self.fonts_list.bind_model(self.model, self._create_font_row)
 
         # Drag and drop
         drop_target = Gtk.DropTarget.new(Gdk.FileList, Gdk.DragAction.COPY)
-        drop_target.connect("drop", self._on_drop)
+        drop_target.connect('drop', self._on_drop)
         self.add_controller(drop_target)
 
     def setup_actions(self):
@@ -111,6 +90,10 @@ class Window(Adw.ApplicationWindow):
         remove_font.connect('activate', self._on_remove_font)
         self.add_action(remove_font)
 
+        set_dir = Gio.SimpleAction.new('set-dir', None)
+        set_dir.connect('activate', self._on_set_dir)
+        self.add_action(set_dir)
+
         open_ = Gio.SimpleAction.new('open', None)
         open_.connect('activate', self._on_open)
         self.add_action(open_)
@@ -118,10 +101,6 @@ class Window(Adw.ApplicationWindow):
         google = Gio.SimpleAction.new('google', None)
         google.connect('activate', self._on_google)
         self.add_action(google)
-
-        set_outpath = Gio.SimpleAction.new('set-outpath', None)
-        set_outpath.connect('activate', self._on_set_outpath)
-        self.add_action(set_outpath)
 
         generate = Gio.SimpleAction.new('generate', None)
         generate.connect('activate', self._on_generate)
@@ -136,27 +115,69 @@ class Window(Adw.ApplicationWindow):
         loader = Loader(self, self.model)
         loader.load(files)
 
-    def open_generation_dir(self, _widget):
-        Gio.app_info_launch_default_for_uri(self.outuri)
+    @Gtk.Template.Callback()
+    def _open_generation_dir(self, _button):
+        def on_launched(launcher, result):
+            launcher.launch_finish(result)
+
+        launcher = Gtk.FileLauncher(file=self.out_dir)
+        launcher.launch(self, None, on_launched)
+
+    @Gtk.Template.Callback()
+    def _on_appstack_changes(self, stack, _pspec):
+        file_choosers = stack.props.visible_child_name == 'main'
+
+        self.lookup_action('open').set_enabled(file_choosers)
+        self.lookup_action('set-dir').set_enabled(file_choosers)
 
     def _on_open(self, _action, _param):
-        if self.appstack.get_visible_child_name() == 'main':
-            self.fontschooser.show()
+        def on_selected(chooser, result):
+            try:
+                files = chooser.open_multiple_finish(result)
+
+                if files is not None:
+                    self.load_fonts(files)
+
+            except GLib.Error as e:
+                if e.code == Gtk.DialogError.FAILED:
+                    print(e.code)
+
+        self.fonts_chooser.open_multiple(self, None, on_selected)
+
+    def _on_set_dir(self, _action, _param):
+        def on_selected(chooser, result):
+            try:
+                selected: Gio.File = chooser.select_folder_finish(result)
+
+                if selected is not None:
+                    if os.access(selected.get_path(), os.W_OK):
+                        self.out_dir = selected
+                        self.directory.set_label(selected.get_basename())
+                        self._check_ready_state()
+                    else:
+                        self.toasts.add_toast(
+                            Adw.Toast.new(
+                                _(
+                                    'You don’t have write access to the selected directory.'  # noqa
+                                )
+                            )
+                        )
+            except GLib.Error as e:
+                if e.code == Gtk.DialogError.FAILED:
+                    print(e.code)
+
+        self.out_dir_chooser.select_folder(self, None, on_selected)
 
     def _on_google(self, _action, _param):
         dialog = GoogleDialog(self)
-        dialog.set_transient_for(self)
-        dialog.set_modal(True)
+        dialog.props.transient_for = self
+        dialog.props.modal = True
         dialog.present()
-
-    def _on_set_outpath(self, _action, _param):
-        if self.appstack.get_visible_child_name() == 'main':
-            self.outpathchooser.show()
 
     def _on_generate(self, _action, _param):
         generator = Generator(
             self,
-            self.outpath,
+            self.out_dir.get_path(),
             self.model,
             self.options.get_formats(),
             self.options.get_subsetting(),
@@ -170,31 +191,6 @@ class Window(Adw.ApplicationWindow):
 
     def _on_remove_font(self, _action, param):
         self.model.remove(param.get_uint32())
-
-    def _on_fontschooser_response(self, dialog, response):
-        dialog.hide()
-        if response == Gtk.ResponseType.ACCEPT:
-            files = dialog.get_files()
-            if files:
-                self.load_fonts(files)
-
-    def _on_outpathchooser_response(self, dialog, response):
-        dialog.hide()
-        if response == Gtk.ResponseType.ACCEPT:
-            path = dialog.get_file().get_path()
-            uri = dialog.get_file().get_uri()
-            name = os.path.basename(path)
-
-            if os.access(path, os.W_OK):
-                self.outpath = path
-                self.outuri = uri
-                self.directory.set_label(name)
-                self._check_ready_state()
-            else:
-                error = Adw.Toast.new(
-                    _('You don’t have write access to the selected directory.')
-                )
-                self.toasts.add_toast(error)
 
     def _create_font_row(self, font):
         widget = FontRow(font.data)
@@ -210,7 +206,7 @@ class Window(Adw.ApplicationWindow):
     def _check_ready_state(self):
         items = self.model.get_n_items() > 0
 
-        self.lookup_action('generate').set_enabled(items and self.outpath)
+        self.lookup_action('generate').set_enabled(items and self.out_dir)
         self.path_revealer.set_reveal_child(items)
 
         if items:

@@ -24,7 +24,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="title" translatable="yes" context="shortcut window">Select Output Directory</property>
-                <property name="action-name">win.set-outpath</property>
+                <property name="action-name">win.set-dir</property>
               </object>
             </child>
             <child>

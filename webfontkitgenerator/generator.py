@@ -3,17 +3,25 @@
 
 import os
 import re
-
 from gettext import gettext as _
 from threading import Thread
-from gi.repository import GLib
+
+from fontTools.subset import Subsetter, parse_unicodes
 from fontTools.ttLib import TTFont
-from fontTools.subset import parse_unicodes, Subsetter
+from gi.repository import GLib
+
+from webfontkitgenerator.font import Font
 
 
 class Generator(object):
     def __init__(
-        self, window, path, fonts_list, formats, ranges, font_display
+        self,
+        window,
+        path: str,
+        fonts_list: list[Font],
+        formats: list[str],
+        ranges: dict[str, str],
+        font_display: str | None,
     ):
         self.window = window
         self.stop = False

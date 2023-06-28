@@ -2,17 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
-
 from gettext import gettext as _
+
 from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
 
+from webfontkitgenerator.font import Font, FontRow
 from webfontkitgenerator.generator import Generator
 from webfontkitgenerator.google import GoogleDialog
 from webfontkitgenerator.loader import Loader
-from webfontkitgenerator.options import Options
 from webfontkitgenerator.log import Log
+from webfontkitgenerator.options import Options
 from webfontkitgenerator.sourceview import SourceView
-from webfontkitgenerator.font import Font, FontRow
 
 
 @Gtk.Template(

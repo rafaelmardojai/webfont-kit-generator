@@ -24,7 +24,7 @@ PRESET_RANGES = {
 @Gtk.Template(
     resource_path='/com/rafaelmardojai/WebfontKitGenerator/options.ui'
 )
-class Options(Gtk.Box):
+class Options(Adw.Bin):
     __gtype_name__ = 'Options'
 
     # Fonts format

@@ -293,9 +293,8 @@
           <object class="GtkStackPage">
             <property name="name">finished</property>
             <property name="child">
-              <object class="GtkBox">
-                <property name="orientation">vertical</property>
-                <child>
+              <object class="AdwToolbarView">
+                <child type="top">
                   <object class="GtkHeaderBar">
                     <property name="title-widget">
                       <object class="AdwViewSwitcher">

@@ -1,240 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="Options" parent="GtkBox">
+  <template class="Options" parent="AdwBin">
     <child>
-      <object class="GtkScrolledWindow">
-        <property name="hexpand">True</property>
+      <object class="AdwPreferencesPage">
         <child>
-          <object class="GtkViewport">
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Fonts</property>
             <child>
-              <object class="AdwClamp">
-                <property name="margin_start">24</property>
-                <property name="margin_end">24</property>
+              <object class="AdwActionRow">
+                <property name="title">WOFF2</property>
+                <property name="activatable_widget">woff2</property>
                 <child>
-                  <object class="GtkBox">
-                    <property name="orientation">vertical</property>
-                    <property name="spacing">48</property>
-                    <property name="margin_top">48</property>
-                    <property name="margin_bottom">48</property>
+                  <object class="GtkSwitch" id="woff2">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title">WOFF</property>
+                <property name="activatable_widget">woff</property>
+                <child>
+                  <object class="GtkSwitch"  id="woff">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <child>
+              <object class="AdwExpanderRow" id="subsetting">
+                <property name="title" translatable="yes">Subsetting</property>
+                <property name="subtitle" translatable="yes">Limit the character set to reduce file size</property>
+                <property name="show-enable-switch">True</property>
+                <child>
+                  <object class="GtkListBoxRow">
+                    <property name="activatable">False</property>
                     <child>
-                      <object class="AdwPreferencesGroup">
-                        <property name="title" translatable="yes">Fonts</property>
+                      <object class="GtkBox">
+                        <property name="homogeneous">True</property>
+                        <property name="hexpand">True</property>
                         <child>
-                          <object class="AdwActionRow">
-                            <property name="title">WOFF2</property>
-                            <property name="activatable_widget">woff2</property>
+                          <object class="GtkListBox">
+                            <property name="selection-mode">none</property>
+                            <style>
+                              <class name="sub-left-box"/>
+                              <class name="sub-box"/>
+                            </style>
                             <child>
-                              <object class="GtkSwitch" id="woff2">
-                                <property name="valign">center</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwActionRow">
-                            <property name="title">WOFF</property>
-                            <property name="activatable_widget">woff</property>
-                            <child>
-                              <object class="GtkSwitch"  id="woff">
-                                <property name="valign">center</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="AdwPreferencesGroup">
-                        <child>
-                          <object class="AdwExpanderRow" id="subsetting">
-                            <property name="title" translatable="yes">Subsetting</property>
-                            <property name="subtitle" translatable="yes">Limit the character set to reduce file size</property>
-                            <property name="show-enable-switch">True</property>
-                            <child>
-                              <object class="GtkListBoxRow">
-                                <property name="activatable">False</property>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Latin</property>
+                                <property name="activatable_widget">latin</property>
                                 <child>
-                                  <object class="GtkBox">
-                                    <property name="homogeneous">True</property>
-                                    <property name="hexpand">True</property>
-                                    <child>
-                                      <object class="GtkListBox">
-                                        <property name="selection-mode">none</property>
-                                        <style>
-                                          <class name="sub-left-box"/>
-                                          <class name="sub-box"/>
-                                        </style>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Latin</property>
-                                            <property name="activatable_widget">latin</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="latin">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Cyrillic</property>
-                                            <property name="activatable_widget">cyrillic</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="cyrillic">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Greek</property>
-                                            <property name="activatable_widget">greek</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="greek">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Vietnamese</property>
-                                            <property name="activatable_widget">vietnamese</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="vietnamese">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkListBox">
-                                        <property name="selection-mode">none</property>
-                                        <style>
-                                          <class name="sub-box"/>
-                                        </style>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Latin Extended</property>
-                                            <property name="activatable_widget">latin_ext</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="latin_ext">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Cyrillic Extended</property>
-                                            <property name="activatable_widget">cyrillic_ext</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="cyrillic_ext">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Greek Extended</property>
-                                            <property name="activatable_widget">greek_ext</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="greek_ext">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwActionRow">
-                                            <property name="title" translatable="yes">Devanagari</property>
-                                            <property name="visible">True</property>
-                                            <property name="activatable_widget">devanagari</property>
-                                            <child>
-                                              <object class="GtkCheckButton" id="devanagari">
-                                                <property name="valign">center</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
+                                  <object class="GtkCheckButton" id="latin">
+                                    <property name="valign">center</property>
                                   </object>
                                 </child>
                               </object>
                             </child>
                             <child>
-                              <object class="GtkListBoxRow">
-                                <property name="activatable">False</property>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Cyrillic</property>
+                                <property name="activatable_widget">cyrillic</property>
                                 <child>
-                                  <object class="GtkBox">
-                                    <property name="orientation">vertical</property>
-                                    <property name="margin_top">12</property>
-                                    <property name="margin_end">12</property>
-                                    <property name="margin_start">12</property>
-                                    <property name="margin_bottom">12</property>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="label" translatable="yes">Custom</property>
-                                        <property name="halign">start</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkLabel">
-                                        <property name="label" translatable="yes">Comma separated values. Single hex values and/or ranges separated with hyphens.</property>
-                                        <property name="wrap">True</property>
-                                        <property name="wrap_mode">word</property>
-                                        <property name="halign">start</property>
-                                        <style>
-                                          <class name="subtitle"/>
-                                        </style>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkEntry" id="custom">
-                                        <property name="valign">center</property>
-                                        <property name="margin_top">12</property>
-                                        <property name="placeholder-text">0021-007E,00E7,00EB,00C7,00CB</property>
-                                        <signal name="changed" handler="_validate_subsetting" swapped="no"/>
-                                      </object>
-                                    </child>
+                                  <object class="GtkCheckButton" id="cyrillic">
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Greek</property>
+                                <property name="activatable_widget">greek</property>
+                                <child>
+                                  <object class="GtkCheckButton" id="greek">
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Vietnamese</property>
+                                <property name="activatable_widget">vietnamese</property>
+                                <child>
+                                  <object class="GtkCheckButton" id="vietnamese">
+                                    <property name="valign">center</property>
                                   </object>
                                 </child>
                               </object>
                             </child>
                           </object>
                         </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="AdwPreferencesGroup">
-                        <property name="title" translatable="yes">CSS</property>
                         <child>
-                          <object class="AdwComboRow" id="font_display">
-                            <property name="title" translatable="yes">Font display</property>
-                            <property name="subtitle" translatable="yes">The CSS font-display descriptor</property>
-                            <property name="model">
-                              <object class="GtkStringList">
-                                <items>
-                                  <item translatable="yes">Disabled</item>
-                                  <item>auto</item>
-                                  <item>block</item>
-                                  <item>swap</item>
-                                  <item>fallback</item>
-                                  <item>optional</item>
-                                </items>
+                          <object class="GtkListBox">
+                            <property name="selection-mode">none</property>
+                            <style>
+                              <class name="sub-box"/>
+                            </style>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Latin Extended</property>
+                                <property name="activatable_widget">latin_ext</property>
+                                <child>
+                                  <object class="GtkCheckButton" id="latin_ext">
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
                               </object>
-                            </property>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Cyrillic Extended</property>
+                                <property name="activatable_widget">cyrillic_ext</property>
+                                <child>
+                                  <object class="GtkCheckButton" id="cyrillic_ext">
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Greek Extended</property>
+                                <property name="activatable_widget">greek_ext</property>
+                                <child>
+                                  <object class="GtkCheckButton" id="greek_ext">
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title" translatable="yes">Devanagari</property>
+                                <property name="visible">True</property>
+                                <property name="activatable_widget">devanagari</property>
+                                <child>
+                                  <object class="GtkCheckButton" id="devanagari">
+                                    <property name="valign">center</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
                           </object>
                         </child>
                       </object>
                     </child>
                   </object>
                 </child>
+                <child>
+                  <object class="GtkListBoxRow">
+                    <property name="activatable">False</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="margin_top">12</property>
+                        <property name="margin_end">12</property>
+                        <property name="margin_start">12</property>
+                        <property name="margin_bottom">12</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label" translatable="yes">Custom</property>
+                            <property name="halign">start</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label" translatable="yes">Comma separated values. Single hex values and/or ranges separated with hyphens.</property>
+                            <property name="wrap">True</property>
+                            <property name="wrap_mode">word</property>
+                            <property name="halign">start</property>
+                            <style>
+                              <class name="subtitle"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="custom">
+                            <property name="valign">center</property>
+                            <property name="margin_top">12</property>
+                            <property name="placeholder-text">0021-007E,00E7,00EB,00C7,00CB</property>
+                            <signal name="changed" handler="_validate_subsetting" swapped="no"/>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">CSS</property>
+            <child>
+              <object class="AdwComboRow" id="font_display">
+                <property name="title" translatable="yes">Font display</property>
+                <property name="subtitle" translatable="yes">The CSS font-display descriptor</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">Disabled</item>
+                      <item>auto</item>
+                      <item>block</item>
+                      <item>swap</item>
+                      <item>fallback</item>
+                      <item>optional</item>
+                    </items>
+                  </object>
+                </property>
               </object>
             </child>
           </object>

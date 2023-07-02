@@ -5,16 +5,17 @@
 # 
 # Translators:
 # Nikita Ivanov, 2023
+# UnixJ Sunax, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 08:58-0500\n"
+"POT-Creation-Date: 2023-03-21 11:13-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Nikita Ivanov, 2023\n"
-"Language-Team: Russian (https://www.transifex.com/rafaelmardojai/teams/135056/ru/)\n"
+"Last-Translator: UnixJ Sunax, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/teams/135056/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,15 +40,15 @@ msgid ""
 "ttf)."
 msgstr ""
 "Webfont Kit Generator - это простая утилита, которая позволяет генерировать "
-"woff, woff2 и необходимый CSS-шаблон из шрифтов не-веб форматов (otf и ttf)."
+"woff, woff2 и необходимый CSS-шаблон из шрифтов не веб форматов (otf и ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 msgid ""
-"Webfont Kit Generator also inlcudes a tool to Download fonts from Google "
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Webfont Kit Generator также включает в себя инструмент для загрузки шрифтов "
-"из Google Fonts для самостоятельного размещения."
+"Webfont Kit Generator также входит инструмент для загрузки шрифтов из Google"
+" Fonts для собственного хостинга."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
 msgid "Rafael Mardojai CM"
@@ -72,8 +73,8 @@ msgid "Open Fonts"
 msgstr "Открытые шрифты"
 
 #: webfontkitgenerator/resources/window.ui:55
-msgid "Menu"
-msgstr "Меню"
+msgid "Main Menu"
+msgstr "Главное меню"
 
 #: webfontkitgenerator/resources/window.ui:69
 #: webfontkitgenerator/resources/options.ui:21
@@ -102,30 +103,34 @@ msgstr "Генерировать"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: webfontkitgenerator/resources/window.ui:312
+#: webfontkitgenerator/resources/window.ui:302
+msgid "Back"
+msgstr "Назад"
+
+#: webfontkitgenerator/resources/window.ui:313
 msgid "Information"
 msgstr "Информация"
 
-#: webfontkitgenerator/resources/window.ui:320
+#: webfontkitgenerator/resources/window.ui:321
 #: webfontkitgenerator/generator.py:57
 msgid "Generation finished!"
 msgstr "Генерация закончена!"
 
-#: webfontkitgenerator/resources/window.ui:331
+#: webfontkitgenerator/resources/window.ui:332
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Чтобы связать свои шрифты, скопируйте приведенный ниже код в заголовок "
 "вашего HTML\\:"
 
-#: webfontkitgenerator/resources/window.ui:340
+#: webfontkitgenerator/resources/window.ui:343
 msgid "Or import it directly to your CSS:"
 msgstr "Или импортируйте его прямо в свой CSS\\:"
 
-#: webfontkitgenerator/resources/window.ui:349
+#: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
 msgstr "Открыть в файлах"
 
-#: webfontkitgenerator/resources/window.ui:370
+#: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"
 msgstr "Журналы"
 
@@ -245,15 +250,15 @@ msgid "Open Font Files"
 msgstr "Открытие файлов шрифтов"
 
 #. Setup view stack pages
-#: webfontkitgenerator/window.py:79
+#: webfontkitgenerator/window.py:75
 msgid "Options"
 msgstr "Параметры"
 
-#: webfontkitgenerator/window.py:105
+#: webfontkitgenerator/window.py:93
 msgid "OTF & TTF"
 msgstr " OTF & TTF "
 
-#: webfontkitgenerator/window.py:210
+#: webfontkitgenerator/window.py:198
 msgid "You don't have write access to the selected directory."
 msgstr "У вас нет доступа на запись в выбранный каталог."
 

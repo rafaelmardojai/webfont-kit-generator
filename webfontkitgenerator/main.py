@@ -59,12 +59,13 @@ class Application(Adw.Application):
         self.set_accels_for_action('win.back', ['Escape'])
 
     def _on_about(self, _action, _param):
-        dialog = Gtk.Builder.new_from_resource(
-            '/com/rafaelmardojai/WebfontKitGenerator/about.ui'
-        ).get_object('about')
-        dialog.set_version(self.version)
-        dialog.set_transient_for(self.window)
-        dialog.set_modal(True)
+        dialog = Adw.AboutWindow.new_from_appdata(
+            '/com/rafaelmardojai/WebfontKitGenerator/appdata.xml',
+            str(self.version),
+        )
+        dialog.props.translator_credits = _("translator-credits")
+        dialog.props.transient_for = self.window
+        dialog.props.modal = True
         dialog.present()
 
 

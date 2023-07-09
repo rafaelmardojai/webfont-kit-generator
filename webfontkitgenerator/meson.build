@@ -12,7 +12,6 @@ conf.set('pkgdatadir', pkgdatadir)
 
 blueprints = custom_target('blueprints',
   input: files(
-    'about.blp',
     'google.blp',
     'options.blp',
     'window.blp',

@@ -1,0 +1,190 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $Options : Adw.PreferencesPage {
+
+  Adw.PreferencesGroup {
+    title: _("Options");
+
+    Adw.ActionRow {
+      title: "WOFF2";
+      activatable-widget: woff2;
+
+      Switch woff2 {
+        valign: center;
+      }
+    }
+
+    Adw.ActionRow {
+      title: "WOFF";
+      activatable-widget: woff;
+
+      Switch woff {
+        valign: center;
+      }
+    }
+  }
+
+  Adw.PreferencesGroup {
+    
+    Adw.ExpanderRow subsetting {
+      title: _("Subsetting");
+      subtitle: _("Limit the character set to reduce file size");
+      show-enable-switch: true;
+
+      ListBoxRow {
+        activatable: false;
+
+        Box {
+          homogeneous: true;
+          hexpand: true;
+
+          ListBox {
+            selection-mode: none;
+
+            styles [
+              "sub-left-box",
+              "sub-box",
+            ]
+
+            Adw.ActionRow {
+              title: _("Latin");
+              activatable-widget: latin;
+
+              CheckButton latin {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Cyrillic");
+              activatable-widget: cyrillic;
+
+              CheckButton cyrillic {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Greek");
+              activatable-widget: greek;
+
+              CheckButton greek {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Vietnamese");
+              activatable-widget: vietnamese;
+
+              CheckButton vietnamese {
+                valign: center;
+              }
+            }
+          }
+
+          ListBox {
+            selection-mode: none;
+
+            styles [
+              "sub-box",
+            ]
+
+            Adw.ActionRow {
+              title: _("Latin Extended");
+              activatable-widget: latin_ext;
+
+              CheckButton latin_ext {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Cyrillic Extended");
+              activatable-widget: cyrillic_ext;
+
+              CheckButton cyrillic_ext {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Greek Extended");
+              activatable-widget: greek_ext;
+
+              CheckButton greek_ext {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Devanagari");
+              visible: true;
+              activatable-widget: devanagari;
+
+              CheckButton devanagari {
+                valign: center;
+              }
+            }
+          }
+        }
+      }
+
+      ListBoxRow {
+        activatable: false;
+
+        Box {
+          orientation: vertical;
+          margin-top: 12;
+          margin-end: 12;
+          margin-start: 12;
+          margin-bottom: 12;
+
+          Label {
+            label: _("Custom");
+            halign: start;
+          }
+
+          Label {
+            label: _("Comma separated values. Single hex values and/or ranges separated with hyphens.");
+            wrap: true;
+            wrap-mode: word;
+            halign: start;
+
+            styles [
+              "subtitle",
+            ]
+          }
+
+          Entry custom {
+            valign: center;
+            margin-top: 12;
+            placeholder-text: "0021-007E,00E7,00EB,00C7,00CB";
+
+            changed => $_validate_subsetting();
+          }
+        }
+      }
+    }
+  }
+
+  Adw.PreferencesGroup {
+    title: _("CSS");
+
+    Adw.ComboRow font_display {
+      title: _("Font display");
+      subtitle: _("The CSS font-display descriptor");
+      model: StringList {
+        strings [
+          _("Disabled"),
+          "auto",
+          "block",
+          "swap",
+          "fallback",
+          "optional",
+        ]
+      };
+    }
+  }
+}

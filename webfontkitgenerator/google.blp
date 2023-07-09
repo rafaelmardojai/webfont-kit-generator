@@ -1,0 +1,116 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $GoogleDialog : Adw.Window {
+  resizable: false;
+  default-width: 500;
+  modal: true;
+  destroy-with-parent: true;
+  focus-widget: url_entry;
+
+  WindowHandle {
+    Stack stack {
+      transition-type: crossfade;
+      hexpand: true;
+
+      StackPage {
+        name: "main";
+        child: 
+        $AdwToolbarView {
+          [top]
+          Adw.HeaderBar {
+            valign: start;
+            show-title: false;
+
+            styles [
+              "flat",
+            ]
+          }
+
+          Adw.StatusPage {
+            icon-name: "font-x-generic-symbolic";
+            title: _("Import from Google Fonts");
+            description: _("Download fonts from Google Fonts for self-hosting");
+
+            Adw.Clamp {
+              Box {
+                orientation: vertical;
+                spacing: 12;
+                valign: center;
+
+                Box {
+                  orientation: vertical;
+                  spacing: 3;
+                  valign: center;
+
+                  Entry url_entry {
+                    halign: center;
+                    placeholder-text: "https://fonts.googleapis.com/css2?family=Roboto";
+                    secondary-icon-name: "edit-paste-symbolic";
+                    changed => $_on_entry_changed();
+                    icon-press => $_on_entry_icon();
+                  }
+
+                  Revealer error_revealer {
+                    reveal-child: false;
+
+                    Label error_label {
+                      styles [
+                        "error",
+                      ]
+                    }
+                  }
+                }
+
+                Button download_btn {
+                  sensitive: false;
+                  label: _("Download Fonts");
+                  halign: center;
+                  clicked => $_on_download_clicked();
+
+                  styles [
+                    "suggested-action",
+                    "pill",
+                  ]
+                }
+              }
+            }
+          }
+        }
+
+        ;
+      }
+
+      StackPage {
+        name: "loading";
+        child: 
+        Adw.StatusPage progress {
+          Adw.Clamp {
+            Box {
+              orientation: vertical;
+              spacing: 36;
+
+              ProgressBar progressbar {
+                show-text: true;
+                width-request: 300;
+                halign: center;
+              }
+
+              Button cancel_btn {
+                label: _("Cancel");
+                halign: center;
+                clicked => $_on_cancel_clicked();
+
+                styles [
+                  "pill",
+                ]
+              }
+            }
+          }
+        }
+
+        ;
+      }
+    }
+  }
+}

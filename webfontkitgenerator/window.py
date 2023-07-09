@@ -38,11 +38,11 @@ class Window(Adw.ApplicationWindow):
     log: Log = Gtk.Template.Child()
 
     # Fonts list and options view
-    viewstack: Gtk.Stack = Gtk.Template.Child()
+    split: Adw.OverlaySplitView = Gtk.Template.Child()
+    toolbar_view: Adw.ToolbarView = Gtk.Template.Child()
     fonts_stack: Gtk.Stack = Gtk.Template.Child()
     fonts_list: Gtk.ListBox = Gtk.Template.Child()
     options: Options = Gtk.Template.Child()
-    path_revealer: Gtk.Revealer = Gtk.Template.Child()
     directory: Gtk.Label = Gtk.Template.Child()
     toasts: Adw.ToastOverlay = Gtk.Template.Child()
 
@@ -204,12 +204,15 @@ class Window(Adw.ApplicationWindow):
             self.load_fonts(value.get_files())
 
     def _check_ready_state(self):
-        items = self.model.get_n_items() > 0
+        has_items = self.model.get_n_items() > 0
 
-        self.lookup_action('generate').set_enabled(items and self.out_dir)
-        self.path_revealer.set_reveal_child(items)
+        self.lookup_action('generate').set_enabled(has_items and self.out_dir)
+        self.split.props.show_sidebar = has_items
+        self.toolbar_view.props.reveal_bottom_bars = has_items
 
-        if items:
+        if has_items:
             self.fonts_stack.set_visible_child_name('fonts')
+            self.toolbar_view.props.top_bar_style = Adw.ToolbarStyle.RAISED
         else:
             self.fonts_stack.set_visible_child_name('empty')
+            self.toolbar_view.props.top_bar_style = Adw.ToolbarStyle.FLAT

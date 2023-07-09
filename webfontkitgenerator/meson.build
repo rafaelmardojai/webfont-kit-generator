@@ -10,11 +10,24 @@ conf.set('VERSION', meson.project_version())
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 
+blueprints = custom_target('blueprints',
+  input: files(
+    'about.blp',
+    'google.blp',
+    'options.blp',
+    'window.blp',
+    'gtk/help-overlay.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
 gnome.compile_resources('webfontkitgenerator',
   'webfontkitgenerator.gresource.xml',
   gresource_bundle: true,
   install: true,
   install_dir: pkgdatadir,
+  dependencies: blueprints,
 )
 
 webfontkitgenerator_sources = [

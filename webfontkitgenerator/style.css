@@ -19,6 +19,6 @@
   background: @theme_bg_color;
 }
 
-.bottom-box {
+.bottom-box > revealer > box {
   padding: 12px;
 }

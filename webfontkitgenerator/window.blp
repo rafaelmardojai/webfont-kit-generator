@@ -1,0 +1,334 @@
+using Gtk 4.0;
+using Adw 1;
+
+menu app-menu {
+  section {
+    id: "importers-section";
+
+    item {
+      label: _("Import from Google Fonts");
+      action: "win.google";
+    }
+  }
+
+  section {
+    id: "help-section";
+
+    item {
+      label: _("_Keyboard Shortcuts");
+      action: "win.show-help-overlay";
+    }
+
+    item {
+      label: _("_About Webfont Kit Generator");
+      action: "app.about";
+    }
+  }
+}
+
+template $Window : Adw.ApplicationWindow {
+  default-width: 1000;
+  default-height: 500;
+
+  content: Stack appstack {
+    transition-type: crossfade;
+    notify::visible-child-name => $_on_appstack_changes();
+
+    StackPage {
+      name: "main";
+      child: Adw.ToastOverlay toasts {
+        vexpand: true;
+
+        Adw.ToolbarView toolbar_view {
+          bottom-bar-style: raised;
+          reveal-bottom-bars: false;
+
+          [top]
+          HeaderBar headerbar {
+            Button btn_add_fonts {
+              tooltip-text: _("Open Fonts");
+              action-name: "win.open";
+              icon-name: "list-add-symbolic";
+            }
+
+            [end]
+            MenuButton {
+              tooltip-text: _("Main Menu");
+              menu-model: app-menu;
+              focus-on-click: false;
+              direction: none;
+            }
+          }
+
+          content: Adw.OverlaySplitView split {
+            show-sidebar: false;
+            sidebar-position: end;
+            max-sidebar-width: 600;
+            min-sidebar-width: 350;
+
+            content: Stack fonts_stack {
+              transition-type: crossfade;
+              hexpand: true;
+
+              StackPage {
+                name: "empty";
+                child: 
+                Box {
+                  valign: center;
+                  orientation: vertical;
+                  spacing: 48;
+
+                  Label {
+                    label: _("Add some fonts");
+
+                    styles [
+                      "title-1",
+                    ]
+                  }
+
+                  Box {
+                    halign: center;
+
+                    Image {
+                      icon-name: "splash-a-symbolic";
+                      pixel-size: 192;
+                    }
+
+                    Image {
+                      icon-name: "splash-b-symbolic";
+                      pixel-size: 192;
+                    }
+                  }
+
+                  Button {
+                    label: _("Open Fonts");
+                    halign: center;
+                    action-name: "win.open";
+
+                    styles [
+                      "suggested-action",
+                      "pill",
+                    ]
+                  }
+                };
+              }
+
+              StackPage {
+                name: "fonts";
+                child: Box {
+                  orientation: vertical;
+
+                  ScrolledWindow {
+                    vexpand: true;
+
+                    Viewport {
+                      Adw.Clamp {
+                        margin-start: 24;
+                        margin-end: 24;
+
+                        Box {
+                          orientation: vertical;
+                          margin-top: 48;
+                          margin-bottom: 48;
+
+                          Box {
+                            orientation: vertical;
+
+                            ListBox fonts_list {
+                              selection-mode: none;
+
+                              styles [
+                                "content",
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                };
+              }
+            };
+
+            sidebar: $Options options {};
+          };
+
+          [bottom]
+          ActionBar {
+            styles [
+              "bottom-box"
+            ]
+
+            Box {
+              spacing: 12;
+              valign: center;
+              hexpand: true;
+
+              Box {
+                spacing: 6;
+
+                Image {
+                  icon-name: "folder-open-symbolic";
+                }
+
+                Label directory {
+                  label: _("Select Output Directory");
+                  valign: center;
+                  ellipsize: end;
+
+                  styles [
+                    "heading",
+                  ]
+                }
+              }
+
+              Button {
+                label: _("Browse...");
+                action-name: "win.set-dir";
+              }
+            }
+
+            [end]
+            Button {
+              label: _("Generate");
+              action-name: "win.generate";
+
+              styles [
+                "suggested-action",
+              ]
+            }
+          }
+        }
+      }
+
+      ;
+    }
+
+    StackPage {
+      name: "progress";
+      child: WindowHandle {
+        Adw.StatusPage progress {
+          Adw.Clamp {
+            Box {
+              orientation: vertical;
+              spacing: 36;
+
+              ProgressBar progressbar {
+                show-text: true;
+              }
+
+              Button cancel {
+                label: _("Cancel");
+                halign: center;
+
+                styles [
+                  "pill",
+                ]
+              }
+            }
+          }
+        }
+      };
+    }
+
+    StackPage {
+      name: "finished";
+      child: 
+      $AdwToolbarView {
+        [top]
+        HeaderBar {
+          title-widget: Adw.ViewSwitcher {
+            stack: finished_stack;
+            policy: wide;
+          };
+
+          Button btn_back {
+            action-name: "win.back";
+            icon-name: "go-previous-symbolic";
+            tooltip-text: _("Back");
+          }
+        }
+
+        Adw.ViewStack finished_stack {
+          Adw.ViewStackPage {
+            name: "info";
+            icon-name: "emblem-default-symbolic";
+            title: _("Information");
+
+            child: ScrolledWindow {
+              vexpand: true;
+
+              Viewport {
+                Adw.StatusPage {
+                  title: _("Generation finished!");
+                  icon-name: "emblem-default-symbolic";
+
+                  Adw.Clamp {
+                    Box {
+                      orientation: vertical;
+                      spacing: 12;
+                      valign: center;
+
+                      Label {
+                        label: _("To link your fonts, copy the code below into the head of your HTML:");
+                        halign: start;
+                      }
+
+                      $SourceView src_html {
+                        language: "html";
+                      }
+
+                      Label {
+                        label: _("Or import it directly to your CSS:");
+                        halign: start;
+                      }
+
+                      $SourceView src_css {
+                        language: "css";
+                      }
+
+                      Button {
+                        label: _("Open in Files");
+                        halign: center;
+                        margin-top: 20;
+                        clicked => $_open_generation_dir();
+
+                        styles [
+                          "pill",
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            };
+          }
+
+          Adw.ViewStackPage {
+            name: "log";
+            icon-name: "view-list-bullet-symbolic";
+            title: _("Logs");
+
+            child: Box {
+              orientation: vertical;
+              spacing: 6;
+
+              ScrolledWindow {
+                vexpand: true;
+
+                Viewport {
+                  Adw.Clamp {
+                    margin-top: 20;
+
+                    $Log log {
+                    }
+                  }
+                }
+              }
+            };
+          }
+        }
+      };
+    }
+  };
+}

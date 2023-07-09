@@ -160,60 +160,79 @@ class GoogleDialog(Adw.Window):
             self.errors = [_('Couldn’t find any fonts for the given url.')]
             self.terminate_dialog()
 
-    def parse_api_v1(self, query):
-        pass
+    def parse_api_v1(self, query: str) -> list[dict[str, str | list[str]]]:
+        result = []
+        query: dict = parse_qs(query)
 
-    def parse_api_v2(self, query):
-        families = []
-        query = parse_qs(query)
+        if 'family' in query:
+            families = query['family'][0].split('|')
+
+            for family in families:
+                family = family.split(':')
+
+                if len(family) == 2:
+                    name = family[0]
+                    variants = family[1].split(',')
+
+                    result.append({'name': name, 'variants': variants})
+
+        return result
+
+    def parse_api_v2(self, query: str) -> list[dict[str, str | list[str]]]:
+        results = []
+        query: dict = parse_qs(query)
+
         if 'family' in query:
             for family in query['family']:
                 # Parse family_name, axis_tag_list, axis_tuple_list
                 data = re.split(':|@', family)
-                # Create new dict to store the family
-                family = {}
 
                 if len(data) == 1:
-                    family['name'] = data[0]
-                    family['variants'] = ['regular']
+                    results.append({'name': data[0], 'variants': ['regular']})
+
                 elif len(data) == 3:
-                    family['name'] = data[0]
+                    result = {}
+                    result['name'] = data[0]
                     # axis_tag_list = data[1].split(',')
                     variants = []
+
                     for variant in data[2].split(';'):
                         variant_data = variant.split(',')
                         variant_id = ''
+
+                        # Variant only has weight data
                         if len(variant_data) == 1:
                             if variant_data[0] == '400':
                                 variant_id = 'regular'
                             else:
                                 variant_id = variant_data[0]
+
+                        # Variant has weight and italic data
                         elif len(variant_data) == 2:
+                            # Is italic
                             if variant_data[0] == '1':
                                 if variant_data[1] == '400':
                                     variant_id = 'italic'
                                 else:
                                     variant_id = variant_data[1] + 'italic'
                             else:
-                                variant_id = variant_data[1]
+                                if variant_data[1] == '400':
+                                    variant_id = 'regular'
+                                else:
+                                    variant_id = variant_data[1]
                         variants.append(variant_id)
 
-                    family['variants'] = variants
+                    result['variants'] = variants
+                    results.append(result)
                 else:
                     continue
-                families.append(family)
-            return families
+
+        return results
 
     def invalid_url(self):
         self.url_entry.add_css_class('error')
         self.download_btn.set_sensitive(False)
         self.error_label.set_text(_('Please set a valid url'))
-        self.error_revealer.set_reveal_child(True)
-
-    def invalid_api_version(self):
-        self.url_entry.add_css_class('error')
-        self.download_btn.set_sensitive(False)
-        self.error_label.set_text(_('Update your url to CSS API v2'))
         self.error_revealer.set_reveal_child(True)
 
     def valid_url(self):
@@ -316,7 +335,13 @@ class GoogleDialog(Adw.Window):
         url = self.url_entry.get_text()
         parsed = urlparse(url)
 
-        families = self.parse_api_v2(parsed.query)
+        families = []
+        if parsed.path == '/css':
+            families = self.parse_api_v1(parsed.query)
+        elif parsed.path == '/css2':
+            families = self.parse_api_v2(parsed.query)
+
+        print(families)
         self.families = families
         if self.families:
             self.load_fonts_data()
@@ -334,11 +359,7 @@ class GoogleDialog(Adw.Window):
 
             parsed = urlparse(url)
             if parsed.netloc == 'fonts.googleapis.com':
-                if parsed.path == '/css':
-                    # API version 1
-                    self.invalid_api_version()
-                elif parsed.path == '/css2':
-                    # API version 2
+                if parsed.path == '/css' or parsed.path == '/css2':
                     self.valid_url()
                 else:
                     # Unknown API path

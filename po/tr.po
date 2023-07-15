@@ -90,7 +90,7 @@ msgstr "Birkaç yazı tipi ekle"
 #: webfontkitgenerator/resources/window.ui:208
 #: webfontkitgenerator/window.py:63
 msgid "Select Output Directory"
-msgstr "Dışa Aktarma Dizinini Seç"
+msgstr "Çıktı Dizinini Seç"
 
 #: webfontkitgenerator/resources/window.ui:220
 msgid "Browse..."

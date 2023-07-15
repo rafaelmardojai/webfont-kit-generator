@@ -237,7 +237,7 @@ msgstr "Yazı Tiplerini Aç"
 #: webfontkitgenerator/resources/shortcuts.ui:26
 msgctxt "shortcut window"
 msgid "Select Output Directory"
-msgstr "Dışa Aktarma Dizinini Seç"
+msgstr "Çıktı Dizinini Seç"
 
 #: webfontkitgenerator/resources/shortcuts.ui:32
 msgctxt "shortcut window"

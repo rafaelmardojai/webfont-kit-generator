@@ -138,7 +138,7 @@ msgstr "Günlükler"
 
 #: webfontkitgenerator/resources/options.ui:50
 msgid "Subsetting"
-msgstr "Alt ayarlar"
+msgstr "Alt kümeler"
 
 #: webfontkitgenerator/resources/options.ui:51
 msgid "Limit the character set to reduce file size"

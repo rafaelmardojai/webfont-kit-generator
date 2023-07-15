@@ -130,7 +130,7 @@ msgstr "Ya da doğrudan CSS'inizin içine ekleyin:"
 
 #: webfontkitgenerator/resources/window.ui:354
 msgid "Open in Files"
-msgstr "Dosyalar'da aç"
+msgstr "Dosyalar'da Aç"
 
 #: webfontkitgenerator/resources/window.ui:375
 msgid "Logs"

@@ -172,6 +172,11 @@ template $Options : Adw.PreferencesPage {
   Adw.PreferencesGroup {
     title: _("CSS");
 
+    Adw.SwitchRow base64 {
+      title: _("Base64 Encode");
+      subtitle: _("Embed fonts in the CSS");
+    }
+
     Adw.ComboRow font_display {
       title: _("Font display");
       subtitle: _("The CSS font-display descriptor");

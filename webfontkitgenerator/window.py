@@ -181,6 +181,7 @@ class Window(Adw.ApplicationWindow):
             self.model,
             self.options.get_formats(),
             self.options.get_subsetting(),
+            self.options.get_base64(),
             self.options.get_font_display(),
         )
         generator.run()

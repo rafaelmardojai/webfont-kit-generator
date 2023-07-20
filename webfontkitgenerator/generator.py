@@ -1,9 +1,11 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import base64
+from gettext import gettext as _
+from io import BytesIO
 import os
 import re
-from gettext import gettext as _
 from threading import Thread
 
 from fontTools.subset import Subsetter, parse_unicodes
@@ -21,6 +23,7 @@ class Generator(object):
         fonts_list: list[Font],
         formats: list[str],
         ranges: dict[str, str],
+        base64: bool,
         font_display: str | None,
     ):
         self.window = window
@@ -29,6 +32,7 @@ class Generator(object):
         self.list = fonts_list
         self.formats = formats
         self.ranges = ranges
+        self.base64 = base64
         self.font_display = font_display
         self.css = {}
 
@@ -119,8 +123,17 @@ class Generator(object):
                 if not os.path.exists(outfolder):
                     os.makedirs(outfolder)
 
-                font.save(os.path.join(self.path, filenameout))
-                css['src'].append(f'url({filename}) format("{format}")')
+                if self.base64:
+                    output_io = BytesIO()
+                    font.save(output_io)
+                    output = base64.b64encode(output_io.getvalue())
+                    output = output.decode("utf-8")
+                    css['src'].append(
+                        f'url(data:font/{format};charset=utf-8;base64,{output}) format("{format}")'
+                    )
+                else:
+                    font.save(os.path.join(self.path, filenameout))
+                    css['src'].append(f'url({filename}) format("{format}")')
 
                 self.progress += 1
                 gen_text = _(

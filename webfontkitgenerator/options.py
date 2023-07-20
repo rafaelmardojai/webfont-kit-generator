@@ -44,6 +44,7 @@ class Options(Adw.PreferencesPage):
     custom: Gtk.Entry = Gtk.Template.Child()
 
     # CSS
+    base64: Adw.SwitchRow = Gtk.Template.Child()
     font_display: Adw.ComboRow = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
@@ -58,7 +59,7 @@ class Options(Adw.PreferencesPage):
 
     def load_saved(self):
         # Generate list of toggle names
-        toggles = ['woff2', 'woff']
+        toggles = ['woff2', 'woff', 'base64']
         toggles.extend(PRESET_RANGES.keys())  # latin, latin_ext, etc
 
         for name in toggles:
@@ -122,6 +123,9 @@ class Options(Adw.PreferencesPage):
             return None
 
         return ranges
+
+    def get_base64(self) -> bool:
+        return self.base64.props.active
 
     def get_font_display(self) -> str | None:
         if self.font_display.props.selected == 0:

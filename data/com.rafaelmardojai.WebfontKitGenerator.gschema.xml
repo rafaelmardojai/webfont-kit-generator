@@ -36,6 +36,9 @@
         <default>false</default>
     </key>
 
+    <key type="b" name="base64">
+        <default>false</default>
+    </key>
     <key type="i" name="font-display">
         <default>0</default>
     </key>

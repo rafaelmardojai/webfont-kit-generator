@@ -33,6 +33,20 @@ Webfont Kit Generator uses [fontTools](https://github.com/fonttools/fonttools) p
 | Fedora Linux (Copr) | [`webfont-kit-generator`](https://copr.fedorainfracloud.org/coprs/xfgusta/webfont-kit-generator/) | [Gustavo Costa](https://github.com/xfgusta)|
 
 ## Building
+
+### Requirements
+
+- Python 3 `python`
+- PyGObject `python-gobject`
+- GTK4 (>= 4.12.0) `gtk4`
+- libadwaita (>= 1.4.0) `libadwaita`
+- libsoup (>= 3.0) `libsoup3`
+- gtksourceview (>= 5.0) `gtksourceview5`
+- Meson `meson`
+- Ninja `ninja`
+- fontTools `python-fontTools`
+- brotli `python-brotli`
+
 Clone and run from GNOME Builder.
 Alternatively, you can build with `meson`.
 ```bash

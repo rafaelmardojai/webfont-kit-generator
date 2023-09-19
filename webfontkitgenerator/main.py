@@ -14,7 +14,15 @@ try:
     gi.require_version('Soup', '3.0')
     from gi.repository import Adw, Gio, GLib, Gtk
 except ImportError or ValueError as exc:
-    print('Error: GIR Dependencies not met.', exc)
+    print('Error: GIR dependencies not met.', exc)
+    exit()
+
+try:
+    import fontTools  # noqa
+    import brotli  # noqa
+except ModuleNotFoundError as exc:
+    print('Error: Python dependencies not met.', exc)
+    exit()
 
 from webfontkitgenerator.window import Window
 

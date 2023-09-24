@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 11:13-0500\n"
+"POT-Creation-Date: 2023-09-24 16:19-0500\n"
 "PO-Revision-Date: 2021-10-19 08:09+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
@@ -19,12 +19,12 @@ msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+#: webfontkitgenerator/main.py:36
 msgid "Webfont Kit Generator"
 msgstr "Generador de kits de poliças"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
-#: webfontkitgenerator/resources/about.ui:6
 msgid "Create @font-face kits easily"
 msgstr "Crear de kits @font-face facilament"
 
@@ -44,136 +44,131 @@ msgid ""
 "Fonts for self-hosting."
 msgstr ""
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: webfontkitgenerator/resources/window.ui:7
-#: webfontkitgenerator/resources/google.ui:34
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:32
 msgid "Import from Google Fonts"
 msgstr ""
 
-#: webfontkitgenerator/resources/window.ui:14
+#: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: webfontkitgenerator/resources/window.ui:18
+#: webfontkitgenerator/window.blp:23
 #, fuzzy
 msgid "_About Webfont Kit Generator"
 msgstr "Generador de kits de poliças"
 
-#: webfontkitgenerator/resources/window.ui:48
-#: webfontkitgenerator/resources/window.ui:112
+#: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
 msgstr "Dobrir poliças"
 
-#: webfontkitgenerator/resources/window.ui:55
+#: webfontkitgenerator/window.blp:56
 msgid "Main Menu"
 msgstr ""
 
-#: webfontkitgenerator/resources/window.ui:69
-#: webfontkitgenerator/resources/options.ui:21
-msgid "Fonts"
-msgstr "Poliças"
-
-#: webfontkitgenerator/resources/window.ui:87
+#: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
 msgstr "Apondre de poliças"
 
-#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:57
 #, fuzzy
 msgid "Select Output Directory"
 msgstr "Seleccionar un repertòri de sortida"
 
-#: webfontkitgenerator/resources/window.ui:220
+#: webfontkitgenerator/window.blp:186
 msgid "Browse..."
 msgstr "Percórrer..."
 
-#: webfontkitgenerator/resources/window.ui:228
+#: webfontkitgenerator/window.blp:193
 msgid "Generate"
 msgstr "Generar"
 
-#: webfontkitgenerator/resources/window.ui:267
-#: webfontkitgenerator/resources/google.ui:110
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:101
 msgid "Cancel"
 msgstr "Anullar"
 
-#: webfontkitgenerator/resources/window.ui:302
+#: webfontkitgenerator/window.blp:248
 msgid "Back"
 msgstr ""
 
-#: webfontkitgenerator/resources/window.ui:313
+#: webfontkitgenerator/window.blp:256
 msgid "Information"
 msgstr "Informacions"
 
-#: webfontkitgenerator/resources/window.ui:321
-#: webfontkitgenerator/generator.py:57
+#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:70
 msgid "Generation finished!"
 msgstr "Generacion terminada !"
 
-#: webfontkitgenerator/resources/window.ui:332
+#: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Per ligar vòstras poliças, copiatz lo còdi çai-jos dins l’entèsta HEAD de "
 "vòstre HTML :"
 
-#: webfontkitgenerator/resources/window.ui:343
+#: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
 msgstr "O importatz-la dirèctament dins vòstre CSS :"
 
-#: webfontkitgenerator/resources/window.ui:354
+#: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
 msgstr "Dobrir dins Fichièrs"
 
-#: webfontkitgenerator/resources/window.ui:375
+#: webfontkitgenerator/window.blp:310
 msgid "Logs"
 msgstr "Jornals"
 
-#: webfontkitgenerator/resources/options.ui:50
+#: webfontkitgenerator/options.blp:7
+msgid "Options"
+msgstr "Opcions"
+
+#: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
 msgstr "Jos-paramètres"
 
-#: webfontkitgenerator/resources/options.ui:51
+#: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"
 msgstr "Limitar lo jòc de caractèrs per reduire la talha del fichièr"
 
-#: webfontkitgenerator/resources/options.ui:69
+#: webfontkitgenerator/options.blp:51
 msgid "Latin"
 msgstr "Latin"
 
-#: webfontkitgenerator/resources/options.ui:80
+#: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
 msgstr "Cirillic"
 
-#: webfontkitgenerator/resources/options.ui:91
+#: webfontkitgenerator/options.blp:69
 msgid "Greek"
 msgstr "Grèc"
 
-#: webfontkitgenerator/resources/options.ui:102
+#: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
 msgstr "Vietnamian"
 
-#: webfontkitgenerator/resources/options.ui:121
+#: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
 msgstr "Latin espandit"
 
-#: webfontkitgenerator/resources/options.ui:132
+#: webfontkitgenerator/options.blp:104
 msgid "Cyrillic Extended"
 msgstr "Cirillic espandit"
 
-#: webfontkitgenerator/resources/options.ui:143
+#: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
 msgstr "Grèc espandit"
 
-#: webfontkitgenerator/resources/options.ui:154
+#: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: webfontkitgenerator/resources/options.ui:182
+#: webfontkitgenerator/options.blp:145
 msgid "Custom"
 msgstr "Personalizar"
 
-#: webfontkitgenerator/resources/options.ui:188
+#: webfontkitgenerator/options.blp:150
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
@@ -181,183 +176,183 @@ msgstr ""
 "Valors separadas per de virgulas. Valors hex solas e/o una plaja separada "
 "per de jonhents."
 
-#: webfontkitgenerator/resources/options.ui:214
+#: webfontkitgenerator/options.blp:173
 msgid "CSS"
 msgstr "CSS"
 
-#: webfontkitgenerator/resources/options.ui:217
+#: webfontkitgenerator/options.blp:176
+msgid "Base64 Encode"
+msgstr ""
+
+#: webfontkitgenerator/options.blp:177
+msgid "Embed fonts in the CSS"
+msgstr ""
+
+#: webfontkitgenerator/options.blp:181
 msgid "Font display"
 msgstr "Afichatge de la poliça"
 
-#: webfontkitgenerator/resources/options.ui:218
+#: webfontkitgenerator/options.blp:182
 msgid "The CSS font-display descriptor"
 msgstr "Lo descriptor CSS font-display"
 
-#: webfontkitgenerator/resources/options.ui:222
+#: webfontkitgenerator/options.blp:185
 msgid "Disabled"
 msgstr "Desactivat"
 
-#: webfontkitgenerator/resources/google.ui:35
+#: webfontkitgenerator/google.blp:33
 msgid "Download fonts from Google Fonts for self-hosting"
 msgstr ""
 
-#: webfontkitgenerator/resources/google.ui:72
+#: webfontkitgenerator/google.blp:68
 msgid "Download Fonts"
 msgstr ""
 
-#. Replace me with your names.
-#: webfontkitgenerator/resources/about.ui:10
-msgid "translator-credits"
-msgstr ""
-
-#: webfontkitgenerator/resources/shortcuts.ui:11
+#: webfontkitgenerator/gtk/help-overlay.blp:11
 #, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Generar"
 
-#: webfontkitgenerator/resources/shortcuts.ui:14
+#: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr ""
 
-#: webfontkitgenerator/resources/shortcuts.ui:20
+#: webfontkitgenerator/gtk/help-overlay.blp:19
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Open Fonts"
 msgstr "Dobrir poliças"
 
-#: webfontkitgenerator/resources/shortcuts.ui:26
+#: webfontkitgenerator/gtk/help-overlay.blp:24
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Select Output Directory"
 msgstr "Seleccionar un repertòri de sortida"
 
-#: webfontkitgenerator/resources/shortcuts.ui:32
+#: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
 msgstr ""
 
-#: webfontkitgenerator/resources/shortcuts.ui:38
+#: webfontkitgenerator/gtk/help-overlay.blp:34
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Generar"
 
-#: webfontkitgenerator/window.py:56
+#: webfontkitgenerator/main.py:74
+msgid "translator-credits"
+msgstr ""
+
+#: webfontkitgenerator/window.py:61
 #, fuzzy
 msgid "Open Font Files"
 msgstr "Dobrir los fichièrs de poliça"
 
-#. Setup view stack pages
-#: webfontkitgenerator/window.py:75
-msgid "Options"
-msgstr "Opcions"
-
-#: webfontkitgenerator/window.py:93
+#: webfontkitgenerator/window.py:64
 msgid "OTF & TTF"
 msgstr "OTF & TTF"
 
-#: webfontkitgenerator/window.py:198
-msgid "You don't have write access to the selected directory."
+#: webfontkitgenerator/window.py:161
+#, fuzzy
+msgid "You don’t have write access to the selected directory."
 msgstr "Avètz pas l’autorizacion d’escriure al repertòri seleccionat."
 
 #. name = data['name-slug']
-#: webfontkitgenerator/generator.py:67
+#: webfontkitgenerator/generator.py:80
 #, fuzzy, python-brace-format
 msgid "Generating fonts for {name}:"
 msgstr "Generacion de las poliças per %s :"
 
-#: webfontkitgenerator/generator.py:69
+#: webfontkitgenerator/generator.py:82
 #, fuzzy, python-brace-format
 msgid "Generating {name}"
 msgstr "Generacion del CSS :"
 
-#: webfontkitgenerator/generator.py:118
+#: webfontkitgenerator/generator.py:140
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr " <i>{filename}</i> generat amb <i>{count}</i> glifes."
 
-#: webfontkitgenerator/generator.py:132
+#: webfontkitgenerator/generator.py:154
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
 msgstr "Cap de glife pas trobat per {range}. Ignorar."
 
-#: webfontkitgenerator/generator.py:147
+#: webfontkitgenerator/generator.py:169
 msgid "Generating CSS:"
 msgstr "Generacion del CSS :"
 
-#: webfontkitgenerator/generator.py:148
+#: webfontkitgenerator/generator.py:170
 msgid "Finishing"
 msgstr ""
 
-#: webfontkitgenerator/generator.py:167
+#: webfontkitgenerator/generator.py:191
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
 msgstr "<i>{filename}</i> generat."
 
-#: webfontkitgenerator/generator.py:171
+#: webfontkitgenerator/generator.py:195
 msgid "There is no CSS to generate."
 msgstr "I a pas cap de CSS de generar."
 
-#: webfontkitgenerator/google.py:61
+#: webfontkitgenerator/google.py:55
 msgid "Loading Google Fonts Database"
 msgstr ""
 
-#: webfontkitgenerator/google.py:126
-msgid "Couldn't download the Google Fonts data."
+#: webfontkitgenerator/google.py:114
+msgid "Couldn’t download the Google Fonts data."
 msgstr ""
 
-#. If variant not available
-#. Save error to show it after dialog is terminated
-#: webfontkitgenerator/google.py:154
+#: webfontkitgenerator/google.py:143
 #, python-brace-format
-msgid "Couldn't find the {variant} variant for {family_name}."
+msgid "Couldn’t find the {variant} variant for {family_name}."
 msgstr ""
 
 #. If no family found, add error to list
-#: webfontkitgenerator/google.py:162
+#: webfontkitgenerator/google.py:151
 #, python-brace-format
-msgid "Couldn't find the {family_name} font family."
+msgid "Couldn’t find the {family_name} font family."
 msgstr ""
 
 #. If not files found at all, show general error and terminate
-#: webfontkitgenerator/google.py:171
-msgid "Couldn't find any fonts for the given url."
+#: webfontkitgenerator/google.py:160
+msgid "Couldn’t find any fonts for the given url."
 msgstr ""
 
-#: webfontkitgenerator/google.py:221
+#: webfontkitgenerator/google.py:235
 msgid "Please set a valid url"
 msgstr ""
 
-#: webfontkitgenerator/google.py:227
-msgid "Update your url to CSS API v2"
-msgstr ""
-
-#: webfontkitgenerator/google.py:251
+#: webfontkitgenerator/google.py:259
 #, fuzzy, python-brace-format
 msgid "Downloading {name}"
 msgstr "Error de cargament de la poliça"
 
-#: webfontkitgenerator/google.py:275
+#: webfontkitgenerator/google.py:283
 #, python-brace-format
-msgid "Couldn't download the font file for {name}."
+msgid "Couldn’t download the font file for {name}."
 msgstr ""
 
-#: webfontkitgenerator/google.py:292
+#: webfontkitgenerator/google.py:300
 #, python-brace-format
-msgid "Couldn't write the font file for {name}."
+msgid "Couldn’t write the font file for {name}."
 msgstr ""
 
-#: webfontkitgenerator/loader.py:50
-#, python-brace-format
-msgid "You don't have read access to {font} or it doesn't exists."
+#: webfontkitgenerator/loader.py:43
+#, fuzzy, python-brace-format
+msgid "You don’t have read access to {font} or it doesn’t exists."
 msgstr "Avètz pas l’autorizacion de legir {font} o existís pas."
 
-#: webfontkitgenerator/loader.py:60
+#: webfontkitgenerator/loader.py:52
 #, python-brace-format
 msgid "Error: {error}."
 msgstr ""
+
+#~ msgid "Fonts"
+#~ msgstr "Poliças"
 
 #~ msgid "Output directory"
 #~ msgstr "Repertòri de sortida"

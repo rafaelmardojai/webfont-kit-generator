@@ -1,11 +1,11 @@
 data/com.rafaelmardojai.WebfontKitGenerator.desktop.in
 data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in
 data/com.rafaelmardojai.WebfontKitGenerator.gschema.xml
-webfontkitgenerator/resources/window.ui
-webfontkitgenerator/resources/options.ui
-webfontkitgenerator/resources/google.ui
-webfontkitgenerator/resources/about.ui
-webfontkitgenerator/resources/shortcuts.ui
+webfontkitgenerator/window.blp
+webfontkitgenerator/options.blp
+webfontkitgenerator/google.blp
+webfontkitgenerator/gtk/help-overlay.blp
+webfontkitgenerator/main.py
 webfontkitgenerator/window.py
 webfontkitgenerator/options.py
 webfontkitgenerator/generator.py

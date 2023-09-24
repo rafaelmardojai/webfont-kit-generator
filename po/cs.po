@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 11:13-0500\n"
+"POT-Creation-Date: 2023-09-24 16:19-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Vojtěch Perník <translations@pervoj.cz>, 2023\n"
 "Language-Team: Czech (https://www.transifex.com/rafaelmardojai/teams/135056/"
@@ -26,12 +26,12 @@ msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+#: webfontkitgenerator/main.py:36
 msgid "Webfont Kit Generator"
 msgstr "Generátor webových sad písem"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
-#: webfontkitgenerator/resources/about.ui:6
 msgid "Create @font-face kits easily"
 msgstr "Vytvářejte sady @font-face jednoduše"
 
@@ -54,134 +54,129 @@ msgstr ""
 "Aplikace také obsahuje nástroj pro stahování písem ze serveru Google Fonts "
 "pro vlastní hostování."
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:20
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: webfontkitgenerator/resources/window.ui:7
-#: webfontkitgenerator/resources/google.ui:34
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:32
 msgid "Import from Google Fonts"
 msgstr "Import z Google Fonts"
 
-#: webfontkitgenerator/resources/window.ui:14
+#: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
 msgstr "_Klávesové zkratky"
 
-#: webfontkitgenerator/resources/window.ui:18
+#: webfontkitgenerator/window.blp:23
 msgid "_About Webfont Kit Generator"
 msgstr "_O aplikaci"
 
-#: webfontkitgenerator/resources/window.ui:48
-#: webfontkitgenerator/resources/window.ui:112
+#: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
 msgstr "Otevřít fonty"
 
-#: webfontkitgenerator/resources/window.ui:55
+#: webfontkitgenerator/window.blp:56
 #, fuzzy
 msgid "Main Menu"
 msgstr "Menu"
 
-#: webfontkitgenerator/resources/window.ui:69
-#: webfontkitgenerator/resources/options.ui:21
-msgid "Fonts"
-msgstr "Fonty"
-
-#: webfontkitgenerator/resources/window.ui:87
+#: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
 msgstr "Přidejte nějaké fonty"
 
-#: webfontkitgenerator/resources/window.ui:208 webfontkitgenerator/window.py:63
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:57
 msgid "Select Output Directory"
 msgstr "Vyprat výstupní adresář"
 
-#: webfontkitgenerator/resources/window.ui:220
+#: webfontkitgenerator/window.blp:186
 msgid "Browse..."
 msgstr "Procházet..."
 
-#: webfontkitgenerator/resources/window.ui:228
+#: webfontkitgenerator/window.blp:193
 msgid "Generate"
 msgstr "Generovat"
 
-#: webfontkitgenerator/resources/window.ui:267
-#: webfontkitgenerator/resources/google.ui:110
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:101
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: webfontkitgenerator/resources/window.ui:302
+#: webfontkitgenerator/window.blp:248
 msgid "Back"
 msgstr ""
 
-#: webfontkitgenerator/resources/window.ui:313
+#: webfontkitgenerator/window.blp:256
 msgid "Information"
 msgstr "Informace"
 
-#: webfontkitgenerator/resources/window.ui:321
-#: webfontkitgenerator/generator.py:57
+#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:70
 msgid "Generation finished!"
 msgstr "Generování skončilo!"
 
-#: webfontkitgenerator/resources/window.ui:332
+#: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
 "Chcete-li načíst svá písma, zkopírujte níže uvedený kód do hlavičky HTML:"
 
-#: webfontkitgenerator/resources/window.ui:343
+#: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
 msgstr "Nebo je naimportujte přímo do CSS:"
 
-#: webfontkitgenerator/resources/window.ui:354
+#: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
 msgstr "Otevřít v Souborech"
 
-#: webfontkitgenerator/resources/window.ui:375
+#: webfontkitgenerator/window.blp:310
 msgid "Logs"
 msgstr "Logy"
 
-#: webfontkitgenerator/resources/options.ui:50
+#: webfontkitgenerator/options.blp:7
+msgid "Options"
+msgstr "Možnosti"
+
+#: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
 msgstr "Podmnožina znakové sady"
 
-#: webfontkitgenerator/resources/options.ui:51
+#: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"
 msgstr "Omezením znakové sady zmenšíte velikost souboru"
 
-#: webfontkitgenerator/resources/options.ui:69
+#: webfontkitgenerator/options.blp:51
 msgid "Latin"
 msgstr "Latinka"
 
-#: webfontkitgenerator/resources/options.ui:80
+#: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
 msgstr "Cyrilice"
 
-#: webfontkitgenerator/resources/options.ui:91
+#: webfontkitgenerator/options.blp:69
 msgid "Greek"
 msgstr "Řecká abeceda"
 
-#: webfontkitgenerator/resources/options.ui:102
+#: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
 msgstr "Vietnamská abeceda"
 
-#: webfontkitgenerator/resources/options.ui:121
+#: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
 msgstr "Rozšířená latinka"
 
-#: webfontkitgenerator/resources/options.ui:132
+#: webfontkitgenerator/options.blp:104
 msgid "Cyrillic Extended"
 msgstr "Rozšířená cyrilice"
 
-#: webfontkitgenerator/resources/options.ui:143
+#: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
 msgstr "Rozšířená řecká abeceda"
 
-#: webfontkitgenerator/resources/options.ui:154
+#: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
 msgstr "Dévanágarí"
 
-#: webfontkitgenerator/resources/options.ui:182
+#: webfontkitgenerator/options.blp:145
 msgid "Custom"
 msgstr "Vlastní"
 
-#: webfontkitgenerator/resources/options.ui:188
+#: webfontkitgenerator/options.blp:150
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
@@ -189,175 +184,180 @@ msgstr ""
 "Hodnoty oddělené čárkami. Jednotlivé hexadecimální hodnoty a/nebo rozsahy "
 "oddělené spojovníky."
 
-#: webfontkitgenerator/resources/options.ui:214
+#: webfontkitgenerator/options.blp:173
 msgid "CSS"
 msgstr "CSS"
 
-#: webfontkitgenerator/resources/options.ui:217
+#: webfontkitgenerator/options.blp:176
+msgid "Base64 Encode"
+msgstr ""
+
+#: webfontkitgenerator/options.blp:177
+msgid "Embed fonts in the CSS"
+msgstr ""
+
+#: webfontkitgenerator/options.blp:181
 msgid "Font display"
 msgstr "Font display"
 
-#: webfontkitgenerator/resources/options.ui:218
+#: webfontkitgenerator/options.blp:182
 msgid "The CSS font-display descriptor"
 msgstr "CSS deskriptor font-display"
 
-#: webfontkitgenerator/resources/options.ui:222
+#: webfontkitgenerator/options.blp:185
 msgid "Disabled"
 msgstr "Zakázáno"
 
-#: webfontkitgenerator/resources/google.ui:35
+#: webfontkitgenerator/google.blp:33
 msgid "Download fonts from Google Fonts for self-hosting"
 msgstr "Stáhnout fonty z Google Fonts pro vlastní hostování"
 
-#: webfontkitgenerator/resources/google.ui:72
+#: webfontkitgenerator/google.blp:68
 msgid "Download Fonts"
 msgstr "Stáhnout fonty"
 
-#. Replace me with your names.
-#: webfontkitgenerator/resources/about.ui:10
-msgid "translator-credits"
-msgstr "Vojtěch Perník <translations@pervoj.cz>"
-
-#: webfontkitgenerator/resources/shortcuts.ui:11
+#: webfontkitgenerator/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Obecné"
 
-#: webfontkitgenerator/resources/shortcuts.ui:14
+#: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Zobrazit klávesové zkratky"
 
-#: webfontkitgenerator/resources/shortcuts.ui:20
+#: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Open Fonts"
 msgstr "Otevřít fonty"
 
-#: webfontkitgenerator/resources/shortcuts.ui:26
+#: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Select Output Directory"
 msgstr "Vybrat výstupní adresář"
 
-#: webfontkitgenerator/resources/shortcuts.ui:32
+#: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
 msgstr "Importovat z Google Fonts"
 
-#: webfontkitgenerator/resources/shortcuts.ui:38
+#: webfontkitgenerator/gtk/help-overlay.blp:34
 msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Generovat"
 
-#: webfontkitgenerator/window.py:56
+#: webfontkitgenerator/main.py:74
+msgid "translator-credits"
+msgstr "Vojtěch Perník <translations@pervoj.cz>"
+
+#: webfontkitgenerator/window.py:61
 msgid "Open Font Files"
 msgstr "Otevřít soubory fontů"
 
-#. Setup view stack pages
-#: webfontkitgenerator/window.py:75
-msgid "Options"
-msgstr "Možnosti"
-
-#: webfontkitgenerator/window.py:93
+#: webfontkitgenerator/window.py:64
 msgid "OTF & TTF"
 msgstr "OTF a TTF"
 
-#: webfontkitgenerator/window.py:198
-msgid "You don't have write access to the selected directory."
+#: webfontkitgenerator/window.py:161
+#, fuzzy
+msgid "You don’t have write access to the selected directory."
 msgstr "K vybranému adresáři nemáte právo k zápisu."
 
 #. name = data['name-slug']
-#: webfontkitgenerator/generator.py:67
+#: webfontkitgenerator/generator.py:80
 #, python-brace-format
 msgid "Generating fonts for {name}:"
 msgstr "Generování fontů pro {name}:"
 
-#: webfontkitgenerator/generator.py:69
+#: webfontkitgenerator/generator.py:82
 #, python-brace-format
 msgid "Generating {name}"
 msgstr "Generování {name}"
 
-#: webfontkitgenerator/generator.py:118
+#: webfontkitgenerator/generator.py:140
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Vygenerováno <i>{filename}</i> s <i>{count}</i> glyfy."
 
-#: webfontkitgenerator/generator.py:132
+#: webfontkitgenerator/generator.py:154
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
 msgstr "Pro {range} nebyly nalezeny žádné glyfy. Vynechávám."
 
-#: webfontkitgenerator/generator.py:147
+#: webfontkitgenerator/generator.py:169
 msgid "Generating CSS:"
 msgstr "Generování CSS:"
 
-#: webfontkitgenerator/generator.py:148
+#: webfontkitgenerator/generator.py:170
 msgid "Finishing"
 msgstr "Dokončuje se"
 
-#: webfontkitgenerator/generator.py:167
+#: webfontkitgenerator/generator.py:191
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
 msgstr "Vygenerováno <i>{filename}</i>."
 
-#: webfontkitgenerator/generator.py:171
+#: webfontkitgenerator/generator.py:195
 msgid "There is no CSS to generate."
 msgstr "Není třeba generovat žádné CSS."
 
-#: webfontkitgenerator/google.py:61
+#: webfontkitgenerator/google.py:55
 msgid "Loading Google Fonts Database"
 msgstr "Načítá se databáze Google Fonts"
 
-#: webfontkitgenerator/google.py:126
-msgid "Couldn't download the Google Fonts data."
+#: webfontkitgenerator/google.py:114
+#, fuzzy
+msgid "Couldn’t download the Google Fonts data."
 msgstr "Nepodařilo se stáhnout data z Google Fonts."
 
-#. If variant not available
-#. Save error to show it after dialog is terminated
-#: webfontkitgenerator/google.py:154
-#, python-brace-format
-msgid "Couldn't find the {variant} variant for {family_name}."
+#: webfontkitgenerator/google.py:143
+#, fuzzy, python-brace-format
+msgid "Couldn’t find the {variant} variant for {family_name}."
 msgstr "Nepodařilo se najít variantu {variant} pro {family_name}."
 
 #. If no family found, add error to list
-#: webfontkitgenerator/google.py:162
-#, python-brace-format
-msgid "Couldn't find the {family_name} font family."
+#: webfontkitgenerator/google.py:151
+#, fuzzy, python-brace-format
+msgid "Couldn’t find the {family_name} font family."
 msgstr "Nepodařilo se najít font {family_name}."
 
 #. If not files found at all, show general error and terminate
-#: webfontkitgenerator/google.py:171
-msgid "Couldn't find any fonts for the given url."
+#: webfontkitgenerator/google.py:160
+#, fuzzy
+msgid "Couldn’t find any fonts for the given url."
 msgstr "Pro zadanou URL se nepodařilo najít žádné fonty."
 
-#: webfontkitgenerator/google.py:221
+#: webfontkitgenerator/google.py:235
 msgid "Please set a valid url"
 msgstr "Prosím, zadejte platnou URL"
 
-#: webfontkitgenerator/google.py:227
-msgid "Update your url to CSS API v2"
-msgstr "Aktualizujte svou URL pro CSS API v2"
-
-#: webfontkitgenerator/google.py:251
+#: webfontkitgenerator/google.py:259
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Stahuje se {name}"
 
-#: webfontkitgenerator/google.py:275
-#, python-brace-format
-msgid "Couldn't download the font file for {name}."
+#: webfontkitgenerator/google.py:283
+#, fuzzy, python-brace-format
+msgid "Couldn’t download the font file for {name}."
 msgstr "Nepodařilo se najít soubor fontu pro {name}."
 
-#: webfontkitgenerator/google.py:292
-#, python-brace-format
-msgid "Couldn't write the font file for {name}."
+#: webfontkitgenerator/google.py:300
+#, fuzzy, python-brace-format
+msgid "Couldn’t write the font file for {name}."
 msgstr "Nepodařilo se zapsat soubor fontu pro {name}."
 
-#: webfontkitgenerator/loader.py:50
-#, python-brace-format
-msgid "You don't have read access to {font} or it doesn't exists."
+#: webfontkitgenerator/loader.py:43
+#, fuzzy, python-brace-format
+msgid "You don’t have read access to {font} or it doesn’t exists."
 msgstr "K {font} nemáte právo ke čtení nebo soubor neexistuje."
 
-#: webfontkitgenerator/loader.py:60
+#: webfontkitgenerator/loader.py:52
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Chyba: {error}."
+
+#~ msgid "Fonts"
+#~ msgstr "Fonty"
+
+#~ msgid "Update your url to CSS API v2"
+#~ msgstr "Aktualizujte svou URL pro CSS API v2"

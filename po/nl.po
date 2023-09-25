@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Philip Goto <philip.goto@gmail.com>, 2023
 # Heimen Stoffels <vistausss@fastmail.com>, 2023
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -16,12 +16,11 @@ msgstr ""
 "POT-Creation-Date: 2023-09-24 16:19-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2023\n"
-"Language-Team: Dutch (https://www.transifex.com/rafaelmardojai/teams/135056/"
-"nl/)\n"
-"Language: nl\n"
+"Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135056/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
@@ -111,8 +110,8 @@ msgstr "Het genereren is voltooid!"
 #: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
-"U kunt uw lettertypen linken door de volgende code toe te voegen aan de head-"
-"sectie van uw HTML:"
+"U kunt uw lettertypen linken door de volgende code toe te voegen aan de "
+"head-sectie van uw HTML:"
 
 #: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
@@ -188,11 +187,11 @@ msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "Base64-encodering"
 
 #: webfontkitgenerator/options.blp:177
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "Lettertypen insluiten in css"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
@@ -259,7 +258,6 @@ msgid "OTF & TTF"
 msgstr "OTF en TTF"
 
 #: webfontkitgenerator/window.py:161
-#, fuzzy
 msgid "You don’t have write access to the selected directory."
 msgstr "U heeft geen schrijftoegang tot de gekozen map."
 
@@ -306,24 +304,22 @@ msgid "Loading Google Fonts Database"
 msgstr "Bezig met laden van Google Fonts-databank…"
 
 #: webfontkitgenerator/google.py:114
-#, fuzzy
 msgid "Couldn’t download the Google Fonts data."
 msgstr "Er kunnen geen gegevens worden opgehaald van Google Fonts."
 
 #: webfontkitgenerator/google.py:143
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
 msgstr "De {variant} variant van {family_name} kan niet worden gevonden."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:151
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
 msgstr "De lettertypefamilie ‘{family_name}’ kan niet worden gevonden."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:160
-#, fuzzy
 msgid "Couldn’t find any fonts for the given url."
 msgstr "Er zijn geen lettertypen aangetroffen op de opgegeven url."
 
@@ -337,17 +333,17 @@ msgid "Downloading {name}"
 msgstr "Bezig met downloaden van {name}…"
 
 #: webfontkitgenerator/google.py:283
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t download the font file for {name}."
 msgstr "Het lettertypebestand van ‘{name}’ kan niet worden opgehaald."
 
 #: webfontkitgenerator/google.py:300
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t write the font file for {name}."
 msgstr "Het lettertypebestand van ‘{name}’ kan niet worden weggeschreven."
 
 #: webfontkitgenerator/loader.py:43
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
 msgstr "U heeft geen leestoegang tot {font} of het lettertype bestaat niet."
 
@@ -355,9 +351,3 @@ msgstr "U heeft geen leestoegang tot {font} of het lettertype bestaat niet."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Foutmelding: {error}."
-
-#~ msgid "Fonts"
-#~ msgstr "Lettertypen"
-
-#~ msgid "Update your url to CSS API v2"
-#~ msgstr "Werk uw URL bij naar CSS-api v2"

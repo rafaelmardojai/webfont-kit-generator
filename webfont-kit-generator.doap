@@ -8,7 +8,10 @@
   <shortdesc xml:lang="en">Create @font-face kits easily</shortdesc>
   <homepage rdf:resource="https://github.com/rafaelmardojai/webfont-kit-generator" />
   <bug-database rdf:resource="https://github.com/rafaelmardojai/webfont-kit-generator/issues"/>
+
   <programming-language>Python</programming-language>
+  <platform>GTK 4</platform>
+  <platform>Libadwaita</platform>
 
   <maintainer>
     <foaf:Person>

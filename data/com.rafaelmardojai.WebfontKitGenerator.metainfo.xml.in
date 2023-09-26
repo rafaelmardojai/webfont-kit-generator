@@ -41,11 +41,19 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/5.png</image>
     </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/6.png</image>
-    </screenshot>
   </screenshots>
   <releases>
+    <release version="1.1.0" date="2023-09-25">
+      <description>
+        <ul>
+          <li>Font options are now an utility pane</li>
+          <li>Google Fonts importer now supports the old Google v1 CSS API url</li>
+          <li>Base64 encoding support</li>
+          <li>Update translations</li>
+          <li>Bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.3" date="2023-03-22">
       <description>
         <ul>

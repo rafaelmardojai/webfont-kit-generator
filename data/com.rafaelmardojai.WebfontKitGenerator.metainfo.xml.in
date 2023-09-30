@@ -44,7 +44,7 @@
   </screenshots>
   <releases>
     <release version="1.1.0" date="2023-09-25">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Font options are now an utility pane</li>
           <li>Google Fonts importer now supports the old Google v1 CSS API url</li>
@@ -55,7 +55,7 @@
       </description>
     </release>
     <release version="1.0.3" date="2023-03-22">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Update translations</li>
           <li>Small code improvements</li>
@@ -63,7 +63,7 @@
       </description>
     </release>
     <release version="1.0.2" date="2022-10-09">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Use new Adwaita about window</li>
           <li>Update translations</li>
@@ -71,7 +71,7 @@
       </description>
     </release>
     <release version="1.0.1" date="2022-07-16">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Update translations</li>
           <li>Fixed symbolic icon installation</li>
@@ -80,7 +80,7 @@
       </description>
     </release>
     <release version="1.0.0" date="2022-03-27">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Ported to GTK4 and libadwaita</li>
           <li>New Google Fonts importer</li>
@@ -91,7 +91,7 @@
       </description>
     </release>
     <release version="0.5.0" date="2021-07-13">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Drag and drop bug fix</li>
           <li>Fonts loader fixes</li>
@@ -101,7 +101,7 @@
       </description>
     </release>
     <release version="0.4.0" date="2021-05-02">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Open fonts from file manager</li>
           <li>Drag and Drop support</li>
@@ -112,7 +112,7 @@
       </description>
     </release>
     <release version="0.3.0" date="2020-06-17">
-      <description>
+      <description translatable="no">
         <ul>
           <li>UI tweaks</li>
           <li>Code improvements</li>
@@ -120,7 +120,7 @@
       </description>
     </release>
     <release version="0.2.0" date="2020-05-30">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Add custom subsetting support</li>
           <li>Design and UX improvements</li>
@@ -129,7 +129,7 @@
       </description>
     </release>
     <release version="0.1.0" date="2020-05-25">
-      <description>
+      <description translatable="no">
         <p>Initial release.</p>
       </description>
     </release>

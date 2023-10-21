@@ -226,7 +226,7 @@ msgstr "Показать горячие клавиши"
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Open Fonts"
-msgstr "Открытые шрифты"
+msgstr "Открыть шрифты"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"

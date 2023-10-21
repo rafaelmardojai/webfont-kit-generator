@@ -65,7 +65,7 @@ msgstr "_Горячие клавиши"
 
 #: webfontkitgenerator/window.blp:23
 msgid "_About Webfont Kit Generator"
-msgstr "_О генераторе комплектов веб-шрифтов"
+msgstr "_О генераторе наборов веб-шрифтов"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"

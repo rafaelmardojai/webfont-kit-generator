@@ -69,7 +69,7 @@ msgstr "_О генераторе комплектов веб-шрифтов"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
-msgstr "Открытые шрифты"
+msgstr "Открыть шрифты"
 
 #: webfontkitgenerator/window.blp:56
 msgid "Main Menu"

@@ -231,7 +231,7 @@ msgstr "Открытые шрифты"
 #: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Select Output Directory"
-msgstr "Выберите каталог вывода"
+msgstr "Выбрать папку назначения"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"

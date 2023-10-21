@@ -131,7 +131,7 @@ msgstr "Параметры"
 
 #: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
-msgstr "Под настройки"
+msgstr "Сабсеттинг"
 
 #: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"

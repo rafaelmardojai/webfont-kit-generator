@@ -2,11 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Nikita Ivanov, 2023
 # UnixJ Sunax, 2023
-#
+# Konstantin FireFall, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -14,16 +15,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-24 16:19-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: UnixJ Sunax, 2023\n"
-"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/"
-"teams/135056/ru/)\n"
-"Language: ru\n"
+"Last-Translator: Konstantin FireFall, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/teams/135056/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -50,8 +48,8 @@ msgid ""
 "Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Webfont Kit Generator также входит инструмент для загрузки шрифтов из Google "
-"Fonts для собственного хостинга."
+"Webfont Kit Generator также входит инструмент для загрузки шрифтов из Google"
+" Fonts для собственного хостинга."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
 msgid "Rafael Mardojai CM"
@@ -189,11 +187,11 @@ msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "Шифровка через Base64"
 
 #: webfontkitgenerator/options.blp:177
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "Встроить шрифты в CSS"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
@@ -258,7 +256,6 @@ msgid "OTF & TTF"
 msgstr " OTF & TTF "
 
 #: webfontkitgenerator/window.py:161
-#, fuzzy
 msgid "You don’t have write access to the selected directory."
 msgstr "У вас нет доступа на запись в выбранный каталог."
 
@@ -305,24 +302,22 @@ msgid "Loading Google Fonts Database"
 msgstr "Загрузка базы данных Google шрифтов"
 
 #: webfontkitgenerator/google.py:114
-#, fuzzy
 msgid "Couldn’t download the Google Fonts data."
-msgstr "Не удалось загрузить данные о шрифтах Google."
+msgstr "Не удалось получить данные о шрифте Google Fonts."
 
 #: webfontkitgenerator/google.py:143
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
 msgstr "Не удалось найти вариант {variant} для {family_name}."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:151
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
 msgstr "Не удалось найти семейство шрифтов {family_name}."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:160
-#, fuzzy
 msgid "Couldn’t find any fonts for the given url."
 msgstr "Не удалось найти шрифты для указанного url."
 
@@ -336,17 +331,17 @@ msgid "Downloading {name}"
 msgstr " Загрузка {name} "
 
 #: webfontkitgenerator/google.py:283
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t download the font file for {name}."
 msgstr "Не удалось скачать файл шрифта для {name}."
 
 #: webfontkitgenerator/google.py:300
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t write the font file for {name}."
-msgstr "Не удалось записать файл шрифтов для {name}."
+msgstr "Не удалось записать файл шрифта для {name}."
 
 #: webfontkitgenerator/loader.py:43
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
 msgstr "У вас нет доступа на чтение к {font} или он не существует."
 
@@ -354,9 +349,3 @@ msgstr "У вас нет доступа на чтение к {font} или он 
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Ошибка\\: {error}."
-
-#~ msgid "Fonts"
-#~ msgstr "Шрифты"
-
-#~ msgid "Update your url to CSS API v2"
-#~ msgstr "Обновите свой url до версии CSS API v2"

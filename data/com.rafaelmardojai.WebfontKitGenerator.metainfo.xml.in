@@ -26,6 +26,11 @@
     <category>Utility</category>
     <category>GTK</category>
   </categories>
+  <keywords>
+    <keyword>font</keyword>
+    <keyword>font-face</keyword>
+  </keywords>
+  
   <launchable type="desktop-id">com.rafaelmardojai.WebfontKitGenerator.desktop</launchable>
   <translation type="gettext">webfontkitgenerator</translation>
 

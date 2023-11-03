@@ -6,5 +6,7 @@ Icon=com.rafaelmardojai.WebfontKitGenerator
 Terminal=false
 Type=Application
 Categories=Utility;GTK;
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Keywords=font;font-face;
 StartupNotify=true
 MimeType=font/otf;font/ttf;

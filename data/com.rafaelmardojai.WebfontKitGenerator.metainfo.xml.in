@@ -13,15 +13,19 @@
       Webfont Kit Generator also includes a tool to Download fonts from Google Fonts for self-hosting.
     </p>
   </description>  
-  <url type="homepage">https://apps.gnome.org/es/app/com.rafaelmardojai.WebfontKitGenerator/</url>
+  <url type="homepage">https://apps.gnome.org/WebfontKitGenerator/</url>
   <url type="vcs-browser">https://github.com/rafaelmardojai/webfont-kit-generator/</url>
   <url type="bugtracker">https://github.com/rafaelmardojai/webfont-kit-generator/issues</url>
   <url type="translate">https://www.transifex.com/rafaelmardojai/webfont-kit-generator/</url>
   <url type="donation">https://rafaelmardojai.com/donate/</url>
-  <developer_name>Rafael Mardojai CM</developer_name>
+  <developer_name translatable="no">Rafael Mardojai CM</developer_name>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
   <content_rating type="oars-1.1" />
   
+  <categories>
+    <category>Utility</category>
+    <category>GTK</category>
+  </categories>
   <launchable type="desktop-id">com.rafaelmardojai.WebfontKitGenerator.desktop</launchable>
   <translation type="gettext">webfontkitgenerator</translation>
 

@@ -67,14 +67,12 @@ class Application(Adw.Application):
         self.set_accels_for_action('win.back', ['Escape'])
 
     def _on_about(self, _action, _param):
-        dialog = Adw.AboutWindow.new_from_appdata(
+        dialog = Adw.AboutDialog.new_from_appdata(
             '/com/rafaelmardojai/WebfontKitGenerator/appdata.xml',
             str(self.version),
         )
         dialog.props.translator_credits = _("translator-credits")
-        dialog.props.transient_for = self.window
-        dialog.props.modal = True
-        dialog.present()
+        dialog.present(self.window)
 
 
 def main(version):

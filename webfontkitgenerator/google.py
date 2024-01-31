@@ -18,7 +18,7 @@ DATA_FILE = os.path.join(XDG_DATA_DIR, 'google-fonts.json')
 @Gtk.Template(
     resource_path='/com/rafaelmardojai/WebfontKitGenerator/google.ui'
 )
-class GoogleDialog(Adw.Window):
+class GoogleDialog(Adw.Dialog):
     __gtype_name__ = 'GoogleDialog'
 
     stack: Gtk.Stack = Gtk.Template.Child()
@@ -79,7 +79,7 @@ class GoogleDialog(Adw.Window):
             status_code = message.props.status_code
             response_headers = message.get_response_headers()
 
-            print(f'Response Status {status.get_phrase(status_code)}')
+            print(f'Google Fonts Response Status {status.get_phrase(status_code)}')
 
             if status == Soup.Status.OK and 'kind' in data:
                 try:
@@ -341,7 +341,6 @@ class GoogleDialog(Adw.Window):
         elif parsed.path == '/css2':
             families = self.parse_api_v2(parsed.query)
 
-        print(families)
         self.families = families
         if self.families:
             self.load_fonts_data()
@@ -411,7 +410,8 @@ class GoogleDialog(Adw.Window):
     def _read_response(self, response):
         response_data = {}
         try:
-            response_data = json.loads(response.get_data()) if response else {}
+            if response.get_data():
+                response_data = json.loads(response.get_data()) if response else {}
         except Exception as exc:
-            print(exc)
+            print('Read error:', exc)
         return response_data

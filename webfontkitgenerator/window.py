@@ -170,9 +170,7 @@ class Window(Adw.ApplicationWindow):
 
     def _on_google(self, _action, _param):
         dialog = GoogleDialog(self)
-        dialog.props.transient_for = self
-        dialog.props.modal = True
-        dialog.present()
+        dialog.present(self)
 
     def _on_generate(self, _action, _param):
         generator = Generator(

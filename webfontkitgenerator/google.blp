@@ -1,11 +1,8 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $GoogleDialog : Adw.Window {
-  resizable: false;
-  default-width: 500;
-  modal: true;
-  destroy-with-parent: true;
+template $GoogleDialog : Adw.Dialog {
+  content-width: 500;
   focus-widget: url_entry;
 
   WindowHandle {
@@ -15,8 +12,7 @@ template $GoogleDialog : Adw.Window {
 
       StackPage {
         name: "main";
-        child: 
-        $AdwToolbarView {
+        child: $AdwToolbarView {
           [top]
           Adw.HeaderBar {
             valign: start;
@@ -77,15 +73,12 @@ template $GoogleDialog : Adw.Window {
               }
             }
           }
-        }
-
-        ;
+        };
       }
 
       StackPage {
         name: "loading";
-        child: 
-        Adw.StatusPage progress {
+        child: Adw.StatusPage progress {
           Adw.Clamp {
             Box {
               orientation: vertical;
@@ -108,9 +101,7 @@ template $GoogleDialog : Adw.Window {
               }
             }
           }
-        }
-
-        ;
+        };
       }
     }
   }

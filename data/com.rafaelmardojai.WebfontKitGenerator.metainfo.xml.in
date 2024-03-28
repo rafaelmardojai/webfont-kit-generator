@@ -19,9 +19,9 @@
   <url type="translate">https://www.transifex.com/rafaelmardojai/webfont-kit-generator/</url>
   <url type="donation">https://rafaelmardojai.com/donate/</url>
   <!-- developer_name tag deprecated with Appstream 1.0 -->
-  <developer_name translatable="no">Rafael Mardojai CM</developer_name>
+  <developer_name translate="no">Rafael Mardojai CM</developer_name>
   <developer id="com.mardojai">
-      <name translatable="no">Rafael Mardojai CM</name>
+      <name translate="no">Rafael Mardojai CM</name>
   </developer>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
   <content_rating type="oars-1.1" />
@@ -47,7 +47,7 @@
   </screenshots>
   <releases>
     <release version="1.1.0" date="2023-09-25">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Font options are now an utility pane</li>
           <li>Google Fonts importer now supports the old Google v1 CSS API url</li>
@@ -58,7 +58,7 @@
       </description>
     </release>
     <release version="1.0.3" date="2023-03-22">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update translations</li>
           <li>Small code improvements</li>
@@ -66,7 +66,7 @@
       </description>
     </release>
     <release version="1.0.2" date="2022-10-09">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Use new Adwaita about window</li>
           <li>Update translations</li>
@@ -74,7 +74,7 @@
       </description>
     </release>
     <release version="1.0.1" date="2022-07-16">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update translations</li>
           <li>Fixed symbolic icon installation</li>
@@ -83,7 +83,7 @@
       </description>
     </release>
     <release version="1.0.0" date="2022-03-27">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Ported to GTK4 and libadwaita</li>
           <li>New Google Fonts importer</li>
@@ -94,7 +94,7 @@
       </description>
     </release>
     <release version="0.5.0" date="2021-07-13">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Drag and drop bug fix</li>
           <li>Fonts loader fixes</li>
@@ -104,7 +104,7 @@
       </description>
     </release>
     <release version="0.4.0" date="2021-05-02">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Open fonts from file manager</li>
           <li>Drag and Drop support</li>
@@ -115,7 +115,7 @@
       </description>
     </release>
     <release version="0.3.0" date="2020-06-17">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>UI tweaks</li>
           <li>Code improvements</li>
@@ -123,7 +123,7 @@
       </description>
     </release>
     <release version="0.2.0" date="2020-05-30">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Add custom subsetting support</li>
           <li>Design and UX improvements</li>
@@ -132,7 +132,7 @@
       </description>
     </release>
     <release version="0.1.0" date="2020-05-25">
-      <description translatable="no">
+      <description translate="no">
         <p>Initial release.</p>
       </description>
     </release>

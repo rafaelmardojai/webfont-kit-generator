@@ -2,24 +2,26 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:19-0500\n"
+"POT-Creation-Date: 2024-03-31 09:15-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Spanish (https://app.transifex.com/rafaelmardojai/teams/135056/es/)\n"
+"Language-Team: Spanish (https://app.transifex.com/rafaelmardojai/"
+"teams/135056/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -31,6 +33,11 @@ msgstr "Webfont Kit Generator"
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Cree fácilmente los kits @font-face"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+msgid "font;font-face;"
+msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
@@ -46,14 +53,10 @@ msgid ""
 "Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Webfont Kit Generator también incluye una herramienta para descargar fuentes"
-" de Google Fonts su autoalojamiento."
+"Webfont Kit Generator también incluye una herramienta para descargar fuentes "
+"de Google Fonts su autoalojamiento."
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
-
-#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:32
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
 msgstr "Importar desde Google Fonts"
 
@@ -89,7 +92,7 @@ msgstr "Examinar..."
 msgid "Generate"
 msgstr "Generar"
 
-#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:101
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -108,8 +111,8 @@ msgstr "Generación finalizada!"
 #: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
-"Para vincular sus tipografías, copie el siguiente código en el encabezado de"
-" su HTML:"
+"Para vincular sus tipografías, copie el siguiente código en el encabezado de "
+"su HTML:"
 
 #: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
@@ -203,11 +206,11 @@ msgstr "El descriptor CSS font-display"
 msgid "Disabled"
 msgstr "Deshabilitado"
 
-#: webfontkitgenerator/google.blp:33
+#: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
 msgstr "Descargar tipografías desde Google Fonts para auto-hospedaje"
 
-#: webfontkitgenerator/google.blp:68
+#: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
 msgstr "Descargar tipografías"
 
@@ -347,3 +350,6 @@ msgstr "No tienes acceso de lectura a {font} o no existe."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Error: {error}."
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"

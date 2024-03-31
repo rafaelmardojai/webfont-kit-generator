@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:19-0500\n"
+"POT-Creation-Date: 2024-03-31 09:15-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/rafaelmardojai/"
@@ -33,6 +33,11 @@ msgstr "Webfont Kit Generator"
 msgid "Create @font-face kits easily"
 msgstr "Crie facilmente kits @font-face"
 
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+msgid "font;font-face;"
+msgstr ""
+
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
 "Webfont Kit Generator is a simple utility that allows you to generate woff, "
@@ -49,11 +54,7 @@ msgid ""
 "Fonts for self-hosting."
 msgstr "Baixe fontes do Google Fonts para auto-hospedagem"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
-
-#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:32
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
 msgstr "Importar do Google Fonts"
 
@@ -90,7 +91,7 @@ msgstr "Navegar..."
 msgid "Generate"
 msgstr "Gerar"
 
-#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:101
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -203,11 +204,11 @@ msgstr "O descritor de exibição da fonte CSS"
 msgid "Disabled"
 msgstr "Desativado"
 
-#: webfontkitgenerator/google.blp:33
+#: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
 msgstr "Baixe fontes do Google Fonts para auto-hospedagem"
 
-#: webfontkitgenerator/google.blp:68
+#: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
 msgstr "Baixar fontes"
 
@@ -350,6 +351,9 @@ msgstr "Você não tem acesso de leitura para {font} ou ela não existe."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Erro: {error}."
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"
 
 #~ msgid "Fonts"
 #~ msgstr "Fontes"

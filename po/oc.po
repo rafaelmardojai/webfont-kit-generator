@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:19-0500\n"
+"POT-Creation-Date: 2024-03-31 09:15-0500\n"
 "PO-Revision-Date: 2021-10-19 08:09+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
@@ -28,6 +28,11 @@ msgstr "Generador de kits de poliças"
 msgid "Create @font-face kits easily"
 msgstr "Crear de kits @font-face facilament"
 
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+msgid "font;font-face;"
+msgstr ""
+
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
 "Webfont Kit Generator is a simple utility that allows you to generate woff, "
@@ -44,11 +49,7 @@ msgid ""
 "Fonts for self-hosting."
 msgstr ""
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
-
-#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:32
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
 msgstr ""
 
@@ -86,7 +87,7 @@ msgstr "Percórrer..."
 msgid "Generate"
 msgstr "Generar"
 
-#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:101
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
 msgstr "Anullar"
 
@@ -200,11 +201,11 @@ msgstr "Lo descriptor CSS font-display"
 msgid "Disabled"
 msgstr "Desactivat"
 
-#: webfontkitgenerator/google.blp:33
+#: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
 msgstr ""
 
-#: webfontkitgenerator/google.blp:68
+#: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
 msgstr ""
 
@@ -350,6 +351,9 @@ msgstr "Avètz pas l’autorizacion de legir {font} o existís pas."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr ""
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"
 
 #~ msgid "Fonts"
 #~ msgstr "Poliças"

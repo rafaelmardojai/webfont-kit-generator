@@ -2,24 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Luna Jernberg <bittin@cafe8bitar.se>, 2023
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:19-0500\n"
+"POT-Creation-Date: 2024-03-31 09:15-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2023\n"
-"Language-Team: Swedish (https://app.transifex.com/rafaelmardojai/teams/135056/sv/)\n"
+"Language-Team: Swedish (https://app.transifex.com/rafaelmardojai/"
+"teams/135056/sv/)\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
@@ -32,6 +33,11 @@ msgstr "Webfont Kit Generator"
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Skapa @font-face-kit enkelt"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+msgid "font;font-face;"
+msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
@@ -51,11 +57,7 @@ msgstr ""
 "Webfont Kit Generator inkluderar också ett verktyg för att ladda ner "
 "teckensnitt från Google Fonts för själv-hosting."
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:21
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
-
-#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:32
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
 msgstr "Importera från Google Fonts"
 
@@ -91,7 +93,7 @@ msgstr "Bläddra..."
 msgid "Generate"
 msgstr "Generera"
 
-#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:101
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -205,11 +207,11 @@ msgstr "CSS teckensnitt"
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: webfontkitgenerator/google.blp:33
+#: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
 msgstr "Ladda ner typsnitt från Google Fonts för självhosting"
 
-#: webfontkitgenerator/google.blp:68
+#: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
 msgstr "Ladda ner teckensnitt"
 
@@ -351,3 +353,6 @@ msgstr "Du har inte läsbehörigheter för {font} eller så finns den inte."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Fel: {error}."
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"

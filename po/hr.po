@@ -54,7 +54,7 @@ msgid ""
 "Fonts for self-hosting."
 msgstr ""
 "Webfont Kit Generator također uključuje alat za preuzimanje fontova sa "
-"stranice ​​Google Fonts za samostalni hosting fontova."
+"stranice ​​Google Fonts za vlastiti hosting fontova."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"

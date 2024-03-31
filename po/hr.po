@@ -167,7 +167,7 @@ msgstr "Grčki, prošireno"
 
 #: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
-msgstr "Devanagarski"
+msgstr "Devanagari"
 
 #: webfontkitgenerator/options.blp:145
 msgid "Custom"

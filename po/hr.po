@@ -319,7 +319,7 @@ msgstr "Nije bilo moguće pronaći obitelj fontova {family_name}."
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:160
 msgid "Couldn’t find any fonts for the given url."
-msgstr "Nije bilo moguće pronaći fontove u zadanom URL-u."
+msgstr "Nije bilo moguće pronaći nijedan font za zadani URL."
 
 #: webfontkitgenerator/google.py:235
 msgid "Please set a valid url"

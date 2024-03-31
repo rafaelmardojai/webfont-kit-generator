@@ -28,6 +28,11 @@
   <launchable type="desktop-id">com.rafaelmardojai.WebfontKitGenerator.desktop</launchable>
   <translation type="gettext">webfontkitgenerator</translation>
 
+  <branding>
+    <color type="primary" scheme_preference="light">#cf6969</color>
+    <color type="primary" scheme_preference="dark">#652121</color>
+  </branding>
+
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/rafaelmardojai/webfont-kit-generator/master/brand/screenshots/1.png</image>

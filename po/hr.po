@@ -2,11 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# Milo Ivir <mail@milotype.de>, 2023
-#
+# Milo Ivir <mail@milotype.de>, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -14,15 +14,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-31 09:15-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>, 2023\n"
-"Language-Team: Croatian (https://app.transifex.com/rafaelmardojai/"
-"teams/135056/hr/)\n"
-"Language: hr\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>, 2024\n"
+"Language-Team: Croatian (https://app.transifex.com/rafaelmardojai/teams/135056/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -35,10 +33,11 @@ msgstr "Webfont Kit Generator"
 msgid "Create @font-face kits easily"
 msgstr "Stvori @font-face pakete jednostavno"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
 msgid "font;font-face;"
-msgstr ""
+msgstr "font;font-face;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
@@ -350,6 +349,3 @@ msgstr "Nemaš prava za čitanje fonta {font} ili font ne postoji."
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Greška: {error}."
-
-#~ msgid "Rafael Mardojai CM"
-#~ msgstr "Rafael Mardojai CM"

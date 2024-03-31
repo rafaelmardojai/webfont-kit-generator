@@ -119,7 +119,7 @@ msgstr "Ili ga izravno uvezi u CSS:"
 
 #: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
-msgstr "Otvori u datotekama"
+msgstr "Otvori u mapi „Datoteke”"
 
 #: webfontkitgenerator/window.blp:310
 msgid "Logs"

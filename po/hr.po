@@ -278,7 +278,7 @@ msgstr "Generirana je datoteka <i>{filename}</i> s <i>{count}</i> grafema."
 #: webfontkitgenerator/generator.py:154
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr "Za {range} nije pronađen nijedan grafem. Preskače se."
+msgstr "Za raspon {range} nije pronađen nijedan grafem. Preskače se."
 
 #: webfontkitgenerator/generator.py:169
 msgid "Generating CSS:"

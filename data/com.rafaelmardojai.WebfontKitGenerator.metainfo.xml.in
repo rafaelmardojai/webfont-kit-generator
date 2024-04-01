@@ -51,6 +51,14 @@
     </screenshot>
   </screenshots>
   <releases>
+  <release version="1.1.1" date="2024-04-01">
+      <description translate="no">
+        <ul>
+          <li>Translations Updates</li>
+          <li>Use new GNOME 46 adaptive dialogs</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2023-09-25">
       <description translate="no">
         <ul>

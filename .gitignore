@@ -8,3 +8,4 @@ build-aux/.flatpak-builder/
 .flatpak/
 .vscode/
 venv/
+.venv/

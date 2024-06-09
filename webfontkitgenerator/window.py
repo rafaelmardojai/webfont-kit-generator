@@ -191,7 +191,7 @@ class Window(Adw.ApplicationWindow):
     def _on_remove_font(self, _action, param):
         self.model.remove(param.get_uint32())
 
-    def _create_font_row(self, font):
+    def _create_font_row(self, font: Font):
         widget = FontRow(font.data)
         return widget
 

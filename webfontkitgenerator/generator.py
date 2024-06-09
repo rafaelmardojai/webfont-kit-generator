@@ -12,7 +12,7 @@ from fontTools.subset import Subsetter, parse_unicodes
 from fontTools.ttLib import TTFont
 from gi.repository import GLib
 
-from webfontkitgenerator.font import Font
+from webfontkitgenerator.font import Font, FontData
 
 
 class Generator(object):
@@ -75,12 +75,12 @@ class Generator(object):
 
         return
 
-    def _generate_font(self, filename, data):
+    def _generate_font(self, filename, data: FontData):
         # name = data['name-slug']
         log_text = _('Generating fonts for {name}:')
-        self._append_log(log_text.format(name=data['name']), bold=True)
+        self._append_log(log_text.format(name=data.name), bold=True)
         progress_text = _('Generating {name}')
-        self._set_progressbar_text(progress_text.format(name=data['family']))
+        self._set_progressbar_text(progress_text.format(name=data.family))
 
         if self.ranges:
             for range, unicodes in self.ranges.items():
@@ -97,20 +97,21 @@ class Generator(object):
             self._write_font(font, data)
             font.close()
 
-    def _write_font(self, font, data, range=None):
+    def _write_font(self, font: TTFont, data: FontData, range=None):
         cmap = font.getBestCmap()
-        name = data['name-slug']
+        name = data.name_slug
         name = '-'.join([name, range]) if range else name
 
         if cmap:
-            slug = data['family-slug']
+            slug = data.family_slug
             self.css.setdefault(slug, {})
 
             css = {
-                'font-family': data['family'],
-                'font-style': data['style'],
-                'font-weight': data['weight'],
-                'src': list(data['local']),
+                'font-family': data.family,
+                'font-style': data.style,
+                'font-weight': data.weight,
+                'font-stretch': data.width,
+                'src': list(data.local),
             }
 
             for format in self.formats:

@@ -2,13 +2,38 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
+from collections.abc import Sequence
 from urllib.parse import urlparse, unquote
 
 from gettext import gettext as _
 from gi.repository import Adw, GLib
 from fontTools.ttLib import TTFont
 
-from webfontkitgenerator.font import Font
+from webfontkitgenerator.font import Font, FontData
+
+WEIGHTS = {
+    'thin': '100',
+    'extralight': '200',
+    'light': '300',
+    'regular': '400',
+    'medium': '500',
+    'semibold': '600',
+    'bold': '700',
+    'extrabold': '800',
+    'black': '900',
+}
+
+WIDTHS = {
+    'ultracondensed': '50%',
+    'extracondensed': '62.5%',
+    'condensed': '75%',
+    'semicondensed': '87.5%',
+    'normal': '100%',
+    'semiexpanded': '112.5%',
+    'expanded': '125%',
+    'extraexpanded': '150%',
+    'ultraexpanded': '200%',
+}
 
 
 class Loader(object):
@@ -34,7 +59,7 @@ class Loader(object):
 
                 if os.path.exists(path) and os.access(path, os.R_OK):
                     ttfont = TTFont(path, lazy=True)
-                    data = self._get_font_data(ttfont['name'].getDebugName)
+                    data = self._get_font_data(ttfont)
                     ttfont.close()
                     font = Font(path, data)
                     GLib.idle_add(self.model.append, font)
@@ -47,52 +72,84 @@ class Loader(object):
                     )
 
             except Exception as exc:
-                print('Error loading ' + path)
+                print(f'Error loading {path}')
                 print(exc)
                 error_text = _('Error: {error}.')
                 GLib.idle_add(self._show_error, error_text.format(error=exc))
 
         self.window.processing = False
 
-    def _show_error(self, text):
+    def _show_error(self, text: str):
         error = Adw.Toast.new(text)
         self.window.toasts.add_toast(error)
 
-    def _get_font_data(self, data_src):
-        data = {}
-        weights = {
-            'Thin': '100',
-            'Extra-light': '200',
-            'Light': '300',
-            'Regular': '400',
-            'Medium': '500',
-            'Semi-bold': '600',
-            'Bold': '700',
-            'Extra-bold': '800',
-            'Black': '900',
-        }
+    def _get_font_data(self, tt_font: TTFont) -> FontData:
+        naming = tt_font['name']  # Font naming table
+        variations = None
+        if 'fvar' in tt_font:
+            variations = tt_font['fvar']
 
-        # Data used by UI
-        data['name'] = data_src(4)
-        data['version'] = data_src(5)
-        data['family'] = data_src(16) or data_src(1)
-        data['style'] = 'normal'
-        data['weight'] = '400'
+        font_data = FontData(
+            naming.getBestFullName(),  # type: ignore
+            naming.getBestFamilyName(),  # type: ignore
+            naming.getDebugName(5),  # type: ignore
+        )
 
-        data['local'] = ['local("%s")' % data_src(4)]
-        if not data_src(6) == data_src(4):
-            data['local'].append('local("%s")' % data_src(6))
+        # Variable font data
+        if variations is not None:
+            font_data.is_variable = True
+            axes: dict[str, tuple[float, ...]] = variations.getAxes()  # type: ignore
+            font_data.weight, font_data.width = self.__get_font_axis_ranges(
+                axes['wght'], axes['wdth']
+            )
 
-        data['name-slug'] = '-'.join(data['name'].split()).lower()
-        data['family-slug'] = '-'.join(data['family'].split()).lower()
+        # Get local font name
+        font_data.local.append('local("%s")' % naming.getDebugName(4))  # type: ignore
+        if not naming.getDebugName(6) == naming.getDebugName(4):  # type: ignore
+            font_data.local.append('local("%s")' % naming.getDebugName(6))  # type: ignore
 
-        ws = data_src(17) or data_src(2)
-        ws = ws.split()
+        # Get style, weight and width
+        # We try to guess this info from some name strings
+        names = ' '.join(
+            (
+                naming.getDebugName(17) or naming.getDebugName(2),  # type: ignore
+                naming.getDebugName(4),  # type: ignore
+            )
+        )
+        ws = self.__normalize_names(names.split())
 
         for s in ws:
-            if s == 'Italic':
-                data['style'] = 'italic'
-            if s in weights:
-                data['weight'] = weights[s]
+            if s == 'italic':
+                font_data.style = 'italic'
+            if variations is None:
+                if s in WEIGHTS:
+                    font_data.weight = WEIGHTS[s]
+                elif s in WIDTHS:
+                    font_data.width = WIDTHS[s]
 
-        return data
+        return font_data
+
+    def __normalize_names(self, names: Sequence[str]) -> Sequence[str]:
+        return list(
+            map(lambda n: n.lower().replace('-', '').replace('_', ''), names)
+        )
+
+    def __get_font_axis_ranges(
+        self, weights: Sequence[float], widths: Sequence[float]
+    ) -> tuple[str, str]:
+        min_weight = min(weights)
+        max_weight = max(weights)
+        min_width = min(widths)
+        max_width = max(widths)
+
+        if min_weight == max_weight:
+            weight = str(int(max_weight))
+        else:
+            weight = f"{int(min_weight)} {int(max_weight)}"
+
+        if min_width == max_width:
+            width = f"{max_width:g}%"
+        else:
+            width = f"{min_width:g}% {max_width:g}%"
+
+        return (weight, width)

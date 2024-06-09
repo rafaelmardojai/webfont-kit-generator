@@ -54,6 +54,12 @@ meson builddir --prefix=/usr/local
 sudo ninja -C builddir install
 ```
 
+### Collect Python deps for flatpak
+
+```bash
+build-aux/flatpak-pip-generator  --requirements-file requirements.txt --output=build-aux/python3-requirements
+```
+
 ## Screenshots
 
 <p align="center">

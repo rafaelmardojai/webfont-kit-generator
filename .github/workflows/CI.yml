@@ -15,6 +15,6 @@ jobs:
     - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: "webfont-kit-generator-devel.flatpak"
-        manifest-path: "com.rafaelmardojai.WebfontKitGenerator.json"
+        manifest-path: "build-aux/com.rafaelmardojai.WebfontKitGenerator.json"
         run-tests: "true"
         cache-key: flatpak-builder-${{ github.sha }}

@@ -84,6 +84,7 @@ class Loader(object):
         self.window.toasts.add_toast(error)
 
     def _get_font_data(self, tt_font: TTFont) -> FontData:
+        head = tt_font['head']
         naming = tt_font['name']  # Font naming table
         variations = None
         if 'fvar' in tt_font:
@@ -94,6 +95,16 @@ class Loader(object):
             naming.getBestFamilyName(),  # type: ignore
             naming.getDebugName(5),  # type: ignore
         )
+
+        # Font macStyle bits
+        mac_style_bitfield = [bool(int(b)) for b in bin(head.macStyle)[2:]]  # type: ignore
+        mac_style_bitfield.reverse()
+
+        # Get font bold or italic by macStyle
+        if mac_style_bitfield[0]:
+            font_data.weight = '700'  # Font is bold
+        if len(mac_style_bitfield) > 1 and mac_style_bitfield[1]:
+            font_data.style = 'italic'  # Font is italic
 
         # Variable font data
         if variations is not None:

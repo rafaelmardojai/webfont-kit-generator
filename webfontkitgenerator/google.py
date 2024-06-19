@@ -233,42 +233,40 @@ class GoogleDialog(Adw.Dialog):
         if 'family' in query:
             for family in query['family']:
                 # Parse family_name, axis_tag_list, axis_tuple_list
-                data = re.split(':|@', family)
+                data: list[str] = re.split(':|@', family)
 
+                # Only the family name is present
                 if len(data) == 1:
                     results.append(
                         GoogleFontInfo(name=data[0], variants=['regular'])
                     )
-
+                # We have the three values
                 elif len(data) == 3:
-                    result = GoogleFontInfo(name=data[0], variants=[])
-                    # axis_tag_list = data[1].split(',')
+                    (family_name, axis_tag_list, axis_tuple_list) = data
+                    result = GoogleFontInfo(name=family_name, variants=[])
+                    tags = axis_tag_list.split(',')
+                    variants = axis_tuple_list.split(';')
 
-                    for variant in data[2].split(';'):
-                        variant_data = variant.split(',')
-                        variant_id = ''
+                    for variant in variants:
+                        properties = dict(zip(tags, variant.split(',')))
 
-                        # Variant only has weight data
-                        if len(variant_data) == 1:
-                            if variant_data[0] == '400':
-                                variant_id = 'regular'
-                            else:
-                                variant_id = variant_data[0]
+                        if 'wght' in properties:
+                            variant_id = (
+                                'regular'
+                                if properties['wght'] == '400'
+                                else properties['wght']
+                            )
+                            if (
+                                'ital' in properties
+                                and properties['ital'] == '1'
+                            ):
+                                variant_id = (
+                                    'italic'
+                                    if variant_id == 'regular'
+                                    else variant_id + 'italic'
+                                )
 
-                        # Variant has weight and italic data
-                        elif len(variant_data) == 2:
-                            # Is italic
-                            if variant_data[0] == '1':
-                                if variant_data[1] == '400':
-                                    variant_id = 'italic'
-                                else:
-                                    variant_id = variant_data[1] + 'italic'
-                            else:
-                                if variant_data[1] == '400':
-                                    variant_id = 'regular'
-                                else:
-                                    variant_id = variant_data[1]
-                        result.variants.append(variant_id)
+                            result.variants.append(variant_id)
 
                     results.append(result)
                 else:

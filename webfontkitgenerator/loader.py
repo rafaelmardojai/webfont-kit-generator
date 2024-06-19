@@ -110,9 +110,10 @@ class Loader(object):
         if variations is not None:
             font_data.is_variable = True
             axes: dict[str, tuple[float, ...]] = variations.getAxes()  # type: ignore
-            font_data.weight, font_data.width = self.__get_font_axis_ranges(
-                axes['wght'], axes['wdth']
-            )
+            if wght := axes.get('wght'):
+                font_data.weight = self.__get_font_weight_axis_range(wght)
+            if wdth := axes.get('wdth'):
+                font_data.weight = self.__get_font_width_axis_range(wdth)
 
         # Get local font name
         font_data.local.append('local("%s")' % naming.getDebugName(4))  # type: ignore
@@ -145,22 +146,24 @@ class Loader(object):
             map(lambda n: n.lower().replace('-', '').replace('_', ''), names)
         )
 
-    def __get_font_axis_ranges(
-        self, weights: Sequence[float], widths: Sequence[float]
-    ) -> tuple[str, str]:
+    def __get_font_weight_axis_range(self, weights: Sequence[float]) -> str:
         min_weight = min(weights)
         max_weight = max(weights)
-        min_width = min(widths)
-        max_width = max(widths)
 
         if min_weight == max_weight:
             weight = str(int(max_weight))
         else:
             weight = f"{int(min_weight)} {int(max_weight)}"
 
+        return weight
+
+    def __get_font_width_axis_range(self, widths: Sequence[float]) -> str:
+        min_width = min(widths)
+        max_width = max(widths)
+
         if min_width == max_width:
             width = f"{max_width:g}%"
         else:
             width = f"{min_width:g}% {max_width:g}%"
 
-        return (weight, width)
+        return width

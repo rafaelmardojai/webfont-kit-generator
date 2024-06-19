@@ -1,15 +1,20 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from __future__ import annotations
 import os
+import typing
 from collections.abc import Sequence
-from urllib.parse import urlparse, unquote
+from urllib.parse import unquote
 
 from gettext import gettext as _
-from gi.repository import Adw, GLib
+from gi.repository import Adw, Gio, GLib
 from fontTools.ttLib import TTFont
 
 from webfontkitgenerator.font import Font, FontData
+
+if typing.TYPE_CHECKING:
+    from webfontkitgenerator.window import Window
 
 WEIGHTS = {
     'thin': '100',
@@ -37,39 +42,32 @@ WIDTHS = {
 
 
 class Loader(object):
-    def __init__(self, window, model):
+    def __init__(self, window: Window, model: Gio.ListStore):
         self.window = window
         self.model = model
 
-    def load(self, files):
+    def load(self, files: Sequence[Gio.File]):
         self.window.processing = True
 
         for f in files:
             try:
-                path = None
-                if isinstance(f, str):
-                    url_parsed = urlparse(f)
-                    if url_parsed.scheme == 'file':
-                        path = url_parsed.path
-                    else:
-                        continue
-                else:
-                    path = f.get_path()
-                path = unquote(path)
+                path = f.get_path()
+                if path:
+                    path = unquote(path)
 
-                if os.path.exists(path) and os.access(path, os.R_OK):
-                    ttfont = TTFont(path, lazy=True)
-                    data = self._get_font_data(ttfont)
-                    ttfont.close()
-                    font = Font(path, data)
-                    GLib.idle_add(self.model.append, font)
-                else:
-                    error_text = _(
-                        'You don’t have read access to {font} or it doesn’t exists.'  # noqa
-                    )
-                    GLib.idle_add(
-                        self._show_error, error_text.format(font=path)
-                    )
+                    if os.path.exists(path) and os.access(path, os.R_OK):
+                        ttfont = TTFont(path, lazy=True)
+                        data = self._get_font_data(ttfont)
+                        ttfont.close()
+                        font = Font(path, data)
+                        GLib.idle_add(self.model.append, font)
+                    else:
+                        error_text = _(
+                            'You don’t have read access to {font} or it doesn’t exists.'  # noqa
+                        )
+                        GLib.idle_add(
+                            self._show_error, error_text.format(font=path)
+                        )
 
             except Exception as exc:
                 print(f'Error loading {path}')

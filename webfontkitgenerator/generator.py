@@ -22,7 +22,7 @@ class Generator(object):
         path: str,
         fonts_list: list[Font],
         formats: list[str],
-        ranges: dict[str, str],
+        ranges: dict[str, str] | None,
         base64: bool,
         font_display: str | None,
     ):
@@ -34,7 +34,7 @@ class Generator(object):
         self.ranges = ranges
         self.base64 = base64
         self.font_display = font_display
-        self.css = {}
+        self.css: dict[str, dict[str, dict[str, str | list[str]]]] = {}
 
         total_ranges = len(ranges) if ranges else 1
         self.total = (len(fonts_list) * len(formats)) * total_ranges
@@ -83,13 +83,13 @@ class Generator(object):
         self._set_progressbar_text(progress_text.format(name=data.family))
 
         if self.ranges:
-            for range, unicodes in self.ranges.items():
+            for char_range, unicodes in self.ranges.items():
                 font = TTFont(filename)
                 subs = Subsetter()
 
                 subs.populate(unicodes=parse_unicodes(unicodes))
                 subs.subset(font)
-                self._write_font(font, data, range=range)
+                self._write_font(font, data, char_range=char_range)
                 font.close()
                 del font
         else:
@@ -97,10 +97,12 @@ class Generator(object):
             self._write_font(font, data)
             font.close()
 
-    def _write_font(self, font: TTFont, data: FontData, range=None):
+    def _write_font(
+        self, font: TTFont, data: FontData, char_range: str | None = None
+    ):
         cmap = font.getBestCmap()
         name = data.name_slug
-        name = '-'.join([name, range]) if range else name
+        name = '-'.join([name, char_range]) if char_range else name
 
         if cmap:
             slug = data.family_slug
@@ -143,8 +145,8 @@ class Generator(object):
                 gen_text = gen_text.format(filename=filenameout, count=count)
                 self._append_log(gen_text)
 
-            if range:
-                css['unicode-range'] = self.ranges[range]
+            if char_range and self.ranges:
+                css['unicode-range'] = self.ranges[char_range]
             if self.font_display is not None:
                 css['font-display'] = self.font_display
             self.css[slug][name] = css
@@ -202,10 +204,10 @@ class Generator(object):
         self.window.progressbar.set_fraction(progress)
         return progress != 1
 
-    def _set_progressbar_text(self, text):
+    def _set_progressbar_text(self, text: str):
         GLib.idle_add(self.window.progress.set_title, text)
 
-    def _append_log(self, text, bold=False, italic=False):
+    def _append_log(self, text: str, bold=False, italic=False):
         GLib.idle_add(self.window.log.append, text, bold, italic)
 
     def _end_code(self, sheets):

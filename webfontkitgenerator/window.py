@@ -3,6 +3,7 @@
 
 import os
 from gettext import gettext as _
+from typing import Sequence
 
 from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
 
@@ -21,30 +22,30 @@ from webfontkitgenerator.sourceview import SourceView
 class Window(Adw.ApplicationWindow):
     __gtype_name__ = 'Window'
 
-    processing: bool = GObject.Property(type=bool, default=False)
+    processing: bool = GObject.Property(type=bool, default=False)  # type: ignore
 
     # Main app stack
-    appstack: Gtk.Stack = Gtk.Template.Child()
+    appstack: Gtk.Stack = Gtk.Template.Child()  # type: ignore
 
     # Progress View
-    progressbar: Gtk.ProgressBar = Gtk.Template.Child()
-    progress: Adw.StatusPage = Gtk.Template.Child()
-    cancel: Gtk.Button = Gtk.Template.Child()
+    progressbar: Gtk.ProgressBar = Gtk.Template.Child()  # type: ignore
+    progress: Adw.StatusPage = Gtk.Template.Child()  # type: ignore
+    cancel: Gtk.Button = Gtk.Template.Child()  # type: ignore
 
     # Finished View
-    finished_stack: Gtk.Stack = Gtk.Template.Child()
-    src_html: SourceView = Gtk.Template.Child()
-    src_css: SourceView = Gtk.Template.Child()
-    log: Log = Gtk.Template.Child()
+    finished_stack: Gtk.Stack = Gtk.Template.Child()  # type: ignore
+    src_html: SourceView = Gtk.Template.Child()  # type: ignore
+    src_css: SourceView = Gtk.Template.Child()  # type: ignore
+    log: Log = Gtk.Template.Child()  # type: ignore
 
     # Fonts list and options view
-    split: Adw.OverlaySplitView = Gtk.Template.Child()
-    toolbar_view: Adw.ToolbarView = Gtk.Template.Child()
-    fonts_stack: Gtk.Stack = Gtk.Template.Child()
-    fonts_list: Gtk.ListBox = Gtk.Template.Child()
-    options: Options = Gtk.Template.Child()
-    directory: Gtk.Label = Gtk.Template.Child()
-    toasts: Adw.ToastOverlay = Gtk.Template.Child()
+    split: Adw.OverlaySplitView = Gtk.Template.Child()  # type: ignore
+    toolbar_view: Adw.ToolbarView = Gtk.Template.Child()  # type: ignore
+    fonts_stack: Gtk.Stack = Gtk.Template.Child()  # type: ignore
+    fonts_list: Gtk.ListBox = Gtk.Template.Child()  # type: ignore
+    options: Options = Gtk.Template.Child()  # type: ignore
+    directory: Gtk.Label = Gtk.Template.Child()  # type: ignore
+    toasts: Adw.ToastOverlay = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -112,7 +113,7 @@ class Window(Adw.ApplicationWindow):
         back.connect('activate', self._on_back)
         self.add_action(back)
 
-    def load_fonts(self, files):
+    def load_fonts(self, files: Sequence[Gio.File]):
         self.loader.load(files)
 
     @Gtk.Template.Callback()
@@ -124,19 +125,19 @@ class Window(Adw.ApplicationWindow):
         launcher.launch(self, None, on_launched)
 
     @Gtk.Template.Callback()
-    def _on_appstack_changes(self, stack, _pspec):
+    def _on_appstack_changes(self, stack: Gtk.Stack, _pspec):
         file_choosers = stack.props.visible_child_name == 'main'
 
-        self.lookup_action('open').set_enabled(file_choosers)
-        self.lookup_action('set-dir').set_enabled(file_choosers)
+        self.lookup_action('open').set_enabled(file_choosers)  # type: ignore
+        self.lookup_action('set-dir').set_enabled(file_choosers)  # type: ignore
 
     def _on_open(self, _action, _param):
-        def on_selected(chooser, result):
+        def on_selected(chooser: Gtk.FileDialog, result: Gio.AsyncResult):
             try:
                 files = chooser.open_multiple_finish(result)
 
                 if files is not None:
-                    self.load_fonts(files)
+                    self.load_fonts(files)  # type: ignore
 
             except GLib.Error as e:
                 if e.code == Gtk.DialogError.FAILED:
@@ -145,14 +146,14 @@ class Window(Adw.ApplicationWindow):
         self.fonts_chooser.open_multiple(self, None, on_selected)
 
     def _on_set_dir(self, _action, _param):
-        def on_selected(chooser, result):
+        def on_selected(chooser: Gtk.FileDialog, result: Gio.AsyncResult):
             try:
-                selected: Gio.File = chooser.select_folder_finish(result)
+                selected = chooser.select_folder_finish(result)
 
-                if selected is not None:
-                    if os.access(selected.get_path(), os.W_OK):
+                if selected is not None and (path := selected.get_path()):
+                    if os.access(path, os.W_OK):
                         self.out_dir = selected
-                        self.directory.set_label(selected.get_basename())
+                        self.directory.set_label(selected.get_basename() or "")
                         self._check_ready_state()
                     else:
                         self.toasts.add_toast(
@@ -173,16 +174,17 @@ class Window(Adw.ApplicationWindow):
         dialog.present(self)
 
     def _on_generate(self, _action, _param):
-        generator = Generator(
-            self,
-            self.out_dir.get_path(),
-            self.model,
-            self.options.get_formats(),
-            self.options.get_subsetting(),
-            self.options.get_base64(),
-            self.options.get_font_display(),
-        )
-        generator.run()
+        if self.out_dir and (path := self.out_dir.get_path()):
+            generator = Generator(
+                self,
+                path,
+                self.model,  # type:ignore
+                self.options.get_formats(),
+                self.options.get_subsetting(),
+                self.options.get_base64(),
+                self.options.get_font_display(),
+            )
+            generator.run()
 
     def _on_back(self, _action, _param):
         if not self.processing:
@@ -205,7 +207,7 @@ class Window(Adw.ApplicationWindow):
     def _check_ready_state(self):
         has_items = self.model.get_n_items() > 0
 
-        self.lookup_action('generate').set_enabled(has_items and self.out_dir)
+        self.lookup_action('generate').set_enabled(has_items and self.out_dir)  # type: ignore
         self.split.props.show_sidebar = has_items
         self.toolbar_view.props.reveal_bottom_bars = has_items
 

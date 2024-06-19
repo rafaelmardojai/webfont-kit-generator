@@ -3,7 +3,7 @@
 
 import sys
 import gi
-
+from collections.abc import Sequence
 from gettext import gettext as _
 
 try:
@@ -12,7 +12,7 @@ try:
     gi.require_version('Adw', '1')
     gi.require_version('GtkSource', '5')
     gi.require_version('Soup', '3.0')
-    from gi.repository import Adw, Gio, GLib, Gtk
+    from gi.repository import Adw, Gio, GLib
 except ImportError or ValueError as exc:
     print('Error: GIR dependencies not met.', exc)
     exit()
@@ -28,7 +28,7 @@ from webfontkitgenerator.window import Window
 
 
 class Application(Adw.Application):
-    def __init__(self, version):
+    def __init__(self, version: str):
         super().__init__(
             application_id='com.rafaelmardojai.WebfontKitGenerator',
             flags=Gio.ApplicationFlags.HANDLES_OPEN,
@@ -36,7 +36,7 @@ class Application(Adw.Application):
         GLib.set_application_name(_('Webfont Kit Generator'))
 
         self.version = version
-        self.window = None
+        self.window: Window | None = None
 
         self.setup_actions()
 
@@ -44,16 +44,17 @@ class Application(Adw.Application):
         Adw.Application.do_startup(self)
 
     def do_activate(self):
-        self.window = self.props.active_window
+        self.window = self.props.active_window  # type: ignore
         if not self.window:
             self.window = Window(application=self)
         self.window.present()
 
-    def do_open(self, files, _n_files, _hint):
+    def do_open(self, files: Sequence[Gio.File], _n_files, _hint):
         # Activate window first
         self.activate()
         # Load fonts
-        self.window.load_fonts(files)
+        if self.window:
+            self.window.load_fonts(files)
 
     def setup_actions(self):
         about = Gio.SimpleAction.new('about', None)

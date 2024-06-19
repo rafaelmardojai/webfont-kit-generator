@@ -31,7 +31,7 @@ class Font(GObject.Object):
 
     __gtype_name__ = 'Font'
 
-    path: str = GObject.Property(type=str)
+    path: str = GObject.Property(type=str)  # type:ignore
     data: FontData
 
     def __init__(self, path: str, data: FontData):

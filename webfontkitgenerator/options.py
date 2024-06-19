@@ -28,24 +28,24 @@ class Options(Adw.PreferencesPage):
     __gtype_name__ = 'Options'
 
     # Fonts format
-    woff2: Gtk.Switch = Gtk.Template.Child()
-    woff: Gtk.Switch = Gtk.Template.Child()
+    woff2: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    woff: Gtk.Switch = Gtk.Template.Child()  # type: ignore
 
     # Subsetting
-    subsetting: Adw.ExpanderRow = Gtk.Template.Child()
-    latin: Gtk.Switch = Gtk.Template.Child()
-    latin_ext: Gtk.Switch = Gtk.Template.Child()
-    cyrillic: Gtk.Switch = Gtk.Template.Child()
-    cyrillic_ext: Gtk.Switch = Gtk.Template.Child()
-    greek: Gtk.Switch = Gtk.Template.Child()
-    greek_ext: Gtk.Switch = Gtk.Template.Child()
-    vietnamese: Gtk.Switch = Gtk.Template.Child()
-    devanagari: Gtk.Switch = Gtk.Template.Child()
-    custom: Gtk.Entry = Gtk.Template.Child()
+    subsetting: Adw.ExpanderRow = Gtk.Template.Child()  # type: ignore
+    latin: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    latin_ext: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    cyrillic: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    cyrillic_ext: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    greek: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    greek_ext: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    vietnamese: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    devanagari: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    custom: Gtk.Entry = Gtk.Template.Child()  # type: ignore
 
     # CSS
-    base64: Adw.SwitchRow = Gtk.Template.Child()
-    font_display: Adw.ComboRow = Gtk.Template.Child()
+    base64: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
+    font_display: Adw.ComboRow = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -131,7 +131,7 @@ class Options(Adw.PreferencesPage):
         if self.font_display.props.selected == 0:
             return None
         return (
-            self.font_display.props.selected_item.props.string
+            self.font_display.props.selected_item.props.string  # type: ignore
         )  # Get string from StringObject
 
     @Gtk.Template.Callback()

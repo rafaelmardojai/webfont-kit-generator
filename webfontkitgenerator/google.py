@@ -1,18 +1,54 @@
 # Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from __future__ import annotations
+import inspect
 import json
 import os
 import re
+import typing
+from dataclasses import dataclass
 from urllib.parse import urlparse, parse_qs
 
 from gettext import gettext as _
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Soup
 
 
+if typing.TYPE_CHECKING:
+    from webfontkitgenerator.window import Window
+
+
 GOOGLE_API_URL = 'https://www.googleapis.com/webfonts/v1/webfonts?key={}'
 XDG_DATA_DIR = os.path.join(GLib.get_user_data_dir(), 'webfont-kit-generator')
 DATA_FILE = os.path.join(XDG_DATA_DIR, 'google-fonts.json')
+
+
+@dataclass
+class GoogleFont:
+    kind: str
+    category: str
+    family: str
+    subsets: list[str]
+    variants: list[str]
+    version: str
+    lastModified: str
+    files: dict[str, str]
+
+    @classmethod
+    def from_data(cls, data: dict):
+        return cls(
+            **{
+                k: v
+                for k, v in data.items()
+                if k in inspect.signature(cls).parameters
+            }
+        )
+
+
+@dataclass
+class GoogleFontInfo:
+    name: str
+    variants: list[str]
 
 
 @Gtk.Template(
@@ -21,15 +57,15 @@ DATA_FILE = os.path.join(XDG_DATA_DIR, 'google-fonts.json')
 class GoogleDialog(Adw.Dialog):
     __gtype_name__ = 'GoogleDialog'
 
-    stack: Gtk.Stack = Gtk.Template.Child()
-    url_entry: Gtk.Entry = Gtk.Template.Child()
-    error_revealer: Gtk.Revealer = Gtk.Template.Child()
-    error_label: Gtk.Label = Gtk.Template.Child()
-    download_btn: Gtk.Button = Gtk.Template.Child()
-    progress: Adw.StatusPage = Gtk.Template.Child()
-    progressbar: Gtk.ProgressBar = Gtk.Template.Child()
+    stack: Gtk.Stack = Gtk.Template.Child()  # type: ignore
+    url_entry: Gtk.Entry = Gtk.Template.Child()  # type: ignore
+    error_revealer: Gtk.Revealer = Gtk.Template.Child()  # type: ignore
+    error_label: Gtk.Label = Gtk.Template.Child()  # type: ignore
+    download_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
+    progress: Adw.StatusPage = Gtk.Template.Child()  # type: ignore
+    progressbar: Gtk.ProgressBar = Gtk.Template.Child()  # type: ignore
 
-    def __init__(self, window, **kwargs):
+    def __init__(self, window: Window, **kwargs):
         super().__init__(**kwargs)
 
         self.window = window
@@ -41,12 +77,12 @@ class GoogleDialog(Adw.Dialog):
         # Google Fonts
         self.google_sha = ''
         # Families to lockup
-        self.families = {}
+        self.families: list[GoogleFontInfo] = []
         # Progress
         self.total = 0
         self.pending = 0
         # Files to import
-        self.files = []
+        self.files: list[Gio.File] = []
 
     def load_fonts_data(self):
         # Loading feedback
@@ -60,17 +96,23 @@ class GoogleDialog(Adw.Dialog):
         api_url = GOOGLE_API_URL.format(api_key)
         message = Soup.Message.new('GET', api_url)
 
-        if self._local_data_exists():
-            request_headers = message.get_request_headers()
-            request_headers.append(
-                'If-None-Match', self.settings.get_string('google-fonts-sha')
+        if message:
+            if self._local_data_exists():
+                request_headers = message.get_request_headers()
+                request_headers.append(
+                    'If-None-Match',
+                    self.settings.get_string('google-fonts-sha'),
+                )
+            self.session.send_and_read_async(
+                message, 0, self.cancellable, self.on_google_response, message
             )
 
-        self.session.send_and_read_async(
-            message, 0, self.cancellable, self.on_google_response, message
-        )
-
-    def on_google_response(self, session, result, message):
+    def on_google_response(
+        self,
+        session: Soup.Session,
+        result: Gio.AsyncResult,
+        message: Soup.Message,
+    ):
         failed = True
         try:
             response = session.send_and_read_finish(result)
@@ -79,7 +121,9 @@ class GoogleDialog(Adw.Dialog):
             status_code = message.props.status_code
             response_headers = message.get_response_headers()
 
-            print(f'Google Fonts Response Status {status.get_phrase(status_code)}')
+            print(
+                f'Google Fonts Response Status {status.get_phrase(status_code)}'
+            )
 
             if status == Soup.Status.OK and 'kind' in data:
                 try:
@@ -96,7 +140,9 @@ class GoogleDialog(Adw.Dialog):
                         response_headers.get_one('ETag') or '',
                     )
 
-                    self.find_on_data(data['items'])
+                    self.find_on_data(
+                        [GoogleFont.from_data(d) for d in data['items']]
+                    )
                     failed = False
                 except Exception as exc:
                     print(exc)
@@ -107,7 +153,7 @@ class GoogleDialog(Adw.Dialog):
                 self.find_on_data()
                 failed = False
 
-        except GLib.GError as exc:
+        except GLib.Error as exc:
             print(exc)
 
         if failed:
@@ -115,26 +161,28 @@ class GoogleDialog(Adw.Dialog):
             self.errors.append(error)
             self.terminate_dialog()
 
-    def find_on_data(self, data=None):
+    def find_on_data(self, data: list[GoogleFont] | None = None):
         if not data:
             data = self._get_local_data()
 
-        files = {}  # Where files to download will be stored
+        files: dict[str, dict[str, str]] = (
+            {}
+        )  # Where files to download will be stored
         for family in self.families:
             # Filter data with wanted families
             results = list(
-                filter(lambda x: x['family'] == family['name'], data)
+                filter(lambda x: x.family == family.name, data or [])
             )
 
             if results:
                 results = results[0]  # Get first result
-                for variant in family['variants']:  # Check for wanted variants
-                    if variant in results['files']:  # If variant available
+                for variant in family.variants:  # Check for wanted variants
+                    if variant in results.files:  # If variant available
                         # Store variant files to download
-                        if family['name'] not in files:
-                            files[family['name']] = {}
-                        name = ' '.join([family['name'], variant])
-                        files[family['name']][name] = results['files'][variant]
+                        if family.name not in files:
+                            files[family.name] = {}
+                        name = ' '.join([family.name, variant])
+                        files[family.name][name] = results.files[variant]
                         # Increase count of total files to download
                         self.total += 1
                     else:  # If variant not available
@@ -143,13 +191,13 @@ class GoogleDialog(Adw.Dialog):
                             'Couldn’t find the {variant} variant for {family_name}.'  # noqa
                         )
                         error = error.format(
-                            variant=variant, family_name=family['name']
+                            variant=variant, family_name=family.name
                         )
                         self.errors.append(error)
             else:
                 # If no family found, add error to list
                 error = _('Couldn’t find the {family_name} font family.')
-                error = error.format(family_name=family['name'])
+                error = error.format(family_name=family.name)
                 self.errors.append(error)
 
         if files:
@@ -160,9 +208,9 @@ class GoogleDialog(Adw.Dialog):
             self.errors = [_('Couldn’t find any fonts for the given url.')]
             self.terminate_dialog()
 
-    def parse_api_v1(self, query: str) -> list[dict[str, str | list[str]]]:
-        result = []
-        query: dict = parse_qs(query)
+    def parse_api_v1(self, q: str) -> list[GoogleFontInfo]:
+        result: list[GoogleFontInfo] = []
+        query = parse_qs(q)
 
         if 'family' in query:
             families = query['family'][0].split('|')
@@ -174,13 +222,13 @@ class GoogleDialog(Adw.Dialog):
                     name = family[0]
                     variants = family[1].split(',')
 
-                    result.append({'name': name, 'variants': variants})
+                    result.append(GoogleFontInfo(name, variants))
 
         return result
 
-    def parse_api_v2(self, query: str) -> list[dict[str, str | list[str]]]:
-        results = []
-        query: dict = parse_qs(query)
+    def parse_api_v2(self, q: str) -> list[GoogleFontInfo]:
+        results: list[GoogleFontInfo] = []
+        query = parse_qs(q)
 
         if 'family' in query:
             for family in query['family']:
@@ -188,13 +236,13 @@ class GoogleDialog(Adw.Dialog):
                 data = re.split(':|@', family)
 
                 if len(data) == 1:
-                    results.append({'name': data[0], 'variants': ['regular']})
+                    results.append(
+                        GoogleFontInfo(name=data[0], variants=['regular'])
+                    )
 
                 elif len(data) == 3:
-                    result = {}
-                    result['name'] = data[0]
+                    result = GoogleFontInfo(name=data[0], variants=[])
                     # axis_tag_list = data[1].split(',')
-                    variants = []
 
                     for variant in data[2].split(';'):
                         variant_data = variant.split(',')
@@ -220,9 +268,8 @@ class GoogleDialog(Adw.Dialog):
                                     variant_id = 'regular'
                                 else:
                                     variant_id = variant_data[1]
-                        variants.append(variant_id)
+                        result.variants.append(variant_id)
 
-                    result['variants'] = variants
                     results.append(result)
                 else:
                     continue
@@ -253,8 +300,12 @@ class GoogleDialog(Adw.Dialog):
 
         self.close()
 
-    def _download_files(self, files):
-        def on_file_downloaded(session, result, user_data):
+    def _download_files(self, files: dict[str, dict[str, str]]):
+        def on_file_downloaded(
+            session: Soup.Session,
+            result: Gio.AsyncResult,
+            user_data: tuple[str, str],
+        ):
             (family, name) = user_data
             progress_text = _('Downloading {name}')
             self.progress.set_title(progress_text.format(name=family))
@@ -275,7 +326,7 @@ class GoogleDialog(Adw.Dialog):
                         (name, font),
                     )
                     failed = False
-            except GLib.GError as exc:
+            except GLib.Error as exc:
                 print(exc)
                 self.pending -= 1
 
@@ -284,7 +335,11 @@ class GoogleDialog(Adw.Dialog):
                 error = error.format(name=name)
                 self.errors.append(error)
 
-        def on_file_writed(outstream, result, user_data):
+        def on_file_writed(
+            outstream: Gio.OutputStream,
+            result: Gio.AsyncResult,
+            user_data: tuple[str, Gio.File],
+        ):
             (name, font) = user_data
             failed = True
             self.pending -= 1
@@ -293,7 +348,7 @@ class GoogleDialog(Adw.Dialog):
                 outstream.close()
                 self.files.append(font)
                 failed = False
-            except GLib.GError as exc:
+            except GLib.Error as exc:
                 print(exc)
 
             if failed:
@@ -310,21 +365,24 @@ class GoogleDialog(Adw.Dialog):
         for family, variants in files.items():
             for name, url in variants.items():
                 message = Soup.Message.new('GET', url)
-                self.session.send_and_read_async(
-                    message,
-                    0,
-                    self.cancellable,
-                    on_file_downloaded,
-                    (family, name),
-                )
+                if message:
+                    self.session.send_and_read_async(
+                        message,
+                        0,
+                        self.cancellable,
+                        on_file_downloaded,
+                        (family, name),
+                    )
 
-    def _get_local_data(self):
+    def _get_local_data(self) -> list[GoogleFont] | None:
         data = None
         try:
             with open(DATA_FILE) as json_file:
-                data = json.load(json_file)
+                saved_data = json.load(json_file)
+                data = [GoogleFont.from_data(d) for d in saved_data]
         except Exception as exc:
             print(exc)
+
         return data
 
     def _local_data_exists(self):
@@ -389,14 +447,15 @@ class GoogleDialog(Adw.Dialog):
                 self._paste_text()
 
     def _paste_text(self):
-        clipboard = Gdk.Display.get_default().get_clipboard()
-
-        def on_paste(clipboard, result):
+        def on_paste(clipboard: Gdk.Clipboard, result: Gio.AsyncResult):
             text = clipboard.read_text_finish(result)
             if text is not None:
                 self.url_entry.set_text(text)
 
-        clipboard.read_text_async(None, on_paste)
+        display = Gdk.Display.get_default()
+        if display:
+            clipboard = display.get_clipboard()
+            clipboard.read_text_async(None, on_paste)
 
     def _on_progressbar_timeout(self, _data):
         if self.total and self.pending:
@@ -407,11 +466,11 @@ class GoogleDialog(Adw.Dialog):
             self.progressbar.pulse()
         return True
 
-    def _read_response(self, response):
+    def _read_response(self, response: GLib.Bytes):
         response_data = {}
         try:
-            if response.get_data():
-                response_data = json.loads(response.get_data()) if response else {}
+            if data := response.get_data():
+                response_data = json.loads(data) if response else {}
         except Exception as exc:
             print('Read error:', exc)
         return response_data

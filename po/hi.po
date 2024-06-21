@@ -1,0 +1,352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 09:15-0500\n"
+"PO-Revision-Date: 2022-04-13 02:00+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024\n"
+"Language-Team: Hindi (https://app.transifex.com/rafaelmardojai/teams/135056/hi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+#: webfontkitgenerator/main.py:36
+msgid "Webfont Kit Generator"
+msgstr "वेबफॉन्ट किट जेनरेटर"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+msgid "Create @font-face kits easily"
+msgstr "@font-face किट आसानी से बनाएं"
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+msgid "font;font-face;"
+msgstr "फॉन्ट;फॉन्ट-फ़ेस;"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"वेबफॉन्ट किट जेनरेटर एक सरल उपयोगिता है जो आपको गैर-वेब फॉन्ट प्रारूपों (otf"
+" और ttf) से woff, woff2 और आवश्यक CSS बॉयलरप्लेट उत्पन्न करने की अनुमति देता"
+" है।"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+msgid ""
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
+"Fonts for self-hosting."
+msgstr ""
+"वेबफॉन्ट किट जेनरेटर में स्वयं होस्टिंग के लिए गूगल फॉन्ट्स से फॉन्ट्स "
+"डाउनलोड करने का टूल भी शामिल है।"
+
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
+msgid "Import from Google Fonts"
+msgstr "गूगल फॉन्ट्स से आयात करें"
+
+#: webfontkitgenerator/window.blp:18
+msgid "_Keyboard Shortcuts"
+msgstr "कीबोर्ड शॉर्टकट (_K)"
+
+#: webfontkitgenerator/window.blp:23
+msgid "_About Webfont Kit Generator"
+msgstr "वेबफॉन्ट किट जेनरेटर के बारे में (_A)"
+
+#: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
+msgid "Open Fonts"
+msgstr "फॉन्ट खोलें"
+
+#: webfontkitgenerator/window.blp:56
+msgid "Main Menu"
+msgstr "मुख्य मेनू"
+
+#: webfontkitgenerator/window.blp:82
+msgid "Add some fonts"
+msgstr "कुछ फॉन्ट जोड़ें"
+
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:57
+msgid "Select Output Directory"
+msgstr "आउटपुट निर्देशिका चुनें"
+
+#: webfontkitgenerator/window.blp:186
+msgid "Browse..."
+msgstr "देखें..."
+
+#: webfontkitgenerator/window.blp:193
+msgid "Generate"
+msgstr "उत्पन्न करें"
+
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: webfontkitgenerator/window.blp:248
+msgid "Back"
+msgstr "पीछे"
+
+#: webfontkitgenerator/window.blp:256
+msgid "Information"
+msgstr "जानकारी"
+
+#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:70
+msgid "Generation finished!"
+msgstr "पीढ़ि ख़त्म!"
+
+#: webfontkitgenerator/window.blp:273
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr ""
+"अपने फॉन्ट्स को लिंक करने के लिए, नीचे दिए गए कोड को अपने HTML के हेड में "
+"कॉपी करें:"
+
+#: webfontkitgenerator/window.blp:282
+msgid "Or import it directly to your CSS:"
+msgstr "या इसे सीधे अपने CSS में आयात करें:"
+
+#: webfontkitgenerator/window.blp:291
+msgid "Open in Files"
+msgstr "*फाइल* में खोलें"
+
+#: webfontkitgenerator/window.blp:310
+msgid "Logs"
+msgstr "लॉग"
+
+#: webfontkitgenerator/options.blp:7
+msgid "Options"
+msgstr "विकल्प"
+
+#: webfontkitgenerator/options.blp:31
+msgid "Subsetting"
+msgstr "उपसमुच्चय"
+
+#: webfontkitgenerator/options.blp:32
+msgid "Limit the character set to reduce file size"
+msgstr "फाइल आकार को कम करने के लिए वर्ण सेट को सीमित करें"
+
+#: webfontkitgenerator/options.blp:51
+msgid "Latin"
+msgstr "लैटिन"
+
+#: webfontkitgenerator/options.blp:60
+msgid "Cyrillic"
+msgstr "सिरिलिक"
+
+#: webfontkitgenerator/options.blp:69
+msgid "Greek"
+msgstr "ग्रीक"
+
+#: webfontkitgenerator/options.blp:78
+msgid "Vietnamese"
+msgstr "वियतनामी"
+
+#: webfontkitgenerator/options.blp:95
+msgid "Latin Extended"
+msgstr "लैटिन विस्तारित"
+
+#: webfontkitgenerator/options.blp:104
+msgid "Cyrillic Extended"
+msgstr "सिरिलिक विस्तारित"
+
+#: webfontkitgenerator/options.blp:113
+msgid "Greek Extended"
+msgstr "ग्रीक विस्तारित"
+
+#: webfontkitgenerator/options.blp:122
+msgid "Devanagari"
+msgstr "देवनागरी"
+
+#: webfontkitgenerator/options.blp:145
+msgid "Custom"
+msgstr "तदनुकूल"
+
+#: webfontkitgenerator/options.blp:150
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr ""
+"अल्पविराम से अलग किए गए मान। एकल हेक्स मान और/या हाइफ़न से अलग किए गए "
+"श्रेणियां।"
+
+#: webfontkitgenerator/options.blp:173
+msgid "CSS"
+msgstr "CSS"
+
+#: webfontkitgenerator/options.blp:176
+msgid "Base64 Encode"
+msgstr "बेस64 एनकोड"
+
+#: webfontkitgenerator/options.blp:177
+msgid "Embed fonts in the CSS"
+msgstr "CSS में फॉन्ट सन्निहित करें"
+
+#: webfontkitgenerator/options.blp:181
+msgid "Font display"
+msgstr "फॉन्ट प्रदर्शन"
+
+#: webfontkitgenerator/options.blp:182
+msgid "The CSS font-display descriptor"
+msgstr "CSS फॉन्ट-डिस्प्ले डिस्क्रिप्टर"
+
+#: webfontkitgenerator/options.blp:185
+msgid "Disabled"
+msgstr "अक्षम"
+
+#: webfontkitgenerator/google.blp:29
+msgid "Download fonts from Google Fonts for self-hosting"
+msgstr "स्व-होस्टिंग के लिए गूगल फॉन्ट्स से फॉन्ट्स डाउनलोड करें"
+
+#: webfontkitgenerator/google.blp:64
+msgid "Download Fonts"
+msgstr "फॉन्ट डाउनलोड करें"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "सामान्य"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "शॉर्टकट दिखाएं"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Open Fonts"
+msgstr "फॉन्ट खोलें"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:24
+msgctxt "shortcut window"
+msgid "Select Output Directory"
+msgstr "आउटपुट निर्देशिका चुनें"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:29
+msgctxt "shortcut window"
+msgid "Google Fonts Importer"
+msgstr "गूगल फॉन्ट्स आयातक"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:34
+msgctxt "shortcut window"
+msgid "Generate"
+msgstr "उत्पन्न करें"
+
+#: webfontkitgenerator/main.py:74
+msgid "translator-credits"
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
+
+#: webfontkitgenerator/window.py:61
+msgid "Open Font Files"
+msgstr "फॉन्ट फाइलें खोलें"
+
+#: webfontkitgenerator/window.py:64
+msgid "OTF & TTF"
+msgstr "OTF एवं TTF"
+
+#: webfontkitgenerator/window.py:161
+msgid "You don’t have write access to the selected directory."
+msgstr "आपके पास चयनित निर्देशिका तक लिखने की पहुंच नहीं है।"
+
+#. name = data['name-slug']
+#: webfontkitgenerator/generator.py:80
+#, python-brace-format
+msgid "Generating fonts for {name}:"
+msgstr "{name} के लिए फॉन्ट उत्पन्न किया जा रहा है:"
+
+#: webfontkitgenerator/generator.py:82
+#, python-brace-format
+msgid "Generating {name}"
+msgstr "{name} उत्पन्न किया जा रहा है"
+
+#: webfontkitgenerator/generator.py:140
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "<i>{filename}</i> को <i>{count}</i> ग्लिफ़ के साथ उत्पन्न किया गया।"
+
+#: webfontkitgenerator/generator.py:154
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "{range} के लिए कोई ग्लिफ़ नहीं मिला। छोड़ा जा रहा है।"
+
+#: webfontkitgenerator/generator.py:169
+msgid "Generating CSS:"
+msgstr "CSS उत्पन्न किया जा रहा है:"
+
+#: webfontkitgenerator/generator.py:170
+msgid "Finishing"
+msgstr "समाप्त हो रहा है"
+
+#: webfontkitgenerator/generator.py:191
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "<i>{filename}</i> उत्पन्न किया गया।"
+
+#: webfontkitgenerator/generator.py:195
+msgid "There is no CSS to generate."
+msgstr "उत्पन्न करने के लिए कोई CSS नहीं है।"
+
+#: webfontkitgenerator/google.py:55
+msgid "Loading Google Fonts Database"
+msgstr "गूगल फॉन्ट्स डेटाबेस लोड हो रहा है"
+
+#: webfontkitgenerator/google.py:114
+msgid "Couldn’t download the Google Fonts data."
+msgstr "गूगल फॉन्ट्स डेटा डाउनलोड नहीं किया जा सका।"
+
+#: webfontkitgenerator/google.py:143
+#, python-brace-format
+msgid "Couldn’t find the {variant} variant for {family_name}."
+msgstr "{family_name} के लिए {variant} वैरिएंट नहीं मिल सका।"
+
+#. If no family found, add error to list
+#: webfontkitgenerator/google.py:151
+#, python-brace-format
+msgid "Couldn’t find the {family_name} font family."
+msgstr "{family_name} फॉन्ट परिवार नहीं मिल सका।"
+
+#. If not files found at all, show general error and terminate
+#: webfontkitgenerator/google.py:160
+msgid "Couldn’t find any fonts for the given url."
+msgstr "दिए गए यूआरएल के लिए कोई फॉन्ट नहीं मिल सका।"
+
+#: webfontkitgenerator/google.py:235
+msgid "Please set a valid url"
+msgstr "कृपया एक मान्य यूआरएल निर्धारित करें"
+
+#: webfontkitgenerator/google.py:259
+#, python-brace-format
+msgid "Downloading {name}"
+msgstr "{name} डाउनलोड किया जा रहा है"
+
+#: webfontkitgenerator/google.py:283
+#, python-brace-format
+msgid "Couldn’t download the font file for {name}."
+msgstr "{name} के लिए फॉन्ट फाइल डाउनलोड नहीं की जा सकी।"
+
+#: webfontkitgenerator/google.py:300
+#, python-brace-format
+msgid "Couldn’t write the font file for {name}."
+msgstr "{name} के लिए फॉन्ट फाइल नहीं लिखी जा सकी।"
+
+#: webfontkitgenerator/loader.py:43
+#, python-brace-format
+msgid "You don’t have read access to {font} or it doesn’t exists."
+msgstr "आपके पास {font} तक पढ़ने की पहुंच नहीं है या यह मौजूद नहीं है।"
+
+#: webfontkitgenerator/loader.py:52
+#, python-brace-format
+msgid "Error: {error}."
+msgstr "त्रुटि: {error}।"

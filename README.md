@@ -22,7 +22,7 @@ Webfont Kit Generator also includes a tool to Download fonts from Google Fonts f
 Webfont Kit Generator uses [fontTools](https://github.com/fonttools/fonttools) python library under the hood.
 
 ## Install
-<a href="https://flathub.org/apps/details/com.rafaelmardojai.WebfontKitGenerator"><img width="200" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png"/></a>
+<a href="https://flathub.org/apps/details/com.rafaelmardojai.WebfontKitGenerator"><img width="240" alt="Download on Flathub" src="https://flathub.org/api/badge?svg&locale=en"/></a>
 
 ### Third Party Packages
 

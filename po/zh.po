@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the webfontkitgenerator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# zixian lu, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: webfontkitgenerator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 09:15-0500\n"
+"PO-Revision-Date: 2022-04-13 02:00+0000\n"
+"Last-Translator: zixian lu, 2024\n"
+"Language-Team: Chinese (https://app.transifex.com/rafaelmardojai/teams/135056/zh/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
+#: webfontkitgenerator/main.py:36
+msgid "Webfont Kit Generator"
+msgstr "Webfont Kit Generator"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
+msgid "Create @font-face kits easily"
+msgstr "轻轻松松创建 @font-face 字体"
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+msgid "font;font-face;"
+msgstr "font;font-face;"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+msgid ""
+"Webfont Kit Generator is a simple utility that allows you to generate woff, "
+"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
+"ttf)."
+msgstr ""
+"Webfont Kit Generator是一个简单、实用的程序，支持你生成woff、woff2格式的字体和非网络字体（otf、ttf）的CSS模板。"
+
+#: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+msgid ""
+"Webfont Kit Generator also includes a tool to Download fonts from Google "
+"Fonts for self-hosting."
+msgstr "Webfont Kit Generator也包含一个用于从Google Fonts下载字体的小工具。"
+
+#: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
+msgid "Import from Google Fonts"
+msgstr "从Google Fonts导入字体"
+
+#: webfontkitgenerator/window.blp:18
+msgid "_Keyboard Shortcuts"
+msgstr "_键盘快捷键"
+
+#: webfontkitgenerator/window.blp:23
+msgid "_About Webfont Kit Generator"
+msgstr "_关于Webfont Kit Generator"
+
+#: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
+msgid "Open Fonts"
+msgstr "打开字体"
+
+#: webfontkitgenerator/window.blp:56
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: webfontkitgenerator/window.blp:82
+msgid "Add some fonts"
+msgstr "添加一些字体"
+
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:57
+msgid "Select Output Directory"
+msgstr "选择输出路径"
+
+#: webfontkitgenerator/window.blp:186
+msgid "Browse..."
+msgstr "选择……"
+
+#: webfontkitgenerator/window.blp:193
+msgid "Generate"
+msgstr "生成"
+
+#: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
+msgid "Cancel"
+msgstr "取消"
+
+#: webfontkitgenerator/window.blp:248
+msgid "Back"
+msgstr "返回"
+
+#: webfontkitgenerator/window.blp:256
+msgid "Information"
+msgstr "详细"
+
+#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:70
+msgid "Generation finished!"
+msgstr "生成完成！"
+
+#: webfontkitgenerator/window.blp:273
+msgid "To link your fonts, copy the code below into the head of your HTML:"
+msgstr "若要使用你的字体，请将下面的代码复制到你的HTML代码头部："
+
+#: webfontkitgenerator/window.blp:282
+msgid "Or import it directly to your CSS:"
+msgstr "或者直接将其导入到您的CSS中："
+
+#: webfontkitgenerator/window.blp:291
+msgid "Open in Files"
+msgstr "在文件管理器中打开"
+
+#: webfontkitgenerator/window.blp:310
+msgid "Logs"
+msgstr "日志"
+
+#: webfontkitgenerator/options.blp:7
+msgid "Options"
+msgstr "选项"
+
+#: webfontkitgenerator/options.blp:31
+msgid "Subsetting"
+msgstr "子设置"
+
+#: webfontkitgenerator/options.blp:32
+msgid "Limit the character set to reduce file size"
+msgstr "限制字形数量以控制字体大小"
+
+#: webfontkitgenerator/options.blp:51
+msgid "Latin"
+msgstr "拉丁语"
+
+#: webfontkitgenerator/options.blp:60
+msgid "Cyrillic"
+msgstr "西里尔文"
+
+#: webfontkitgenerator/options.blp:69
+msgid "Greek"
+msgstr "希腊语"
+
+#: webfontkitgenerator/options.blp:78
+msgid "Vietnamese"
+msgstr "越南语"
+
+#: webfontkitgenerator/options.blp:95
+msgid "Latin Extended"
+msgstr "拉丁语扩展"
+
+#: webfontkitgenerator/options.blp:104
+msgid "Cyrillic Extended"
+msgstr "西里尔文扩展"
+
+#: webfontkitgenerator/options.blp:113
+msgid "Greek Extended"
+msgstr "希腊语扩展"
+
+#: webfontkitgenerator/options.blp:122
+msgid "Devanagari"
+msgstr "梵文"
+
+#: webfontkitgenerator/options.blp:145
+msgid "Custom"
+msgstr "自定义"
+
+#: webfontkitgenerator/options.blp:150
+msgid ""
+"Comma separated values. Single hex values and/or ranges separated with "
+"hyphens."
+msgstr "逗号分隔的值，用连字符分隔的单个十六进制值和/或范围。"
+
+#: webfontkitgenerator/options.blp:173
+msgid "CSS"
+msgstr "CSS"
+
+#: webfontkitgenerator/options.blp:176
+msgid "Base64 Encode"
+msgstr "Base64编码"
+
+#: webfontkitgenerator/options.blp:177
+msgid "Embed fonts in the CSS"
+msgstr "在 CSS 中嵌入字体"
+
+#: webfontkitgenerator/options.blp:181
+msgid "Font display"
+msgstr "显示字体"
+
+#: webfontkitgenerator/options.blp:182
+msgid "The CSS font-display descriptor"
+msgstr "CSS 字体显示描述符"
+
+#: webfontkitgenerator/options.blp:185
+msgid "Disabled"
+msgstr "关闭"
+
+#: webfontkitgenerator/google.blp:29
+msgid "Download fonts from Google Fonts for self-hosting"
+msgstr "从 Google Fonts 下载字体以进行自托管"
+
+#: webfontkitgenerator/google.blp:64
+msgid "Download Fonts"
+msgstr "下载字体"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "常规"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "显示快捷键"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:19
+msgctxt "shortcut window"
+msgid "Open Fonts"
+msgstr "打开字体"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:24
+msgctxt "shortcut window"
+msgid "Select Output Directory"
+msgstr "选择输出路径"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:29
+msgctxt "shortcut window"
+msgid "Google Fonts Importer"
+msgstr "Google Fonts导入工具"
+
+#: webfontkitgenerator/gtk/help-overlay.blp:34
+msgctxt "shortcut window"
+msgid "Generate"
+msgstr "生成"
+
+#: webfontkitgenerator/main.py:74
+msgid "translator-credits"
+msgstr "翻译"
+
+#: webfontkitgenerator/window.py:61
+msgid "Open Font Files"
+msgstr "打开字体文件"
+
+#: webfontkitgenerator/window.py:64
+msgid "OTF & TTF"
+msgstr "OTF 和 TTF"
+
+#: webfontkitgenerator/window.py:161
+msgid "You don’t have write access to the selected directory."
+msgstr "您没有对所选目录的写入权限！"
+
+#. name = data['name-slug']
+#: webfontkitgenerator/generator.py:80
+#, python-brace-format
+msgid "Generating fonts for {name}:"
+msgstr "为 {name} 生成字体："
+
+#: webfontkitgenerator/generator.py:82
+#, python-brace-format
+msgid "Generating {name}"
+msgstr "正在生成 {name}"
+
+#: webfontkitgenerator/generator.py:140
+#, python-brace-format
+msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
+msgstr "已生成 <i>{filename}</i> with <i>{count}</i> glyphs."
+
+#: webfontkitgenerator/generator.py:154
+#, python-brace-format
+msgid "No glyphs where found for {range}. Skipping."
+msgstr "没有在 {range} 中找到字形，跳过。"
+
+#: webfontkitgenerator/generator.py:169
+msgid "Generating CSS:"
+msgstr "正在生成CSS："
+
+#: webfontkitgenerator/generator.py:170
+msgid "Finishing"
+msgstr "正在完成"
+
+#: webfontkitgenerator/generator.py:191
+#, python-brace-format
+msgid "Generated <i>{filename}</i>."
+msgstr "已生成 <i>{filename}</i>."
+
+#: webfontkitgenerator/generator.py:195
+msgid "There is no CSS to generate."
+msgstr "没有可用于生成的CSS"
+
+#: webfontkitgenerator/google.py:55
+msgid "Loading Google Fonts Database"
+msgstr "正在加载Google Fonts的数据库"
+
+#: webfontkitgenerator/google.py:114
+msgid "Couldn’t download the Google Fonts data."
+msgstr "无法下载Google Fonts的数据。"
+
+#: webfontkitgenerator/google.py:143
+#, python-brace-format
+msgid "Couldn’t find the {variant} variant for {family_name}."
+msgstr "没有找到 {family_name} 中的字形 {variant} 。"
+
+#. If no family found, add error to list
+#: webfontkitgenerator/google.py:151
+#, python-brace-format
+msgid "Couldn’t find the {family_name} font family."
+msgstr "没有找到 {family_name} "
+
+#. If not files found at all, show general error and terminate
+#: webfontkitgenerator/google.py:160
+msgid "Couldn’t find any fonts for the given url."
+msgstr "没有在给出的URL中找到字体。"
+
+#: webfontkitgenerator/google.py:235
+msgid "Please set a valid url"
+msgstr "请给出一个有效的URL"
+
+#: webfontkitgenerator/google.py:259
+#, python-brace-format
+msgid "Downloading {name}"
+msgstr "正在下载 {name} "
+
+#: webfontkitgenerator/google.py:283
+#, python-brace-format
+msgid "Couldn’t download the font file for {name}."
+msgstr "无法下载 {name} 的字体文件。"
+
+#: webfontkitgenerator/google.py:300
+#, python-brace-format
+msgid "Couldn’t write the font file for {name}."
+msgstr "无法为 {name} 生成字体文件。"
+
+#: webfontkitgenerator/loader.py:43
+#, python-brace-format
+msgid "You don’t have read access to {font} or it doesn’t exists."
+msgstr "你没有 {font} 的读取权限或它正被使用。"
+
+#: webfontkitgenerator/loader.py:52
+#, python-brace-format
+msgid "Error: {error}."
+msgstr "错误： {error}。"

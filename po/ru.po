@@ -2,12 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Nikita Ivanov, 2023
 # UnixJ Sunax, 2023
-# Konstantin FireFall, 2023
-#
+# FireFall, 2023
+# nikita litvikov, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -15,16 +16,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-31 09:15-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Konstantin FireFall, 2023\n"
-"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/"
-"teams/135056/ru/)\n"
-"Language: ru\n"
+"Last-Translator: nikita litvikov, 2024\n"
+"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/teams/135056/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -37,10 +35,11 @@ msgstr "Генератор набора веб-шрифтов"
 msgid "Create @font-face kits easily"
 msgstr "Легко создавайте наборы @font-face"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
 msgid "font;font-face;"
-msgstr ""
+msgstr "Шрифт;Название-Шрифта;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
@@ -56,8 +55,8 @@ msgid ""
 "Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
-"Webfont Kit Generator также входит инструмент для загрузки шрифтов из Google "
-"Fonts для собственного хостинга."
+"Webfont Kit Generator также входит инструмент для загрузки шрифтов из Google"
+" Fonts для собственного хостинга."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
@@ -353,6 +352,3 @@ msgstr "У вас нет доступа на чтение к {font} или он 
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Ошибка\\: {error}."
-
-#~ msgid "Rafael Mardojai CM"
-#~ msgstr "Рафаэль Мардохай CM"

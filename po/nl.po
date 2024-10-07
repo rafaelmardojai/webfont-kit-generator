@@ -2,30 +2,31 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the webfontkitgenerator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # Philip Goto <philip.goto@gmail.com>, 2023
 # Heimen Stoffels <vistausss@fastmail.com>, 2024
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 09:15-0500\n"
+"POT-Creation-Date: 2024-10-06 20:52-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2024\n"
-"Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135056/nl/)\n"
+"Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135056/"
+"nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
-#: webfontkitgenerator/main.py:36
+#: webfontkitgenerator/main.py:37
 msgid "Webfont Kit Generator"
 msgstr "Webfont Kit Generator"
 
@@ -34,8 +35,7 @@ msgstr "Webfont Kit Generator"
 msgid "Create @font-face kits easily"
 msgstr "Creëer eenvoudig kits voor @font-face"
 
-#. Translators: Search terms to find this application. Do NOT translate or
-#. localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
 msgid "font;font-face;"
 msgstr "lettertype;"
@@ -81,7 +81,7 @@ msgstr "Hoofdmenu"
 msgid "Add some fonts"
 msgstr "Lettertypen toevoegen"
 
-#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:57
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:58
 msgid "Select Output Directory"
 msgstr "Uitvoermap selecteren"
 
@@ -105,15 +105,15 @@ msgstr "Terug"
 msgid "Information"
 msgstr "Informatie"
 
-#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:70
+#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:69
 msgid "Generation finished!"
 msgstr "Het genereren is voltooid!"
 
 #: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
-"U kunt uw lettertypen linken door de volgende code toe te voegen aan de "
-"head-sectie van uw HTML:"
+"U kunt uw lettertypen linken door de volgende code toe te voegen aan de head-"
+"sectie van uw HTML:"
 
 #: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
@@ -245,111 +245,111 @@ msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Genereren"
 
-#: webfontkitgenerator/main.py:74
+#: webfontkitgenerator/main.py:76
 msgid "translator-credits"
 msgstr ""
 "Heimen Stoffels <vistausss@fastmail.com>\n"
 "Philip Goto <philip.goto@gmail.com>"
 
-#: webfontkitgenerator/window.py:61
+#: webfontkitgenerator/window.py:62
 msgid "Open Font Files"
 msgstr "Lettertypebestanden openen"
 
-#: webfontkitgenerator/window.py:64
+#: webfontkitgenerator/window.py:65
 msgid "OTF & TTF"
 msgstr "OTF en TTF"
 
-#: webfontkitgenerator/window.py:161
+#: webfontkitgenerator/window.py:162
 msgid "You don’t have write access to the selected directory."
 msgstr "U heeft geen schrijftoegang tot de gekozen map."
 
 #. name = data['name-slug']
-#: webfontkitgenerator/generator.py:80
+#: webfontkitgenerator/generator.py:79
 #, python-brace-format
 msgid "Generating fonts for {name}:"
 msgstr "Bezig met genereren van lettertypen voor {name}:"
 
-#: webfontkitgenerator/generator.py:82
+#: webfontkitgenerator/generator.py:81
 #, python-brace-format
 msgid "Generating {name}"
 msgstr "Bezig met genereren van {name}…"
 
-#: webfontkitgenerator/generator.py:140
+#: webfontkitgenerator/generator.py:142
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "<i>{filename}</i> is gegenereerd met <i>{count}</i> glieven."
 
-#: webfontkitgenerator/generator.py:154
+#: webfontkitgenerator/generator.py:156
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
 msgstr "Geen glieven aangetroffen binnen {range}. Overgeslagen."
 
-#: webfontkitgenerator/generator.py:169
+#: webfontkitgenerator/generator.py:171
 msgid "Generating CSS:"
 msgstr "Bezig met genereren van CSS:"
 
-#: webfontkitgenerator/generator.py:170
+#: webfontkitgenerator/generator.py:172
 msgid "Finishing"
 msgstr "Bezig met afronden…"
 
-#: webfontkitgenerator/generator.py:191
+#: webfontkitgenerator/generator.py:193
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
 msgstr "<i>{filename}</i>. is gegenereerd."
 
-#: webfontkitgenerator/generator.py:195
+#: webfontkitgenerator/generator.py:197
 msgid "There is no CSS to generate."
 msgstr "Er is geen te genereren CSS."
 
-#: webfontkitgenerator/google.py:55
+#: webfontkitgenerator/google.py:91
 msgid "Loading Google Fonts Database"
 msgstr "Bezig met laden van Google Fonts-databank…"
 
-#: webfontkitgenerator/google.py:114
+#: webfontkitgenerator/google.py:160
 msgid "Couldn’t download the Google Fonts data."
 msgstr "Er kunnen geen gegevens worden opgehaald van Google Fonts."
 
-#: webfontkitgenerator/google.py:143
+#: webfontkitgenerator/google.py:191
 #, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
 msgstr "De {variant} variant van {family_name} kan niet worden gevonden."
 
 #. If no family found, add error to list
-#: webfontkitgenerator/google.py:151
+#: webfontkitgenerator/google.py:199
 #, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
 msgstr "De lettertypefamilie ‘{family_name}’ kan niet worden gevonden."
 
 #. If not files found at all, show general error and terminate
-#: webfontkitgenerator/google.py:160
+#: webfontkitgenerator/google.py:208
 msgid "Couldn’t find any fonts for the given url."
 msgstr "Er zijn geen lettertypen aangetroffen op de opgegeven url."
 
-#: webfontkitgenerator/google.py:235
+#: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"
 msgstr "Geef een geldige URL op"
 
-#: webfontkitgenerator/google.py:259
+#: webfontkitgenerator/google.py:308
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Bezig met downloaden van {name}…"
 
-#: webfontkitgenerator/google.py:283
+#: webfontkitgenerator/google.py:332
 #, python-brace-format
 msgid "Couldn’t download the font file for {name}."
 msgstr "Het lettertypebestand van ‘{name}’ kan niet worden opgehaald."
 
-#: webfontkitgenerator/google.py:300
+#: webfontkitgenerator/google.py:353
 #, python-brace-format
 msgid "Couldn’t write the font file for {name}."
 msgstr "Het lettertypebestand van ‘{name}’ kan niet worden weggeschreven."
 
-#: webfontkitgenerator/loader.py:43
+#: webfontkitgenerator/loader.py:67
 #, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
 msgstr "U heeft geen leestoegang tot {font} of het lettertype bestaat niet."
 
-#: webfontkitgenerator/loader.py:52
+#: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Foutmelding: {error}."

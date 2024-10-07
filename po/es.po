@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 09:15-0500\n"
+"POT-Creation-Date: 2024-10-06 20:52-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/rafaelmardojai/"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
-#: webfontkitgenerator/main.py:36
+#: webfontkitgenerator/main.py:37
 msgid "Webfont Kit Generator"
 msgstr "Webfont Kit Generator"
 
@@ -80,7 +80,7 @@ msgstr "Menú Principal"
 msgid "Add some fonts"
 msgstr "Agregue algunas tipografías"
 
-#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:57
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:58
 msgid "Select Output Directory"
 msgstr "Seleccionar directorio de salida"
 
@@ -104,7 +104,7 @@ msgstr "Volver"
 msgid "Information"
 msgstr "Información"
 
-#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:70
+#: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:69
 msgid "Generation finished!"
 msgstr "Generación finalizada!"
 
@@ -244,109 +244,109 @@ msgctxt "shortcut window"
 msgid "Generate"
 msgstr "Generar"
 
-#: webfontkitgenerator/main.py:74
+#: webfontkitgenerator/main.py:76
 msgid "translator-credits"
 msgstr "Rafael Mardojai CM"
 
-#: webfontkitgenerator/window.py:61
+#: webfontkitgenerator/window.py:62
 msgid "Open Font Files"
 msgstr "Abrir archivos de tipografías"
 
-#: webfontkitgenerator/window.py:64
+#: webfontkitgenerator/window.py:65
 msgid "OTF & TTF"
 msgstr "OTF  y TTF"
 
-#: webfontkitgenerator/window.py:161
+#: webfontkitgenerator/window.py:162
 msgid "You don’t have write access to the selected directory."
 msgstr "No tienes acceso de escritura al directorio seleccionado."
 
 #. name = data['name-slug']
-#: webfontkitgenerator/generator.py:80
+#: webfontkitgenerator/generator.py:79
 #, python-brace-format
 msgid "Generating fonts for {name}:"
 msgstr "Generando tipografías para {name}:"
 
-#: webfontkitgenerator/generator.py:82
+#: webfontkitgenerator/generator.py:81
 #, python-brace-format
 msgid "Generating {name}"
 msgstr "Generando {name}"
 
-#: webfontkitgenerator/generator.py:140
+#: webfontkitgenerator/generator.py:142
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
 msgstr "Generado <i>{filename}</i> con <i>{count}</i> signos."
 
-#: webfontkitgenerator/generator.py:154
+#: webfontkitgenerator/generator.py:156
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
 msgstr "No se encontraron signos para {range}. Omitiendo."
 
-#: webfontkitgenerator/generator.py:169
+#: webfontkitgenerator/generator.py:171
 msgid "Generating CSS:"
 msgstr "Generando CSS:"
 
-#: webfontkitgenerator/generator.py:170
+#: webfontkitgenerator/generator.py:172
 msgid "Finishing"
 msgstr "Finalizando"
 
-#: webfontkitgenerator/generator.py:191
+#: webfontkitgenerator/generator.py:193
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
 msgstr "Generado <i>{filename}</i>."
 
-#: webfontkitgenerator/generator.py:195
+#: webfontkitgenerator/generator.py:197
 msgid "There is no CSS to generate."
 msgstr "No hay CSS para generar."
 
-#: webfontkitgenerator/google.py:55
+#: webfontkitgenerator/google.py:91
 msgid "Loading Google Fonts Database"
 msgstr "Cargando la base de datos de Google Fonts"
 
-#: webfontkitgenerator/google.py:114
+#: webfontkitgenerator/google.py:160
 msgid "Couldn’t download the Google Fonts data."
 msgstr "No se pudo descargar la data de Google Fonts."
 
-#: webfontkitgenerator/google.py:143
+#: webfontkitgenerator/google.py:191
 #, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
 msgstr "No se pudo encontrar la variante {variant} para {family_name}."
 
 #. If no family found, add error to list
-#: webfontkitgenerator/google.py:151
+#: webfontkitgenerator/google.py:199
 #, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
 msgstr "No se pudo encontrar la familia tipográfica {family_name}."
 
 #. If not files found at all, show general error and terminate
-#: webfontkitgenerator/google.py:160
+#: webfontkitgenerator/google.py:208
 msgid "Couldn’t find any fonts for the given url."
 msgstr "No se encontraron tipografías para la url."
 
-#: webfontkitgenerator/google.py:235
+#: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"
 msgstr "Por favor, ingrese una url valida"
 
-#: webfontkitgenerator/google.py:259
+#: webfontkitgenerator/google.py:308
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Descargando {name}"
 
-#: webfontkitgenerator/google.py:283
+#: webfontkitgenerator/google.py:332
 #, python-brace-format
 msgid "Couldn’t download the font file for {name}."
 msgstr "No se pudo descargar el archivo para {name}."
 
-#: webfontkitgenerator/google.py:300
+#: webfontkitgenerator/google.py:353
 #, python-brace-format
 msgid "Couldn’t write the font file for {name}."
 msgstr "No se pudo escribir el archivo para {name}."
 
-#: webfontkitgenerator/loader.py:43
+#: webfontkitgenerator/loader.py:67
 #, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
 msgstr "No tienes acceso de lectura a {font} o no existe."
 
-#: webfontkitgenerator/loader.py:52
+#: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
 msgstr "Error: {error}."

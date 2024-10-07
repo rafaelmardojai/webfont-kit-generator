@@ -2,15 +2,15 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import base64
-from gettext import gettext as _
-from io import BytesIO
 import os
 import re
+from gettext import gettext as _
+from io import BytesIO
 from threading import Thread
 
 from fontTools.subset import Subsetter, parse_unicodes
 from fontTools.ttLib import TTFont
-from gi.repository import GLib
+from gi.repository import Adw, GLib
 
 from webfontkitgenerator.font import Font, FontData
 
@@ -56,7 +56,6 @@ class Generator(object):
         self.window.appstack.set_visible_child_name('main')
 
     def generate(self):
-        GLib.timeout_add(50, self._on_progressbar_timeout, None)
         self.window.processing = True
         self.window.appstack.set_visible_child_name('progress')
 
@@ -138,7 +137,7 @@ class Generator(object):
                     font.save(os.path.join(self.path, filenameout))
                     css['src'].append(f'url({filename}) format("{format}")')
 
-                self.progress += 1
+                self._step_done()
                 gen_text = _(
                     'Generated <i>{filename}</i> with <i>{count}</i> glyphs.'
                 )
@@ -152,7 +151,7 @@ class Generator(object):
             self.css[slug][name] = css
 
         else:
-            self.progress += 1 * len(self.formats)
+            self._step_done(1 * len(self.formats))
             text = range if range else name
             gen_text = _('No glyphs where found for {range}. Skipping.')
             self._append_log(gen_text.format(range=text), italic=True)
@@ -199,10 +198,12 @@ class Generator(object):
 
         return css_sheets
 
-    def _on_progressbar_timeout(self, _data):
-        progress = self.progress / self.total
-        self.window.progressbar.set_fraction(progress)
-        return progress != 1
+    def _step_done(self, increment=1):
+        def do_progress(progress):
+            self.window.progressbar.props.fraction = progress
+
+        self.progress += increment
+        GLib.idle_add(do_progress, self.progress / self.total)
 
     def _set_progressbar_text(self, text: str):
         GLib.idle_add(self.window.progress.set_title, text)

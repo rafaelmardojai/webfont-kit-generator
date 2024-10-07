@@ -2,17 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from __future__ import annotations
+
 import inspect
 import json
 import os
 import re
 import typing
 from dataclasses import dataclass
-from urllib.parse import urlparse, parse_qs
-
 from gettext import gettext as _
-from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Soup
+from urllib.parse import parse_qs, urlparse
 
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk, Soup
 
 if typing.TYPE_CHECKING:
     from webfontkitgenerator.window import Window

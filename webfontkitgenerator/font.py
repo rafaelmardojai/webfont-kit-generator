@@ -3,7 +3,7 @@
 
 from dataclasses import dataclass, field
 
-from gi.repository import Adw, GObject, GLib, Gtk
+from gi.repository import Adw, GLib, GObject, Gtk
 
 
 @dataclass

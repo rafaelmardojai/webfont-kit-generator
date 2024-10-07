@@ -2,14 +2,15 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from __future__ import annotations
+
 import os
 import typing
 from collections.abc import Sequence
+from gettext import gettext as _
 from urllib.parse import unquote
 
-from gettext import gettext as _
-from gi.repository import Adw, Gio, GLib
 from fontTools.ttLib import TTFont
+from gi.repository import Adw, Gio, GLib
 
 from webfontkitgenerator.font import Font, FontData
 

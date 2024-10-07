@@ -2,9 +2,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import sys
-import gi
 from collections.abc import Sequence
 from gettext import gettext as _
+
+import gi
 
 try:
     gi.require_version('Gdk', '4.0')

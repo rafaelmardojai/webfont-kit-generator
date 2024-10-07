@@ -1,9 +1,8 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gio, Gtk
 from fontTools.subset import parse_unicodes
-
+from gi.repository import Adw, Gio, Gtk
 
 PRESET_RANGES = {
     'latin': 'U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,'

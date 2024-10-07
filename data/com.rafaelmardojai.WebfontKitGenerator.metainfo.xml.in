@@ -51,7 +51,16 @@
     </screenshot>
   </screenshots>
   <releases>
-  <release version="1.1.1" date="2024-04-01">
+    <release version="1.2.0" date="2024-10-06">
+      <description translate="no">
+        <ul>
+          <li>Support variable fonts</li>
+          <li>Translations Updates</li>          
+          <li>Code optimizations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.1" date="2024-04-01">
       <description translate="no">
         <ul>
           <li>Translations Updates</li>

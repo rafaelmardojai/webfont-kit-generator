@@ -50,6 +50,9 @@ class Window(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        # Set default window icon for window managers
+        self.set_default_icon_name('com.rafaelmardojai.WebfontKitGenerator')
+
         self.setup_actions()
 
         # Out directory chooser

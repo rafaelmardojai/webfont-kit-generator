@@ -48,14 +48,16 @@ msgid ""
 "Webfont Kit Generator also includes a tool to Download fonts from Google "
 "Fonts for self-hosting."
 msgstr ""
+"Webfont Kit Generator obsahuje aj nástroj na stiahnutie písiem zo služby "
+"Google Fonts pre vlastné hostovanie."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
-msgstr ""
+msgstr "Import zo služby Google Fonts"
 
 #: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klávesové skratky"
 
 #: webfontkitgenerator/window.blp:23
 #, fuzzy
@@ -68,7 +70,7 @@ msgstr "Otvoriť písma"
 
 #: webfontkitgenerator/window.blp:56
 msgid "Main Menu"
-msgstr ""
+msgstr "Hlavné menu"
 
 #: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
@@ -93,7 +95,7 @@ msgstr "Zrušiť"
 
 #: webfontkitgenerator/window.blp:248
 msgid "Back"
-msgstr ""
+msgstr "Späť"
 
 #: webfontkitgenerator/window.blp:256
 msgid "Information"
@@ -185,11 +187,11 @@ msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "Kódovanie Base64"
 
 #: webfontkitgenerator/options.blp:177
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "Vloženie písiem do CSS"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
@@ -205,11 +207,11 @@ msgstr "Zakázané"
 
 #: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
-msgstr ""
+msgstr "Stiahnite si písma zo služby Google Fonts pre vlastné hostovanie"
 
 #: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
-msgstr ""
+msgstr "Stiahnuť písma"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:11
 #, fuzzy
@@ -220,7 +222,7 @@ msgstr "Generovať"
 #: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Zobraziť skratky"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 #, fuzzy
@@ -237,7 +239,7 @@ msgstr "Vyberte výstupný adresár"
 #: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
-msgstr ""
+msgstr "Importér písiem Google"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:34
 #, fuzzy
@@ -290,7 +292,7 @@ msgstr "Generovanie CSS:"
 
 #: webfontkitgenerator/generator.py:172
 msgid "Finishing"
-msgstr ""
+msgstr "Dokončovanie"
 
 #: webfontkitgenerator/generator.py:193
 #, fuzzy, python-brace-format
@@ -303,31 +305,31 @@ msgstr "Žiadne CSS na vygenerovanie."
 
 #: webfontkitgenerator/google.py:91
 msgid "Loading Google Fonts Database"
-msgstr ""
+msgstr "Načítavanie databázy písiem Google"
 
 #: webfontkitgenerator/google.py:160
 msgid "Couldn’t download the Google Fonts data."
-msgstr ""
+msgstr "Nepodarilo sa stiahnuť údaje o písmach Google."
 
 #: webfontkitgenerator/google.py:191
 #, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
-msgstr ""
+msgstr "Nepodarilo sa nájsť variant {variant} pre {family_name}."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:199
 #, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
-msgstr ""
+msgstr "Nepodarilo sa nájsť rodinu písma {family_name}."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:208
 msgid "Couldn’t find any fonts for the given url."
-msgstr ""
+msgstr "Pre zadanú url adresu sa nepodarilo nájsť žiadne písmo."
 
 #: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"
-msgstr ""
+msgstr "Prosím, nastavte platnú url adresu"
 
 #: webfontkitgenerator/google.py:308
 #, fuzzy, python-brace-format
@@ -337,12 +339,12 @@ msgstr "Chyba pri nahrávaní písma"
 #: webfontkitgenerator/google.py:332
 #, python-brace-format
 msgid "Couldn’t download the font file for {name}."
-msgstr ""
+msgstr "Nepodarilo sa stiahnuť súbor písma pre {name}."
 
 #: webfontkitgenerator/google.py:353
 #, python-brace-format
 msgid "Couldn’t write the font file for {name}."
-msgstr ""
+msgstr "Nepodarilo sa zapísať súbor písma pre {name}."
 
 #: webfontkitgenerator/loader.py:67
 #, fuzzy, python-brace-format
@@ -352,7 +354,7 @@ msgstr "Nemáte právo na čítanie písma {font}, alebo neexistuje."
 #: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
-msgstr ""
+msgstr "Chyba: {error}."
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "Rafael Mardojai CM"

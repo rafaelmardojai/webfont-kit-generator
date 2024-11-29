@@ -10,7 +10,7 @@ from threading import Thread
 
 from fontTools.subset import Subsetter, parse_unicodes
 from fontTools.ttLib import TTFont
-from gi.repository import Adw, GLib
+from gi.repository import GLib
 
 from webfontkitgenerator.font import Font, FontData
 
@@ -108,7 +108,7 @@ class Generator(object):
             self.css.setdefault(slug, {})
 
             css = {
-                'font-family': data.family,
+                'font-family': f'"{data.family}"',
                 'font-style': data.style,
                 'font-weight': data.weight,
                 'font-stretch': data.width,
@@ -222,11 +222,11 @@ class Generator(object):
         self.window.src_html.set_text('\n'.join(html))
         self.window.src_css.set_text('\n'.join(css))
 
-    def _dict_to_styles(self, style_dict):
+    def _dict_to_styles(self, style_dict: dict[str, str | list[str]]):
         properties = []
 
-        for i, (k, v) in enumerate(style_dict.items()):
+        for k, v in style_dict.items():
             v = ', '.join(v) if isinstance(v, list) else v
-            properties.append('\t{}: {};'.format(k, v))
+            properties.append(f'\t{k}: {v};')
 
         return '\n'.join(properties)

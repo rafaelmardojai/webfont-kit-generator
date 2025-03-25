@@ -122,7 +122,7 @@ class GoogleDialog(Adw.Dialog):
             response_headers = message.get_response_headers()
 
             print(
-                f'Google Fonts Response Status {status.get_phrase(status_code)}'
+                f'Google Fonts Response Status {status.get_phrase()}'
             )
 
             if status == Soup.Status.OK and 'kind' in data:

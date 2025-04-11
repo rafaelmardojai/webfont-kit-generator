@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.rafaelmardojai.WebfontKitGenerator
+Exec=@bindir@/webfontkitgenerator --gapplication-service

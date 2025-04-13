@@ -1,5 +1,5 @@
 {
-    "app-id" : "com.rafaelmardojai.WebfontKitGenerator",
+    "id" : "com.rafaelmardojai.WebfontKitGenerator",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
@@ -20,8 +20,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "tag": "v0.12.0",
-                    "commit": "66b43c36cf1017c878762007373964a096b3d2a5"
+                    "tag": "v0.16.0",
+                    "commit": "04ef0944db56ab01307a29aaa7303df6067cb3c0"
                 }
             ]
         },

@@ -41,6 +41,15 @@ if compile_schemas.found()
   )
 endif
 
+service_conf = configuration_data()
+service_conf.set('bindir', join_paths(get_option('prefix') / get_option('bindir')))
+configure_file(
+  input: 'com.rafaelmardojai.WebfontKitGenerator.service.in',
+  output: 'com.rafaelmardojai.WebfontKitGenerator.service',
+  configuration: service_conf,
+  install_dir: join_paths(get_option('datadir'), 'dbus-1/services')
+)
+
 install_data(
   'com.rafaelmardojai.WebfontKitGenerator.svg',
   install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps')

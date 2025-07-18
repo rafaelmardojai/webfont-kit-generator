@@ -16,7 +16,7 @@
   <url type="homepage">https://apps.gnome.org/WebfontKitGenerator/</url>
   <url type="vcs-browser">https://github.com/rafaelmardojai/webfont-kit-generator/</url>
   <url type="bugtracker">https://github.com/rafaelmardojai/webfont-kit-generator/issues</url>
-  <url type="translate">https://www.transifex.com/rafaelmardojai/webfont-kit-generator/</url>
+  <url type="translate">https://hosted.weblate.org/engage/webfont-bundler/</url>
   <url type="donation">https://rafaelmardojai.com/donate/</url>
   <!-- developer_name tag deprecated with Appstream 1.0 -->
   <developer_name translate="no">Rafael Mardojai CM</developer_name>

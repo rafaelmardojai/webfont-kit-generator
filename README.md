@@ -1,6 +1,6 @@
-<img src="brand/icon.svg" alt="Webfont Kit Generator" width="128" height="128" align="left"/> 
+<img src="brand/icon.svg" alt="Webfont Bundler" width="128" height="128" align="left"/> 
 
-# Webfont Kit Generator
+# Webfont Bundler
 
 Create @font-face kits easily
 
@@ -15,11 +15,11 @@ Create @font-face kits easily
 
 
 ## Description
-**Webfont Kit Generator** is a simple utility that allows you to generate **woff**, **woff2** and the necessary CSS boilerplate from non-web font formats (otf & ttf).
+**Webfont Bundler** is a simple utility that allows you to generate **woff**, **woff2** and the necessary CSS boilerplate from non-web font formats (otf & ttf).
 
-Webfont Kit Generator also includes a tool to Download fonts from Google Fonts for self-hosting.
+Webfont Bundler also includes a tool to Download fonts from Google Fonts for self-hosting.
 
-Webfont Kit Generator uses [fontTools](https://github.com/fonttools/fonttools) python library under the hood.
+Webfont Bundler uses [fontTools](https://github.com/fonttools/fonttools) python library under the hood.
 
 ## Install
 <a href="https://flathub.org/apps/details/com.rafaelmardojai.WebfontKitGenerator"><img width="240" alt="Download on Flathub" src="https://flathub.org/api/badge?svg&locale=en"/></a>
@@ -71,7 +71,7 @@ build-aux/flatpak-pip-generator  --requirements-file requirements.txt --output=b
 </p>
 
 ## Translations
-Webfont Kit Generator is translated into several languages. If your language is missing or incomplete, please help to [translate Webfont Kit Generator in Transifex](https://www.transifex.com/rafaelmardojai/webfont-kit-generator/).
+Webfont Bundler is translated into several languages. If your language is missing or incomplete, please help to [translate Webfont Bundler in Transifex](https://www.transifex.com/rafaelmardojai/webfont-kit-generator/).
 
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/WebfontKitGenerator/graphs/contributors).

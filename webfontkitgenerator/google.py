@@ -72,7 +72,7 @@ class GoogleDialog(Adw.Dialog):
         self.settings = self.window.options.settings
         self.cancellable = Gio.Cancellable.new()
         self.session = Soup.Session()
-        self.session.set_user_agent('Webfont Kit Generator')
+        self.session.set_user_agent('Webfont Bundler')
         self.errors = []
         # Google Fonts
         self.google_sha = ''

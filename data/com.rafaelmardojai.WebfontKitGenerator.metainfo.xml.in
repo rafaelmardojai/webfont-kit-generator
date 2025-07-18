@@ -3,14 +3,14 @@
 	<id>com.rafaelmardojai.WebfontKitGenerator</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
-  <name>Webfont Kit Generator</name>
+  <name>Webfont Bundler</name>
   <summary>Create @font-face kits easily</summary>
   <description>
     <p>
-      Webfont Kit Generator is a simple utility that allows you to generate woff, woff2 and the necessary CSS boilerplate from non-web font formats (otf and ttf).
+      Webfont Bundler is a simple utility that allows you to generate woff, woff2 and the necessary CSS boilerplate from non-web font formats (otf and ttf).
     </p>
     <p>
-      Webfont Kit Generator also includes a tool to Download fonts from Google Fonts for self-hosting.
+      Webfont Bundler also includes a tool to Download fonts from Google Fonts for self-hosting.
     </p>
   </description>  
   <url type="homepage">https://apps.gnome.org/WebfontKitGenerator/</url>

@@ -4,7 +4,7 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">Webfont Kit Generator</name>
+  <name xml:lang="en">Webfont Bundler</name>
   <shortdesc xml:lang="en">Create @font-face kits easily</shortdesc>
   <homepage rdf:resource="https://github.com/rafaelmardojai/webfont-kit-generator" />
   <bug-database rdf:resource="https://github.com/rafaelmardojai/webfont-kit-generator/issues"/>

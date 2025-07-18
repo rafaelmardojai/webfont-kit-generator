@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Webfont Kit Generator
+Name=Webfont Bundler
 Comment=Create @font-face kits easily
 Exec=webfontkitgenerator %U
 Icon=com.rafaelmardojai.WebfontKitGenerator

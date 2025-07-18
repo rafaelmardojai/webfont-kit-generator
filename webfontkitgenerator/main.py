@@ -34,7 +34,7 @@ class Application(Adw.Application):
             application_id='com.rafaelmardojai.WebfontKitGenerator',
             flags=Gio.ApplicationFlags.HANDLES_OPEN,
         )
-        GLib.set_application_name(_('Webfont Kit Generator'))
+        GLib.set_application_name(_('Webfont Bundler'))
 
         self.version = version
         self.window: Window | None = None

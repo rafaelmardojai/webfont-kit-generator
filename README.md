@@ -73,6 +73,8 @@ build-aux/flatpak-pip-generator  --requirements-file requirements.txt --output=b
 ## Translations
 Webfont Bundler is translated into several languages. If your language is missing or incomplete, please help to [translate Webfont Bundler in Weblate](https://hosted.weblate.org/engage/webfont-bundler/).
 
+[![Translation status](https://hosted.weblate.org/widget/webfont-bundler/webfont-bundler/horizontal-auto.svg)](https://hosted.weblate.org/engage/webfont-bundler/)
+
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/WebfontKitGenerator/graphs/contributors).
 

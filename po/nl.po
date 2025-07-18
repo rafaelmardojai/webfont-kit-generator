@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-06 20:52-0500\n"
+"POT-Creation-Date: 2025-07-18 11:45-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2024\n"
 "Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135056/"
@@ -24,35 +24,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
-msgid "Webfont Kit Generator"
+#, fuzzy
+msgid "Webfont Bundler"
 msgstr "Webfont Kit Generator"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Creëer eenvoudig kits voor @font-face"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
 msgstr "lettertype;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+#, fuzzy
 msgid ""
-"Webfont Kit Generator is a simple utility that allows you to generate woff, "
-"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
-"ttf)."
+"Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
+"and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
 "Met Webfont Kit Generator kunt u eenvoudig woff-, woff2- en css-"
 "boilerplatebestanden creëren uit reguliere lettertypebestanden (otf en ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
 msgid ""
-"Webfont Kit Generator also includes a tool to Download fonts from Google "
-"Fonts for self-hosting."
+"Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
+"self-hosting."
 msgstr ""
 "Webfont Kit Generator bevat tevens de mogelijkheid om lettertypen te "
 "downloaden van Google Fonts."
@@ -66,7 +68,8 @@ msgid "_Keyboard Shortcuts"
 msgstr "_Sneltoetsen"
 
 #: webfontkitgenerator/window.blp:23
-msgid "_About Webfont Kit Generator"
+#, fuzzy
+msgid "_About Webfont Bundler"
 msgstr "_Over Webfont Kit Generator"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
@@ -81,7 +84,7 @@ msgstr "Hoofdmenu"
 msgid "Add some fonts"
 msgstr "Lettertypen toevoegen"
 
-#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:58
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
 msgstr "Uitvoermap selecteren"
 
@@ -251,15 +254,15 @@ msgstr ""
 "Heimen Stoffels <vistausss@fastmail.com>\n"
 "Philip Goto <philip.goto@gmail.com>"
 
-#: webfontkitgenerator/window.py:62
+#: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
 msgstr "Lettertypebestanden openen"
 
-#: webfontkitgenerator/window.py:65
+#: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
 msgstr "OTF en TTF"
 
-#: webfontkitgenerator/window.py:162
+#: webfontkitgenerator/window.py:165
 msgid "You don’t have write access to the selected directory."
 msgstr "U heeft geen schrijftoegang tot de gekozen map."
 

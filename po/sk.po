@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-06 20:52-0500\n"
+"POT-Creation-Date: 2025-07-18 11:45-0500\n"
 "PO-Revision-Date: 2020-10-25 02:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: https://github.com/martin-sk\n"
@@ -18,35 +18,37 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
-msgid "Webfont Kit Generator"
+#, fuzzy
+msgid "Webfont Bundler"
 msgstr "Webfont Kit Generator"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Vytvorte @font-face jednoducho"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
 msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+#, fuzzy
 msgid ""
-"Webfont Kit Generator is a simple utility that allows you to generate woff, "
-"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
-"ttf)."
+"Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
+"and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
 "Webfont Kit Generator je jednoduchý nástroj, ktorý vám umožňuje generovať "
 "woff, woff2 a potrebný CSS pre iné ako webové formáty písma (otf a ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
+#, fuzzy
 msgid ""
-"Webfont Kit Generator also includes a tool to Download fonts from Google "
-"Fonts for self-hosting."
+"Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
+"self-hosting."
 msgstr ""
 "Webfont Kit Generator obsahuje aj nástroj na stiahnutie písiem zo služby "
 "Google Fonts pre vlastné hostovanie."
@@ -61,7 +63,7 @@ msgstr "_Klávesové skratky"
 
 #: webfontkitgenerator/window.blp:23
 #, fuzzy
-msgid "_About Webfont Kit Generator"
+msgid "_About Webfont Bundler"
 msgstr "Webfont Kit Generator"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
@@ -76,7 +78,7 @@ msgstr "Hlavné menu"
 msgid "Add some fonts"
 msgstr "Pridajte písma"
 
-#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:58
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 #, fuzzy
 msgid "Select Output Directory"
 msgstr "Vyberte výstupný adresár"
@@ -251,16 +253,16 @@ msgstr "Generovať"
 msgid "translator-credits"
 msgstr ""
 
-#: webfontkitgenerator/window.py:62
+#: webfontkitgenerator/window.py:65
 #, fuzzy
 msgid "Open Font Files"
 msgstr "Otvoriť súbory písiem"
 
-#: webfontkitgenerator/window.py:65
+#: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
 msgstr "OTF a TTF"
 
-#: webfontkitgenerator/window.py:162
+#: webfontkitgenerator/window.py:165
 #, fuzzy
 msgid "You don’t have write access to the selected directory."
 msgstr "Nemáte dostatočné práva na zápis do zvolehéno adresára."

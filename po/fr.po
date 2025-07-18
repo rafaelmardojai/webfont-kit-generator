@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-06 20:52-0500\n"
+"POT-Creation-Date: 2025-07-18 11:45-0500\n"
 "PO-Revision-Date: 2022-04-13 02:00+0000\n"
 "Last-Translator: Vasco Compain <vasco.gribouille@gmail.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/rafaelmardojai/teams/135056/"
@@ -23,27 +23,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
-msgid "Webfont Kit Generator"
+#, fuzzy
+msgid "Webfont Bundler"
 msgstr "Genérateur de Kit Webfont"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Créez des kits @font-face facilement"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
 msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+#, fuzzy
 msgid ""
-"Webfont Kit Generator is a simple utility that allows you to generate woff, "
-"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
-"ttf)."
+"Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
+"and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
 "Genérateur de Kit Webfont est un logiciel utilitaire qui vous permet de "
 "genérer des des fichiers .woff, .woff2 et les fichiers CSS correspondant "
@@ -52,8 +53,8 @@ msgstr ""
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 #, fuzzy
 msgid ""
-"Webfont Kit Generator also includes a tool to Download fonts from Google "
-"Fonts for self-hosting."
+"Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
+"self-hosting."
 msgstr "Télécharger les polices depuis Google Fonts pour les hébérger."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
@@ -65,7 +66,8 @@ msgid "_Keyboard Shortcuts"
 msgstr "_Raccourcis Claviers"
 
 #: webfontkitgenerator/window.blp:23
-msgid "_About Webfont Kit Generator"
+#, fuzzy
+msgid "_About Webfont Bundler"
 msgstr "_A propos du Genérateur de Kit Webfont"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
@@ -81,7 +83,7 @@ msgstr "Menu"
 msgid "Add some fonts"
 msgstr "Ajouter des polices"
 
-#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:58
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
 msgstr "Choisir le dossier de destination"
 
@@ -249,15 +251,15 @@ msgstr "Générer"
 msgid "translator-credits"
 msgstr ""
 
-#: webfontkitgenerator/window.py:62
+#: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
 msgstr "Séléctionner des fichiers de police"
 
-#: webfontkitgenerator/window.py:65
+#: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
 msgstr "OTF et TTF"
 
-#: webfontkitgenerator/window.py:162
+#: webfontkitgenerator/window.py:165
 #, fuzzy
 msgid "You don’t have write access to the selected directory."
 msgstr "Vous n'avez pas la permission d'écrire dans le dossier séléctionné."

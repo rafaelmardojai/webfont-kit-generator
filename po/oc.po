@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-06 20:52-0500\n"
+"POT-Creation-Date: 2025-07-18 11:45-0500\n"
 "PO-Revision-Date: 2021-10-19 08:09+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
@@ -17,27 +17,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
-msgid "Webfont Kit Generator"
+#, fuzzy
+msgid "Webfont Bundler"
 msgstr "Generador de kits de poliças"
 
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:4
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
 msgstr "Crear de kits @font-face facilament"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:11
+#: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
 msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
+#, fuzzy
 msgid ""
-"Webfont Kit Generator is a simple utility that allows you to generate woff, "
-"woff2 and the necessary CSS boilerplate from non-web font formats (otf and "
-"ttf)."
+"Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
+"and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
 "Generador de kits de poliças es un utilitari simple per permetre de generat "
 "de woff, woff2 e çò necessari en CSS per las poliças al format non-web (otf "
@@ -45,8 +46,8 @@ msgstr ""
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 msgid ""
-"Webfont Kit Generator also includes a tool to Download fonts from Google "
-"Fonts for self-hosting."
+"Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
+"self-hosting."
 msgstr ""
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
@@ -59,7 +60,7 @@ msgstr ""
 
 #: webfontkitgenerator/window.blp:23
 #, fuzzy
-msgid "_About Webfont Kit Generator"
+msgid "_About Webfont Bundler"
 msgstr "Generador de kits de poliças"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
@@ -74,7 +75,7 @@ msgstr ""
 msgid "Add some fonts"
 msgstr "Apondre de poliças"
 
-#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:58
+#: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 #, fuzzy
 msgid "Select Output Directory"
 msgstr "Seleccionar un repertòri de sortida"
@@ -247,16 +248,16 @@ msgstr "Generar"
 msgid "translator-credits"
 msgstr ""
 
-#: webfontkitgenerator/window.py:62
+#: webfontkitgenerator/window.py:65
 #, fuzzy
 msgid "Open Font Files"
 msgstr "Dobrir los fichièrs de poliça"
 
-#: webfontkitgenerator/window.py:65
+#: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
 msgstr "OTF & TTF"
 
-#: webfontkitgenerator/window.py:162
+#: webfontkitgenerator/window.py:165
 #, fuzzy
 msgid "You don’t have write access to the selected directory."
 msgstr "Avètz pas l’autorizacion d’escriure al repertòri seleccionat."

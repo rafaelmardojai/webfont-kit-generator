@@ -6,29 +6,28 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Spanish (https://app.transifex.com/rafaelmardojai/teams/"
-"135056/es/)\n"
+"PO-Revision-Date: 2025-07-19 18:03+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/webfont-bundler/"
+"webfont-bundler/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
+" ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
-#, fuzzy
 msgid "Webfont Bundler"
-msgstr "Webfont Kit Generator"
+msgstr "Webfont Bundler"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
@@ -38,25 +37,23 @@ msgstr "Cree fácilmente los kits @font-face"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
-msgstr ""
+msgstr "font;font-face;tipografia;fuente;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
 "and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
-"Webfont Kit Generator es una simple utilidad que te permite generar woff, "
-"woff2 y el CSS necesario desde formatos de tipografías no web (otf y ttf)."
+"Webfont Bundler es una simple utilidad que te permite generar woff, woff2 y "
+"el CSS necesario desde formatos de tipografías no web (otf y ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
-#, fuzzy
 msgid ""
 "Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
 "self-hosting."
 msgstr ""
-"Webfont Kit Generator también incluye una herramienta para descargar fuentes "
-"de Google Fonts su autoalojamiento."
+"Webfont Bundler también incluye una herramienta para descargar fuentes de "
+"Google Fonts su autoalojamiento."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
@@ -67,9 +64,8 @@ msgid "_Keyboard Shortcuts"
 msgstr "Atajos del _teclado"
 
 #: webfontkitgenerator/window.blp:23
-#, fuzzy
 msgid "_About Webfont Bundler"
-msgstr "_Acerca de Webfont Kit Generator"
+msgstr "_Acerca de Webfont Bundler"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
@@ -230,7 +226,7 @@ msgstr "Mostrar atajos de teclado"
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Open Fonts"
-msgstr "Abrir Tipografías "
+msgstr "Abrir Tipografías"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
@@ -257,7 +253,7 @@ msgstr "Abrir archivos de tipografías"
 
 #: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
-msgstr "OTF  y TTF"
+msgstr "OTF y TTF"
 
 #: webfontkitgenerator/window.py:165
 msgid "You don’t have write access to the selected directory."

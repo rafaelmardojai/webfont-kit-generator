@@ -252,7 +252,7 @@ template $Window : Adw.ApplicationWindow {
         Adw.ViewStack finished_stack {
           Adw.ViewStackPage {
             name: "info";
-            icon-name: "emblem-default-symbolic";
+            icon-name: "completed-symbolic";
             title: _("Information");
 
             child: ScrolledWindow {
@@ -261,7 +261,7 @@ template $Window : Adw.ApplicationWindow {
               Viewport {
                 Adw.StatusPage {
                   title: _("Generation finished!");
-                  icon-name: "emblem-default-symbolic";
+                  icon-name: "completed-symbolic";
 
                   Adw.Clamp {
                     Box {

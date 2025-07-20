@@ -8,6 +8,7 @@
     <file compressed="true" preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">icons/scalable/emblems/splash-a-symbolic.svg</file>
     <file compressed="true" preprocess="xml-stripblanks">icons/scalable/emblems/splash-b-symbolic.svg</file>
+    <file compressed="true" preprocess="xml-stripblanks">icons/scalable/emblems/completed-symbolic.svg</file>
     <file compressed="true" preprocess="xml-stripblanks">icons/scalable/actions/webfontkitgenerator-remove-symbolic.svg</file>
     <file compressed="true" preprocess="xml-stripblanks" alias="appdata.xml">../data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml</file>
   </gresource>

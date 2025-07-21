@@ -8,331 +8,337 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-07-22 03:03+0000\n"
+"Last-Translator: Ahmed Najmawi <iramosu@protonmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/webfont-bundler/"
+"webfont-bundler/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
 msgid "Webfont Bundler"
-msgstr ""
+msgstr "مُرزِّم خطوط الوِب"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
-msgstr ""
+msgstr "أنشئ عُدَد @font-face بسهولة"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
-msgstr ""
+msgstr "الخطوط;المطبعي;المحارف;مرزم خطوط الوب; font;font-face;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
 "Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
 "and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
+"«مرزِّم خطوط الوِب» أداة بسيطة تسمح لك بتوليد woff وwoff2 ونماذج CSS المعيارية "
+"الضرورية من صيغ الخطوط غير المخصصة للوِب (otf وttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 msgid ""
 "Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
 "self-hosting."
 msgstr ""
+"يتضمن «مرزِّم خطوط الوِب» أيضًا أداة لتنزيل الخطوط من «خطوط جوجل» لاستضافتها "
+"ذاتيًا."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
-msgstr ""
+msgstr "استورد من خطوط جوجل"
 
 #: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "ا_ختصارات لوحة المفاتيح"
 
 #: webfontkitgenerator/window.blp:23
 msgid "_About Webfont Bundler"
-msgstr ""
+msgstr "_عَنْ «مرزِّم خطوط الوِب»"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
-msgstr ""
+msgstr "افتح خطوطًا"
 
 #: webfontkitgenerator/window.blp:56
 msgid "Main Menu"
-msgstr ""
+msgstr "القائمة الرئيسة"
 
 #: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
-msgstr ""
+msgstr "أضِف بعض الخطوط"
 
 #: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
-msgstr ""
+msgstr "حدِّد مجلد الخَرْج"
 
 #: webfontkitgenerator/window.blp:186
 msgid "Browse..."
-msgstr ""
+msgstr "تصفَّح..."
 
 #: webfontkitgenerator/window.blp:193
 msgid "Generate"
-msgstr ""
+msgstr "ولِّد"
 
 #: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
-msgstr ""
+msgstr "ألغِ"
 
 #: webfontkitgenerator/window.blp:248
 msgid "Back"
-msgstr ""
+msgstr "عُد"
 
 #: webfontkitgenerator/window.blp:256
 msgid "Information"
-msgstr ""
+msgstr "معلومات"
 
 #: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:69
 msgid "Generation finished!"
-msgstr ""
+msgstr "انتهى التوليد!"
 
 #: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
-msgstr ""
+msgstr "انسخ الكود أدناه في ترويسة HTML لربط خطوطك:"
 
 #: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
-msgstr ""
+msgstr "أو استوردها مباشرةً إلى CSS:"
 
 #: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
-msgstr ""
+msgstr "افتح في مدير الملفات"
 
 #: webfontkitgenerator/window.blp:310
 msgid "Logs"
-msgstr ""
+msgstr "السجلات"
 
 #: webfontkitgenerator/options.blp:7
 msgid "Options"
-msgstr ""
+msgstr "الخيارات"
 
 #: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
-msgstr ""
+msgstr "التجزيء"
 
 #: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"
-msgstr ""
+msgstr "حِدَّ من مجموعة المحارف لتقليل حجم الملف"
 
 #: webfontkitgenerator/options.blp:51
 msgid "Latin"
-msgstr ""
+msgstr "لاتيني"
 
 #: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
-msgstr ""
+msgstr "سيريلي"
 
 #: webfontkitgenerator/options.blp:69
 msgid "Greek"
-msgstr ""
+msgstr "يوناني"
 
 #: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
-msgstr ""
+msgstr "فيتنامي"
 
 #: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
-msgstr ""
+msgstr "لاتيني موسَّع"
 
 #: webfontkitgenerator/options.blp:104
 msgid "Cyrillic Extended"
-msgstr ""
+msgstr "سيريلي موسَّع"
 
 #: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
-msgstr ""
+msgstr "يوناني موسَّع"
 
 #: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
-msgstr ""
+msgstr "ديفاناغاري"
 
 #: webfontkitgenerator/options.blp:145
 msgid "Custom"
-msgstr ""
+msgstr "مخصَّص"
 
 #: webfontkitgenerator/options.blp:150
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
-msgstr ""
+msgstr "قيم مفصولة بفواصل. قيم ست عشرية مفردة و\\أو نطاقات مفصولة بشرطات."
 
 #: webfontkitgenerator/options.blp:173
 msgid "CSS"
-msgstr ""
+msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "ترميز Base64"
 
 #: webfontkitgenerator/options.blp:177
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "ضمِّن الخطوط في CSS"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
-msgstr ""
+msgstr "عَرض الخط"
 
 #: webfontkitgenerator/options.blp:182
 msgid "The CSS font-display descriptor"
-msgstr ""
+msgstr "واصف font-display في CSS"
 
 #: webfontkitgenerator/options.blp:185
 msgid "Disabled"
-msgstr ""
+msgstr "معطَّل"
 
 #: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
-msgstr ""
+msgstr "نزِّل خطوطًا من «خطوط جوجل» لاستضافتها ذاتيًا"
 
 #: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
-msgstr ""
+msgstr "نزِّل الخطوط"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "عام"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "أظهِر الاختصارات"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Open Fonts"
-msgstr ""
+msgstr "افتح خطوطًا"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Select Output Directory"
-msgstr ""
+msgstr "اختر مجلد الخَرْج"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
-msgstr ""
+msgstr "مستورد «خطوط جوجل»"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:34
 msgctxt "shortcut window"
 msgid "Generate"
-msgstr ""
+msgstr "ولِّد"
 
 #: webfontkitgenerator/main.py:76
 msgid "translator-credits"
-msgstr ""
+msgstr "أحمد النجماوي <iramosu@protonmail.com>"
 
 #: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
-msgstr ""
+msgstr "افتح ملفات الخطوط"
 
 #: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF وTTF"
 
 #: webfontkitgenerator/window.py:165
 msgid "You don’t have write access to the selected directory."
-msgstr ""
+msgstr "ليس لديك صلاحيات الكتابة في المجلد المحدَّد."
 
 #. name = data['name-slug']
 #: webfontkitgenerator/generator.py:79
 #, python-brace-format
 msgid "Generating fonts for {name}:"
-msgstr ""
+msgstr "يولِّد الخطوط لِ‍{name}:"
 
 #: webfontkitgenerator/generator.py:81
 #, python-brace-format
 msgid "Generating {name}"
-msgstr ""
+msgstr "يولِّد {name}"
 
 #: webfontkitgenerator/generator.py:142
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
-msgstr ""
+msgstr "وُلِّد <i>{filename}</i> بعدد <i>{count}</i> محرفًا رمزيًا."
 
 #: webfontkitgenerator/generator.py:156
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr ""
+msgstr "لم يُعثر على محارف رمزية لِ‍{range}. يتخطى."
 
 #: webfontkitgenerator/generator.py:171
 msgid "Generating CSS:"
-msgstr ""
+msgstr "يولِّد CSS:"
 
 #: webfontkitgenerator/generator.py:172
 msgid "Finishing"
-msgstr ""
+msgstr "يُنهي"
 
 #: webfontkitgenerator/generator.py:193
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
-msgstr ""
+msgstr "وُلِّد <i>{filename}</i>."
 
 #: webfontkitgenerator/generator.py:197
 msgid "There is no CSS to generate."
-msgstr ""
+msgstr "لا يوجد CSS لتوليده."
 
 #: webfontkitgenerator/google.py:91
 msgid "Loading Google Fonts Database"
-msgstr ""
+msgstr "يحمِّل قاعدة بيانات «خطوط جوجل»"
 
 #: webfontkitgenerator/google.py:160
 msgid "Couldn’t download the Google Fonts data."
-msgstr ""
+msgstr "تعذَّر تنزيل بيانات «خطوط جوجل»."
 
 #: webfontkitgenerator/google.py:191
 #, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
-msgstr ""
+msgstr "تعذَّر العثور على المتغيِّر {variant} لعائلة الخطوط {family_name}."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:199
 #, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
-msgstr ""
+msgstr "تعذَّر العثور على عائلة الخطوط {family_name}."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:208
 msgid "Couldn’t find any fonts for the given url."
-msgstr ""
+msgstr "تعذَّر العثور على أي خطوط للمسار المعطى."
 
 #: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"
-msgstr ""
+msgstr "أدخل مسارًا صالحًا"
 
 #: webfontkitgenerator/google.py:308
 #, python-brace-format
 msgid "Downloading {name}"
-msgstr ""
+msgstr "ينزِّل {name}"
 
 #: webfontkitgenerator/google.py:332
 #, python-brace-format
 msgid "Couldn’t download the font file for {name}."
-msgstr ""
+msgstr "تعذَّر تنزيل ملف الخط لِ‍{name}."
 
 #: webfontkitgenerator/google.py:353
 #, python-brace-format
 msgid "Couldn’t write the font file for {name}."
-msgstr ""
+msgstr "تعذَّرت كتابة ملف الخط لِ‍{name}."
 
 #: webfontkitgenerator/loader.py:67
 #, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
-msgstr ""
+msgstr "ليس لديك صلاحيات القراءة للملف {font} أو أنه غير موجود."
 
 #: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
-msgstr ""
+msgstr "خطأ: {error}."

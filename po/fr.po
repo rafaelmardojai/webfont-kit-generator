@@ -6,29 +6,28 @@
 # Translators:
 # Vasco Compain <vasco.gribouille@gmail.com>, 2022
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: 2022-04-13 02:00+0000\n"
-"Last-Translator: Vasco Compain <vasco.gribouille@gmail.com>, 2022\n"
-"Language-Team: French (https://www.transifex.com/rafaelmardojai/teams/135056/"
-"fr/)\n"
+"PO-Revision-Date: 2025-09-10 00:01+0000\n"
+"Last-Translator: XalyLodak <quentinduteil@xalystudio.fr>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/webfont-bundler/"
+"webfont-bundler/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
-#, fuzzy
 msgid "Webfont Bundler"
-msgstr "Genérateur de Kit Webfont"
+msgstr "Générateur de Kit Webfont"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
@@ -38,24 +37,24 @@ msgstr "Créez des kits @font-face facilement"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
-msgstr ""
+msgstr "police;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
 "and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
-"Genérateur de Kit Webfont est un logiciel utilitaire qui vous permet de "
-"genérer des des fichiers .woff, .woff2 et les fichiers CSS correspondant "
-"depuis les formats non web (.otf et .ttf)."
+"Générateur de Kit Webfont est un logiciel utilitaire qui vous permet de "
+"générer des fichiers .woff, .woff2 et les fichiers CSS correspondant depuis "
+"les formats non web (.otf et .ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
-#, fuzzy
 msgid ""
 "Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
 "self-hosting."
-msgstr "Télécharger les polices depuis Google Fonts pour les hébérger."
+msgstr ""
+"Générateur de Kit Webfont inclus un outil de téléchargement de polices "
+"depuis Google Fonts pour l'auto-hébérgement."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
@@ -100,8 +99,9 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #: webfontkitgenerator/window.blp:248
+#, fuzzy
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: webfontkitgenerator/window.blp:256
 msgid "Information"
@@ -191,11 +191,12 @@ msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "Encoder en base64"
 
 #: webfontkitgenerator/options.blp:177
+#, fuzzy
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "Polices embarquées dans le CSS"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
@@ -248,8 +249,9 @@ msgid "Generate"
 msgstr "Générer"
 
 #: webfontkitgenerator/main.py:76
+#, fuzzy
 msgid "translator-credits"
-msgstr ""
+msgstr "credits-traducteurs"
 
 #: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
@@ -319,15 +321,14 @@ msgstr ""
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:199
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
 msgstr "Impossible de trouver la famille de police {family_name}."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:208
-#, fuzzy
 msgid "Couldn’t find any fonts for the given url."
-msgstr "Aucune police n'a été trouvée a cette addresse."
+msgstr "Aucune police n'a été trouvée a cette adresse."
 
 #: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"

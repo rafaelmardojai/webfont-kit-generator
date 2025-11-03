@@ -8,25 +8,27 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-11-04 10:51+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/webfont-bundler/"
+"webfont-bundler/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
 msgid "Webfont Bundler"
-msgstr ""
+msgstr "Webfont Bundler"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
-msgstr ""
+msgstr "Luo @font-face-kokoelmia helposti"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
@@ -38,196 +40,204 @@ msgid ""
 "Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
 "and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
+"Webfont Bundler on yksinkertainen apuohjelma, jonka avulla voit luoda woff-, "
+"woff2- ja tarvittavat CSS-vakiomallit muista kuin web-fonttimuodoista "
+"(otf ja ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 msgid ""
 "Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
 "self-hosting."
 msgstr ""
+"Webfont Bundler sisältää myös työkalun kirjasinten lataamiseen Google "
+"Fontsista itseisännöitymistä varten."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
-msgstr ""
+msgstr "Tuo Google Fontsista"
 
 #: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Pikanäppäimet"
 
 #: webfontkitgenerator/window.blp:23
 msgid "_About Webfont Bundler"
-msgstr ""
+msgstr "Tietoa Webfont Bundlerista"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
-msgstr ""
+msgstr "Avaa kirjasimet"
 
 #: webfontkitgenerator/window.blp:56
 msgid "Main Menu"
-msgstr ""
+msgstr "Päävalikko"
 
 #: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
-msgstr ""
+msgstr "Lisää kirjasimia"
 
 #: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
-msgstr ""
+msgstr "Valitse ulostulonhakemisto"
 
 #: webfontkitgenerator/window.blp:186
 msgid "Browse..."
-msgstr ""
+msgstr "Selaa..."
 
 #: webfontkitgenerator/window.blp:193
 msgid "Generate"
-msgstr ""
+msgstr "Luo"
 
 #: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
-msgstr ""
+msgstr "Peruuta"
 
 #: webfontkitgenerator/window.blp:248
 msgid "Back"
-msgstr ""
+msgstr "Takaisin"
 
 #: webfontkitgenerator/window.blp:256
 msgid "Information"
-msgstr ""
+msgstr "Tiedot"
 
 #: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:69
 msgid "Generation finished!"
-msgstr ""
+msgstr "Luonti valmis!"
 
 #: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
+"Linkittääksesi kirjasimesi, kopioi alla oleva koodi HTML-koodisi otsikkoon:"
 
 #: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
-msgstr ""
+msgstr "Tai tuo se suoraan CSS:si:"
 
 #: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
-msgstr ""
+msgstr "Avaa tiedostoissa"
 
 #: webfontkitgenerator/window.blp:310
 msgid "Logs"
-msgstr ""
+msgstr "Lokit"
 
 #: webfontkitgenerator/options.blp:7
 msgid "Options"
-msgstr ""
+msgstr "Vaihtoehdot"
 
 #: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
-msgstr ""
+msgstr "Osajoukko"
 
 #: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"
-msgstr ""
+msgstr "Rajoita merkistöjen joukkoa tiedostokoon pienentämiseksi"
 
 #: webfontkitgenerator/options.blp:51
 msgid "Latin"
-msgstr ""
+msgstr "Latina"
 
 #: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
-msgstr ""
+msgstr "Kyrillinen"
 
 #: webfontkitgenerator/options.blp:69
 msgid "Greek"
-msgstr ""
+msgstr "Kreikkalainen"
 
 #: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnam"
 
 #: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
-msgstr ""
+msgstr "Laajennettu latina"
 
 #: webfontkitgenerator/options.blp:104
 msgid "Cyrillic Extended"
-msgstr ""
+msgstr "Laajennettu kyrillinen"
 
 #: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
-msgstr ""
+msgstr "Kreikka, laajennettu"
 
 #: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: webfontkitgenerator/options.blp:145
 msgid "Custom"
-msgstr ""
+msgstr "Mukautettu"
 
 #: webfontkitgenerator/options.blp:150
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
 msgstr ""
+"Pilkulla erotetut arvot. Yksittäiset heksadesimaaliarvot ja/tai välit "
+"erotettuina yhdysmerkeillä."
 
 #: webfontkitgenerator/options.blp:173
 msgid "CSS"
-msgstr ""
+msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "Base64 Encode"
 
 #: webfontkitgenerator/options.blp:177
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "Upota kirjasimet CSS:ään"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
-msgstr ""
+msgstr "Kirjasinten näyttö"
 
 #: webfontkitgenerator/options.blp:182
 msgid "The CSS font-display descriptor"
-msgstr ""
+msgstr "CSS-font-display-kuvaaja"
 
 #: webfontkitgenerator/options.blp:185
 msgid "Disabled"
-msgstr ""
+msgstr "Poistettu käytöstä"
 
 #: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
-msgstr ""
+msgstr "Lataa kirjasimet Google Fontsista itseisännöitymistä varten"
 
 #: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
-msgstr ""
+msgstr "Lataa kirjasimet"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Yleinen"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Näytä pikanäppäimet"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Open Fonts"
-msgstr ""
+msgstr "Avaa kirjasimet"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Select Output Directory"
-msgstr ""
+msgstr "Valitse ulostulonhakemisto"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
-msgstr ""
+msgstr "Google Fonts:n tuoja"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:34
 msgctxt "shortcut window"
 msgid "Generate"
-msgstr ""
+msgstr "Luo"
 
 #: webfontkitgenerator/main.py:76
 msgid "translator-credits"
@@ -235,103 +245,103 @@ msgstr ""
 
 #: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
-msgstr ""
+msgstr "Avointen kirjasinten tiedostot"
 
 #: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF & TTF"
 
 #: webfontkitgenerator/window.py:165
 msgid "You don’t have write access to the selected directory."
-msgstr ""
+msgstr "Sinulla ei ole kirjoitusoikeutta valittuun hakemistoon."
 
 #. name = data['name-slug']
 #: webfontkitgenerator/generator.py:79
 #, python-brace-format
 msgid "Generating fonts for {name}:"
-msgstr ""
+msgstr "Luodaan kirjasimia {name}:lle:"
 
 #: webfontkitgenerator/generator.py:81
 #, python-brace-format
 msgid "Generating {name}"
-msgstr ""
+msgstr "Luodaan {name}"
 
 #: webfontkitgenerator/generator.py:142
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
-msgstr ""
+msgstr "Luodut <i>{filename}</i> with <i>{count}</i> glyphit."
 
 #: webfontkitgenerator/generator.py:156
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr ""
+msgstr "Ei löytynyt glyphejä {range}:lle. Ohitetaan."
 
 #: webfontkitgenerator/generator.py:171
 msgid "Generating CSS:"
-msgstr ""
+msgstr "Luodaan CSS:ää:"
 
 #: webfontkitgenerator/generator.py:172
 msgid "Finishing"
-msgstr ""
+msgstr "Viimeistellään"
 
 #: webfontkitgenerator/generator.py:193
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
-msgstr ""
+msgstr "Luotu <i>{filename}</i>."
 
 #: webfontkitgenerator/generator.py:197
 msgid "There is no CSS to generate."
-msgstr ""
+msgstr "Ei CSS:ää luotavaksi."
 
 #: webfontkitgenerator/google.py:91
 msgid "Loading Google Fonts Database"
-msgstr ""
+msgstr "Ladataan Google Fonts -tietokantaa"
 
 #: webfontkitgenerator/google.py:160
 msgid "Couldn’t download the Google Fonts data."
-msgstr ""
+msgstr "Google Fonts -dataa ei voitu ladata."
 
 #: webfontkitgenerator/google.py:191
 #, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
-msgstr ""
+msgstr "Muunnelmaa {variant} ei voitu löytää {family_name}:lle."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:199
 #, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
-msgstr ""
+msgstr "Kirjasinperhettä {family_name} ei voitu löytää."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:208
 msgid "Couldn’t find any fonts for the given url."
-msgstr ""
+msgstr "Kirjasimia ei voitu löytää annetulle URL-osoitteelle."
 
 #: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"
-msgstr ""
+msgstr "Aseta kelvollinen URL-osoite"
 
 #: webfontkitgenerator/google.py:308
 #, python-brace-format
 msgid "Downloading {name}"
-msgstr ""
+msgstr "Ladataan {name}"
 
 #: webfontkitgenerator/google.py:332
 #, python-brace-format
 msgid "Couldn’t download the font file for {name}."
-msgstr ""
+msgstr "Kirjasintiedostoa {name}:lle ei voitu ladata."
 
 #: webfontkitgenerator/google.py:353
 #, python-brace-format
 msgid "Couldn’t write the font file for {name}."
-msgstr ""
+msgstr "Kirjasintiedostoa {name}:lle ei voitu kirjoittaa."
 
 #: webfontkitgenerator/loader.py:67
 #, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
-msgstr ""
+msgstr "Sinulla ei ole lukuoikeutta {font}:een tai sitä ei ole olemassa."
 
 #: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
-msgstr ""
+msgstr "Virhe: {error}."

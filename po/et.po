@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: 2025-11-18 20:51+0000\n"
+"PO-Revision-Date: 2025-11-22 20:51+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/webfont-bundler/"
 "webfont-bundler/et/>\n"
@@ -127,43 +127,43 @@ msgstr ""
 
 #: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"
-msgstr ""
+msgstr "Failisuuruse vähendamiseks piira kasutatavat märgstikku"
 
 #: webfontkitgenerator/options.blp:51
 msgid "Latin"
-msgstr ""
+msgstr "ladina"
 
 #: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
-msgstr ""
+msgstr "kirillitsa"
 
 #: webfontkitgenerator/options.blp:69
 msgid "Greek"
-msgstr ""
+msgstr "kreeka"
 
 #: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
-msgstr ""
+msgstr "vietnami"
 
 #: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
-msgstr ""
+msgstr "laiendatud ladina"
 
 #: webfontkitgenerator/options.blp:104
 msgid "Cyrillic Extended"
-msgstr ""
+msgstr "laiendatud kirillitsa"
 
 #: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
-msgstr ""
+msgstr "laiendatud kreeka"
 
 #: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
-msgstr ""
+msgstr "devanagari"
 
 #: webfontkitgenerator/options.blp:145
 msgid "Custom"
-msgstr ""
+msgstr "kohandatud"
 
 #: webfontkitgenerator/options.blp:150
 msgid ""
@@ -235,19 +235,19 @@ msgstr ""
 
 #: webfontkitgenerator/main.py:76
 msgid "translator-credits"
-msgstr ""
+msgstr "Priit Jõerüüt 2025"
 
 #: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
-msgstr ""
+msgstr "Ava kirjatüübi failid"
 
 #: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF ja TTF"
 
 #: webfontkitgenerator/window.py:165
 msgid "You don’t have write access to the selected directory."
-msgstr ""
+msgstr "Sul puudub valitud kaustas kirjutusõigus."
 
 #. name = data['name-slug']
 #: webfontkitgenerator/generator.py:79
@@ -338,4 +338,4 @@ msgstr ""
 #: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
-msgstr ""
+msgstr "Viga: {error}."

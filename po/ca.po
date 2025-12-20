@@ -8,330 +8,340 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-12-21 22:00+0000\n"
+"Last-Translator: Jordi Moreno <jordi.moreno@gmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/webfont-bundler/"
+"webfont-bundler/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
 #: webfontkitgenerator/main.py:37
 msgid "Webfont Bundler"
-msgstr ""
+msgstr "Generador de fonts web"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:3
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:7
 msgid "Create @font-face kits easily"
-msgstr ""
+msgstr "Crea paquets @font-face fàcilment"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:10
 msgid "font;font-face;"
-msgstr ""
+msgstr "font;font-face;"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:9
 msgid ""
 "Webfont Bundler is a simple utility that allows you to generate woff, woff2 "
 "and the necessary CSS boilerplate from non-web font formats (otf and ttf)."
 msgstr ""
+"En Generador de fonts web és una utilitat senzilla que et permet generar "
+"arxius woff i woff2 i la base CSS necessària des de formats no de font web "
+"(otf i ttf)."
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:12
 msgid ""
 "Webfont Bundler also includes a tool to Download fonts from Google Fonts for "
 "self-hosting."
 msgstr ""
+"El Generador de Fonts Web també inclou una eina per descarregar fonts des de "
+"Google Fonts per autoallotjar-les."
 
 #: webfontkitgenerator/window.blp:9 webfontkitgenerator/google.blp:28
 msgid "Import from Google Fonts"
-msgstr ""
+msgstr "Importa des de Google Fonts"
 
 #: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Dreceres de teclat"
 
 #: webfontkitgenerator/window.blp:23
 msgid "_About Webfont Bundler"
-msgstr ""
+msgstr "_Sobre el Generador de Fonts Web"
 
 #: webfontkitgenerator/window.blp:49 webfontkitgenerator/window.blp:104
 msgid "Open Fonts"
-msgstr ""
+msgstr "Obre fonts"
 
 #: webfontkitgenerator/window.blp:56
 msgid "Main Menu"
-msgstr ""
+msgstr "Menú Principal"
 
 #: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
-msgstr ""
+msgstr "Afegeix-hi algunes fonts"
 
 #: webfontkitgenerator/window.blp:175 webfontkitgenerator/window.py:61
 msgid "Select Output Directory"
-msgstr ""
+msgstr "Tria el directori de sortida"
 
 #: webfontkitgenerator/window.blp:186
 msgid "Browse..."
-msgstr ""
+msgstr "Navega..."
 
 #: webfontkitgenerator/window.blp:193
 msgid "Generate"
-msgstr ""
+msgstr "Genera"
 
 #: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: webfontkitgenerator/window.blp:248
 msgid "Back"
-msgstr ""
+msgstr "Enrere"
 
 #: webfontkitgenerator/window.blp:256
 msgid "Information"
-msgstr ""
+msgstr "Informació"
 
 #: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:69
 msgid "Generation finished!"
-msgstr ""
+msgstr "La generació ha finalitzat!"
 
 #: webfontkitgenerator/window.blp:273
 msgid "To link your fonts, copy the code below into the head of your HTML:"
 msgstr ""
+"Per enllaçar les teves fonts, copia el següent codi al <head> del teu HTML:"
 
 #: webfontkitgenerator/window.blp:282
 msgid "Or import it directly to your CSS:"
-msgstr ""
+msgstr "O importa-les directament al teu CSS:"
 
 #: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
-msgstr ""
+msgstr "Obre-ho amb Fitxers"
 
 #: webfontkitgenerator/window.blp:310
 msgid "Logs"
-msgstr ""
+msgstr "Registres"
 
 #: webfontkitgenerator/options.blp:7
 msgid "Options"
-msgstr ""
+msgstr "Opcions"
 
 #: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
-msgstr ""
+msgstr "Subconjunt"
 
 #: webfontkitgenerator/options.blp:32
 msgid "Limit the character set to reduce file size"
-msgstr ""
+msgstr "Limita el conjunt de caràcters per reduir la mida del fitxer"
 
 #: webfontkitgenerator/options.blp:51
 msgid "Latin"
-msgstr ""
+msgstr "Llatí"
 
 #: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
-msgstr ""
+msgstr "Ciríl·lic"
 
 #: webfontkitgenerator/options.blp:69
 msgid "Greek"
-msgstr ""
+msgstr "Grec"
 
 #: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
-msgstr ""
+msgstr "Vietnamita"
 
 #: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
-msgstr ""
+msgstr "Llatí ampliat"
 
 #: webfontkitgenerator/options.blp:104
 msgid "Cyrillic Extended"
-msgstr ""
+msgstr "Ciríl·lic ampliat"
 
 #: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
-msgstr ""
+msgstr "Grec ampliat"
 
 #: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
-msgstr ""
+msgstr "Devanagari"
 
 #: webfontkitgenerator/options.blp:145
 msgid "Custom"
-msgstr ""
+msgstr "Personalitzat"
 
 #: webfontkitgenerator/options.blp:150
 msgid ""
 "Comma separated values. Single hex values and/or ranges separated with "
 "hyphens."
 msgstr ""
+"Valors separats per comes. Valors hexadecimals individuals i/o intervals "
+"separats per guions."
 
 #: webfontkitgenerator/options.blp:173
 msgid "CSS"
-msgstr ""
+msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
-msgstr ""
+msgstr "Codificació Base64"
 
 #: webfontkitgenerator/options.blp:177
 msgid "Embed fonts in the CSS"
-msgstr ""
+msgstr "Incrusta fonts al CSS"
 
 #: webfontkitgenerator/options.blp:181
 msgid "Font display"
-msgstr ""
+msgstr "Propietat «Font display»"
 
 #: webfontkitgenerator/options.blp:182
 msgid "The CSS font-display descriptor"
-msgstr ""
+msgstr "El descriptor CSS font-display"
 
 #: webfontkitgenerator/options.blp:185
 msgid "Disabled"
-msgstr ""
+msgstr "Deshabilitat"
 
 #: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
-msgstr ""
+msgstr "Baixa fonts de Google Fonts per a autoallotjar-les"
 
 #: webfontkitgenerator/google.blp:64
 msgid "Download Fonts"
-msgstr ""
+msgstr "Descarrega Fonts"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Mostra les dreceres de teclat"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
 msgid "Open Fonts"
-msgstr ""
+msgstr "Obre Fonts"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:24
 msgctxt "shortcut window"
 msgid "Select Output Directory"
-msgstr ""
+msgstr "Tria el directori de sortida"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:29
 msgctxt "shortcut window"
 msgid "Google Fonts Importer"
-msgstr ""
+msgstr "Importador de Google Fonts"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:34
 msgctxt "shortcut window"
 msgid "Generate"
-msgstr ""
+msgstr "Genera"
 
 #: webfontkitgenerator/main.py:76
 msgid "translator-credits"
-msgstr ""
+msgstr "jordimoreno.cat"
 
 #: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
-msgstr ""
+msgstr "Obre arxius de fonts"
 
 #: webfontkitgenerator/window.py:68
 msgid "OTF & TTF"
-msgstr ""
+msgstr "OTF i TTF"
 
 #: webfontkitgenerator/window.py:165
 msgid "You don’t have write access to the selected directory."
-msgstr ""
+msgstr "No tens permisos d'escriptura per al directori seleccionat."
 
 #. name = data['name-slug']
 #: webfontkitgenerator/generator.py:79
 #, python-brace-format
 msgid "Generating fonts for {name}:"
-msgstr ""
+msgstr "Generant fonts per a {name}:"
 
 #: webfontkitgenerator/generator.py:81
 #, python-brace-format
 msgid "Generating {name}"
-msgstr ""
+msgstr "Generant {name}"
 
 #: webfontkitgenerator/generator.py:142
 #, python-brace-format
 msgid "Generated <i>{filename}</i> with <i>{count}</i> glyphs."
-msgstr ""
+msgstr "S'ha generat <i>{filename}</i> amb signes <i>{count}</i>."
 
 #: webfontkitgenerator/generator.py:156
 #, python-brace-format
 msgid "No glyphs where found for {range}. Skipping."
-msgstr ""
+msgstr "No s'han trobat signes per a {range}. Omet."
 
 #: webfontkitgenerator/generator.py:171
 msgid "Generating CSS:"
-msgstr ""
+msgstr "Generant CSS:"
 
 #: webfontkitgenerator/generator.py:172
 msgid "Finishing"
-msgstr ""
+msgstr "Finalitzant"
 
 #: webfontkitgenerator/generator.py:193
 #, python-brace-format
 msgid "Generated <i>{filename}</i>."
-msgstr ""
+msgstr "Generat <i>{filename}</i>."
 
 #: webfontkitgenerator/generator.py:197
 msgid "There is no CSS to generate."
-msgstr ""
+msgstr "No hi ha CSS per generar."
 
 #: webfontkitgenerator/google.py:91
 msgid "Loading Google Fonts Database"
-msgstr ""
+msgstr "Carregant la base de dades de Google Fonts"
 
 #: webfontkitgenerator/google.py:160
 msgid "Couldn’t download the Google Fonts data."
-msgstr ""
+msgstr "No s'han pogut descarregar les dades de Google Fonts."
 
 #: webfontkitgenerator/google.py:191
 #, python-brace-format
 msgid "Couldn’t find the {variant} variant for {family_name}."
-msgstr ""
+msgstr "No s'ha pogut trobar la variant {variant} per a {family_name}."
 
 #. If no family found, add error to list
 #: webfontkitgenerator/google.py:199
 #, python-brace-format
 msgid "Couldn’t find the {family_name} font family."
-msgstr ""
+msgstr "No s'ha pogut trobar la família {family_name}."
 
 #. If not files found at all, show general error and terminate
 #: webfontkitgenerator/google.py:208
 msgid "Couldn’t find any fonts for the given url."
-msgstr ""
+msgstr "No s'ha pogut trobar cap font per la URL proporcionada."
 
 #: webfontkitgenerator/google.py:280
 msgid "Please set a valid url"
-msgstr ""
+msgstr "Si us plau, escriu una URL vàlida"
 
 #: webfontkitgenerator/google.py:308
 #, python-brace-format
 msgid "Downloading {name}"
-msgstr ""
+msgstr "Descarregant {name}"
 
 #: webfontkitgenerator/google.py:332
 #, python-brace-format
 msgid "Couldn’t download the font file for {name}."
-msgstr ""
+msgstr "No s'ha pogut descarregar l'arxiu de font per a {name}."
 
 #: webfontkitgenerator/google.py:353
 #, python-brace-format
 msgid "Couldn’t write the font file for {name}."
-msgstr ""
+msgstr "No s'ha pogut escriure l'arxiu de font per a {name}."
 
 #: webfontkitgenerator/loader.py:67
 #, python-brace-format
 msgid "You don’t have read access to {font} or it doesn’t exists."
-msgstr ""
+msgstr "No teniu permisos de lectura per a {font} o no existeix."
 
 #: webfontkitgenerator/loader.py:76
 #, python-brace-format
 msgid "Error: {error}."
-msgstr ""
+msgstr "Error: {error}."

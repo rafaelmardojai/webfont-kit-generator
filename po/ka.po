@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: webfontkitgenerator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 11:45-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-02-02 15:01+0000\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://hosted.weblate.org/projects/webfont-bundler/"
+"webfont-bundler/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #: data/com.rafaelmardojai.WebfontKitGenerator.desktop.in:2
 #: data/com.rafaelmardojai.WebfontKitGenerator.metainfo.xml.in:6
@@ -51,7 +53,7 @@ msgstr ""
 
 #: webfontkitgenerator/window.blp:18
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_კლავიატურის მალსახმობები"
 
 #: webfontkitgenerator/window.blp:23
 msgid "_About Webfont Bundler"
@@ -63,7 +65,7 @@ msgstr ""
 
 #: webfontkitgenerator/window.blp:56
 msgid "Main Menu"
-msgstr ""
+msgstr "მთავარი მენიუ"
 
 #: webfontkitgenerator/window.blp:82
 msgid "Add some fonts"
@@ -75,23 +77,23 @@ msgstr ""
 
 #: webfontkitgenerator/window.blp:186
 msgid "Browse..."
-msgstr ""
+msgstr "პოვნა..."
 
 #: webfontkitgenerator/window.blp:193
 msgid "Generate"
-msgstr ""
+msgstr "გენერაცია"
 
 #: webfontkitgenerator/window.blp:221 webfontkitgenerator/google.blp:94
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: webfontkitgenerator/window.blp:248
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: webfontkitgenerator/window.blp:256
 msgid "Information"
-msgstr ""
+msgstr "ინფორმაცია"
 
 #: webfontkitgenerator/window.blp:263 webfontkitgenerator/generator.py:69
 msgid "Generation finished!"
@@ -107,15 +109,15 @@ msgstr ""
 
 #: webfontkitgenerator/window.blp:291
 msgid "Open in Files"
-msgstr ""
+msgstr "გახსნა Files-ში"
 
 #: webfontkitgenerator/window.blp:310
 msgid "Logs"
-msgstr ""
+msgstr "ჟურნალი"
 
 #: webfontkitgenerator/options.blp:7
 msgid "Options"
-msgstr ""
+msgstr "მორგება"
 
 #: webfontkitgenerator/options.blp:31
 msgid "Subsetting"
@@ -127,19 +129,19 @@ msgstr ""
 
 #: webfontkitgenerator/options.blp:51
 msgid "Latin"
-msgstr ""
+msgstr "ლათინური"
 
 #: webfontkitgenerator/options.blp:60
 msgid "Cyrillic"
-msgstr ""
+msgstr "კირილიცა"
 
 #: webfontkitgenerator/options.blp:69
 msgid "Greek"
-msgstr ""
+msgstr "ბერძნული"
 
 #: webfontkitgenerator/options.blp:78
 msgid "Vietnamese"
-msgstr ""
+msgstr "ვიეტნამური"
 
 #: webfontkitgenerator/options.blp:95
 msgid "Latin Extended"
@@ -151,15 +153,15 @@ msgstr ""
 
 #: webfontkitgenerator/options.blp:113
 msgid "Greek Extended"
-msgstr ""
+msgstr "გაფართოებული ბერძნული"
 
 #: webfontkitgenerator/options.blp:122
 msgid "Devanagari"
-msgstr ""
+msgstr "დევაგანური"
 
 #: webfontkitgenerator/options.blp:145
 msgid "Custom"
-msgstr ""
+msgstr "ხელით"
 
 #: webfontkitgenerator/options.blp:150
 msgid ""
@@ -169,7 +171,7 @@ msgstr ""
 
 #: webfontkitgenerator/options.blp:173
 msgid "CSS"
-msgstr ""
+msgstr "CSS"
 
 #: webfontkitgenerator/options.blp:176
 msgid "Base64 Encode"
@@ -189,7 +191,7 @@ msgstr ""
 
 #: webfontkitgenerator/options.blp:185
 msgid "Disabled"
-msgstr ""
+msgstr "გამორთულია"
 
 #: webfontkitgenerator/google.blp:29
 msgid "Download fonts from Google Fonts for self-hosting"
@@ -202,12 +204,12 @@ msgstr ""
 #: webfontkitgenerator/gtk/help-overlay.blp:11
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "ზოგადი"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "მალსახმობების ჩვენება"
 
 #: webfontkitgenerator/gtk/help-overlay.blp:19
 msgctxt "shortcut window"
@@ -227,11 +229,11 @@ msgstr ""
 #: webfontkitgenerator/gtk/help-overlay.blp:34
 msgctxt "shortcut window"
 msgid "Generate"
-msgstr ""
+msgstr "გენერაცია"
 
 #: webfontkitgenerator/main.py:76
 msgid "translator-credits"
-msgstr ""
+msgstr "ეკატერინე პაპავა"
 
 #: webfontkitgenerator/window.py:65
 msgid "Open Font Files"
@@ -272,7 +274,7 @@ msgstr ""
 
 #: webfontkitgenerator/generator.py:172
 msgid "Finishing"
-msgstr ""
+msgstr "სრულდება"
 
 #: webfontkitgenerator/generator.py:193
 #, python-brace-format

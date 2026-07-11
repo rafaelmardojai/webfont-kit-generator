@@ -39,7 +39,7 @@ Webfont Bundler uses [fontTools](https://github.com/fonttools/fonttools) python 
 - Python 3 `python`
 - PyGObject `python-gobject`
 - GTK4 (>= 4.12.0) `gtk4`
-- libadwaita (>= 1.4.0) `libadwaita`
+- libadwaita (>= 1.8.0) `libadwaita`
 - libsoup (>= 3.0) `libsoup3`
 - gtksourceview (>= 5.0) `gtksourceview5`
 - Meson `meson`

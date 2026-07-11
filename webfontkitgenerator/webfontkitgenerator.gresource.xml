@@ -5,7 +5,7 @@
     <file compressed="true">options.ui</file>
     <file compressed="true">google.ui</file>
     <file compressed="true">style.css</file>
-    <file compressed="true" preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">shortcuts-dialog.ui</file>
     <file compressed="true" preprocess="xml-stripblanks">icons/scalable/emblems/splash-a-symbolic.svg</file>
     <file compressed="true" preprocess="xml-stripblanks">icons/scalable/emblems/splash-b-symbolic.svg</file>
     <file compressed="true" preprocess="xml-stripblanks">icons/scalable/emblems/completed-symbolic.svg</file>

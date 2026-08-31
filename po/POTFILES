@@ -4,7 +4,7 @@ data/com.rafaelmardojai.WebfontKitGenerator.gschema.xml
 webfontkitgenerator/window.blp
 webfontkitgenerator/options.blp
 webfontkitgenerator/google.blp
-webfontkitgenerator/gtk/help-overlay.blp
+webfontkitgenerator/shortcuts-dialog.blp
 webfontkitgenerator/main.py
 webfontkitgenerator/window.py
 webfontkitgenerator/options.py

@@ -1,0 +1,33 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ShortcutsDialog shortcuts_dialog {
+  Adw.ShortcutsSection {
+    title: C_("shortcut window", "General");
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Show Shortcuts");
+      action-name: "app.shortcuts";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Open Fonts");
+      action-name: "win.open";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Select Output Directory");
+      action-name: "win.set-dir";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Google Fonts Importer");
+      action-name: "win.google";
+    }
+
+    Adw.ShortcutsItem {
+      title: C_("shortcut window", "Generate");
+      action-name: "win.generate";
+    }
+  }
+}

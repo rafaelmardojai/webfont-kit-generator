@@ -289,6 +289,7 @@ class GoogleDialog(Adw.Dialog):
         if not cancel:
             # Load downloaded files
             if self.files:
+                self.window.temp_files.extend(self.files)
                 self.window.load_fonts(self.files)
 
             # Show found errors

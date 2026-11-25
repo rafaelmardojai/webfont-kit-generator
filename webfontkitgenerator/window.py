@@ -55,6 +55,9 @@ class Window(Adw.ApplicationWindow):
 
         self.setup_actions()
 
+        # Temporary files downloaded from Google Fonts
+        self.temp_files: list[Gio.File] = []
+
         # Out directory chooser
         self.out_dir: Gio.File | None = None  # Store selected dir
         self.out_dir_chooser = Gtk.FileDialog()

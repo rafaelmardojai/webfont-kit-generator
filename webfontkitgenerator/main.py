@@ -44,6 +44,18 @@ class Application(Adw.Application):
     def do_startup(self):
         Adw.Application.do_startup(self)
 
+    def do_shutdown(self):
+        if self.window:
+            for file in self.window.temp_files:
+                try:
+                    file.delete(None)
+                except GLib.Error:
+                    pass
+
+            self.window.temp_files.clear()
+
+        Adw.Application.do_shutdown(self)
+
     def do_activate(self):
         self.window = self.props.active_window  # type: ignore
         if not self.window:
